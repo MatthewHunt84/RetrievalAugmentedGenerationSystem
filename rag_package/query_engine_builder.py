@@ -29,7 +29,7 @@ class QueryEngineBuilder:
         self.similarity_top_k = similarity_top_k
         # Store the multimodal LLM or create a default one if not provided
         self.multimodal_llm = multimodal_llm or AnthropicMultiModal(
-            model=rag_config.multimodal_model_name,
+            model=rag_config.multimodal_model,
             api_key=os.getenv("ANTHROPIC_API_KEY")
         )
 

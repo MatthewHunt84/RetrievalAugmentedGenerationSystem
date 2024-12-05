@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13557991-094d-4fae-8b67-4e865e4684de" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rag_package/document_processor.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/document_processor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rag_package/query_engine_builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/query_engine_builder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rag_package/rag_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/rag_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage_manuals/default__vector_store.json" beforeDir="false" afterPath="$PROJECT_DIR$/storage_manuals_from_md/default__vector_store.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage_manuals/docstore.json" beforeDir="false" afterPath="$PROJECT_DIR$/storage_manuals_from_md/docstore.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage_manuals/graph_store.json" beforeDir="false" afterPath="$PROJECT_DIR$/storage_manuals_from_md/graph_store.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage_manuals/image__vector_store.json" beforeDir="false" afterPath="$PROJECT_DIR$/storage_manuals_from_md/image__vector_store.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage_manuals/index_store.json" beforeDir="false" afterPath="$PROJECT_DIR$/storage_manuals_from_md/index_store.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +43,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.__init__.executor": "Run",
+    "Python.document_processor.executor": "Run",
     "Python.main.executor": "Run",
     "Python.query_engine.executor": "Run",
     "Python.rag_config.executor": "Run",
@@ -42,7 +52,8 @@
     "Python.textnode_creator.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main"
+    "git-widget-placeholder": "main",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
   <component name="RecentsManager">

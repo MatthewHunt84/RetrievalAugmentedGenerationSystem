@@ -1,23 +1,10 @@
-# document_processor.py
 import os
 import json
 from pathlib import Path
-from dataclasses import dataclass
 from llama_parse import LlamaParse
 from rag_package.errors import DocumentProcessingError
-from . import rag_config
+from rag_package.rag_config import ParserConfig
 
-@dataclass
-class ParserConfig:
-    """Configuration settings for the document parser"""
-    result_type: str = rag_config.parser_result_type
-    parsing_instruction: str = "You are given IKEA assembly instruction manuals"
-    use_vendor_multimodal_model: bool = True
-    vendor_multimodal_model_name: str = "anthropic-sonnet-3.5"
-    show_progress: bool = True
-    verbose: bool = True
-    num_workers: int = 8
-    language: str = "en"
 
 class DocumentProcessor:
     """
@@ -26,26 +13,37 @@ class DocumentProcessor:
     and maintains consistent file paths and configurations.
     """
 
-    def __init__(self, data_dir: str = "files", config: ParserConfig = None):
+    def __init__(self, parsing_config: ParserConfig, data_dir: str = "files"):
         """
         Initialize the DocumentProcessor with a data directory and configuration.
 
         Args:
             data_dir: Directory containing the files to process
-            config: Configuration settings for the parser. If None, uses defaults
+            config: Configuration settings for the parser
         """
         self.data_dir = data_dir
-        self.config = config or ParserConfig()
+        self.config = parsing_config
         self.parser = self._initialize_parser()
 
         # Define paths for storing processed data
         self.image_dir = Path("../data_images")
         self.results_file = Path("../parsed_results.json")
 
+    def _check_cached_files_exist(self) -> bool:
+        """
+        Check if both the parsed results and image files exist.
+        This is important for determining whether we can use cached results
+        or need to reprocess documents.
+
+        Returns:
+            bool: True if both parsed results and image directory exist
+        """
+        return self.results_file.exists() and self.image_dir.exists()
+
     def _initialize_parser(self) -> LlamaParse:
         """
         Creates and configures a LlamaParse instance using the current configuration.
-        This is a private method as indicated by the underscore prefix.
+        This method encapsulates all parser initialization logic in one place.
         """
         return LlamaParse(
             result_type=self.config.result_type,
@@ -54,8 +52,8 @@ class DocumentProcessor:
             vendor_multimodal_model_name=self.config.vendor_multimodal_model_name,
             show_progress=self.config.show_progress,
             verbose=self.config.verbose,
-            invalidate_cache=False,
-            do_not_cache=False,
+            invalidate_cache=self.config.invalidate_cache,
+            do_not_cache=self.config.do_not_cache,
             num_workers=self.config.num_workers,
             language=self.config.language
         )
@@ -63,32 +61,52 @@ class DocumentProcessor:
     def get_data_files(self) -> list[str]:
         """
         Retrieves all file paths from the configured data directory.
-        Returns a list of complete file paths for all files in the directory.
+        This method walks through the data directory and collects paths
+        to all files that need processing.
+
+        Returns:
+            list[str]: Complete file paths for all files in the directory
+
+        Raises:
+            DocumentProcessingError: If the data directory doesn't exist or is empty
         """
-        files = []
-        for filename in os.listdir(self.data_dir):
-            filepath = os.path.join(self.data_dir, filename)
-            if os.path.isfile(filepath):
-                files.append(filepath)
-        return files
+        try:
+            if not os.path.exists(self.data_dir):
+                raise DocumentProcessingError(f"Data directory {self.data_dir} does not exist")
+
+            files = []
+            for filename in os.listdir(self.data_dir):
+                filepath = os.path.join(self.data_dir, filename)
+                if os.path.isfile(filepath):
+                    files.append(filepath)
+
+            if not files:
+                raise DocumentProcessingError(f"No files found in {self.data_dir}")
+
+            return files
+        except Exception as e:
+            raise DocumentProcessingError(f"Error accessing data files: {str(e)}")
 
     def ensure_directories(self) -> None:
         """
         Ensures all required directories exist by creating them if necessary.
         This prevents file operation errors later in the processing pipeline.
         """
-        self.image_dir.mkdir(exist_ok=True)
+        try:
+            self.image_dir.mkdir(parents=True, exist_ok=True)
+        except Exception as e:
+            raise DocumentProcessingError(f"Failed to create required directories: {str(e)}")
 
     def parse_documents(self, files: list[str]) -> list[dict]:
         """
         Parse PDF documents and return JSON objects.
-        This method makes the expensive API call to process the documents.
+        This method handles the core document processing using LlamaParse.
 
         Args:
             files: List of file paths to process
 
         Returns:
-            List of dictionaries containing the parsed document content
+            list[dict]: List of dictionaries containing the parsed document content
 
         Raises:
             DocumentProcessingError: If parsing fails
@@ -104,6 +122,7 @@ class DocumentProcessor:
     def save_results(self, data: list[dict]) -> None:
         """
         Save parsed results to JSON file for future use.
+        This method ensures processed data persists between runs.
 
         Args:
             data: List of dictionaries containing parsed document content
@@ -122,10 +141,10 @@ class DocumentProcessor:
     def verify_saved_data(self) -> list[dict]:
         """
         Verify that saved data can be loaded correctly.
-        This is useful for checking data integrity and loading previously processed results.
+        This method checks data integrity and ensures saved results are usable.
 
         Returns:
-            The loaded data as a list of dictionaries
+            list[dict]: The loaded data if verification succeeds
 
         Raises:
             DocumentProcessingError: If verification fails
@@ -134,20 +153,30 @@ class DocumentProcessor:
             print("Verifying saved data...")
             with open(self.results_file, 'r', encoding='utf-8') as f:
                 data = json.load(f)
+
+            # Basic validation of loaded data
+            if not isinstance(data, list):
+                raise DocumentProcessingError("Saved data is not in the expected format")
+            if not data:
+                raise DocumentProcessingError("Saved data is empty")
+
             print(f"Successfully verified {len(data)} documents")
             return data
+        except json.JSONDecodeError:
+            raise DocumentProcessingError("Saved data is corrupted or not valid JSON")
         except Exception as e:
             raise DocumentProcessingError(f"Failed to verify saved data: {str(e)}")
 
     def extract_images(self, md_json_objs: list[dict]) -> dict:
         """
         Extract images from parsed documents and save them to the image directory.
+        This method handles image extraction and storage for use in multimodal processing.
 
         Args:
             md_json_objs: List of parsed document objects containing image data
 
         Returns:
-            Dictionary containing information about extracted images
+            dict: Dictionary containing information about extracted images
 
         Raises:
             DocumentProcessingError: If image extraction fails
@@ -163,33 +192,53 @@ class DocumentProcessor:
         except Exception as e:
             raise DocumentProcessingError(f"Failed to extract images: {str(e)}")
 
-    def process_all(self, extract_images: bool = False) -> None:
+    def process_all(self, use_cached_files: bool = True) -> None:
         """
         Process all documents in a single call. This is the main processing pipeline
         that coordinates all the individual processing steps.
 
         Args:
-            extract_images: Whether to extract images from the documents
+            use_cached_files: If True, will use existing processed files instead of reprocessing
+                            when they exist. If False, will always reprocess files.
 
         Raises:
             DocumentProcessingError: If any processing step fails
         """
         try:
+            # Check for existing processed files
+            if use_cached_files and self._check_cached_files_exist():
+                print("Using existing processed files from:")
+                print(f"- Parsed results: {self.results_file}")
+                print(f"- Images: {self.image_dir}")
+
+                # Verify the cached data is readable
+                try:
+                    self.verify_saved_data()
+                    return
+                except DocumentProcessingError:
+                    print("Cached files exist but are corrupted. Proceeding with reprocessing...")
+
+            # If we reach here, we need to process the files
+            print("Starting document processing pipeline...")
+
             # Ensure directories exist
             self.ensure_directories()
 
             # Get list of files
             files = self.get_data_files()
+            if not files:
+                raise DocumentProcessingError("No files found in data directory")
 
             # Parse documents
+            print(f"Processing {len(files)} documents...")
             md_json_objs = self.parse_documents(files)
 
             # Save results
             self.save_results(md_json_objs)
 
-            # Extract images if requested
-            if extract_images:
-                self.extract_images(md_json_objs)
+            # Extract images (now always performed)
+            print("Extracting images from documents...")
+            self.extract_images(md_json_objs)
 
             # Verify saved data
             self.verify_saved_data()
@@ -203,4 +252,3 @@ class DocumentProcessor:
         except DocumentProcessingError as e:
             print(f"Processing failed: {str(e)}")
             raise
-

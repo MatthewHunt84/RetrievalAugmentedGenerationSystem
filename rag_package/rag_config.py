@@ -4,32 +4,39 @@ RAG application settings module.
 This works similar to a singleton and lets us keep the project settings centralized.
 Give private variables an underscore up front: _private_variable
 """
-
-import os
+from dataclasses import dataclass
 from llama_index.embeddings.openai import OpenAIEmbedding
-from llama_index.core import Settings
 from llama_index.multi_modal_llms.anthropic import AnthropicMultiModal
-from dotenv import load_dotenv
+from llama_index.core import Settings
 
-# Public variables
-parser_result_type = "markdown"
+# Parsing
+
+@dataclass
+class ParserConfig:
+    result_type: str = "markdown"
+    parsing_instruction: str = "You are given IKEA assembly instruction manuals"
+    use_vendor_multimodal_model: bool = True
+    vendor_multimodal_model_name: str = "anthropic-sonnet-3.5"
+    show_progress: bool = True
+    verbose: bool = True
+    invalidate_cache: bool = False
+    do_not_cache: bool = False
+    num_workers: int = 8
+    language: str = "en"
+
+use_cached_files: bool = True
+parsing_config = ParserConfig()
+
+# Chunking
+
+# Vector store
+
 embedding_model_name = "text-embedding-3-large"
 
-# LlamaIndex settings
+# LLM querying
 
-# embed_model = OpenAIEmbedding(model="text-embedding-3-large")
-# Settings.embed_model = OpenAIEmbedding(model="text-embedding-3-large")
-
-# Generative language model
-multimodal_model_name = "claude-3-5-sonnet-latest"
-multimodal_llm = AnthropicMultiModal(model="claude-3-5-sonnet-latest")
-
-# embed_model = OpenAIEmbedding(
-#     model="text-embedding-3-large",
-#     api_key=os.getenv("OPENAI_API_KEY"),
-#     timeout=10,  # Increase timeout
-#     max_retries=3  # Add retries
-# )
+multimodal_model = "claude-3-5-sonnet-latest"
+multimodal_llm = AnthropicMultiModal(model=multimodal_model)
 
 def get_embed_model():
     if not hasattr(get_embed_model, '_instance'):
@@ -37,3 +44,4 @@ def get_embed_model():
         # Update LlamaIndex settings
         Settings.embed_model = get_embed_model._instance
     return get_embed_model._instance
+
