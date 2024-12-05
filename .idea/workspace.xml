@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="13557991-094d-4fae-8b67-4e865e4684de" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/retrieval_augmented_generation.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/fredde_instruction_manual.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/nordli_instruction_manual.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/smagora_instruction_manual.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuffing_instruction_manual.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/uppspel_instruction_manual.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/04a94724-538d-43a4-8392-13e861d8d0f1-page_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/04a94724-538d-43a4-8392-13e861d8d0f1-page_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/04a94724-538d-43a4-8392-13e861d8d0f1-page_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/04a94724-538d-43a4-8392-13e861d8d0f1-page_4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_25.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_26.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_27.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_28.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_29.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_30.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_31.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_32.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/30db7a6e-f297-42e9-84b0-a8f5f93cef17-page_9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/9f83306c-32e4-42a4-9792-e57d13a241ee-page_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/9f83306c-32e4-42a4-9792-e57d13a241ee-page_10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/9f83306c-32e4-42a4-9792-e57d13a241ee-page_11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/9f83306c-32e4-42a4-9792-e57d13a241ee-page_12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/9f83306c-32e4-42a4-9792-e57d13a241ee-page_13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/9f83306c-32e4-42a4-9792-e57d13a241ee-page_14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/9f83306c-32e4-42a4-9792-e57d13a241ee-page_15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/9f83306c-32e4-42a4-9792-e57d13a241ee-page_16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/9f83306c-32e4-42a4-9792-e57d13a241ee-page_17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/9f83306c-32e4-42a4-9792-e57d13a241ee-page_18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/9f83306c-32e4-42a4-9792-e57d13a241ee-page_19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/9f83306c-32e4-42a4-9792-e57d13a241ee-page_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/9f83306c-32e4-42a4-9792-e57d13a241ee-page_20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/9f83306c-32e4-42a4-9792-e57d13a241ee-page_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/9f83306c-32e4-42a4-9792-e57d13a241ee-page_4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/9f83306c-32e4-42a4-9792-e57d13a241ee-page_5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/9f83306c-32e4-42a4-9792-e57d13a241ee-page_6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/9f83306c-32e4-42a4-9792-e57d13a241ee-page_7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/9f83306c-32e4-42a4-9792-e57d13a241ee-page_8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/9f83306c-32e4-42a4-9792-e57d13a241ee-page_9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/ca439b04-27c2-449f-8e68-8cd1f7efa291-page_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/ca439b04-27c2-449f-8e68-8cd1f7efa291-page_10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/ca439b04-27c2-449f-8e68-8cd1f7efa291-page_11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/ca439b04-27c2-449f-8e68-8cd1f7efa291-page_12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/ca439b04-27c2-449f-8e68-8cd1f7efa291-page_13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/ca439b04-27c2-449f-8e68-8cd1f7efa291-page_14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/ca439b04-27c2-449f-8e68-8cd1f7efa291-page_15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/ca439b04-27c2-449f-8e68-8cd1f7efa291-page_16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/ca439b04-27c2-449f-8e68-8cd1f7efa291-page_17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/ca439b04-27c2-449f-8e68-8cd1f7efa291-page_18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/ca439b04-27c2-449f-8e68-8cd1f7efa291-page_19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/ca439b04-27c2-449f-8e68-8cd1f7efa291-page_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/ca439b04-27c2-449f-8e68-8cd1f7efa291-page_20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/ca439b04-27c2-449f-8e68-8cd1f7efa291-page_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/ca439b04-27c2-449f-8e68-8cd1f7efa291-page_4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/ca439b04-27c2-449f-8e68-8cd1f7efa291-page_5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/ca439b04-27c2-449f-8e68-8cd1f7efa291-page_6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/ca439b04-27c2-449f-8e68-8cd1f7efa291-page_7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/ca439b04-27c2-449f-8e68-8cd1f7efa291-page_8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/ca439b04-27c2-449f-8e68-8cd1f7efa291-page_9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_25.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_26.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_27.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_28.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_29.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_30.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_31.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_32.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_33.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_34.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_35.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_36.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_37.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_images/eccb4105-07f2-4764-82ce-ced3eb2a7d91-page_9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/fredde_instruction_manual.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/nordli_instruction_manual.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/smagora_instruction_manual.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/tuffing_instruction_manual.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/uppspel_instruction_manual.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag_package/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag_package/document_processor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag_package/error_handler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag_package/errors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag_package/query_engine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag_package/query_engine_builder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag_package/rag_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag_package/test_openai.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag_package/textnode_creator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag_package/vector_index_manager.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2pg8g9gaqSurqUXlZz5zb8ffWxj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.__init__.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.query_engine.executor": "Run",
+    "Python.rag_config.executor": "Run",
+    "Python.run.executor": "Run",
+    "Python.test_openai.executor": "Run",
+    "Python.textnode_creator.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/rag_package" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-fb887030ada0-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.21565.199" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="13557991-094d-4fae-8b67-4e865e4684de" name="Changes" comment="" />
+      <created>1733176466950</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1733176466950</updated>
+    </task>
+    <servers />
+  </component>
+</project>
