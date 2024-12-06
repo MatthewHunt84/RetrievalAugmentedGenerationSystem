@@ -4,7 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13557991-094d-4fae-8b67-4e865e4684de" name="Changes" comment="" />
+    <list default="true" id="13557991-094d-4fae-8b67-4e865e4684de" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/fredde_instruction_manual.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/nordli_instruction_manual.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/smagora_instruction_manual.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/tuffing_instruction_manual.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/uppspel_instruction_manual.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parsed_results.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rag_package/document_processor.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/document_processor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rag_package/rag_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/rag_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rag_package/textnode_creator.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/textnode_creator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/raw_input_data/920-3000 4X6TBT Utility Trailer - Barreto Manufacturing, Inc_.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/raw_input_data/920-3000 small_equip_print.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/raw_input_data/920-3010 Scissor-LIft-Trailer-Spec-Sheet.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/raw_input_data/920-3010 Trencher-Trailer-Spec-Sheet.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/raw_input_data/920-3010 ls-utility.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/raw_input_data/920-3041 Triple-L-Trailer-Brochure.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/raw_input_data/920-3041 UT14-10 - Air-tow Trailers.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/raw_input_data/920-3066 2015 Ditch Witch S2B utility trailer in Park City, KS _ Item DQ4920 sold _ Purple Wave.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/raw_input_data/920-3066 CMW-PROD-10807-01-S3C-Sales-Sheet-2020-web.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/raw_input_data/920-3066 tl33-trailer-spec-sheet.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/raw_input_data/920-3200 FT-8 R.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/raw_input_data/920-3200 RR-160 Self-Loading Single-Reel Cable Trailer _ Stellar.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/raw_input_data/920-5610 6-7-8t-low-profile-dump-1.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/raw_input_data/920-5610 FT-10 DT.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/raw_input_data/920-5610 lp.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/raw_input_data/920-7005 2014-EXP-500L-S.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/raw_input_data/920-7005 Water_Trailer_WT5C_WTE5C_ops_manual_rev_2_DataId_240916_Version_4.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage_manuals/default__vector_store.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage_manuals/docstore.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage_manuals/graph_store.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage_manuals/image__vector_store.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage_manuals/index_store.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage_manuals_from_md/default__vector_store.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage_manuals_from_md/docstore.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage_manuals_from_md/graph_store.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage_manuals_from_md/image__vector_store.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage_manuals_from_md/index_store.json" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,12 +80,13 @@
     "Python.textnode_creator.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "useNewDataSource",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/raw_input_data" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/rag_package" />
     </key>

@@ -18,12 +18,12 @@ input_data_folder = "raw_input_data"
 @dataclass
 class ParserConfig:
     result_type: str = "markdown"
-    parsing_instruction: str = "You are given IKEA assembly instruction manuals"
+    parsing_instruction: str = "You are given product line brochure for heavy machinery"
     use_vendor_multimodal_model: bool = True
     vendor_multimodal_model_name: str = "anthropic-sonnet-3.5"
     show_progress: bool = True
     verbose: bool = True
-    invalidate_cache: bool = False
+    invalidate_cache: bool = True
     do_not_cache: bool = False
     num_workers: int = 8
     language: str = "en"

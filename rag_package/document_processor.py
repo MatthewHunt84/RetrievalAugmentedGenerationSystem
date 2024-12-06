@@ -27,7 +27,7 @@ class DocumentProcessor:
 
         # Define paths for storing processed data
         self.image_dir = Path("../data_images")
-        self.results_file = Path("../parsed_results.json")
+        self.results_file = Path("../parsed_results_old.json")
 
     def _check_cached_files_exist(self) -> bool:
         """
