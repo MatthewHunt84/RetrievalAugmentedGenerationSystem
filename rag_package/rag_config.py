@@ -9,6 +9,10 @@ from llama_index.embeddings.openai import OpenAIEmbedding
 from llama_index.multi_modal_llms.anthropic import AnthropicMultiModal
 from llama_index.core import Settings
 
+# Loading
+
+input_data_folder = "raw_input_data"
+
 # Parsing
 
 @dataclass

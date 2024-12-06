@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 from llama_parse import LlamaParse
 from rag_package.errors import DocumentProcessingError
-from rag_package.rag_config import ParserConfig
+from rag_package.rag_config import ParserConfig, input_data_folder
 
 
 class DocumentProcessor:
@@ -13,7 +13,7 @@ class DocumentProcessor:
     and maintains consistent file paths and configurations.
     """
 
-    def __init__(self, parsing_config: ParserConfig, data_dir: str = "files"):
+    def __init__(self, parsing_config: ParserConfig, data_dir: str = input_data_folder):
         """
         Initialize the DocumentProcessor with a data directory and configuration.
 
