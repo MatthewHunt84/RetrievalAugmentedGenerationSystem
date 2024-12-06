@@ -236,7 +236,7 @@ class DocumentProcessor:
             # Save results
             self.save_results(md_json_objs)
 
-            # Extract images (now always performed)
+            # Extract images
             print("Extracting images from documents...")
             self.extract_images(md_json_objs)
 

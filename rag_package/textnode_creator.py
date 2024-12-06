@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 from llama_index.core.schema import TextNode
 from rag_package.errors import TextNodeCreationError
+from llama_index.core.node_parser import €@#@
 
 class TextNodeCreator:
     """
