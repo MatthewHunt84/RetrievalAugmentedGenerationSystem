@@ -1,0 +1,239 @@
+{
+  "total_nodes": 233,
+  "pipeline_config": {
+    "pipeline_name": "third_pipeline",
+    "chunk_size": 512,
+    "chunk_overlap": 128
+  },
+  "hierarchy_distribution": {
+    "level_0": 0,
+    "level_1": 63,
+    "level_2": 65,
+    "level_3": 105
+  },
+  "node_preview": [
+    {
+      "text_preview": "# Barreto Manufacturing, Inc.",
+      "metadata": {
+        "pipeline_name": "third_pipeline",
+        "chunk_size": 512,
+        "chunk_overlap": 128,
+        "image_path": null,
+        "page_num": 1,
+        "document_name": "920-3000 20230321_Brochure-WebSize.pdf",
+        "total_pages": 32,
+        "hierarchy_level": 3,
+        "parent_titles": {
+          "3": "# Barreto Manufacturing, Inc."
+        },
+        "machinery_keywords": {
+          "has_capacity_info": false,
+          "has_weight_info": false,
+          "has_dimension_info": false,
+          "has_power_info": false,
+          "has_engine_info": false,
+          "has_hydraulic_info": true,
+          "has_electrical_info": false,
+          "has_safety_info": false
+        }
+      },
+      "node_id": "867250e2-ec35-44c1-8c2c-c2ff8f29afe5",
+      "relationships": {
+        "parent_titles": {
+          "3": "# Barreto Manufacturing, Inc."
+        },
+        "hierarchy_level": 3
+      },
+      "technical_markers": {
+        "has_capacity_info": false,
+        "has_weight_info": false,
+        "has_dimension_info": false,
+        "has_power_info": false,
+        "has_engine_info": false,
+        "has_hydraulic_info": true,
+        "has_electrical_info": false,
+        "has_safety_info": false
+      }
+    },
+    {
+      "text_preview": "## Innovative Equipment Engineered to Last\n\nThis brochure cover showcases Barreto Manufacturing's line of heavy-duty landscaping and construction equipment. The main image features a powerful red stump grinder (likely model SG) being operated in a park-like setting with trees and a gazebo in the background.",
+      "metadata": {
+        "pipeline_name": "third_pipeline",
+        "chunk_size": 512,
+        "chunk_overlap": 128,
+        "image_path": null,
+        "page_num": 1,
+        "document_name": "920-3000 20230321_Brochure-WebSize.pdf",
+        "total_pages": 32,
+        "hierarchy_level": 3,
+        "parent_titles": {
+          "3": "## Innovative Equipment Engineered to Last"
+        },
+        "machinery_keywords": {
+          "has_capacity_info": false,
+          "has_weight_info": true,
+          "has_dimension_info": false,
+          "has_power_info": true,
+          "has_engine_info": true,
+          "has_hydraulic_info": true,
+          "has_electrical_info": false,
+          "has_safety_info": false
+        }
+      },
+      "node_id": "cf4bf351-5597-4429-97a4-db76030384da",
+      "relationships": {
+        "parent_titles": {
+          "3": "## Innovative Equipment Engineered to Last"
+        },
+        "hierarchy_level": 3
+      },
+      "technical_markers": {
+        "has_capacity_info": false,
+        "has_weight_info": true,
+        "has_dimension_info": false,
+        "has_power_info": true,
+        "has_engine_info": true,
+        "has_hydraulic_info": true,
+        "has_electrical_info": false,
+        "has_safety_info": false
+      }
+    },
+    {
+      "text_preview": "### Key Features Highlighted:\n\n- Robust construction with a red painted body\n- Tracked design for improved mobility and stability\n- Powerful engine with visible cooling system\n- Hydraulic controls for precision operation",
+      "metadata": {
+        "pipeline_name": "third_pipeline",
+        "chunk_size": 512,
+        "chunk_overlap": 128,
+        "image_path": null,
+        "page_num": 1,
+        "document_name": "920-3000 20230321_Brochure-WebSize.pdf",
+        "total_pages": 32,
+        "hierarchy_level": 2,
+        "parent_titles": {
+          "3": "## Innovative Equipment Engineered to Last",
+          "2": "### Key Features Highlighted:"
+        },
+        "machinery_keywords": {
+          "has_capacity_info": false,
+          "has_weight_info": false,
+          "has_dimension_info": false,
+          "has_power_info": true,
+          "has_engine_info": true,
+          "has_hydraulic_info": true,
+          "has_electrical_info": false,
+          "has_safety_info": false
+        }
+      },
+      "node_id": "528187d6-be85-479c-b36d-6305ed69c37c",
+      "relationships": {
+        "parent_titles": {
+          "3": "## Innovative Equipment Engineered to Last",
+          "2": "### Key Features Highlighted:"
+        },
+        "hierarchy_level": 2
+      },
+      "technical_markers": {
+        "has_capacity_info": false,
+        "has_weight_info": false,
+        "has_dimension_info": false,
+        "has_power_info": true,
+        "has_engine_info": true,
+        "has_hydraulic_info": true,
+        "has_electrical_info": false,
+        "has_safety_info": false
+      }
+    },
+    {
+      "text_preview": "### Product Line Overview:\n\nThe bottom of the brochure displays thumbnails of various Barreto equipment in action, including:",
+      "metadata": {
+        "pipeline_name": "third_pipeline",
+        "chunk_size": 512,
+        "chunk_overlap": 128,
+        "image_path": null,
+        "page_num": 1,
+        "document_name": "920-3000 20230321_Brochure-WebSize.pdf",
+        "total_pages": 32,
+        "hierarchy_level": 2,
+        "parent_titles": {
+          "3": "## Innovative Equipment Engineered to Last",
+          "2": "### Product Line Overview:"
+        },
+        "machinery_keywords": {
+          "has_capacity_info": false,
+          "has_weight_info": false,
+          "has_dimension_info": false,
+          "has_power_info": false,
+          "has_engine_info": false,
+          "has_hydraulic_info": true,
+          "has_electrical_info": false,
+          "has_safety_info": false
+        }
+      },
+      "node_id": "a59f5a8a-2cfe-4c71-ab44-50d2a1f2d347",
+      "relationships": {
+        "parent_titles": {
+          "3": "## Innovative Equipment Engineered to Last",
+          "2": "### Product Line Overview:"
+        },
+        "hierarchy_level": 2
+      },
+      "technical_markers": {
+        "has_capacity_info": false,
+        "has_weight_info": false,
+        "has_dimension_info": false,
+        "has_power_info": false,
+        "has_engine_info": false,
+        "has_hydraulic_info": true,
+        "has_electrical_info": false,
+        "has_safety_info": false
+      }
+    },
+    {
+      "text_preview": "1. Stump grinder (featured in main image)",
+      "metadata": {
+        "pipeline_name": "third_pipeline",
+        "chunk_size": 512,
+        "chunk_overlap": 128,
+        "image_path": null,
+        "page_num": 1,
+        "document_name": "920-3000 20230321_Brochure-WebSize.pdf",
+        "total_pages": 32,
+        "hierarchy_level": 1,
+        "parent_titles": {
+          "3": "## Innovative Equipment Engineered to Last",
+          "2": "### Product Line Overview:",
+          "1": "1. Stump grinder (featured in main image)"
+        },
+        "machinery_keywords": {
+          "has_capacity_info": false,
+          "has_weight_info": false,
+          "has_dimension_info": false,
+          "has_power_info": false,
+          "has_engine_info": false,
+          "has_hydraulic_info": false,
+          "has_electrical_info": false,
+          "has_safety_info": false
+        }
+      },
+      "node_id": "87ff7857-5e92-452c-aaf5-2b37ce328269",
+      "relationships": {
+        "parent_titles": {
+          "3": "## Innovative Equipment Engineered to Last",
+          "2": "### Product Line Overview:",
+          "1": "1. Stump grinder (featured in main image)"
+        },
+        "hierarchy_level": 1
+      },
+      "technical_markers": {
+        "has_capacity_info": false,
+        "has_weight_info": false,
+        "has_dimension_info": false,
+        "has_power_info": false,
+        "has_engine_info": false,
+        "has_hydraulic_info": false,
+        "has_electrical_info": false,
+        "has_safety_info": false
+      }
+    }
+  ]
+}

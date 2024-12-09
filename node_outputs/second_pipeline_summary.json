@@ -1,0 +1,211 @@
+{
+  "total_nodes": 209,
+  "pipeline_config": {
+    "pipeline_name": "second_pipeline",
+    "chunk_size": 512,
+    "chunk_overlap": 128
+  },
+  "hierarchy_distribution": {
+    "level_0": 189,
+    "level_1": 20,
+    "level_2": 0,
+    "level_3": 0
+  },
+  "node_preview": [
+    {
+      "text_preview": "This image is a product brochure cover for Barreto Manufacturing, Inc. The main focus is on a red, heavy-duty machine that appears to be a stump grinder or similar landscaping equipment. The machine is being operated in a park-like setting with trees and grass visible in the background.\n\nThe brochure is titled \"INNOVATIVE EQUIPMENT ENGINEERED TO LAST\" and is labeled as a \"FULL PRODUCT LINE BROCHURE\".",
+      "metadata": {
+        "pipeline_name": "second_pipeline",
+        "chunk_size": 512,
+        "chunk_overlap": 128,
+        "image_path": "data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_1.jpg",
+        "page_num": 1,
+        "document_name": "920-3000 20230321_Brochure-WebSize.pdf",
+        "total_pages": 32,
+        "hierarchy_level": 0,
+        "parent_titles": {},
+        "machinery_keywords": {
+          "has_capacity_info": false,
+          "has_weight_info": true,
+          "has_dimension_info": false,
+          "has_power_info": false,
+          "has_engine_info": true,
+          "has_hydraulic_info": true,
+          "has_electrical_info": false,
+          "has_safety_info": false
+        }
+      },
+      "node_id": "e61af309-e086-43e1-9c58-c50172429081",
+      "relationships": {
+        "parent_titles": {},
+        "hierarchy_level": 0
+      },
+      "technical_markers": {
+        "has_capacity_info": false,
+        "has_weight_info": true,
+        "has_dimension_info": false,
+        "has_power_info": false,
+        "has_engine_info": true,
+        "has_hydraulic_info": true,
+        "has_electrical_info": false,
+        "has_safety_info": false
+      }
+    },
+    {
+      "text_preview": "The machine is being operated in a park-like setting with trees and grass visible in the background.\n\nThe brochure is titled \"INNOVATIVE EQUIPMENT ENGINEERED TO LAST\" and is labeled as a \"FULL PRODUCT LINE BROCHURE\". The Barreto logo is prominently displayed at the top of the image.",
+      "metadata": {
+        "pipeline_name": "second_pipeline",
+        "chunk_size": 512,
+        "chunk_overlap": 128,
+        "image_path": "data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_1.jpg",
+        "page_num": 1,
+        "document_name": "920-3000 20230321_Brochure-WebSize.pdf",
+        "total_pages": 32,
+        "hierarchy_level": 0,
+        "parent_titles": {},
+        "machinery_keywords": {
+          "has_capacity_info": false,
+          "has_weight_info": true,
+          "has_dimension_info": false,
+          "has_power_info": false,
+          "has_engine_info": true,
+          "has_hydraulic_info": true,
+          "has_electrical_info": false,
+          "has_safety_info": false
+        }
+      },
+      "node_id": "81cc4571-b5d6-450e-b017-8ba70bf53bcd",
+      "relationships": {
+        "parent_titles": {},
+        "hierarchy_level": 0
+      },
+      "technical_markers": {
+        "has_capacity_info": false,
+        "has_weight_info": true,
+        "has_dimension_info": false,
+        "has_power_info": false,
+        "has_engine_info": true,
+        "has_hydraulic_info": true,
+        "has_electrical_info": false,
+        "has_safety_info": false
+      }
+    },
+    {
+      "text_preview": "The brochure is titled \"INNOVATIVE EQUIPMENT ENGINEERED TO LAST\" and is labeled as a \"FULL PRODUCT LINE BROCHURE\". The Barreto logo is prominently displayed at the top of the image.\n\nAt the bottom of the brochure, there's a series of smaller images showcasing various other pieces of equipment in use, likely representing the full product line offered by Barreto.",
+      "metadata": {
+        "pipeline_name": "second_pipeline",
+        "chunk_size": 512,
+        "chunk_overlap": 128,
+        "image_path": "data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_1.jpg",
+        "page_num": 1,
+        "document_name": "920-3000 20230321_Brochure-WebSize.pdf",
+        "total_pages": 32,
+        "hierarchy_level": 0,
+        "parent_titles": {},
+        "machinery_keywords": {
+          "has_capacity_info": false,
+          "has_weight_info": true,
+          "has_dimension_info": false,
+          "has_power_info": false,
+          "has_engine_info": true,
+          "has_hydraulic_info": true,
+          "has_electrical_info": false,
+          "has_safety_info": false
+        }
+      },
+      "node_id": "495a8326-eee8-4e84-9901-439f0788bcde",
+      "relationships": {
+        "parent_titles": {},
+        "hierarchy_level": 0
+      },
+      "technical_markers": {
+        "has_capacity_info": false,
+        "has_weight_info": true,
+        "has_dimension_info": false,
+        "has_power_info": false,
+        "has_engine_info": true,
+        "has_hydraulic_info": true,
+        "has_electrical_info": false,
+        "has_safety_info": false
+      }
+    },
+    {
+      "text_preview": "The Barreto logo is prominently displayed at the top of the image.\n\nAt the bottom of the brochure, there's a series of smaller images showcasing various other pieces of equipment in use, likely representing the full product line offered by Barreto.\n\nThe overall design emphasizes durability and practical application of the equipment in outdoor settings. The company's website, www.barretomfg.com, is listed at the bottom of the brochure.",
+      "metadata": {
+        "pipeline_name": "second_pipeline",
+        "chunk_size": 512,
+        "chunk_overlap": 128,
+        "image_path": "data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_1.jpg",
+        "page_num": 1,
+        "document_name": "920-3000 20230321_Brochure-WebSize.pdf",
+        "total_pages": 32,
+        "hierarchy_level": 0,
+        "parent_titles": {},
+        "machinery_keywords": {
+          "has_capacity_info": false,
+          "has_weight_info": true,
+          "has_dimension_info": false,
+          "has_power_info": false,
+          "has_engine_info": true,
+          "has_hydraulic_info": true,
+          "has_electrical_info": false,
+          "has_safety_info": false
+        }
+      },
+      "node_id": "44d6766b-b06c-4914-b24d-53d8c4bd1884",
+      "relationships": {
+        "parent_titles": {},
+        "hierarchy_level": 0
+      },
+      "technical_markers": {
+        "has_capacity_info": false,
+        "has_weight_info": true,
+        "has_dimension_info": false,
+        "has_power_info": false,
+        "has_engine_info": true,
+        "has_hydraulic_info": true,
+        "has_electrical_info": false,
+        "has_safety_info": false
+      }
+    },
+    {
+      "text_preview": "The overall design emphasizes durability and practical application of the equipment in outdoor settings. The company's website, www.barretomfg.com, is listed at the bottom of the brochure.\n\nThe image conveys a sense of professional-grade equipment designed for landscaping and outdoor work, with an emphasis on innovation and longevity of the products.",
+      "metadata": {
+        "pipeline_name": "second_pipeline",
+        "chunk_size": 512,
+        "chunk_overlap": 128,
+        "image_path": "data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_1.jpg",
+        "page_num": 1,
+        "document_name": "920-3000 20230321_Brochure-WebSize.pdf",
+        "total_pages": 32,
+        "hierarchy_level": 0,
+        "parent_titles": {},
+        "machinery_keywords": {
+          "has_capacity_info": false,
+          "has_weight_info": true,
+          "has_dimension_info": false,
+          "has_power_info": false,
+          "has_engine_info": true,
+          "has_hydraulic_info": true,
+          "has_electrical_info": false,
+          "has_safety_info": false
+        }
+      },
+      "node_id": "d013a831-10fd-4e0f-abbf-0d034c00ece7",
+      "relationships": {
+        "parent_titles": {},
+        "hierarchy_level": 0
+      },
+      "technical_markers": {
+        "has_capacity_info": false,
+        "has_weight_info": true,
+        "has_dimension_info": false,
+        "has_power_info": false,
+        "has_engine_info": true,
+        "has_hydraulic_info": true,
+        "has_electrical_info": false,
+        "has_safety_info": false
+      }
+    }
+  ]
+}

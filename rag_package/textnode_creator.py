@@ -1,257 +1,371 @@
 from pathlib import Path
 import json
 import re
-from typing import List, Dict, Any
 import pickle
+import time
+from datetime import datetime
 import logging
-
 from llama_index.core.schema import TextNode, Document
-from llama_index.core.node_parser import HierarchicalNodeParser
-from llama_index.core.node_parser import SentenceSplitter
-from llama_index.core.extractors import (
-    QuestionsAnsweredExtractor,
-    SummaryExtractor,
-    TitleExtractor,
-)
+from llama_index.core.node_parser import HierarchicalNodeParser, SentenceSplitter
 from rag_package.errors import TextNodeCreationError
+from rag_package.rag_config import NodeCreationConfig
 
 
 class TextNodeCreator:
     """
-    Enhanced version of TextNodeCreator that uses configuration injection
-    for processing product catalogs with hierarchical structure and rich
-    metadata extraction.
+    Enhanced text node creator that combines hierarchical parsing with detailed
+    technical specification extraction. This class maintains document structure while
+    adding rich technical metadata extraction capabilities.
     """
 
-    def __init__(self, node_config):
+    def __init__(self, node_config: NodeCreationConfig):
         """
-        Initialize the TextNodeCreator with configuration settings.
-
-        Args:
-            node_config: NodeCreationConfig instance containing all necessary settings
+        Initialize the creator with enhanced configuration settings while maintaining
+        hierarchical parsing capabilities.
         """
         self.config = node_config
         self.parsed_results_path = Path(node_config.parsed_results_path)
-        self.image_dir = Path(node_config.image_dir)
         self.output_dir = Path(node_config.output_dir)
+        self.analysis_dir = Path("analysis")
 
-        # Create output directory if it doesn't exist
+        # Ensure required directories exist
         self.output_dir.mkdir(parents=True, exist_ok=True)
+        self.analysis_dir.mkdir(parents=True, exist_ok=True)
+
+        # Set up logging with both file and console handlers
+        self.logger = logging.getLogger(__name__)
+        self.logger.setLevel(logging.INFO)
+        self._setup_logging()
 
         try:
-            print("Creating node parsers and setting up hierarchy...")
-
-            # Create sentence splitters for each level
-            level1_splitter = SentenceSplitter(
-                chunk_size=self.config.chunk_size,
-                chunk_overlap=self.config.chunk_overlap
-            )
-            level2_splitter = SentenceSplitter(
-                chunk_size=self.config.chunk_size // 2,
-                chunk_overlap=self.config.chunk_overlap
-            )
-
-            # Define parser IDs and map
-            node_parser_ids = ["level_1", "level_2"]
-            node_parser_map = {
-                "level_1": level1_splitter,
-                "level_2": level2_splitter
-            }
-
-            print("Initializing HierarchicalNodeParser...")
-            self.hierarchical_parser = HierarchicalNodeParser(
-                node_parser_ids=node_parser_ids,
-                node_parser_map=node_parser_map
-            )
-            print("Successfully initialized HierarchicalNodeParser")
-
-            # Initialize extractors
-            print("Initializing metadata extractors...")
-            self.title_extractor = TitleExtractor(nodes=5)
-            self.qa_extractor = QuestionsAnsweredExtractor()
-            self.summary_extractor = SummaryExtractor(summaries=["self", "prev", "next"])
-            print("Successfully initialized extractors")
+            print("Initializing hierarchical document processor...")
+            self.hierarchical_parser = self._initialize_hierarchical_parser()
+            print("Successfully initialized document processor")
 
         except Exception as e:
-            print(f"Initialization error details: {str(e)}")
-            import traceback
-            print(f"Traceback: {traceback.format_exc()}")
+            print(f"Initialization error: {str(e)}")
             raise TextNodeCreationError(f"Failed to initialize parser: {str(e)}")
 
-        # Validate paths
-        if not self.parsed_results_path.exists():
-            raise TextNodeCreationError(
-                f"Parsed results file not found at {self.parsed_results_path}"
-            )
-        if not self.image_dir.exists():
-            raise TextNodeCreationError(
-                f"Image directory not found at {self.image_dir}"
-            )
-
-    def _apply_extractors(self, nodes: List[TextNode]) -> List[TextNode]:
-        """Apply metadata extractors to nodes."""
-        try:
-            # Apply each extractor sequentially
-            for node in nodes:
-                try:
-                    # Extract titles
-                    title_response = self.title_extractor.process_nodes([node])
-                    node.metadata.update(title_response[0].metadata)
-
-                    # Extract potential questions
-                    qa_response = self.qa_extractor.process_nodes([node])
-                    node.metadata.update(qa_response[0].metadata)
-
-                    # Extract summaries (self, prev, and next contexts)
-                    summary_response = self.summary_extractor.process_nodes([node])
-                    node.metadata.update(summary_response[0].metadata)
-
-                    # Add machinery-related keyword flags directly to metadata
-                    text_lower = node.text.lower()
-                    node.metadata["machinery_keywords"] = {
-                        "has_capacity_info": any(
-                            word in text_lower for word in ["capacity", "can hold", "maximum", "load"]),
-                        "has_weight_info": any(
-                            word in text_lower for word in ["weight", "kg", "tons", "pounds", "lbs"]),
-                        "has_dimension_info": any(word in text_lower for word in
-                                                  ["dimensions", "length", "width", "height", "mm", "cm", "meters"]),
-                        "has_power_info": any(
-                            word in text_lower for word in ["power", "hp", "kw", "horsepower", "watts"]),
-                        "has_engine_info": any(
-                            word in text_lower for word in ["engine", "motor", "diesel", "gasoline", "fuel", "rpm"]),
-                        "has_hydraulic_info": any(
-                            word in text_lower for word in ["hydraulic", "pressure", "flow", "psi", "bar"]),
-                        "has_electrical_info": any(
-                            word in text_lower for word in ["voltage", "electrical", "battery", "volts", "amps"]),
-                        "has_safety_info": any(
-                            word in text_lower for word in ["safety", "warning", "caution", "danger", "protective"])
-                    }
-
-                except Exception as e:
-                    print(f"Warning: Error processing extractors for node: {str(e)}")
-                    continue
-
-            return nodes
-        except Exception as e:
-            print(f"Warning: Error during metadata extraction: {str(e)}")
-            return nodes
-
-    def _process_content(self, content: str, metadata: Dict[str, Any]) -> List[TextNode]:
-        """Process a single piece of content into nodes."""
-        try:
-            # Create a Document object first
-            doc = Document(text=content, metadata=metadata)
-
-            # Process through hierarchical parser
-            print(f"Processing document of length {len(content)} characters...")
-            nodes = self.hierarchical_parser.get_nodes_from_documents(
-                documents=[doc],
-                show_progress=True
-            )
-            print(f"Created {len(nodes)} initial nodes")
-
-            # Apply metadata extractors
-            nodes = self._apply_extractors(nodes)
-
-            # Add hierarchical relationship metadata
-            for node in nodes:
-                if isinstance(node, TextNode):
-                    node.metadata.update({
-                        "hierarchy_level": node.metadata.get("hierarchy_level", 0),
-                        "parent_title": node.metadata.get("parent_title", ""),
-                        "section_title": node.metadata.get("title", ""),
-                    })
-
-            return nodes
-        except Exception as e:
-            print(f"Error processing content: {str(e)}")
-            import traceback
-            print(f"Traceback: {traceback.format_exc()}")
-            return []
-
-    # ... rest of the methods remain the same ...
-
-    def create_nodes(self) -> List[TextNode]:
+    def _setup_logging(self):
         """
-        Create hierarchical nodes from parsed documents with enhanced metadata extraction.
+        Configure logging to write to both a file and the console.
+        The file handler keeps a record of processing events, while the console
+        handler provides immediate feedback during execution.
+        """
+        # Clear any existing handlers
+        self.logger.handlers = []
+
+        # Create file handler that logs even debug messages
+        log_file = self.analysis_dir / "node_creation.log"
+        file_handler = logging.FileHandler(log_file)
+        file_handler.setLevel(logging.INFO)
+
+        # Create console handler with a higher log level
+        console_handler = logging.StreamHandler()
+        console_handler.setLevel(logging.INFO)
+
+        # Create formatter and add it to the handlers
+        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+        file_handler.setFormatter(formatter)
+        console_handler.setFormatter(formatter)
+
+        # Add the handlers to the logger
+        self.logger.addHandler(file_handler)
+        self.logger.addHandler(console_handler)
+
+    def _initialize_hierarchical_parser(self) -> HierarchicalNodeParser:
+        """
+        Initialize the hierarchical parser with appropriate chunk sizes for different
+        header levels, maintaining document structure while allowing for detailed content analysis.
+
+        The method converts our dictionary-based configuration into the list format
+        expected by HierarchicalNodeParser. The conversion ensures that:
+        1. Chunk sizes are ordered correctly by hierarchy level
+        2. The parser receives properly formatted inputs
+        3. Each level's chunking configuration is properly aligned
+        """
+        # Convert our dictionary-based chunk sizes into a list format
+        # The list length should be max(level) + 1 since levels are 0-based in the parser
+        max_level = max(self.config.hierarchy_config.chunk_sizes.keys())
+        chunk_sizes = [256] * (max_level + 1)  # Default size for any unspecified levels
+
+        # Fill in the specified chunk sizes
+        for level, size in self.config.hierarchy_config.chunk_sizes.items():
+            chunk_sizes[level] = size
+
+        # Create sentence splitters for each level
+        # We still use the original dictionary for our splitter map since it's more intuitive
+        splitter_map = {
+            f"level_{level}": SentenceSplitter(
+                chunk_size=size,
+                chunk_overlap=self.config.hierarchy_config.chunk_overlaps[level]
+            )
+            for level, size in self.config.hierarchy_config.chunk_sizes.items()
+        }
+
+        # Create parser IDs in descending order (highest to lowest level)
+        parser_ids = [f"level_{level}"
+                      for level in sorted(self.config.hierarchy_config.chunk_sizes.keys(),
+                                          reverse=True)]
+
+        # Initialize the hierarchical parser with the converted configuration
+        return HierarchicalNodeParser(
+            chunk_sizes=chunk_sizes,  # Now passing a list
+            node_parser_ids=parser_ids,
+            node_parser_map=splitter_map
+        )
+
+    def _extract_technical_specifications(self, text: str) -> dict:
+        """
+        Extract technical specifications using configured patterns.
+        """
+        specs = {}
+        text_lower = text.lower()
+
+        # Process dimensional patterns
+        for spec_type, patterns in self.config.technical_patterns.dimensional_patterns.items():
+            matches = []
+            for pattern in patterns:
+                if found := re.finditer(pattern, text_lower):
+                    for match in found:
+                        value = match.group(1)
+                        unit = re.search(r'[a-z]+', match.group()).group()
+                        context = text[max(0, match.start() - 30):match.end() + 30]
+                        matches.append({
+                            'value': value,
+                            'unit': unit,
+                            'context': context
+                        })
+            if matches:
+                specs[spec_type] = matches
+
+        # Process performance patterns
+        for spec_type, patterns in self.config.technical_patterns.performance_patterns.items():
+            matches = []
+            for pattern in patterns:
+                if found := re.finditer(pattern, text_lower):
+                    for match in found:
+                        value = match.group(1)
+                        unit = re.search(r'[a-z]+', match.group()).group()
+                        context = text[max(0, match.start() - 30):match.end() + 30]
+                        matches.append({
+                            'value': value,
+                            'unit': unit,
+                            'context': context
+                        })
+            if matches:
+                specs[spec_type] = matches
+
+        return specs
+
+    def _extract_features(self, text: str) -> dict:
+        """
+        Extract features and capabilities using configured patterns.
+        """
+        features = {
+            'control_features': [],
+            'applications': [],
+            'maintenance_features': []
+        }
+
+        # Extract each feature type using configured patterns
+        for pattern in self.config.feature_patterns.control_features:
+            if matches := re.finditer(pattern, text, re.IGNORECASE):
+                features['control_features'].extend(
+                    match.group(1).strip() for match in matches
+                )
+
+        for pattern in self.config.feature_patterns.applications:
+            if matches := re.finditer(pattern, text, re.IGNORECASE):
+                features['applications'].extend(
+                    match.group(1).strip() for match in matches
+                )
+
+        for pattern in self.config.feature_patterns.maintenance_features:
+            if matches := re.finditer(pattern, text, re.IGNORECASE):
+                features['maintenance_features'].extend(
+                    match.group(1).strip() for match in matches
+                )
+
+        return features
+
+    def _process_content(self, content: str, base_metadata: dict) -> list[TextNode]:
+        """
+        Process content into nodes while maintaining hierarchical structure and
+        adding technical metadata.
+
+        This method performs three main steps:
+        1. Creates a Document object with the content and base metadata
+        2. Uses the hierarchical parser to break the content into appropriate chunks
+        3. Enhances each node with technical specifications and feature extraction
+
+        Args:
+            content: The text content to process
+            base_metadata: Base metadata to include in all nodes
 
         Returns:
-            List of TextNode objects with hierarchical structure and rich metadata
+            list[TextNode]: A list of processed nodes with enhanced metadata
+
+        Raises:
+            Exception: If any processing step fails
         """
         try:
-            print("Loading parsed document results...")
+            # Create initial document with base metadata
+            doc = Document(text=content, metadata=base_metadata)
+
+            # Create nodes using hierarchical parser
+            # This breaks the content into chunks based on hierarchy levels
+            nodes = self.hierarchical_parser.get_nodes_from_documents([doc])
+
+            # Process each node to add technical specifications and features
+            enhanced_nodes = []
+            for node in nodes:
+                # Extract technical information from node text
+                technical_specs = self._extract_technical_specifications(node.text)
+                features = self._extract_features(node.text)
+
+                # Create enhanced metadata combining existing and new information
+                enhanced_metadata = {
+                    **node.metadata,
+                    'technical_specifications': technical_specs,
+                    'features': features,
+                    'hierarchy_level': self._detect_hierarchy_level(node.text)
+                }
+
+                # Create new node with enhanced metadata
+                enhanced_node = TextNode(
+                    text=node.text,
+                    metadata=enhanced_metadata,
+                    node_id=node.node_id,
+                    relationships=node.relationships
+                )
+                enhanced_nodes.append(enhanced_node)
+
+            self.logger.debug(f"Processed {len(enhanced_nodes)} nodes from content")
+            return enhanced_nodes
+
+        except Exception as e:
+            error_msg = f"Error processing content: {str(e)}"
+            self.logger.error(error_msg)
+            raise TextNodeCreationError(error_msg)
+
+    def _detect_hierarchy_level(self, text: str) -> int:
+        """
+        Determine the hierarchy level of text using configured patterns.
+
+        This method examines the text content to determine its hierarchical level
+        based on the patterns defined in the configuration. For example, it can
+        identify if the text represents a main category, a model description,
+        or detailed specifications.
+
+        Args:
+            text: The text content to analyze
+
+        Returns:
+            int: The detected hierarchy level (3 for highest, 1 for lowest, 0 for regular content)
+        """
+        # Get the first line of text for header detection
+        first_line = text.strip().split('\n')[0]
+
+        # Check patterns for each level, starting from highest
+        for level, patterns in sorted(
+                self.config.hierarchy_config.header_patterns.items(),
+                reverse=True
+        ):
+            if any(re.match(pattern, first_line) for pattern in patterns):
+                return level
+
+        # Return 0 for regular content with no specific hierarchy
+        return 0
+
+    def create_nodes(self) -> list[TextNode]:
+        """
+        Create hierarchical nodes with timing measurement and logging.
+        Returns a list of processed TextNodes.
+        """
+        start_time = time.time()
+
+        try:
+            self.logger.info("Beginning node creation process...")
             with open(self.parsed_results_path, 'r', encoding='utf-8') as f:
                 md_json_objs = json.load(f)
 
             all_nodes = []
-            image_files = sorted(
-                [f for f in self.image_dir.iterdir() if f.is_file()],
-                key=lambda x: int(
-                    re.search(r"-page-(\d+)\.jpg$", str(x)).group(1) if re.search(r"-page-(\d+)\.jpg$", str(x)) else 0)
-            )
-
             for result in md_json_objs:
                 document_name = Path(result["file_path"]).name
-                print(f"Processing document: {document_name}")
+                self.logger.info(f"Processing document: {document_name}")
 
                 for idx, page_dict in enumerate(result["pages"]):
-                    print(f"Processing page {idx + 1}")
-
                     metadata = {
-                        "pipeline_name": self.config.pipeline_name,
-                        "image_path": str(image_files[idx]),
+                        **self.config.base_metadata,
                         "page_num": idx + 1,
                         "document_name": document_name,
-                        "total_pages": len(result["pages"]),
-                        "chunk_size": self.config.chunk_size,
-                        "chunk_overlap": self.config.chunk_overlap
+                        "total_pages": len(result["pages"])
                     }
 
-                    nodes = self._process_content(
-                        content=page_dict["md"],
-                        metadata=metadata
-                    )
-
+                    nodes = self._process_content(page_dict["md"], metadata)
                     all_nodes.extend(nodes)
-                    print(f"Created {len(nodes)} nodes for page {idx + 1}")
+                    self.logger.info(f"Created {len(nodes)} nodes for page {idx + 1}")
 
-            print(f"\nCreated {len(all_nodes)} total nodes")
-
-            # Save the nodes
             if all_nodes:
-                output_path = self.output_dir / f"{self.config.pipeline_name}_nodes.pkl"
-                with open(output_path, 'wb') as f:
-                    pickle.dump(all_nodes, f)
+                self._save_outputs(all_nodes)
 
-                # Save a summary in JSON format for easy inspection
-                summary_path = self.output_dir / f"{self.config.pipeline_name}_summary.json"
-                summary = {
-                    "total_nodes": len(all_nodes),
-                    "pipeline_config": {
-                        "chunk_size": self.config.chunk_size,
-                        "chunk_overlap": self.config.chunk_overlap,
-                        "pipeline_name": self.config.pipeline_name
-                    },
-                    "node_preview": [
-                        {
-                            "text_preview": str(node.text)[:100] + "...",
-                            "metadata": node.metadata,
-                            "keywords": node.metadata.get("keywords", []),
-                            "summary": node.metadata.get("summary", ""),
-                            "title": node.metadata.get("title", ""),
-                            "questions_answered": node.metadata.get("questions_answered", [])
-                        }
-                        for node in all_nodes[:5]  # Preview first 5 nodes
-                    ]
-                }
-
-                with open(summary_path, 'w', encoding='utf-8') as f:
-                    json.dump(summary, f, indent=2)
-
-                print(f"Saved nodes to {output_path}")
-                print(f"Saved summary to {summary_path}")
+            # Log execution time
+            execution_time = time.time() - start_time
+            self._log_execution_time(execution_time)
 
             return all_nodes
 
         except Exception as e:
+            self.logger.error(f"Node creation failed: {str(e)}")
             raise TextNodeCreationError(f"Failed to create nodes: {str(e)}")
+
+    def _save_outputs(self, nodes: list[TextNode]) -> None:
+        """
+        Save nodes and enhanced analysis information to disk.
+        Creates both a pickle file of the raw nodes and a JSON summary
+        for analysis purposes.
+        """
+        # Save the raw nodes to pickle file
+        output_path = self.output_dir / f"{self.config.pipeline_name}_nodes.pkl"
+        with open(output_path, 'wb') as f:
+            pickle.dump(nodes, f)
+
+        # Create detailed summary
+        summary = {
+            "total_nodes": len(nodes),
+            "pipeline_config": self.config.base_metadata,
+            "hierarchy_distribution": {
+                level: len([n for n in nodes
+                            if n.metadata.get('hierarchy_level') == level])
+                for level in self.config.hierarchy_config.chunk_sizes.keys()
+            },
+            "node_preview": [
+                {
+                    "text_preview": str(node.text),
+                    "metadata": {
+                        **node.metadata,
+                        "technical_specifications": node.metadata.get('technical_specifications', {}),
+                        "features": node.metadata.get('features', {})
+                    },
+                    "node_id": node.node_id
+                }
+                for node in nodes[:5]
+            ]
+        }
+
+        # Save the complete summary
+        summary_path = self.output_dir / f"{self.config.pipeline_name}_summary.json"
+        with open(summary_path, 'w', encoding='utf-8') as f:
+            json.dump(summary, f, indent=2)
+
+        self.logger.info(f"Saved complete nodes to {output_path}")
+        self.logger.info(f"Saved detailed summary to {summary_path}")
+
+    def _log_execution_time(self, execution_time: float) -> None:
+        """Log execution time to the analysis directory."""
+        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        timing_log = f"{timestamp} - Pipeline: {self.config.pipeline_name}, Execution Time: {execution_time:.2f} seconds\n"
+
+        with open(self.analysis_dir / "node_creation_times.txt", 'a') as f:
+            f.write(timing_log)

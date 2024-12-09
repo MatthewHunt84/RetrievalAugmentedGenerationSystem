@@ -5,8 +5,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13557991-094d-4fae-8b67-4e865e4684de" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/node_analysis.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag_package/rag_config_first_pipeline.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag_package/rag_config_third_pipeline.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/analysis_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/analysis_log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/hierarchy_analysis_20241209_092620.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/page_10_analysis_20241209_092620.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_21.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_22.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_23.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_24.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_25.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_26.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_27.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_28.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_29.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_30.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_31.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_32.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_images/1089b52b-df4b-4efe-a774-36f05a54da2d-page_9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/node_analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parsed_results.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rag_package/document_processor.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/document_processor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rag_package/rag_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/rag_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rag_package/textnode_creator.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/textnode_creator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +97,35 @@
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/rag_package" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="node_analysis" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="retrieval_augmented_generation" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/node_analysis.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.node_analysis" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>

@@ -15,7 +15,7 @@ def main():
     embed_model = rag_config.get_embed_model()
 
     try:
-        index_manager = VectorIndexManager(embed_model=embed_model)
+        # index_manager = VectorIndexManager(embed_model=embed_model)
 
         # If we need to parse files and create nodes
         # if not index_manager.index_exists():

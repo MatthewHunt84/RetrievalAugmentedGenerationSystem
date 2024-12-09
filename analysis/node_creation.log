@@ -1,0 +1,211 @@
+2024-12-09 11:47:23,583 - INFO - Beginning node creation process...
+2024-12-09 11:47:23,586 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 11:47:23,588 - INFO - Created 5 nodes for page 1
+2024-12-09 11:47:23,590 - INFO - Created 8 nodes for page 2
+2024-12-09 11:47:23,591 - INFO - Created 5 nodes for page 3
+2024-12-09 11:47:23,592 - INFO - Created 6 nodes for page 4
+2024-12-09 11:47:23,593 - INFO - Created 6 nodes for page 5
+2024-12-09 11:47:23,594 - INFO - Created 7 nodes for page 6
+2024-12-09 11:47:23,596 - INFO - Created 6 nodes for page 7
+2024-12-09 11:47:23,597 - INFO - Created 7 nodes for page 8
+2024-12-09 11:47:23,598 - INFO - Created 8 nodes for page 9
+2024-12-09 11:47:23,599 - INFO - Created 6 nodes for page 10
+2024-12-09 11:47:23,600 - INFO - Created 8 nodes for page 11
+2024-12-09 11:47:23,601 - INFO - Created 7 nodes for page 12
+2024-12-09 11:47:23,602 - INFO - Created 7 nodes for page 13
+2024-12-09 11:47:23,603 - INFO - Created 8 nodes for page 14
+2024-12-09 11:47:23,604 - INFO - Created 6 nodes for page 15
+2024-12-09 11:47:23,605 - INFO - Created 8 nodes for page 16
+2024-12-09 11:47:23,607 - INFO - Created 7 nodes for page 17
+2024-12-09 11:47:23,608 - INFO - Created 8 nodes for page 18
+2024-12-09 11:47:23,609 - INFO - Created 9 nodes for page 19
+2024-12-09 11:47:23,609 - INFO - Created 8 nodes for page 20
+2024-12-09 11:47:23,611 - INFO - Created 7 nodes for page 21
+2024-12-09 11:47:23,612 - INFO - Created 4 nodes for page 22
+2024-12-09 11:47:23,613 - INFO - Created 6 nodes for page 23
+2024-12-09 11:47:23,614 - INFO - Created 7 nodes for page 24
+2024-12-09 11:47:23,615 - INFO - Created 8 nodes for page 25
+2024-12-09 11:47:23,615 - INFO - Created 5 nodes for page 26
+2024-12-09 11:47:23,616 - INFO - Created 9 nodes for page 27
+2024-12-09 11:47:23,617 - INFO - Created 5 nodes for page 28
+2024-12-09 11:47:23,618 - INFO - Created 5 nodes for page 29
+2024-12-09 11:47:23,619 - INFO - Created 4 nodes for page 30
+2024-12-09 11:47:23,621 - INFO - Created 5 nodes for page 31
+2024-12-09 11:47:23,621 - INFO - Created 4 nodes for page 32
+2024-12-09 11:47:23,629 - INFO - Saved complete nodes to node_outputs/second_pipeline_nodes.pkl
+2024-12-09 11:47:23,630 - INFO - Saved detailed summary to node_outputs/second_pipeline_summary.json
+2024-12-09 15:23:27,151 - INFO - Beginning node creation process...
+2024-12-09 15:23:27,155 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,155 - WARNING - No image file found for page 1 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,158 - INFO - Created 11 nodes for page 1
+2024-12-09 15:23:27,158 - WARNING - No image file found for page 2 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,159 - INFO - Created 6 nodes for page 2
+2024-12-09 15:23:27,159 - WARNING - No image file found for page 3 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,160 - INFO - Created 5 nodes for page 3
+2024-12-09 15:23:27,161 - WARNING - No image file found for page 4 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,163 - INFO - Created 11 nodes for page 4
+2024-12-09 15:23:27,163 - WARNING - No image file found for page 5 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,164 - INFO - Created 6 nodes for page 5
+2024-12-09 15:23:27,164 - WARNING - No image file found for page 6 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,166 - INFO - Created 11 nodes for page 6
+2024-12-09 15:23:27,166 - WARNING - No image file found for page 7 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,167 - INFO - Created 5 nodes for page 7
+2024-12-09 15:23:27,167 - WARNING - No image file found for page 8 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,168 - INFO - Created 5 nodes for page 8
+2024-12-09 15:23:27,169 - WARNING - No image file found for page 9 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,170 - INFO - Created 6 nodes for page 9
+2024-12-09 15:23:27,170 - WARNING - No image file found for page 10 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,171 - INFO - Created 6 nodes for page 10
+2024-12-09 15:23:27,171 - WARNING - No image file found for page 11 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,173 - INFO - Created 12 nodes for page 11
+2024-12-09 15:23:27,174 - WARNING - No image file found for page 12 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,176 - INFO - Created 11 nodes for page 12
+2024-12-09 15:23:27,176 - WARNING - No image file found for page 13 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,177 - INFO - Created 7 nodes for page 13
+2024-12-09 15:23:27,177 - WARNING - No image file found for page 14 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,179 - INFO - Created 9 nodes for page 14
+2024-12-09 15:23:27,179 - WARNING - No image file found for page 15 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,180 - INFO - Created 5 nodes for page 15
+2024-12-09 15:23:27,180 - WARNING - No image file found for page 16 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,182 - INFO - Created 9 nodes for page 16
+2024-12-09 15:23:27,182 - WARNING - No image file found for page 17 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,183 - INFO - Created 5 nodes for page 17
+2024-12-09 15:23:27,183 - WARNING - No image file found for page 18 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,184 - INFO - Created 8 nodes for page 18
+2024-12-09 15:23:27,184 - WARNING - No image file found for page 19 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,185 - INFO - Created 6 nodes for page 19
+2024-12-09 15:23:27,186 - WARNING - No image file found for page 20 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,187 - INFO - Created 8 nodes for page 20
+2024-12-09 15:23:27,187 - WARNING - No image file found for page 21 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,189 - INFO - Created 8 nodes for page 21
+2024-12-09 15:23:27,189 - WARNING - No image file found for page 22 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,190 - INFO - Created 4 nodes for page 22
+2024-12-09 15:23:27,190 - WARNING - No image file found for page 23 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,191 - INFO - Created 8 nodes for page 23
+2024-12-09 15:23:27,192 - WARNING - No image file found for page 24 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,192 - INFO - Created 4 nodes for page 24
+2024-12-09 15:23:27,192 - WARNING - No image file found for page 25 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,194 - INFO - Created 7 nodes for page 25
+2024-12-09 15:23:27,194 - WARNING - No image file found for page 26 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,195 - INFO - Created 8 nodes for page 26
+2024-12-09 15:23:27,196 - WARNING - No image file found for page 27 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,197 - INFO - Created 6 nodes for page 27
+2024-12-09 15:23:27,197 - WARNING - No image file found for page 28 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,198 - INFO - Created 11 nodes for page 28
+2024-12-09 15:23:27,199 - WARNING - No image file found for page 29 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,199 - INFO - Created 5 nodes for page 29
+2024-12-09 15:23:27,200 - WARNING - No image file found for page 30 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,201 - INFO - Created 11 nodes for page 30
+2024-12-09 15:23:27,202 - WARNING - No image file found for page 31 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,203 - INFO - Created 5 nodes for page 31
+2024-12-09 15:23:27,203 - WARNING - No image file found for page 32 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 15:23:27,204 - INFO - Created 4 nodes for page 32
+2024-12-09 15:23:27,211 - INFO - Saved complete nodes to node_outputs/third_pipeline_nodes.pkl
+2024-12-09 15:23:27,211 - INFO - Saved detailed summary to node_outputs/third_pipeline_summary.json
+2024-12-09 16:03:54,336 - INFO - Beginning node creation process...
+2024-12-09 16:03:54,340 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,340 - WARNING - No image file found for page 1 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,342 - INFO - Created 1 nodes for page 1
+2024-12-09 16:03:54,342 - WARNING - No image file found for page 2 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,343 - INFO - Created 1 nodes for page 2
+2024-12-09 16:03:54,343 - WARNING - No image file found for page 3 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,344 - INFO - Created 1 nodes for page 3
+2024-12-09 16:03:54,344 - WARNING - No image file found for page 4 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,345 - INFO - Created 1 nodes for page 4
+2024-12-09 16:03:54,345 - WARNING - No image file found for page 5 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,346 - INFO - Created 1 nodes for page 5
+2024-12-09 16:03:54,346 - WARNING - No image file found for page 6 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,346 - INFO - Created 1 nodes for page 6
+2024-12-09 16:03:54,347 - WARNING - No image file found for page 7 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,347 - INFO - Created 1 nodes for page 7
+2024-12-09 16:03:54,347 - WARNING - No image file found for page 8 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,348 - INFO - Created 1 nodes for page 8
+2024-12-09 16:03:54,348 - WARNING - No image file found for page 9 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,348 - INFO - Created 1 nodes for page 9
+2024-12-09 16:03:54,348 - WARNING - No image file found for page 10 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,349 - INFO - Created 1 nodes for page 10
+2024-12-09 16:03:54,349 - WARNING - No image file found for page 11 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,350 - INFO - Created 1 nodes for page 11
+2024-12-09 16:03:54,350 - WARNING - No image file found for page 12 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,351 - INFO - Created 1 nodes for page 12
+2024-12-09 16:03:54,351 - WARNING - No image file found for page 13 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,351 - INFO - Created 1 nodes for page 13
+2024-12-09 16:03:54,351 - WARNING - No image file found for page 14 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,352 - INFO - Created 1 nodes for page 14
+2024-12-09 16:03:54,352 - WARNING - No image file found for page 15 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,353 - INFO - Created 1 nodes for page 15
+2024-12-09 16:03:54,353 - WARNING - No image file found for page 16 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,354 - INFO - Created 1 nodes for page 16
+2024-12-09 16:03:54,354 - WARNING - No image file found for page 17 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,354 - INFO - Created 1 nodes for page 17
+2024-12-09 16:03:54,354 - WARNING - No image file found for page 18 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,355 - INFO - Created 1 nodes for page 18
+2024-12-09 16:03:54,355 - WARNING - No image file found for page 19 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,356 - INFO - Created 1 nodes for page 19
+2024-12-09 16:03:54,356 - WARNING - No image file found for page 20 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,356 - INFO - Created 1 nodes for page 20
+2024-12-09 16:03:54,357 - WARNING - No image file found for page 21 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,357 - INFO - Created 1 nodes for page 21
+2024-12-09 16:03:54,358 - WARNING - No image file found for page 22 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,358 - INFO - Created 1 nodes for page 22
+2024-12-09 16:03:54,358 - WARNING - No image file found for page 23 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,359 - INFO - Created 1 nodes for page 23
+2024-12-09 16:03:54,359 - WARNING - No image file found for page 24 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,359 - INFO - Created 1 nodes for page 24
+2024-12-09 16:03:54,360 - WARNING - No image file found for page 25 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,360 - INFO - Created 1 nodes for page 25
+2024-12-09 16:03:54,360 - WARNING - No image file found for page 26 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,361 - INFO - Created 1 nodes for page 26
+2024-12-09 16:03:54,361 - WARNING - No image file found for page 27 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,362 - INFO - Created 1 nodes for page 27
+2024-12-09 16:03:54,362 - WARNING - No image file found for page 28 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,362 - INFO - Created 1 nodes for page 28
+2024-12-09 16:03:54,362 - WARNING - No image file found for page 29 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,363 - INFO - Created 1 nodes for page 29
+2024-12-09 16:03:54,363 - WARNING - No image file found for page 30 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,364 - INFO - Created 1 nodes for page 30
+2024-12-09 16:03:54,364 - WARNING - No image file found for page 31 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,364 - INFO - Created 1 nodes for page 31
+2024-12-09 16:03:54,365 - WARNING - No image file found for page 32 of 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:03:54,365 - INFO - Created 1 nodes for page 32
+2024-12-09 16:03:54,368 - INFO - Saved complete nodes to node_outputs/fourth_pipeline_nodes.pkl
+2024-12-09 16:03:54,368 - INFO - Saved detailed summary to node_outputs/fourth_pipeline_summary.json
+2024-12-09 16:26:20,335 - INFO - Beginning node creation process...
+2024-12-09 16:26:20,339 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:26:20,339 - ERROR - Node creation failed: 'TextNodeCreator' object has no attribute '_process_content'
+2024-12-09 16:27:46,981 - INFO - Beginning node creation process...
+2024-12-09 16:27:46,985 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 16:27:46,988 - INFO - Created 4 nodes for page 1
+2024-12-09 16:27:46,992 - INFO - Created 11 nodes for page 2
+2024-12-09 16:27:46,993 - INFO - Created 5 nodes for page 3
+2024-12-09 16:27:46,996 - INFO - Created 8 nodes for page 4
+2024-12-09 16:27:46,998 - INFO - Created 6 nodes for page 5
+2024-12-09 16:27:47,000 - INFO - Created 5 nodes for page 6
+2024-12-09 16:27:47,001 - INFO - Created 5 nodes for page 7
+2024-12-09 16:27:47,003 - INFO - Created 5 nodes for page 8
+2024-12-09 16:27:47,004 - INFO - Created 6 nodes for page 9
+2024-12-09 16:27:47,008 - INFO - Created 11 nodes for page 10
+2024-12-09 16:27:47,011 - INFO - Created 9 nodes for page 11
+2024-12-09 16:27:47,013 - INFO - Created 6 nodes for page 12
+2024-12-09 16:27:47,015 - INFO - Created 5 nodes for page 13
+2024-12-09 16:27:47,016 - INFO - Created 5 nodes for page 14
+2024-12-09 16:27:47,018 - INFO - Created 5 nodes for page 15
+2024-12-09 16:27:47,021 - INFO - Created 9 nodes for page 16
+2024-12-09 16:27:47,022 - INFO - Created 5 nodes for page 17
+2024-12-09 16:27:47,024 - INFO - Created 6 nodes for page 18
+2024-12-09 16:27:47,025 - INFO - Created 5 nodes for page 19
+2024-12-09 16:27:47,027 - INFO - Created 6 nodes for page 20
+2024-12-09 16:27:47,030 - INFO - Created 9 nodes for page 21
+2024-12-09 16:27:47,031 - INFO - Created 5 nodes for page 22
+2024-12-09 16:27:47,033 - INFO - Created 5 nodes for page 23
+2024-12-09 16:27:47,034 - INFO - Created 5 nodes for page 24
+2024-12-09 16:27:47,036 - INFO - Created 5 nodes for page 25
+2024-12-09 16:27:47,039 - INFO - Created 9 nodes for page 26
+2024-12-09 16:27:47,040 - INFO - Created 5 nodes for page 27
+2024-12-09 16:27:47,042 - INFO - Created 6 nodes for page 28
+2024-12-09 16:27:47,044 - INFO - Created 5 nodes for page 29
+2024-12-09 16:27:47,047 - INFO - Created 9 nodes for page 30
+2024-12-09 16:27:47,048 - INFO - Created 5 nodes for page 31
+2024-12-09 16:27:47,049 - INFO - Created 4 nodes for page 32
+2024-12-09 16:27:47,060 - INFO - Saved complete nodes to node_outputs/fourth_pipeline_nodes.pkl
+2024-12-09 16:27:47,060 - INFO - Saved detailed summary to node_outputs/fourth_pipeline_summary.json

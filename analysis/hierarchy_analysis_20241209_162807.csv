@@ -1,2 +1,2 @@
 pipeline_name,total_nodes,unique_hierarchy_levels,max_hierarchy_level,level_distribution
-first_pipeline_nodes,152,0,0,{0: 152}
+fourth_pipeline_nodes,199,2,3,"{3: 101, 0: 93, 2: 5}"

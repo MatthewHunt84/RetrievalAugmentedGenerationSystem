@@ -150,7 +150,7 @@ class NodeAnalyzer:
 
                     if metadata.get('page_num') == page_number:
                         node_info = {
-                            'text_preview': text[:200] + '...' if len(text) > 200 else text,
+                            'text_preview': text,
                             'metadata': metadata,
                             'node_id': node_id
                         }
@@ -181,8 +181,8 @@ if __name__ == "__main__":
     analyzer = NodeAnalyzer()
 
     # Example paths - replace with your actual paths
-    pickle_files = ["node_outputs/first_pipeline_nodes.pkl"]
-
+    # pickle_files = ["node_outputs/fourth_pipeline_nodes.pkl", "node_outputs/third_pipeline_nodes.pkl", "node_outputs/second_pipeline_nodes.pkl", "node_outputs/first_pipeline_nodes.pkl"]
+    pickle_files = ["node_outputs/fourth_pipeline_nodes.pkl"]
     # Analyze hierarchy levels
     hierarchy_results = analyzer.analyze_hierarchy_levels(pickle_files)
     print("\nHierarchy Level Analysis:")
