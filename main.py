@@ -8,6 +8,7 @@ from rag_package.query_engine_builder import QueryManager
 from rag_package.error_handler import ErrorHandler
 from rag_package import rag_config
 
+
 def main():
     load_dotenv()
     error_handler = ErrorHandler()
@@ -18,10 +19,10 @@ def main():
 
         # If we need to parse files and create nodes
         # if not index_manager.index_exists():
-        document_processor = DocumentProcessor(parsing_config=rag_config.parsing_config)
-        document_processor.process_all(use_cached_files=rag_config.use_cached_files)
-    #         node_creator = TextNodeCreator()
-    #         text_nodes = node_creator.create_nodes()
+        # document_processor = DocumentProcessor(parsing_config=rag_config.parsing_config)
+        # document_processor.process_all(use_cached_files=rag_config.use_cached_files)
+        node_creator = TextNodeCreator(node_config=rag_config.node_config)
+        nodes = node_creator.create_nodes()
     #         # Create new index
     #         index = index_manager.get_or_create_index(text_nodes)
     #     else:
@@ -38,6 +39,8 @@ def main():
     #     print(f"Sending test query: {test_query}")  # Add debug print
     #     response = query_manager.query(test_query, get_sources=True)
     #
+
+
     except Exception as e:
         return error_handler.handle_error(e)
 
