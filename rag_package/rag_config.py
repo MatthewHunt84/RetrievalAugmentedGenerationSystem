@@ -1,23 +1,31 @@
 # rag_config.py
 """
 RAG application settings module.
-This works similar to a singleton and lets us keep the project settings centralized.
-Give private variables an underscore up front: _private_variable
+
+This module serves as a central configuration system for the RAG pipeline,
+implementing a pseudo-singleton pattern for settings management. The configuration
+is structured to handle the complex task of processing technical documentation
+for heavy machinery and equipment.
+
+Private variables are prefixed with an underscore: _private_variable
 """
 from dataclasses import dataclass, field
 from llama_index.embeddings.openai import OpenAIEmbedding
 from llama_index.multi_modal_llms.anthropic import AnthropicMultiModal
-from pydantic import BaseModel
 from llama_index.core import Settings
-from llama_index.core.node_parser import SentenceSplitter
 import re
 
-# Loading
-input_data_folder = "raw_input_data"
+# Base directory for raw input data files
+input_data_folder: str = "raw_input_data"
 
-# Parsing
+
 @dataclass
 class ParserConfig:
+    """
+    Configuration for the initial parsing of technical documents. This class
+    defines how raw documents should be processed and structured before entering
+    the node creation phase.
+    """
     result_type: str = "markdown"
     parsing_instruction: str = """
     You are processing technical product brochures for heavy machinery and equipment. 
@@ -54,165 +62,184 @@ class ParserConfig:
     detect_lists: bool = True
     technical_terms_mode: str = "preserve"
 
+
+# Global parsing configuration instance
 use_cached_files: bool = True
 parsing_config = ParserConfig()
 
-# Node Creation
 
-from dataclasses import dataclass, field
-from llama_index.core.node_parser import SentenceSplitter
+@dataclass
+class Measurement:
+    """
+    Represents a numerical measurement with its unit and context. Handles both
+    single values and ranges while maintaining the original context.
+    """
+    value: float | int
+    unit: str
+    context: str | None = None
+    confidence: float = 1.0
+
+    def __post_init__(self) -> None:
+        # Handle string inputs that might contain ranges
+        if isinstance(self.value, str):
+            if '-' in self.value:
+                low, high = map(float, self.value.split('-'))
+                self.value = (low + high) / 2  # Use average for now
+                self.context = f"Range: {low}-{high} {self.unit}"
+            else:
+                self.value = float(self.value)
 
 
 @dataclass
-class TechnicalSpecPatterns:
-    """Patterns for extracting technical specifications from machinery documentation."""
-    dimensional_patterns: dict[str, list[str]] = field(default_factory=lambda: {
-        'weight': [
-            r'(\d+(?:\.\d+)?)\s*(?:lb|lbs|pounds?|kg|kilos?)',
-            r'weighs?\s+(\d+(?:\.\d+)?)\s*(?:lb|lbs|pounds?|kg|kilos?)'
-        ],
-        'working_depth': [
-            r'(?:dig|trench|working) depth(?:s)? (?:of )?(\d+(?:-\d+)?)\s*(?:"|inches|ft|feet)',
-            r'depth(?:s)? (?:of )?(\d+(?:-\d+)?)\s*(?:"|inches|ft|feet)'
-        ],
-        'pressure': [
-            r'(\d+(?:\.\d+)?)\s*(?:psi|bar|kPa)',
-            r'pressure of (\d+(?:\.\d+)?)\s*(?:psi|bar|kPa)'
-        ]
-    })
+class EquipmentSpecifications:
+    """
+    Flexible specification structure for equipment metadata. Avoids rigid
+    categorization while maintaining structured data where appropriate.
+    """
+    # Basic identification and classification information
+    basic_info: dict[str, str] = field(default_factory=dict)
 
-    performance_patterns: dict[str, list[str]] = field(default_factory=lambda: {
-        'power': [
-            r'(\d+(?:\.\d+)?)\s*(?:hp|horsepower|kW)',
-            r'power output of (\d+(?:\.\d+)?)\s*(?:hp|horsepower|kW)'
-        ],
-        'flow_rate': [
-            r'(\d+(?:\.\d+)?)\s*(?:gpm|lpm)',
-            r'flow(?:s)? at (\d+(?:\.\d+)?)\s*(?:gpm|lpm)'
-        ]
-    })
+    # All numerical specifications in a flat structure for easy access
+    numerical_specs: dict[str, Measurement] = field(default_factory=dict)
 
+    # Extracted features and capabilities as normalized tags
+    attribute_tags: list[str] = field(default_factory=list)
 
-@dataclass
-class FeatureExtractionPatterns:
-    """Patterns for identifying key features and capabilities."""
-    control_features: list[str] = field(default_factory=lambda: [
-        r'features (?:a|an) ([^.]+control[^.]+)',
-        r'includes (?:a|an) ([^.]+system[^.]+)'
-    ])
+    # Original text chunks for context preservation
+    text_chunks: list[str] = field(default_factory=list)
 
-    applications: list[str] = field(default_factory=lambda: [
-        r'designed for ([^.]+)',
-        r'can (?:easily )?handle ([^.]+)',
-        r'suitable for ([^.]+)'
-    ])
+    # Track confidence scores for extracted information
+    extraction_confidence: dict[str, float] = field(default_factory=dict)
 
-    maintenance_features: list[str] = field(default_factory=lambda: [
-        r'reduces maintenance ([^.]+)',
-        r'easy to maintain ([^.]+)',
-        r'simplified (?:maintenance|service) ([^.]+)'
-    ])
+    def add_specification(self, name: str, value: float | str, unit: str,
+                          context: str | None = None, confidence: float = 1.0) -> None:
+        """
+        Add a numerical specification with associated metadata.
+        Normalizes specification names for consistent access.
+        """
+        spec_key = name.lower().replace(' ', '_')
+        self.numerical_specs[spec_key] = Measurement(value, unit, context, confidence)
+
+    def add_tag(self, tag: str, confidence: float = 1.0) -> None:
+        """
+        Add a descriptive tag with confidence score.
+        Normalizes tags and prevents duplicates.
+        """
+        normalized_tag = tag.lower().strip()
+        if normalized_tag not in self.attribute_tags:
+            self.attribute_tags.append(normalized_tag)
+            self.extraction_confidence[normalized_tag] = confidence
+
+    def to_dict(self) -> dict:
+        """Convert specifications to a serializable dictionary format."""
+        return {
+            "basic_info": self.basic_info,
+            "numerical_specs": {
+                k: v.__dict__ for k, v in self.numerical_specs.items()
+            },
+            "attribute_tags": self.attribute_tags,
+            "extraction_confidence": self.extraction_confidence
+        }
 
 
 @dataclass
 class HierarchicalConfig:
     """
-    Configuration for hierarchical document processing.
-
-    This class manages document hierarchy through a combination of header patterns
-    and chunk size configurations. The header detection logic is centralized here
-    to make it easily configurable and maintainable.
+    Manages document hierarchy through header patterns and chunk sizing.
+    Provides a consistent way to determine content hierarchy levels.
     """
-    # Define the mapping between Markdown header levels and hierarchy levels
+    # Map Markdown header levels to hierarchy levels
     header_hierarchy_map: dict[int, int] = field(default_factory=lambda: {
-        1: 3,  # h1 headers (single #) map to highest hierarchy level 3
-        2: 2,  # h2 headers (##) map to middle hierarchy level 2
-        3: 1,  # h3 headers (###) map to lowest hierarchy level 1
-        4: 1,  # h4 and deeper headers also map to level 1
+        1: 3,  # h1 headers (single #) → highest level 3
+        2: 2,  # h2 headers (##) → middle level 2
+        3: 1,  # h3+ headers (### or more) → lowest level 1
+        4: 1,
         5: 1,
         6: 1
     })
 
-    # Chunk sizes for different hierarchy levels
+    # Configure chunk sizes for different hierarchy levels
     chunk_sizes: dict[int, int] = field(default_factory=lambda: {
         3: 1024,  # Larger chunks for main sections
         2: 512,  # Medium chunks for model details
         1: 256  # Smaller chunks for specifications
     })
 
-    # Chunk overlaps ensure context is maintained between segments
+    # Define overlap to maintain context between chunks
     chunk_overlaps: dict[int, int] = field(default_factory=lambda: {
-        3: 128,  # ~12.5% overlap for main sections
-        2: 64,  # ~12.5% overlap for model details
-        1: 32  # ~12.5% overlap for specifications
+        3: 128,  # ~12.5% overlap for continuity
+        2: 64,
+        1: 32
     })
 
     def get_level_for_text(self, text: str) -> int:
         """
         Determine the hierarchy level of text based on its Markdown header depth.
-
-        This method analyzes the first line of text to determine if it's a header
-        and, if so, what level of header it is. The header level is then mapped
-        to the appropriate hierarchy level based on header_hierarchy_map.
-
-        Args:
-            text: The text content to analyze, potentially starting with a Markdown header
-
-        Returns:
-            int: The detected hierarchy level (3 for highest, 2 for middle, 1 for lowest,
-                 0 for regular content)
-
-        Example:
-            "# Main Title" -> returns 3 (highest level)
-            "## Section Header" -> returns 2 (middle level)
-            "### Subsection" -> returns 1 (lowest level)
-            "Regular text" -> returns 0 (no hierarchy)
+        Returns 0 for non-header content.
         """
-        # Get the first line for header detection
         first_line = text.strip().split('\n')[0]
-
-        # Find the number of # symbols at the start of the line
         header_match = re.match(r'^(#+)\s', first_line)
 
         if not header_match:
-            return 0  # Not a header, return base level
+            return 0
 
-        # Count the number of # symbols to determine header level
         header_level = len(header_match.group(1))
-
-        # Map the header level to hierarchy level using our configuration
-        # If the header level is deeper than our mapping, use the deepest defined level
         return self.header_hierarchy_map.get(
             min(header_level, max(self.header_hierarchy_map.keys())),
-            0  # Default to 0 if no mapping exists (shouldn't occur with our setup)
+            0
         )
+
 
 @dataclass
 class NodeCreationConfig:
     """
-    Comprehensive configuration combining hierarchical parsing with technical
-    metadata extraction capabilities.
-    """
-    # Pipeline identification
-    pipeline_name: str = 'fifth_pipeline'
+    Configuration for node creation with flexible metadata extraction.
+    Combines hierarchical processing with comprehensive metadata capture.
 
-    # File paths
-    parsed_results_path: str = 'parsed_results.json'
-    image_dir: str = "data_images"
+    This class maintains all necessary configuration parameters including:
+    - Pipeline identification and paths
+    - Hierarchical document processing settings
+    - Patterns for extracting numerical values and features
+    - Confidence thresholds for extraction quality
+    """
+    # Pipeline identification and basic paths
+    pipeline_name: str = 'fifth_pipeline'
+    parsed_results_path: str = 'parsed_results.json'  # Added this back
     output_dir: str = "node_outputs"
 
-    # Processing configurations
+    # Core configuration components
     hierarchy_config: HierarchicalConfig = field(default_factory=HierarchicalConfig)
-    technical_patterns: TechnicalSpecPatterns = field(default_factory=TechnicalSpecPatterns)
-    feature_patterns: FeatureExtractionPatterns = field(default_factory=FeatureExtractionPatterns)
+
+    # Patterns for extracting numerical values with units
+    numerical_patterns: dict[str, list[str]] = field(default_factory=lambda: {
+        'dimensional': [
+            r'(\d+(?:\.\d+)?(?:-\d+(?:\.\d+)?)?)\s*(?:lb|lbs|pounds?|kg|kilos?)',
+            r'(\d+(?:\.\d+)?(?:-\d+(?:\.\d+)?)?)\s*(?:"|in|inch|inches|ft|feet)',
+            r'(\d+(?:\.\d+)?(?:-\d+(?:\.\d+)?)?)\s*(?:mm|cm|m|meters?)',
+        ],
+        'performance': [
+            r'(\d+(?:\.\d+)?(?:-\d+(?:\.\d+)?)?)\s*(?:hp|kW|mph|rpm)',
+            r'(\d+(?:\.\d+)?(?:-\d+(?:\.\d+)?)?)\s*(?:psi|bar|kPa|MPa)',
+            r'(\d+(?:\.\d+)?(?:-\d+(?:\.\d+)?)?)\s*(?:gpm|lpm)',
+        ]
+    })
+
+    # Patterns for identifying descriptive features
+    feature_patterns: list[str] = field(default_factory=lambda: [
+        r'features (?:a|an) ([^.]+)',
+        r'designed (?:for|to) ([^.]+)',
+        r'capable of ([^.]+)',
+        r'includes (?:a|an) ([^.]+)',
+        r'provides ([^.]+capability[^.]+)',
+    ])
 
     # Processing settings
+    min_confidence_threshold: float = 0.6
     normalize_units: bool = True
-    confidence_threshold: float = 0.8
 
     @property
     def base_metadata(self) -> dict:
-        """Get base metadata for nodes."""
+        """Provide base metadata structure for all nodes."""
         return {
             "pipeline_name": self.pipeline_name,
             "hierarchy_config": {
@@ -221,18 +248,19 @@ class NodeCreationConfig:
             }
         }
 
+
+# Global configuration instances
 node_config = NodeCreationConfig()
-
-# Vector store
 embedding_model_name = "text-embedding-3-large"
-
-# Query Engine
 multimodal_model = "claude-3-5-sonnet-latest"
 multimodal_llm = AnthropicMultiModal(model=multimodal_model)
 
-def get_embed_model():
+def get_embed_model() -> OpenAIEmbedding:
+    """
+    Singleton pattern for embedding model access.
+    Ensures consistent embedding model usage across the application.
+    """
     if not hasattr(get_embed_model, '_instance'):
         get_embed_model._instance = OpenAIEmbedding(model="text-embedding-3-large")
-        # Update LlamaIndex settings
         Settings.embed_model = get_embed_model._instance
     return get_embed_model._instance

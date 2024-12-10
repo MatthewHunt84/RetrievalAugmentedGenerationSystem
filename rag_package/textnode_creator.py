@@ -8,7 +8,11 @@ import logging
 from llama_index.core.schema import TextNode, Document
 from llama_index.core.node_parser import HierarchicalNodeParser, SentenceSplitter
 from rag_package.errors import TextNodeCreationError
-from rag_package.rag_config import NodeCreationConfig
+from rag_package.rag_config import (
+    NodeCreationConfig,
+    EquipmentSpecifications,
+    Measurement
+)
 
 
 class TextNodeCreator:
@@ -115,127 +119,243 @@ class TextNodeCreator:
             node_parser_map=splitter_map
         )
 
-    def _extract_technical_specifications(self, text: str) -> dict:
+    def _extract_measurements_and_context(self, text: str) -> dict[str, list[tuple[float, str, str]]]:
         """
-        Extract technical specifications using configured patterns.
+        Generic measurement extraction that captures numerical values with their units
+        and surrounding context. Uses natural language processing patterns to understand
+        the relationship between measurements and their descriptions.
         """
-        specs = {}
-        text_lower = text.lower()
+        # Pattern that catches any number followed by any unit
+        measurement_pattern = r'(\d+(?:\.\d+)?(?:-\d+(?:\.\d+)?)?)\s*([a-zA-Z]+(?:/[a-zA-Z]+)?)'
 
-        # Process dimensional patterns
-        for spec_type, patterns in self.config.technical_patterns.dimensional_patterns.items():
-            matches = []
-            for pattern in patterns:
-                if found := re.finditer(pattern, text_lower):
-                    for match in found:
-                        value = match.group(1)
-                        unit = re.search(r'[a-z]+', match.group()).group()
-                        context = text[max(0, match.start() - 30):match.end() + 30]
-                        matches.append({
-                            'value': value,
-                            'unit': unit,
-                            'context': context
-                        })
-            if matches:
-                specs[spec_type] = matches
+        measurements = []
+        for match in re.finditer(measurement_pattern, text):
+            # Get the full sentence containing this measurement for context
+            sentence_pattern = r'[^.!?]*{}[^.!?]*[.!?]'.format(re.escape(match.group(0)))
+            context_match = re.search(sentence_pattern, text)
+            context = context_match.group(0) if context_match else text[max(0, match.start() - 50):min(len(text),
+                                                                                                       match.end() + 50)]
 
-        # Process performance patterns
-        for spec_type, patterns in self.config.technical_patterns.performance_patterns.items():
-            matches = []
-            for pattern in patterns:
-                if found := re.finditer(pattern, text_lower):
-                    for match in found:
-                        value = match.group(1)
-                        unit = re.search(r'[a-z]+', match.group()).group()
-                        context = text[max(0, match.start() - 30):match.end() + 30]
-                        matches.append({
-                            'value': value,
-                            'unit': unit,
-                            'context': context
-                        })
-            if matches:
-                specs[spec_type] = matches
+            value_text, unit = match.groups()
+
+            # Handle range values
+            if '-' in value_text:
+                low, high = map(float, value_text.split('-'))
+                value = (low + high) / 2  # Store average while keeping range in context
+            else:
+                value = float(value_text)
+
+            measurements.append((value, unit, context.strip()))
+
+        return measurements
+
+    def _extract_measurements_and_context(self, text: str) -> dict[str, list[tuple[float, str, str]]]:
+        """
+        Enhanced measurement extraction that distinguishes between actual measurements
+        and model identifiers/other numerical patterns.
+        """
+        # First, identify and mask model numbers to protect them from measurement extraction
+        model_pattern = r'(?:[A-Z][a-zA-Z]*\s)?(\d{3,4}[A-Z]{2,3})'
+        model_numbers = set(re.findall(model_pattern, text))
+        protected_text = text
+
+        # Create a mapping of protected strings
+        protected_mappings = {}
+        for i, model in enumerate(model_numbers):
+            placeholder = f"__MODEL_{i}__"
+            protected_mappings[placeholder] = model
+            protected_text = protected_text.replace(model, placeholder)
+
+        # Now look for measurements in the protected text
+        # Define common measurement units
+        valid_units = {
+            'length': ['in', 'ft', 'm', 'mm', 'cm'],
+            'weight': ['lb', 'kg', 'ton'],
+            'power': ['hp', 'kw'],
+            'pressure': ['psi', 'bar', 'kpa'],
+            'flow': ['gpm', 'lpm'],
+            'speed': ['rpm', 'mph', 'kph'],
+            'temperature': ['f', 'c']
+        }
+
+        # Flatten the valid units for pattern matching
+        all_valid_units = '|'.join([unit for units in valid_units.values() for unit in units])
+
+        # Pattern that catches numbers followed by valid units
+        measurement_pattern = f'(\d+(?:\.\d+)?(?:-\d+(?:\.\d+)?)?)\s*({all_valid_units})'
+
+        measurements = []
+        for match in re.finditer(measurement_pattern, protected_text, re.IGNORECASE):
+            value_text, unit = match.groups()
+
+            # Get the surrounding context
+            context_start = max(0, match.start() - 50)
+            context_end = min(len(protected_text), match.end() + 50)
+            context = protected_text[context_start:context_end]
+
+            # Restore any model numbers in the context
+            for placeholder, model in protected_mappings.items():
+                context = context.replace(placeholder, model)
+
+            # Process the value (handling ranges)
+            if '-' in value_text:
+                low, high = map(float, value_text.split('-'))
+                value = (low + high) / 2  # Store average with range in context
+            else:
+                value = float(value_text)
+
+            measurements.append((value, unit.lower(), context.strip()))
+
+        return measurements
+
+    def _identify_model_information(self, text: str) -> dict:
+        """
+        Separate method to handle model identification and related metadata.
+        """
+        model_patterns = {
+            'full_model': r'(\d{3,4}[A-Z]{2,3}(?:\s+(?:Standard|Mini|Micro|Track)\s+Trencher)?)',
+            'release_year': r'(?:introduced|released|developed)(?:\sin|\s)(?:the\syear\s)?(\d{4})',
+            'category': r'(?:Standard|Mini|Micro|Track)\s+Trencher'
+        }
+
+        model_info = {}
+
+        # Extract model information
+        if full_model_match := re.search(model_patterns['full_model'], text):
+            model_info['model_number'] = full_model_match.group(1)
+
+        # Extract release year if present
+        if year_match := re.search(model_patterns['release_year'], text):
+            model_info['release_year'] = int(year_match.group(1))
+
+        # Extract category if present
+        if category_match := re.search(model_patterns['category'], text):
+            model_info['category'] = category_match.group(0)
+
+        return model_info
+
+    def _infer_measurement_type(self, context: str, unit: str) -> str:
+        """
+        Infers the type of measurement based on context and unit.
+        Uses a combination of unit analysis and contextual clues.
+        """
+        # First, try to understand the measurement from context
+        context_lower = context.lower()
+
+        # Look for descriptive phrases that explain what's being measured
+        descriptor_matches = re.findall(r'(?:the|a|an)\s+([a-zA-Z]+(?:\s+[a-zA-Z]+)?)\s+(?:is|of|at|was|measures)',
+                                        context_lower)
+
+        if descriptor_matches:
+            return '_'.join(descriptor_matches[0].split())
+
+        # If no clear context, create a generic but meaningful identifier
+        return f"measurement_{unit}"
+
+    def _extract_equipment_metadata(self, text: str) -> EquipmentSpecifications:
+        """
+        Enhanced metadata extraction that properly handles both measurements and model information.
+        """
+        specs = EquipmentSpecifications()
+
+        # First, extract model information
+        model_info = self._identify_model_information(text)
+        specs.basic_info.update(model_info)
+
+        # Then extract actual measurements
+        measurements = self._extract_measurements_and_context(text)
+
+        # Process each valid measurement
+        for value, unit, context in measurements:
+            measurement_type = self._infer_measurement_type(context, unit)
+            specs.add_specification(
+                name=measurement_type,
+                value=value,
+                unit=unit,
+                context=context,
+                confidence=0.9  # Higher confidence because we're using validated units
+            )
 
         return specs
 
-    def _extract_features(self, text: str) -> dict:
+    def _infer_specification_name(self, context: str, unit: str) -> str:
         """
-        Extract features and capabilities using configured patterns.
+        Infer a meaningful name for a specification based on its context and unit.
+        Uses common terminology patterns in technical documentation.
         """
-        features = {
-            'control_features': [],
-            'applications': [],
-            'maintenance_features': []
+        # Unit-based naming patterns
+        unit_name_map = {
+            'lb': 'weight',
+            'kg': 'weight',
+            'in': 'length',
+            'ft': 'height',
+            'hp': 'power',
+            'kw': 'power_rating',
+            'psi': 'pressure',
+            'gpm': 'flow_rate'
         }
 
-        # Extract each feature type using configured patterns
-        for pattern in self.config.feature_patterns.control_features:
-            if matches := re.finditer(pattern, text, re.IGNORECASE):
-                features['control_features'].extend(
-                    match.group(1).strip() for match in matches
-                )
+        # Look for specific measurement terms in context
+        context_lower = context.lower()
+        if 'depth' in context_lower:
+            return 'working_depth'
+        elif 'width' in context_lower:
+            return 'width'
+        elif 'height' in context_lower:
+            return 'height'
+        elif 'capacity' in context_lower:
+            return 'capacity'
 
-        for pattern in self.config.feature_patterns.applications:
-            if matches := re.finditer(pattern, text, re.IGNORECASE):
-                features['applications'].extend(
-                    match.group(1).strip() for match in matches
-                )
+        # Default to unit-based naming if no specific context is found
+        return unit_name_map.get(unit.lower(), f'measurement_{unit}')
 
-        for pattern in self.config.feature_patterns.maintenance_features:
-            if matches := re.finditer(pattern, text, re.IGNORECASE):
-                features['maintenance_features'].extend(
-                    match.group(1).strip() for match in matches
-                )
+    def _calculate_feature_confidence(self, feature: str, pattern: str) -> float:
+        """
+        Calculate confidence score for extracted features based on various heuristics.
+        """
+        confidence = 0.7  # Base confidence
 
-        return features
+        # Increase confidence for longer, more specific features
+        if len(feature.split()) >= 3:
+            confidence += 0.1
+
+        # Increase confidence for features with technical terms
+        technical_terms = {'hydraulic', 'automatic', 'electronic', 'integrated', 'system'}
+        if any(term in feature.lower() for term in technical_terms):
+            confidence += 0.1
+
+        # Cap confidence at 0.95
+        return min(0.95, confidence)
 
     def _process_content(self, content: str, base_metadata: dict) -> list[TextNode]:
         """
-        Process content into nodes based on semantic document structure.
-
-        This implementation recognizes the natural hierarchy of the document by:
-        1. Identifying main sections by their headers
-        2. Keeping related content together
-        3. Maintaining proper context through careful content grouping
-
-        Args:
-            content: The text content to process
-            base_metadata: Base metadata to include in all nodes
-
-        Returns:
-            list[TextNode]: A list of processed nodes with enhanced metadata
+        Process content into nodes with enhanced metadata using the flexible
+        EquipmentSpecifications structure.
         """
         try:
-            # Parse the content into sections based on headers
             sections = self._split_into_sections(content)
             enhanced_nodes = []
 
-            # Process each section
             for section in sections:
-                # Extract header and content
                 header = section['header']
                 text = section['content']
-
-                # Combine header with its content
                 full_text = f"{header}\n{text}" if header else text
 
-                # Extract technical specifications and features
-                technical_specs = self._extract_technical_specifications(full_text)
-                features = self._extract_features(full_text)
+                # Extract comprehensive equipment metadata
+                equipment_specs = self._extract_equipment_metadata(full_text)
 
-                # Determine hierarchy level from header
+                # Determine hierarchy level
                 hierarchy_level = self._detect_hierarchy_level(header if header else full_text)
 
-                # Create enhanced metadata
+                # Create enhanced metadata combining base metadata with equipment specifications
                 enhanced_metadata = {
                     **base_metadata,
-                    'technical_specifications': technical_specs,
-                    'features': features,
+                    'equipment_specs': equipment_specs.to_dict(),
                     'hierarchy_level': hierarchy_level,
-                    'section_header': header  # Store the section header for context
+                    'section_header': header
                 }
 
-                # Create node with the complete section
+                # Create node with complete section
                 enhanced_node = TextNode(
                     text=full_text,
                     metadata=enhanced_metadata
@@ -398,16 +518,12 @@ class TextNodeCreator:
 
     def _save_outputs(self, nodes: list[TextNode]) -> None:
         """
-        Save nodes and enhanced analysis information to disk.
-        Creates both a pickle file of the raw nodes and a JSON summary
-        for analysis purposes.
+        Save nodes and enhanced analysis information with the new metadata structure.
         """
-        # Save the raw nodes to pickle file
         output_path = self.output_dir / f"{self.config.pipeline_name}_nodes.pkl"
         with open(output_path, 'wb') as f:
             pickle.dump(nodes, f)
 
-        # Create detailed summary
         summary = {
             "total_nodes": len(nodes),
             "pipeline_config": self.config.base_metadata,
@@ -416,13 +532,22 @@ class TextNodeCreator:
                             if n.metadata.get('hierarchy_level') == level])
                 for level in self.config.hierarchy_config.chunk_sizes.keys()
             },
+            "metadata_statistics": {
+                "average_specifications_per_node": sum(
+                    len(n.metadata.get('equipment_specs', {}).get('numerical_specs', {}))
+                    for n in nodes
+                ) / len(nodes) if nodes else 0,
+                "average_tags_per_node": sum(
+                    len(n.metadata.get('equipment_specs', {}).get('attribute_tags', []))
+                    for n in nodes
+                ) / len(nodes) if nodes else 0,
+            },
             "node_preview": [
                 {
                     "text_preview": str(node.text),
                     "metadata": {
                         **node.metadata,
-                        "technical_specifications": node.metadata.get('technical_specifications', {}),
-                        "features": node.metadata.get('features', {})
+                        "equipment_specs": node.metadata.get('equipment_specs', {})
                     },
                     "node_id": node.node_id
                 }
@@ -430,7 +555,6 @@ class TextNodeCreator:
             ]
         }
 
-        # Save the complete summary
         summary_path = self.output_dir / f"{self.config.pipeline_name}_summary.json"
         with open(summary_path, 'w', encoding='utf-8') as f:
             json.dump(summary, f, indent=2)

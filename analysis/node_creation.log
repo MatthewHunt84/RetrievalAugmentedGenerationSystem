@@ -361,3 +361,111 @@
 2024-12-09 17:51:54,560 - INFO - Created 4 nodes for page 32
 2024-12-09 17:51:54,565 - INFO - Saved complete nodes to node_outputs/fifth_pipeline_nodes.pkl
 2024-12-09 17:51:54,565 - INFO - Saved detailed summary to node_outputs/fifth_pipeline_summary.json
+2024-12-09 18:33:47,503 - INFO - Beginning node creation process...
+2024-12-09 18:33:47,507 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 18:33:47,508 - INFO - Created 5 nodes for page 1
+2024-12-09 18:33:47,508 - INFO - Created 6 nodes for page 2
+2024-12-09 18:33:47,508 - INFO - Created 5 nodes for page 3
+2024-12-09 18:33:47,509 - INFO - Created 9 nodes for page 4
+2024-12-09 18:33:47,509 - INFO - Created 6 nodes for page 5
+2024-12-09 18:33:47,510 - INFO - Created 6 nodes for page 6
+2024-12-09 18:33:47,510 - INFO - Created 5 nodes for page 7
+2024-12-09 18:33:47,511 - INFO - Created 5 nodes for page 8
+2024-12-09 18:33:47,511 - INFO - Created 6 nodes for page 9
+2024-12-09 18:33:47,511 - INFO - Created 6 nodes for page 10
+2024-12-09 18:33:47,512 - INFO - Created 12 nodes for page 11
+2024-12-09 18:33:47,512 - INFO - Created 6 nodes for page 12
+2024-12-09 18:33:47,512 - INFO - Created 7 nodes for page 13
+2024-12-09 18:33:47,513 - INFO - Created 6 nodes for page 14
+2024-12-09 18:33:47,513 - INFO - Created 5 nodes for page 15
+2024-12-09 18:33:47,514 - INFO - Created 9 nodes for page 16
+2024-12-09 18:33:47,514 - INFO - Created 5 nodes for page 17
+2024-12-09 18:33:47,514 - INFO - Created 6 nodes for page 18
+2024-12-09 18:33:47,515 - INFO - Created 6 nodes for page 19
+2024-12-09 18:33:47,515 - INFO - Created 6 nodes for page 20
+2024-12-09 18:33:47,515 - INFO - Created 8 nodes for page 21
+2024-12-09 18:33:47,516 - INFO - Created 4 nodes for page 22
+2024-12-09 18:33:47,516 - INFO - Created 8 nodes for page 23
+2024-12-09 18:33:47,517 - INFO - Created 4 nodes for page 24
+2024-12-09 18:33:47,517 - INFO - Created 7 nodes for page 25
+2024-12-09 18:33:47,518 - INFO - Created 7 nodes for page 26
+2024-12-09 18:33:47,518 - INFO - Created 6 nodes for page 27
+2024-12-09 18:33:47,518 - INFO - Created 6 nodes for page 28
+2024-12-09 18:33:47,519 - INFO - Created 5 nodes for page 29
+2024-12-09 18:33:47,519 - INFO - Created 9 nodes for page 30
+2024-12-09 18:33:47,520 - INFO - Created 5 nodes for page 31
+2024-12-09 18:33:47,520 - INFO - Created 4 nodes for page 32
+2024-12-09 18:33:47,524 - INFO - Saved complete nodes to node_outputs/fifth_pipeline_nodes.pkl
+2024-12-09 18:33:47,524 - INFO - Saved detailed summary to node_outputs/fifth_pipeline_summary.json
+2024-12-09 18:49:05,006 - INFO - Beginning node creation process...
+2024-12-09 18:49:05,009 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 18:49:05,010 - INFO - Created 5 nodes for page 1
+2024-12-09 18:49:05,011 - INFO - Created 6 nodes for page 2
+2024-12-09 18:49:05,011 - INFO - Created 5 nodes for page 3
+2024-12-09 18:49:05,012 - INFO - Created 9 nodes for page 4
+2024-12-09 18:49:05,012 - INFO - Created 6 nodes for page 5
+2024-12-09 18:49:05,013 - INFO - Created 6 nodes for page 6
+2024-12-09 18:49:05,013 - INFO - Created 5 nodes for page 7
+2024-12-09 18:49:05,014 - INFO - Created 5 nodes for page 8
+2024-12-09 18:49:05,015 - INFO - Created 6 nodes for page 9
+2024-12-09 18:49:05,015 - INFO - Created 6 nodes for page 10
+2024-12-09 18:49:05,015 - INFO - Created 12 nodes for page 11
+2024-12-09 18:49:05,016 - INFO - Created 6 nodes for page 12
+2024-12-09 18:49:05,016 - INFO - Created 7 nodes for page 13
+2024-12-09 18:49:05,017 - INFO - Created 6 nodes for page 14
+2024-12-09 18:49:05,018 - INFO - Created 5 nodes for page 15
+2024-12-09 18:49:05,018 - INFO - Created 9 nodes for page 16
+2024-12-09 18:49:05,018 - INFO - Created 5 nodes for page 17
+2024-12-09 18:49:05,019 - INFO - Created 6 nodes for page 18
+2024-12-09 18:49:05,019 - INFO - Created 6 nodes for page 19
+2024-12-09 18:49:05,020 - INFO - Created 6 nodes for page 20
+2024-12-09 18:49:05,021 - INFO - Created 8 nodes for page 21
+2024-12-09 18:49:05,024 - INFO - Created 4 nodes for page 22
+2024-12-09 18:49:05,025 - INFO - Created 8 nodes for page 23
+2024-12-09 18:49:05,025 - INFO - Created 4 nodes for page 24
+2024-12-09 18:49:05,026 - INFO - Created 7 nodes for page 25
+2024-12-09 18:49:05,027 - INFO - Created 7 nodes for page 26
+2024-12-09 18:49:05,028 - INFO - Created 6 nodes for page 27
+2024-12-09 18:49:05,029 - INFO - Created 6 nodes for page 28
+2024-12-09 18:49:05,029 - INFO - Created 5 nodes for page 29
+2024-12-09 18:49:05,030 - INFO - Created 9 nodes for page 30
+2024-12-09 18:49:05,031 - INFO - Created 5 nodes for page 31
+2024-12-09 18:49:05,031 - INFO - Created 4 nodes for page 32
+2024-12-09 18:49:05,038 - INFO - Saved complete nodes to node_outputs/fifth_pipeline_nodes.pkl
+2024-12-09 18:49:05,038 - INFO - Saved detailed summary to node_outputs/fifth_pipeline_summary.json
+2024-12-09 18:54:17,589 - INFO - Beginning node creation process...
+2024-12-09 18:54:17,593 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-09 18:54:17,594 - INFO - Created 5 nodes for page 1
+2024-12-09 18:54:17,594 - INFO - Created 6 nodes for page 2
+2024-12-09 18:54:17,594 - INFO - Created 5 nodes for page 3
+2024-12-09 18:54:17,595 - INFO - Created 9 nodes for page 4
+2024-12-09 18:54:17,595 - INFO - Created 6 nodes for page 5
+2024-12-09 18:54:17,595 - INFO - Created 6 nodes for page 6
+2024-12-09 18:54:17,595 - INFO - Created 5 nodes for page 7
+2024-12-09 18:54:17,595 - INFO - Created 5 nodes for page 8
+2024-12-09 18:54:17,596 - INFO - Created 6 nodes for page 9
+2024-12-09 18:54:17,596 - INFO - Created 6 nodes for page 10
+2024-12-09 18:54:17,596 - INFO - Created 12 nodes for page 11
+2024-12-09 18:54:17,596 - INFO - Created 6 nodes for page 12
+2024-12-09 18:54:17,597 - INFO - Created 7 nodes for page 13
+2024-12-09 18:54:17,597 - INFO - Created 6 nodes for page 14
+2024-12-09 18:54:17,597 - INFO - Created 5 nodes for page 15
+2024-12-09 18:54:17,597 - INFO - Created 9 nodes for page 16
+2024-12-09 18:54:17,597 - INFO - Created 5 nodes for page 17
+2024-12-09 18:54:17,598 - INFO - Created 6 nodes for page 18
+2024-12-09 18:54:17,598 - INFO - Created 6 nodes for page 19
+2024-12-09 18:54:17,598 - INFO - Created 6 nodes for page 20
+2024-12-09 18:54:17,598 - INFO - Created 8 nodes for page 21
+2024-12-09 18:54:17,598 - INFO - Created 4 nodes for page 22
+2024-12-09 18:54:17,599 - INFO - Created 8 nodes for page 23
+2024-12-09 18:54:17,599 - INFO - Created 4 nodes for page 24
+2024-12-09 18:54:17,599 - INFO - Created 7 nodes for page 25
+2024-12-09 18:54:17,600 - INFO - Created 7 nodes for page 26
+2024-12-09 18:54:17,600 - INFO - Created 6 nodes for page 27
+2024-12-09 18:54:17,601 - INFO - Created 6 nodes for page 28
+2024-12-09 18:54:17,601 - INFO - Created 5 nodes for page 29
+2024-12-09 18:54:17,601 - INFO - Created 9 nodes for page 30
+2024-12-09 18:54:17,601 - INFO - Created 5 nodes for page 31
+2024-12-09 18:54:17,601 - INFO - Created 4 nodes for page 32
+2024-12-09 18:54:17,606 - INFO - Saved complete nodes to node_outputs/fifth_pipeline_nodes.pkl
+2024-12-09 18:54:17,606 - INFO - Saved detailed summary to node_outputs/fifth_pipeline_summary.json
