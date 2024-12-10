@@ -10,7 +10,6 @@ from llama_index.multi_modal_llms.anthropic import AnthropicMultiModal
 from pydantic import BaseModel
 from llama_index.core import Settings
 from llama_index.core.node_parser import SentenceSplitter
-import re
 
 # Loading
 input_data_folder = "raw_input_data"
@@ -116,69 +115,43 @@ class FeatureExtractionPatterns:
 
 @dataclass
 class HierarchicalConfig:
-    """
-    Configuration for hierarchical document processing.
-
-    This class manages three key aspects of hierarchical text processing:
-    1. Header patterns - Rules for identifying the hierarchy level of text
-    2. Chunk sizes - How large each text segment should be at different levels
-    3. Chunk overlaps - How much text should overlap between chunks to maintain context
-    """
-    # Header patterns help identify the hierarchy level of text chunks
+    """Configuration for hierarchical document processing."""
+    # Patterns for identifying different hierarchy levels
     header_patterns: dict[int, list[str]] = field(default_factory=lambda: {
-        # Level 3 patterns identify major document sections and product categories
+        # Level 3 (highest) - Main product categories
         3: [
-            r'^#{1,2}\s+.+',  # Matches Markdown h1/h2 headers
-            r'^[A-Z\s]{5,}$',  # Matches all-caps headers
-            r'^(?:PRODUCT|CATEGORY|SERIES)\s*:\s*.+'  # Matches specific header types
+            r'^#{1,2}\s+.+',  # Markdown h1/h2
+            r'^[A-Z\s]{5,}$',  # ALL CAPS HEADERS
+            r'^(?:PRODUCT|CATEGORY|SERIES)\s*:\s*.+',
         ],
-        # Level 2 patterns identify product models and major subsections
+        # Level 2 - Product models and major sections
         2: [
-            r'^#{3}\s+.+',  # Matches Markdown h3 headers
-            r'^Model\s+[A-Z0-9-]+:',  # Matches model number headers
-            r'^(?:Specifications|Features and Benefits):',  # Matches common section headers
+            r'^#{3}\s+.+',  # Markdown h3
+            r'^Model\s+[A-Z0-9-]+:',  # Model numbers
+            r'^Specifications:',
+            r'^Features and Benefits:',
         ],
-        # Level 1 patterns identify detailed specifications and minor subsections
+        # Level 1 - Subsections and specification groups
         1: [
-            r'^#{4,}\s+.+',  # Matches Markdown h4+ headers
+            r'^#{4,}\s+.+',  # Markdown h4+
             r'^(?:Engine|Hydraulic|Electrical|Dimensions|Safety)\s+Specifications:',
-            r'^\d+\.\s+[A-Z][^.]+$',  # Matches numbered sections
+            r'^\d+\.\s+[A-Z][^.]+$',  # Numbered sections
         ]
     })
 
-    # Chunk sizes determine the maximum length of text segments at each level
+    # Chunk sizes for different hierarchy levels
     chunk_sizes: dict[int, int] = field(default_factory=lambda: {
         3: 1024,  # Larger chunks for main sections
         2: 512,  # Medium chunks for model details
         1: 256  # Smaller chunks for specifications
     })
 
-    # Chunk overlaps ensure context is maintained between segments
+    # Overlap sizes for different hierarchy levels
     chunk_overlaps: dict[int, int] = field(default_factory=lambda: {
-        3: 128,  # ~12.5% overlap for main sections
-        2: 64,  # ~12.5% overlap for model details
-        1: 32  # ~12.5% overlap for specifications
+        3: 256,  # 25% overlap for main sections
+        2: 128,  # 25% overlap for model details
+        1: 64  # 25% overlap for specifications
     })
-
-    def get_level_for_text(self, text: str) -> int:
-        """
-        Determine the hierarchy level of a given text based on header patterns.
-
-        Args:
-            text: The text to analyze
-
-        Returns:
-            int: The detected hierarchy level (3 for highest, 1 for lowest, 0 for regular content)
-        """
-        # Get the first line of text for header detection
-        first_line = text.strip().split('\n')[0]
-
-        # Check patterns for each level, starting from highest
-        for level, patterns in sorted(self.header_patterns.items(), reverse=True):
-            if any(re.match(pattern, first_line) for pattern in patterns):
-                return level
-
-        return 0  # Return 0 for regular content with no specific hierarchy
 
 
 @dataclass
@@ -188,7 +161,7 @@ class NodeCreationConfig:
     metadata extraction capabilities.
     """
     # Pipeline identification
-    pipeline_name: str = 'fifth_pipeline'
+    pipeline_name: str = 'fourth_pipeline'
 
     # File paths
     parsed_results_path: str = 'parsed_results.json'

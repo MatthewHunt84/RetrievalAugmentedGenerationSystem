@@ -191,13 +191,12 @@ class TextNodeCreator:
 
     def _process_content(self, content: str, base_metadata: dict) -> list[TextNode]:
         """
-        Process content into nodes while maintaining hierarchical structure and
-        adding technical metadata.
+        Process content into nodes based on semantic document structure.
 
-        This method performs three main steps:
-        1. Creates a Document object with the content and base metadata
-        2. Uses the hierarchical parser to break the content into appropriate chunks
-        3. Enhances each node with technical specifications and feature extraction
+        This implementation recognizes the natural hierarchy of the document by:
+        1. Identifying main sections by their headers
+        2. Keeping related content together
+        3. Maintaining proper context through careful content grouping
 
         Args:
             content: The text content to process
@@ -205,39 +204,41 @@ class TextNodeCreator:
 
         Returns:
             list[TextNode]: A list of processed nodes with enhanced metadata
-
-        Raises:
-            Exception: If any processing step fails
         """
         try:
-            # Create initial document with base metadata
-            doc = Document(text=content, metadata=base_metadata)
-
-            # Create nodes using hierarchical parser
-            # This breaks the content into chunks based on hierarchy levels
-            nodes = self.hierarchical_parser.get_nodes_from_documents([doc])
-
-            # Process each node to add technical specifications and features
+            # Parse the content into sections based on headers
+            sections = self._split_into_sections(content)
             enhanced_nodes = []
-            for node in nodes:
-                # Extract technical information from node text
-                technical_specs = self._extract_technical_specifications(node.text)
-                features = self._extract_features(node.text)
 
-                # Create enhanced metadata combining existing and new information
+            # Process each section
+            for section in sections:
+                # Extract header and content
+                header = section['header']
+                text = section['content']
+
+                # Combine header with its content
+                full_text = f"{header}\n{text}" if header else text
+
+                # Extract technical specifications and features
+                technical_specs = self._extract_technical_specifications(full_text)
+                features = self._extract_features(full_text)
+
+                # Determine hierarchy level from header
+                hierarchy_level = self._detect_hierarchy_level(header if header else full_text)
+
+                # Create enhanced metadata
                 enhanced_metadata = {
-                    **node.metadata,
+                    **base_metadata,
                     'technical_specifications': technical_specs,
                     'features': features,
-                    'hierarchy_level': self._detect_hierarchy_level(node.text)
+                    'hierarchy_level': hierarchy_level,
+                    'section_header': header  # Store the section header for context
                 }
 
-                # Create new node with enhanced metadata
+                # Create node with the complete section
                 enhanced_node = TextNode(
-                    text=node.text,
-                    metadata=enhanced_metadata,
-                    node_id=node.node_id,
-                    relationships=node.relationships
+                    text=full_text,
+                    metadata=enhanced_metadata
                 )
                 enhanced_nodes.append(enhanced_node)
 
@@ -249,14 +250,101 @@ class TextNodeCreator:
             self.logger.error(error_msg)
             raise TextNodeCreationError(error_msg)
 
+    def _split_into_sections(self, content: str) -> list[dict]:
+        """
+        Split content into logical sections based on headers.
+
+        This method identifies section boundaries using Markdown headers and ensures
+        that related content stays together. Each section includes its header and
+        all content up to the next header of the same or higher level.
+
+        Args:
+            content: Raw markdown content
+
+        Returns:
+            list[dict]: List of sections, each with 'header' and 'content' keys
+        """
+        # Split content into lines for processing
+        lines = content.strip().split('\n')
+        sections = []
+        current_section = {'header': '', 'content': []}
+
+        for line in lines:
+            # Check if line is a header
+            if line.startswith('#'):
+                # If we have content in the current section, save it
+                if current_section['header'] or current_section['content']:
+                    current_section['content'] = '\n'.join(current_section['content']).strip()
+                    sections.append(current_section)
+                    current_section = {'header': '', 'content': []}
+
+                # Start new section with this header
+                current_section['header'] = line
+            else:
+                # Add non-header line to current section's content
+                if line.strip():  # Only add non-empty lines
+                    current_section['content'].append(line)
+
+        # Add the last section if it has content
+        if current_section['header'] or current_section['content']:
+            current_section['content'] = '\n'.join(current_section['content']).strip()
+            sections.append(current_section)
+
+        return sections
+
+    def _should_replace_existing_node(self, existing_node: TextNode, new_node: TextNode) -> bool:
+        """
+        Determine whether a new node should replace an existing node with the same content.
+
+        This method implements the logic for choosing between duplicate nodes based on:
+        1. Hierarchy level - higher levels are generally preferred
+        2. Content completeness - longer content might be preferred
+        3. Metadata richness - nodes with more detailed metadata might be preferred
+
+        Returns:
+            bool: True if the new node should replace the existing node
+        """
+        # Get hierarchy levels
+        existing_level = existing_node.metadata.get('hierarchy_level', 0)
+        new_level = new_node.metadata.get('hierarchy_level', 0)
+
+        # If hierarchy levels are different, prefer the higher level
+        if existing_level != new_level:
+            return new_level > existing_level
+
+        # If at same level, prefer the node with more complete content
+        if len(new_node.text) != len(existing_node.text):
+            return len(new_node.text) > len(existing_node.text)
+
+        # If content length is the same, prefer the node with richer metadata
+        existing_metadata_count = len(self._count_meaningful_metadata(existing_node.metadata))
+        new_metadata_count = len(self._count_meaningful_metadata(new_node.metadata))
+
+        return new_metadata_count > existing_metadata_count
+
+    def _count_meaningful_metadata(self, metadata: dict) -> dict:
+        """
+        Count non-empty metadata fields, excluding basic fields like pipeline_name.
+        """
+        meaningful_fields = {}
+        basic_fields = {'pipeline_name', 'hierarchy_config'}
+
+        for key, value in metadata.items():
+            if key not in basic_fields and value:
+                if isinstance(value, dict):
+                    if any(value.values()):
+                        meaningful_fields[key] = value
+                elif isinstance(value, (list, tuple)):
+                    if value:
+                        meaningful_fields[key] = value
+                else:
+                    meaningful_fields[key] = value
+
+        return meaningful_fields
+
     def _detect_hierarchy_level(self, text: str) -> int:
         """
         Determine the hierarchy level of text using configured patterns.
-
-        This method examines the text content to determine its hierarchical level
-        based on the patterns defined in the configuration. For example, it can
-        identify if the text represents a main category, a model description,
-        or detailed specifications.
 
         Args:
             text: The text content to analyze
@@ -264,19 +352,7 @@ class TextNodeCreator:
         Returns:
             int: The detected hierarchy level (3 for highest, 1 for lowest, 0 for regular content)
         """
-        # Get the first line of text for header detection
-        first_line = text.strip().split('\n')[0]
-
-        # Check patterns for each level, starting from highest
-        for level, patterns in sorted(
-                self.config.hierarchy_config.header_patterns.items(),
-                reverse=True
-        ):
-            if any(re.match(pattern, first_line) for pattern in patterns):
-                return level
-
-        # Return 0 for regular content with no specific hierarchy
-        return 0
+        return self.config.hierarchy_config.get_level_for_text(text)
 
     def create_nodes(self) -> list[TextNode]:
         """

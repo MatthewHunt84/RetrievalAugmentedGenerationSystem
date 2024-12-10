@@ -1,0 +1,175 @@
+{
+  "total_nodes": 200,
+  "pipeline_config": {
+    "pipeline_name": "fifth_pipeline",
+    "hierarchy_config": {
+      "chunk_sizes": {
+        "3": 1024,
+        "2": 512,
+        "1": 256
+      },
+      "chunk_overlaps": {
+        "3": 128,
+        "2": 64,
+        "1": 32
+      }
+    }
+  },
+  "hierarchy_distribution": {
+    "3": 105,
+    "2": 65,
+    "1": 30
+  },
+  "node_preview": [
+    {
+      "text_preview": "# Barreto Manufacturing, Inc.\n",
+      "metadata": {
+        "pipeline_name": "fifth_pipeline",
+        "hierarchy_config": {
+          "chunk_sizes": {
+            "3": 1024,
+            "2": 512,
+            "1": 256
+          },
+          "chunk_overlaps": {
+            "3": 128,
+            "2": 64,
+            "1": 32
+          }
+        },
+        "page_num": 1,
+        "document_name": "920-3000 20230321_Brochure-WebSize.pdf",
+        "total_pages": 32,
+        "technical_specifications": {},
+        "features": {
+          "control_features": [],
+          "applications": [],
+          "maintenance_features": []
+        },
+        "hierarchy_level": 3,
+        "section_header": "# Barreto Manufacturing, Inc."
+      },
+      "node_id": "d5c6752b-100f-4983-83ac-4a8e86645602"
+    },
+    {
+      "text_preview": "## Innovative Equipment Engineered to Last\nThis brochure cover showcases Barreto Manufacturing's line of heavy-duty landscaping and construction equipment. The main image features a powerful red stump grinder (likely model SG) being operated in a park-like setting with trees and a gazebo in the background.",
+      "metadata": {
+        "pipeline_name": "fifth_pipeline",
+        "hierarchy_config": {
+          "chunk_sizes": {
+            "3": 1024,
+            "2": 512,
+            "1": 256
+          },
+          "chunk_overlaps": {
+            "3": 128,
+            "2": 64,
+            "1": 32
+          }
+        },
+        "page_num": 1,
+        "document_name": "920-3000 20230321_Brochure-WebSize.pdf",
+        "total_pages": 32,
+        "technical_specifications": {},
+        "features": {
+          "control_features": [],
+          "applications": [],
+          "maintenance_features": []
+        },
+        "hierarchy_level": 3,
+        "section_header": "## Innovative Equipment Engineered to Last"
+      },
+      "node_id": "6ce7c1ce-c6b6-4a3e-a1fe-db5d8263a33b"
+    },
+    {
+      "text_preview": "### Key Features Highlighted:\n- Robust construction with a red painted body\n- Tracked design for improved mobility and stability\n- Powerful engine with visible cooling system\n- Hydraulic controls for precision operation",
+      "metadata": {
+        "pipeline_name": "fifth_pipeline",
+        "hierarchy_config": {
+          "chunk_sizes": {
+            "3": 1024,
+            "2": 512,
+            "1": 256
+          },
+          "chunk_overlaps": {
+            "3": 128,
+            "2": 64,
+            "1": 32
+          }
+        },
+        "page_num": 1,
+        "document_name": "920-3000 20230321_Brochure-WebSize.pdf",
+        "total_pages": 32,
+        "technical_specifications": {},
+        "features": {
+          "control_features": [],
+          "applications": [],
+          "maintenance_features": []
+        },
+        "hierarchy_level": 2,
+        "section_header": "### Key Features Highlighted:"
+      },
+      "node_id": "42470ad0-5f75-4802-870b-e9fed26512dc"
+    },
+    {
+      "text_preview": "### Product Line Overview:\nThe bottom of the brochure displays thumbnails of various Barreto equipment in action, including:\n1. Stump grinder (featured in main image)\n2. Walk-behind trencher\n3. Mini loader or skid steer\n4. Tiller or cultivator\n5. Hydraulic trencher\n6. Tracked loader",
+      "metadata": {
+        "pipeline_name": "fifth_pipeline",
+        "hierarchy_config": {
+          "chunk_sizes": {
+            "3": 1024,
+            "2": 512,
+            "1": 256
+          },
+          "chunk_overlaps": {
+            "3": 128,
+            "2": 64,
+            "1": 32
+          }
+        },
+        "page_num": 1,
+        "document_name": "920-3000 20230321_Brochure-WebSize.pdf",
+        "total_pages": 32,
+        "technical_specifications": {},
+        "features": {
+          "control_features": [],
+          "applications": [],
+          "maintenance_features": []
+        },
+        "hierarchy_level": 2,
+        "section_header": "### Product Line Overview:"
+      },
+      "node_id": "3f0b5b94-3613-464e-a1e3-818802ed2cf7"
+    },
+    {
+      "text_preview": "### Company Information:\n- Website: www.barretomfg.com\n- Slogan: \"INNOVATIVE EQUIPMENT ENGINEERED TO LAST\"\n- Focus: Full product line brochure\nThe image emphasizes the durability and versatility of Barreto's equipment, showcasing its use in various landscaping and construction applications. The operator in the main image demonstrates the equipment's ease of use and professional-grade capabilities.",
+      "metadata": {
+        "pipeline_name": "fifth_pipeline",
+        "hierarchy_config": {
+          "chunk_sizes": {
+            "3": 1024,
+            "2": 512,
+            "1": 256
+          },
+          "chunk_overlaps": {
+            "3": 128,
+            "2": 64,
+            "1": 32
+          }
+        },
+        "page_num": 1,
+        "document_name": "920-3000 20230321_Brochure-WebSize.pdf",
+        "total_pages": 32,
+        "technical_specifications": {},
+        "features": {
+          "control_features": [],
+          "applications": [],
+          "maintenance_features": []
+        },
+        "hierarchy_level": 2,
+        "section_header": "### Company Information:"
+      },
+      "node_id": "8afb6c24-b799-477f-a620-f0d4fd7b4e64"
+    }
+  ]
+}

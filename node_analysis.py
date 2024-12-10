@@ -182,7 +182,7 @@ if __name__ == "__main__":
 
     # Example paths - replace with your actual paths
     # pickle_files = ["node_outputs/fourth_pipeline_nodes.pkl", "node_outputs/third_pipeline_nodes.pkl", "node_outputs/second_pipeline_nodes.pkl", "node_outputs/first_pipeline_nodes.pkl"]
-    pickle_files = ["node_outputs/fourth_pipeline_nodes.pkl"]
+    pickle_files = ["node_outputs/fifth_pipeline_nodes.pkl"]
     # Analyze hierarchy levels
     hierarchy_results = analyzer.analyze_hierarchy_levels(pickle_files)
     print("\nHierarchy Level Analysis:")
