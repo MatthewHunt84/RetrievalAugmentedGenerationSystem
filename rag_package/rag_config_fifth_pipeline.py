@@ -93,38 +93,54 @@ class Measurement:
 @dataclass
 class EquipmentSpecifications:
     """
-    Flexible specification structure for equipment metadata.
+    Flexible specification structure for equipment metadata. Avoids rigid
+    categorization while maintaining structured data where appropriate.
     """
-    # Basic identification information
+    # Basic identification and classification information
     basic_info: dict[str, str] = field(default_factory=dict)
 
-    # Specifications with values and units
-    specifications: dict[str, Measurement] = field(default_factory=dict)
+    # All numerical specifications in a flat structure for easy access
+    numerical_specs: dict[str, Measurement] = field(default_factory=dict)
 
-    # Features and capabilities
-    features: list[str] = field(default_factory=list)
+    # Extracted features and capabilities as normalized tags
+    attribute_tags: list[str] = field(default_factory=list)
+
+    # Original text chunks for context preservation
+    text_chunks: list[str] = field(default_factory=list)
+
+    # Track confidence scores for extracted information
+    extraction_confidence: dict[str, float] = field(default_factory=dict)
 
     def add_specification(self, name: str, value: float | str, unit: str,
-                          context: str | None = None) -> None:
-        """Add a numerical specification with associated metadata."""
+                          context: str | None = None, confidence: float = 1.0) -> None:
+        """
+        Add a numerical specification with associated metadata.
+        Normalizes specification names for consistent access.
+        """
         spec_key = name.lower().replace(' ', '_')
-        self.specifications[spec_key] = Measurement(value, unit, context)
+        self.numerical_specs[spec_key] = Measurement(value, unit, context, confidence)
 
-    def add_feature(self, feature: str) -> None:
-        """Add a descriptive feature."""
-        normalized_feature = feature.lower().strip()
-        if normalized_feature not in self.features:
-            self.features.append(normalized_feature)
+    def add_tag(self, tag: str, confidence: float = 1.0) -> None:
+        """
+        Add a descriptive tag with confidence score.
+        Normalizes tags and prevents duplicates.
+        """
+        normalized_tag = tag.lower().strip()
+        if normalized_tag not in self.attribute_tags:
+            self.attribute_tags.append(normalized_tag)
+            self.extraction_confidence[normalized_tag] = confidence
 
     def to_dict(self) -> dict:
         """Convert specifications to a serializable dictionary format."""
         return {
             "basic_info": self.basic_info,
-            "specifications": {
-                k: v.__dict__ for k, v in self.specifications.items()
+            "numerical_specs": {
+                k: v.__dict__ for k, v in self.numerical_specs.items()
             },
-            "features": self.features
+            "attribute_tags": self.attribute_tags,
+            "extraction_confidence": self.extraction_confidence
         }
+
 
 @dataclass
 class HierarchicalConfig:
@@ -176,20 +192,59 @@ class HierarchicalConfig:
 
 @dataclass
 class NodeCreationConfig:
-    """Configuration for node creation."""
-    pipeline_name: str = 'sixth_pipeline'
-    parsed_results_path: str = 'parsed_results.json'
+    """
+    Configuration for node creation with flexible metadata extraction.
+    Combines hierarchical processing with comprehensive metadata capture.
+
+    This class maintains all necessary configuration parameters including:
+    - Pipeline identification and paths
+    - Hierarchical document processing settings
+    - Patterns for extracting numerical values and features
+    - Confidence thresholds for extraction quality
+    """
+    # Pipeline identification and basic paths
+    pipeline_name: str = 'fifth_pipeline'
+    parsed_results_path: str = 'parsed_results.json'  # Added this back
     output_dir: str = "node_outputs"
 
-    # Keep the hierarchy config
+    # Core configuration components
     hierarchy_config: HierarchicalConfig = field(default_factory=HierarchicalConfig)
+
+    # Patterns for extracting numerical values with units
+    numerical_patterns: dict[str, list[str]] = field(default_factory=lambda: {
+        'dimensional': [
+            r'(\d+(?:\.\d+)?(?:-\d+(?:\.\d+)?)?)\s*(?:lb|lbs|pounds?|kg|kilos?)',
+            r'(\d+(?:\.\d+)?(?:-\d+(?:\.\d+)?)?)\s*(?:"|in|inch|inches|ft|feet)',
+            r'(\d+(?:\.\d+)?(?:-\d+(?:\.\d+)?)?)\s*(?:mm|cm|m|meters?)',
+        ],
+        'performance': [
+            r'(\d+(?:\.\d+)?(?:-\d+(?:\.\d+)?)?)\s*(?:hp|kW|mph|rpm)',
+            r'(\d+(?:\.\d+)?(?:-\d+(?:\.\d+)?)?)\s*(?:psi|bar|kPa|MPa)',
+            r'(\d+(?:\.\d+)?(?:-\d+(?:\.\d+)?)?)\s*(?:gpm|lpm)',
+        ]
+    })
+
+    # Patterns for identifying descriptive features
+    feature_patterns: list[str] = field(default_factory=lambda: [
+        r'features (?:a|an) ([^.]+)',
+        r'designed (?:for|to) ([^.]+)',
+        r'capable of ([^.]+)',
+        r'includes (?:a|an) ([^.]+)',
+        r'provides ([^.]+capability[^.]+)',
+    ])
+
+    # Processing settings
+    min_confidence_threshold: float = 0.6
+    normalize_units: bool = True
 
     @property
     def base_metadata(self) -> dict:
         """Provide base metadata structure for all nodes."""
         return {
-            "pipeline_info": {
-                "name": self.pipeline_name
+            "pipeline_name": self.pipeline_name,
+            "hierarchy_config": {
+                "chunk_sizes": self.hierarchy_config.chunk_sizes,
+                "chunk_overlaps": self.hierarchy_config.chunk_overlaps
             }
         }
 

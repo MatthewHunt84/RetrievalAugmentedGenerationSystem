@@ -78,9 +78,11 @@ class NodeAnalyzer:
                 try:
                     # Handle both dictionary-like and object-like nodes
                     if isinstance(node, dict):
-                        hierarchy_level = node.get('metadata', {}).get('hierarchy_level')
+                        content_structure = node.get('metadata', {}).get('content_structure', {})
+                        hierarchy_level = content_structure.get('hierarchy_level')
                     else:
-                        hierarchy_level = node.metadata.get('hierarchy_level')
+                        content_structure = node.metadata.get('content_structure', {})
+                        hierarchy_level = content_structure.get('hierarchy_level')
                     hierarchy_levels.append(hierarchy_level)
                 except AttributeError:
                     continue
@@ -148,7 +150,9 @@ class NodeAnalyzer:
                         text = node.text
                         node_id = node.node_id
 
-                    if metadata.get('page_num') == page_number:
+                    # Check page number in the new metadata structure
+                    doc_info = metadata.get('document_info', {})
+                    if doc_info.get('page_num') == page_number:
                         node_info = {
                             'text_preview': text,
                             'metadata': metadata,
@@ -182,7 +186,7 @@ if __name__ == "__main__":
 
     # Example paths - replace with your actual paths
     # pickle_files = ["node_outputs/fourth_pipeline_nodes.pkl", "node_outputs/third_pipeline_nodes.pkl", "node_outputs/second_pipeline_nodes.pkl", "node_outputs/first_pipeline_nodes.pkl"]
-    pickle_files = ["node_outputs/fifth_pipeline_nodes.pkl"]
+    pickle_files = ["node_outputs/sixth_pipeline_nodes.pkl"]
     # Analyze hierarchy levels
     hierarchy_results = analyzer.analyze_hierarchy_levels(pickle_files)
     print("\nHierarchy Level Analysis:")
