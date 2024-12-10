@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13557991-094d-4fae-8b67-4e865e4684de" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/rag_package/rag_config_fourth_pipeline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis/analysis_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/analysis_log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis/node_creation.log" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/node_creation.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis/node_creation_times.txt" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/node_creation_times.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/node_analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rag_package/rag_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/rag_config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rag_package/textnode_creator.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/textnode_creator.py" afterDir="false" />
-    </list>
+    <list default="true" id="13557991-094d-4fae-8b67-4e865e4684de" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

@@ -119,34 +119,21 @@ class HierarchicalConfig:
     """
     Configuration for hierarchical document processing.
 
-    This class manages three key aspects of hierarchical text processing:
-    1. Header patterns - Rules for identifying the hierarchy level of text
-    2. Chunk sizes - How large each text segment should be at different levels
-    3. Chunk overlaps - How much text should overlap between chunks to maintain context
+    This class manages document hierarchy through a combination of header patterns
+    and chunk size configurations. The header detection logic is centralized here
+    to make it easily configurable and maintainable.
     """
-    # Header patterns help identify the hierarchy level of text chunks
-    header_patterns: dict[int, list[str]] = field(default_factory=lambda: {
-        # Level 3 patterns identify major document sections and product categories
-        3: [
-            r'^#{1,2}\s+.+',  # Matches Markdown h1/h2 headers
-            r'^[A-Z\s]{5,}$',  # Matches all-caps headers
-            r'^(?:PRODUCT|CATEGORY|SERIES)\s*:\s*.+'  # Matches specific header types
-        ],
-        # Level 2 patterns identify product models and major subsections
-        2: [
-            r'^#{3}\s+.+',  # Matches Markdown h3 headers
-            r'^Model\s+[A-Z0-9-]+:',  # Matches model number headers
-            r'^(?:Specifications|Features and Benefits):',  # Matches common section headers
-        ],
-        # Level 1 patterns identify detailed specifications and minor subsections
-        1: [
-            r'^#{4,}\s+.+',  # Matches Markdown h4+ headers
-            r'^(?:Engine|Hydraulic|Electrical|Dimensions|Safety)\s+Specifications:',
-            r'^\d+\.\s+[A-Z][^.]+$',  # Matches numbered sections
-        ]
+    # Define the mapping between Markdown header levels and hierarchy levels
+    header_hierarchy_map: dict[int, int] = field(default_factory=lambda: {
+        1: 3,  # h1 headers (single #) map to highest hierarchy level 3
+        2: 2,  # h2 headers (##) map to middle hierarchy level 2
+        3: 1,  # h3 headers (###) map to lowest hierarchy level 1
+        4: 1,  # h4 and deeper headers also map to level 1
+        5: 1,
+        6: 1
     })
 
-    # Chunk sizes determine the maximum length of text segments at each level
+    # Chunk sizes for different hierarchy levels
     chunk_sizes: dict[int, int] = field(default_factory=lambda: {
         3: 1024,  # Larger chunks for main sections
         2: 512,  # Medium chunks for model details
@@ -162,24 +149,43 @@ class HierarchicalConfig:
 
     def get_level_for_text(self, text: str) -> int:
         """
-        Determine the hierarchy level of a given text based on header patterns.
+        Determine the hierarchy level of text based on its Markdown header depth.
+
+        This method analyzes the first line of text to determine if it's a header
+        and, if so, what level of header it is. The header level is then mapped
+        to the appropriate hierarchy level based on header_hierarchy_map.
 
         Args:
-            text: The text to analyze
+            text: The text content to analyze, potentially starting with a Markdown header
 
         Returns:
-            int: The detected hierarchy level (3 for highest, 1 for lowest, 0 for regular content)
+            int: The detected hierarchy level (3 for highest, 2 for middle, 1 for lowest,
+                 0 for regular content)
+
+        Example:
+            "# Main Title" -> returns 3 (highest level)
+            "## Section Header" -> returns 2 (middle level)
+            "### Subsection" -> returns 1 (lowest level)
+            "Regular text" -> returns 0 (no hierarchy)
         """
-        # Get the first line of text for header detection
+        # Get the first line for header detection
         first_line = text.strip().split('\n')[0]
 
-        # Check patterns for each level, starting from highest
-        for level, patterns in sorted(self.header_patterns.items(), reverse=True):
-            if any(re.match(pattern, first_line) for pattern in patterns):
-                return level
+        # Find the number of # symbols at the start of the line
+        header_match = re.match(r'^(#+)\s', first_line)
 
-        return 0  # Return 0 for regular content with no specific hierarchy
+        if not header_match:
+            return 0  # Not a header, return base level
 
+        # Count the number of # symbols to determine header level
+        header_level = len(header_match.group(1))
+
+        # Map the header level to hierarchy level using our configuration
+        # If the header level is deeper than our mapping, use the deepest defined level
+        return self.header_hierarchy_map.get(
+            min(header_level, max(self.header_hierarchy_map.keys())),
+            0  # Default to 0 if no mapping exists (shouldn't occur with our setup)
+        )
 
 @dataclass
 class NodeCreationConfig:
