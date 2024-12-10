@@ -732,3 +732,434 @@
 2024-12-10 10:12:57,536 - INFO - Created 4 nodes for page 32
 2024-12-10 10:12:57,541 - INFO - Saved nodes to node_outputs/sixth_pipeline_nodes.pkl
 2024-12-10 10:12:57,541 - INFO - Saved summary to node_outputs/sixth_pipeline_summary.json
+2024-12-10 15:03:26,502 - INFO - Beginning hierarchical node creation process...
+2024-12-10 15:03:26,505 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-10 15:03:26,505 - ERROR - Hierarchical node creation failed: 'pipeline_info'
+2024-12-10 15:04:21,033 - INFO - Beginning hierarchical node creation process...
+2024-12-10 15:04:21,035 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-10 15:04:21,062 - INFO - Created 7 nodes for page 1
+2024-12-10 15:04:21,065 - INFO - Created 14 nodes for page 2
+2024-12-10 15:04:21,066 - INFO - Created 7 nodes for page 3
+2024-12-10 15:04:21,068 - INFO - Created 9 nodes for page 4
+2024-12-10 15:04:21,069 - INFO - Created 9 nodes for page 5
+2024-12-10 15:04:21,071 - INFO - Created 9 nodes for page 6
+2024-12-10 15:04:21,072 - INFO - Created 8 nodes for page 7
+2024-12-10 15:04:21,073 - INFO - Created 8 nodes for page 8
+2024-12-10 15:04:21,075 - INFO - Created 9 nodes for page 9
+2024-12-10 15:04:21,078 - INFO - Created 15 nodes for page 10
+2024-12-10 15:04:21,080 - INFO - Created 12 nodes for page 11
+2024-12-10 15:04:21,081 - INFO - Created 9 nodes for page 12
+2024-12-10 15:04:21,082 - INFO - Created 9 nodes for page 13
+2024-12-10 15:04:21,084 - INFO - Created 8 nodes for page 14
+2024-12-10 15:04:21,085 - INFO - Created 8 nodes for page 15
+2024-12-10 15:04:21,087 - INFO - Created 11 nodes for page 16
+2024-12-10 15:04:21,088 - INFO - Created 7 nodes for page 17
+2024-12-10 15:04:21,089 - INFO - Created 9 nodes for page 18
+2024-12-10 15:04:21,090 - INFO - Created 7 nodes for page 19
+2024-12-10 15:04:21,091 - INFO - Created 8 nodes for page 20
+2024-12-10 15:04:21,093 - INFO - Created 12 nodes for page 21
+2024-12-10 15:04:21,095 - INFO - Created 8 nodes for page 22
+2024-12-10 15:04:21,096 - INFO - Created 7 nodes for page 23
+2024-12-10 15:04:21,098 - INFO - Created 7 nodes for page 24
+2024-12-10 15:04:21,099 - INFO - Created 9 nodes for page 25
+2024-12-10 15:04:21,101 - INFO - Created 12 nodes for page 26
+2024-12-10 15:04:21,102 - INFO - Created 8 nodes for page 27
+2024-12-10 15:04:21,104 - INFO - Created 9 nodes for page 28
+2024-12-10 15:04:21,105 - INFO - Created 8 nodes for page 29
+2024-12-10 15:04:21,107 - INFO - Created 11 nodes for page 30
+2024-12-10 15:04:21,108 - INFO - Created 8 nodes for page 31
+2024-12-10 15:04:21,109 - INFO - Created 6 nodes for page 32
+2024-12-10 15:04:21,120 - ERROR - Hierarchical node creation failed: Object of type RelatedNodeInfo is not JSON serializable
+2024-12-10 15:17:13,263 - INFO - Beginning hierarchical node creation process...
+2024-12-10 15:17:13,267 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-10 15:17:13,297 - INFO - Created 7 nodes for page 1
+2024-12-10 15:17:13,300 - INFO - Created 14 nodes for page 2
+2024-12-10 15:17:13,301 - INFO - Created 7 nodes for page 3
+2024-12-10 15:17:13,303 - INFO - Created 9 nodes for page 4
+2024-12-10 15:17:13,304 - INFO - Created 9 nodes for page 5
+2024-12-10 15:17:13,305 - INFO - Created 9 nodes for page 6
+2024-12-10 15:17:13,307 - INFO - Created 8 nodes for page 7
+2024-12-10 15:17:13,308 - INFO - Created 8 nodes for page 8
+2024-12-10 15:17:13,309 - INFO - Created 9 nodes for page 9
+2024-12-10 15:17:13,312 - INFO - Created 15 nodes for page 10
+2024-12-10 15:17:13,314 - INFO - Created 12 nodes for page 11
+2024-12-10 15:17:13,315 - INFO - Created 9 nodes for page 12
+2024-12-10 15:17:13,317 - INFO - Created 9 nodes for page 13
+2024-12-10 15:17:13,318 - INFO - Created 8 nodes for page 14
+2024-12-10 15:17:13,319 - INFO - Created 8 nodes for page 15
+2024-12-10 15:17:13,321 - INFO - Created 11 nodes for page 16
+2024-12-10 15:17:13,322 - INFO - Created 7 nodes for page 17
+2024-12-10 15:17:13,323 - INFO - Created 9 nodes for page 18
+2024-12-10 15:17:13,324 - INFO - Created 7 nodes for page 19
+2024-12-10 15:17:13,325 - INFO - Created 8 nodes for page 20
+2024-12-10 15:17:13,327 - INFO - Created 12 nodes for page 21
+2024-12-10 15:17:13,329 - INFO - Created 8 nodes for page 22
+2024-12-10 15:17:13,330 - INFO - Created 7 nodes for page 23
+2024-12-10 15:17:13,331 - INFO - Created 7 nodes for page 24
+2024-12-10 15:17:13,333 - INFO - Created 9 nodes for page 25
+2024-12-10 15:17:13,334 - INFO - Created 12 nodes for page 26
+2024-12-10 15:17:13,335 - INFO - Created 8 nodes for page 27
+2024-12-10 15:17:13,337 - INFO - Created 9 nodes for page 28
+2024-12-10 15:17:13,338 - INFO - Created 8 nodes for page 29
+2024-12-10 15:17:13,340 - INFO - Created 11 nodes for page 30
+2024-12-10 15:17:13,341 - INFO - Created 8 nodes for page 31
+2024-12-10 15:17:13,342 - INFO - Created 6 nodes for page 32
+2024-12-10 15:17:13,354 - ERROR - Hierarchical node creation failed: Object of type RelatedNodeInfo is not JSON serializable
+2024-12-10 15:26:06,279 - INFO - Beginning hierarchical node creation process...
+2024-12-10 15:26:06,283 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-10 15:26:06,315 - INFO - Created 7 nodes for page 1
+2024-12-10 15:26:06,318 - INFO - Created 14 nodes for page 2
+2024-12-10 15:26:06,319 - INFO - Created 7 nodes for page 3
+2024-12-10 15:26:06,321 - INFO - Created 9 nodes for page 4
+2024-12-10 15:26:06,322 - INFO - Created 9 nodes for page 5
+2024-12-10 15:26:06,323 - INFO - Created 9 nodes for page 6
+2024-12-10 15:26:06,325 - INFO - Created 8 nodes for page 7
+2024-12-10 15:26:06,326 - INFO - Created 8 nodes for page 8
+2024-12-10 15:26:06,327 - INFO - Created 9 nodes for page 9
+2024-12-10 15:26:06,330 - INFO - Created 15 nodes for page 10
+2024-12-10 15:26:06,332 - INFO - Created 12 nodes for page 11
+2024-12-10 15:26:06,334 - INFO - Created 9 nodes for page 12
+2024-12-10 15:26:06,335 - INFO - Created 9 nodes for page 13
+2024-12-10 15:26:06,336 - INFO - Created 8 nodes for page 14
+2024-12-10 15:26:06,337 - INFO - Created 8 nodes for page 15
+2024-12-10 15:26:06,339 - INFO - Created 11 nodes for page 16
+2024-12-10 15:26:06,340 - INFO - Created 7 nodes for page 17
+2024-12-10 15:26:06,341 - INFO - Created 9 nodes for page 18
+2024-12-10 15:26:06,342 - INFO - Created 7 nodes for page 19
+2024-12-10 15:26:06,343 - INFO - Created 8 nodes for page 20
+2024-12-10 15:26:06,345 - INFO - Created 12 nodes for page 21
+2024-12-10 15:26:06,347 - INFO - Created 8 nodes for page 22
+2024-12-10 15:26:06,348 - INFO - Created 7 nodes for page 23
+2024-12-10 15:26:06,349 - INFO - Created 7 nodes for page 24
+2024-12-10 15:26:06,351 - INFO - Created 9 nodes for page 25
+2024-12-10 15:26:06,353 - INFO - Created 12 nodes for page 26
+2024-12-10 15:26:06,354 - INFO - Created 8 nodes for page 27
+2024-12-10 15:26:06,355 - INFO - Created 9 nodes for page 28
+2024-12-10 15:26:06,356 - INFO - Created 8 nodes for page 29
+2024-12-10 15:26:06,358 - INFO - Created 11 nodes for page 30
+2024-12-10 15:26:06,359 - INFO - Created 8 nodes for page 31
+2024-12-10 15:26:06,360 - INFO - Created 6 nodes for page 32
+2024-12-10 15:26:06,362 - INFO - Detailed hierarchy analysis has been written to analysis/seventh_pipeline_hierarchy_analysis.txt
+2024-12-10 15:26:06,362 - INFO - 
+Quick Analysis Summary:
+2024-12-10 15:26:06,362 - INFO - Level 0: 281 nodes
+2024-12-10 15:26:06,362 - INFO - Level 2: 7 nodes
+2024-12-10 16:06:05,828 - INFO - Beginning hierarchical node creation process...
+2024-12-10 16:06:05,829 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-10 16:06:05,829 - INFO - Created 5 nodes for page 1
+2024-12-10 16:06:05,829 - INFO - Created 6 nodes for page 2
+2024-12-10 16:06:05,830 - INFO - Created 5 nodes for page 3
+2024-12-10 16:06:05,830 - INFO - Created 6 nodes for page 4
+2024-12-10 16:06:05,830 - INFO - Created 6 nodes for page 5
+2024-12-10 16:06:05,830 - INFO - Created 3 nodes for page 6
+2024-12-10 16:06:05,830 - INFO - Created 5 nodes for page 7
+2024-12-10 16:06:05,830 - INFO - Created 5 nodes for page 8
+2024-12-10 16:06:05,830 - INFO - Created 6 nodes for page 9
+2024-12-10 16:06:05,830 - INFO - Created 6 nodes for page 10
+2024-12-10 16:06:05,830 - INFO - Created 12 nodes for page 11
+2024-12-10 16:06:05,830 - INFO - Created 3 nodes for page 12
+2024-12-10 16:06:05,831 - INFO - Created 7 nodes for page 13
+2024-12-10 16:06:05,831 - INFO - Created 3 nodes for page 14
+2024-12-10 16:06:05,831 - INFO - Created 5 nodes for page 15
+2024-12-10 16:06:05,831 - INFO - Created 6 nodes for page 16
+2024-12-10 16:06:05,831 - INFO - Created 5 nodes for page 17
+2024-12-10 16:06:05,831 - INFO - Created 3 nodes for page 18
+2024-12-10 16:06:05,831 - INFO - Created 6 nodes for page 19
+2024-12-10 16:06:05,831 - INFO - Created 3 nodes for page 20
+2024-12-10 16:06:05,831 - INFO - Created 8 nodes for page 21
+2024-12-10 16:06:05,831 - INFO - Created 4 nodes for page 22
+2024-12-10 16:06:05,831 - INFO - Created 8 nodes for page 23
+2024-12-10 16:06:05,831 - INFO - Created 4 nodes for page 24
+2024-12-10 16:06:05,832 - INFO - Created 7 nodes for page 25
+2024-12-10 16:06:05,832 - INFO - Created 4 nodes for page 26
+2024-12-10 16:06:05,832 - INFO - Created 6 nodes for page 27
+2024-12-10 16:06:05,832 - INFO - Created 3 nodes for page 28
+2024-12-10 16:06:05,832 - INFO - Created 5 nodes for page 29
+2024-12-10 16:06:05,832 - INFO - Created 6 nodes for page 30
+2024-12-10 16:06:05,832 - INFO - Created 5 nodes for page 31
+2024-12-10 16:06:05,832 - INFO - Created 4 nodes for page 32
+2024-12-10 16:06:05,834 - ERROR - Hierarchical node creation failed: 'set' object is not subscriptable
+2024-12-10 16:06:44,106 - INFO - Beginning hierarchical node creation process...
+2024-12-10 16:06:44,107 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-10 16:06:44,107 - INFO - Created 5 nodes for page 1
+2024-12-10 16:06:44,107 - INFO - Created 6 nodes for page 2
+2024-12-10 16:06:44,108 - INFO - Created 5 nodes for page 3
+2024-12-10 16:06:44,108 - INFO - Created 6 nodes for page 4
+2024-12-10 16:06:44,108 - INFO - Created 6 nodes for page 5
+2024-12-10 16:06:44,108 - INFO - Created 3 nodes for page 6
+2024-12-10 16:06:44,108 - INFO - Created 5 nodes for page 7
+2024-12-10 16:06:44,108 - INFO - Created 5 nodes for page 8
+2024-12-10 16:06:44,108 - INFO - Created 6 nodes for page 9
+2024-12-10 16:06:44,108 - INFO - Created 6 nodes for page 10
+2024-12-10 16:06:44,108 - INFO - Created 12 nodes for page 11
+2024-12-10 16:06:44,108 - INFO - Created 3 nodes for page 12
+2024-12-10 16:06:44,108 - INFO - Created 7 nodes for page 13
+2024-12-10 16:06:44,109 - INFO - Created 3 nodes for page 14
+2024-12-10 16:06:44,109 - INFO - Created 5 nodes for page 15
+2024-12-10 16:06:44,109 - INFO - Created 6 nodes for page 16
+2024-12-10 16:06:44,109 - INFO - Created 5 nodes for page 17
+2024-12-10 16:06:44,109 - INFO - Created 3 nodes for page 18
+2024-12-10 16:06:44,109 - INFO - Created 6 nodes for page 19
+2024-12-10 16:06:44,109 - INFO - Created 3 nodes for page 20
+2024-12-10 16:06:44,109 - INFO - Created 8 nodes for page 21
+2024-12-10 16:06:44,109 - INFO - Created 4 nodes for page 22
+2024-12-10 16:06:44,109 - INFO - Created 8 nodes for page 23
+2024-12-10 16:06:44,109 - INFO - Created 4 nodes for page 24
+2024-12-10 16:06:44,110 - INFO - Created 7 nodes for page 25
+2024-12-10 16:06:44,110 - INFO - Created 4 nodes for page 26
+2024-12-10 16:06:44,110 - INFO - Created 6 nodes for page 27
+2024-12-10 16:06:44,110 - INFO - Created 3 nodes for page 28
+2024-12-10 16:06:44,110 - INFO - Created 5 nodes for page 29
+2024-12-10 16:06:44,110 - INFO - Created 6 nodes for page 30
+2024-12-10 16:06:44,110 - INFO - Created 5 nodes for page 31
+2024-12-10 16:06:44,110 - INFO - Created 4 nodes for page 32
+2024-12-10 16:06:44,111 - ERROR - Hierarchical node creation failed: 'set' object is not subscriptable
+2024-12-10 16:10:55,722 - INFO - Beginning hierarchical node creation process...
+2024-12-10 16:10:55,724 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-10 16:10:55,725 - INFO - Created 5 nodes for page 1
+2024-12-10 16:10:55,725 - INFO - Created 6 nodes for page 2
+2024-12-10 16:10:55,725 - INFO - Created 5 nodes for page 3
+2024-12-10 16:10:55,725 - INFO - Created 6 nodes for page 4
+2024-12-10 16:10:55,725 - INFO - Created 6 nodes for page 5
+2024-12-10 16:10:55,725 - INFO - Created 3 nodes for page 6
+2024-12-10 16:10:55,725 - INFO - Created 5 nodes for page 7
+2024-12-10 16:10:55,726 - INFO - Created 5 nodes for page 8
+2024-12-10 16:10:55,726 - INFO - Created 6 nodes for page 9
+2024-12-10 16:10:55,726 - INFO - Created 6 nodes for page 10
+2024-12-10 16:10:55,726 - INFO - Created 12 nodes for page 11
+2024-12-10 16:10:55,726 - INFO - Created 3 nodes for page 12
+2024-12-10 16:10:55,726 - INFO - Created 7 nodes for page 13
+2024-12-10 16:10:55,726 - INFO - Created 3 nodes for page 14
+2024-12-10 16:10:55,726 - INFO - Created 5 nodes for page 15
+2024-12-10 16:10:55,727 - INFO - Created 6 nodes for page 16
+2024-12-10 16:10:55,727 - INFO - Created 5 nodes for page 17
+2024-12-10 16:10:55,727 - INFO - Created 3 nodes for page 18
+2024-12-10 16:10:55,727 - INFO - Created 6 nodes for page 19
+2024-12-10 16:10:55,727 - INFO - Created 3 nodes for page 20
+2024-12-10 16:10:55,727 - INFO - Created 8 nodes for page 21
+2024-12-10 16:10:55,727 - INFO - Created 4 nodes for page 22
+2024-12-10 16:10:55,727 - INFO - Created 8 nodes for page 23
+2024-12-10 16:10:55,727 - INFO - Created 4 nodes for page 24
+2024-12-10 16:10:55,728 - INFO - Created 7 nodes for page 25
+2024-12-10 16:10:55,728 - INFO - Created 4 nodes for page 26
+2024-12-10 16:10:55,728 - INFO - Created 6 nodes for page 27
+2024-12-10 16:10:55,728 - INFO - Created 3 nodes for page 28
+2024-12-10 16:10:55,728 - INFO - Created 5 nodes for page 29
+2024-12-10 16:10:55,728 - INFO - Created 6 nodes for page 30
+2024-12-10 16:10:55,728 - INFO - Created 5 nodes for page 31
+2024-12-10 16:10:55,728 - INFO - Created 4 nodes for page 32
+2024-12-10 16:10:55,730 - ERROR - Hierarchical node creation failed: 'set' object is not subscriptable
+2024-12-10 16:15:06,149 - INFO - Beginning hierarchical node creation process...
+2024-12-10 16:15:06,152 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-10 16:15:06,152 - INFO - Created 5 nodes for page 1
+2024-12-10 16:15:06,152 - INFO - Created 6 nodes for page 2
+2024-12-10 16:15:06,152 - INFO - Created 5 nodes for page 3
+2024-12-10 16:15:06,153 - INFO - Created 6 nodes for page 4
+2024-12-10 16:15:06,153 - INFO - Created 6 nodes for page 5
+2024-12-10 16:15:06,153 - INFO - Created 3 nodes for page 6
+2024-12-10 16:15:06,153 - INFO - Created 5 nodes for page 7
+2024-12-10 16:15:06,153 - INFO - Created 5 nodes for page 8
+2024-12-10 16:15:06,153 - INFO - Created 6 nodes for page 9
+2024-12-10 16:15:06,153 - INFO - Created 6 nodes for page 10
+2024-12-10 16:15:06,153 - INFO - Created 12 nodes for page 11
+2024-12-10 16:15:06,154 - INFO - Created 3 nodes for page 12
+2024-12-10 16:15:06,154 - INFO - Created 7 nodes for page 13
+2024-12-10 16:15:06,154 - INFO - Created 3 nodes for page 14
+2024-12-10 16:15:06,154 - INFO - Created 5 nodes for page 15
+2024-12-10 16:15:06,154 - INFO - Created 6 nodes for page 16
+2024-12-10 16:15:06,154 - INFO - Created 5 nodes for page 17
+2024-12-10 16:15:06,154 - INFO - Created 3 nodes for page 18
+2024-12-10 16:15:06,154 - INFO - Created 6 nodes for page 19
+2024-12-10 16:15:06,154 - INFO - Created 3 nodes for page 20
+2024-12-10 16:15:06,155 - INFO - Created 8 nodes for page 21
+2024-12-10 16:15:06,155 - INFO - Created 4 nodes for page 22
+2024-12-10 16:15:06,155 - INFO - Created 8 nodes for page 23
+2024-12-10 16:15:06,155 - INFO - Created 4 nodes for page 24
+2024-12-10 16:15:06,155 - INFO - Created 7 nodes for page 25
+2024-12-10 16:15:06,155 - INFO - Created 4 nodes for page 26
+2024-12-10 16:15:06,155 - INFO - Created 6 nodes for page 27
+2024-12-10 16:15:06,155 - INFO - Created 3 nodes for page 28
+2024-12-10 16:15:06,155 - INFO - Created 5 nodes for page 29
+2024-12-10 16:15:06,156 - INFO - Created 6 nodes for page 30
+2024-12-10 16:15:06,156 - INFO - Created 5 nodes for page 31
+2024-12-10 16:15:06,156 - INFO - Created 4 nodes for page 32
+2024-12-10 16:15:06,158 - ERROR - Hierarchical node creation failed: 'set' object is not subscriptable
+2024-12-10 16:18:13,944 - INFO - Beginning hierarchical node creation process...
+2024-12-10 16:18:13,946 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-10 16:18:13,946 - INFO - Created 5 nodes for page 1
+2024-12-10 16:18:13,946 - INFO - Created 6 nodes for page 2
+2024-12-10 16:18:13,946 - INFO - Created 5 nodes for page 3
+2024-12-10 16:18:13,947 - INFO - Created 6 nodes for page 4
+2024-12-10 16:18:13,947 - INFO - Created 6 nodes for page 5
+2024-12-10 16:18:13,947 - INFO - Created 3 nodes for page 6
+2024-12-10 16:18:13,947 - INFO - Created 5 nodes for page 7
+2024-12-10 16:18:13,947 - INFO - Created 5 nodes for page 8
+2024-12-10 16:18:13,947 - INFO - Created 6 nodes for page 9
+2024-12-10 16:18:13,947 - INFO - Created 6 nodes for page 10
+2024-12-10 16:18:13,947 - INFO - Created 12 nodes for page 11
+2024-12-10 16:18:13,947 - INFO - Created 3 nodes for page 12
+2024-12-10 16:18:13,947 - INFO - Created 7 nodes for page 13
+2024-12-10 16:18:13,948 - INFO - Created 3 nodes for page 14
+2024-12-10 16:18:13,948 - INFO - Created 5 nodes for page 15
+2024-12-10 16:18:13,948 - INFO - Created 6 nodes for page 16
+2024-12-10 16:18:13,948 - INFO - Created 5 nodes for page 17
+2024-12-10 16:18:13,948 - INFO - Created 3 nodes for page 18
+2024-12-10 16:18:13,948 - INFO - Created 6 nodes for page 19
+2024-12-10 16:18:13,948 - INFO - Created 3 nodes for page 20
+2024-12-10 16:18:13,948 - INFO - Created 8 nodes for page 21
+2024-12-10 16:18:13,948 - INFO - Created 4 nodes for page 22
+2024-12-10 16:18:13,948 - INFO - Created 8 nodes for page 23
+2024-12-10 16:18:13,948 - INFO - Created 4 nodes for page 24
+2024-12-10 16:18:13,949 - INFO - Created 7 nodes for page 25
+2024-12-10 16:18:13,949 - INFO - Created 4 nodes for page 26
+2024-12-10 16:18:13,949 - INFO - Created 6 nodes for page 27
+2024-12-10 16:18:13,949 - INFO - Created 3 nodes for page 28
+2024-12-10 16:18:13,949 - INFO - Created 5 nodes for page 29
+2024-12-10 16:18:13,949 - INFO - Created 6 nodes for page 30
+2024-12-10 16:18:13,949 - INFO - Created 5 nodes for page 31
+2024-12-10 16:18:13,949 - INFO - Created 4 nodes for page 32
+2024-12-10 16:18:13,950 - ERROR - Hierarchical node creation failed: 'set' object is not subscriptable
+2024-12-10 16:23:54,186 - INFO - Beginning hierarchical node creation process...
+2024-12-10 16:23:54,188 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-10 16:23:54,188 - INFO - Created 5 nodes for page 1
+2024-12-10 16:23:54,188 - INFO - Created 6 nodes for page 2
+2024-12-10 16:23:54,188 - INFO - Created 5 nodes for page 3
+2024-12-10 16:23:54,188 - INFO - Created 6 nodes for page 4
+2024-12-10 16:23:54,188 - INFO - Created 6 nodes for page 5
+2024-12-10 16:23:54,189 - INFO - Created 3 nodes for page 6
+2024-12-10 16:23:54,189 - INFO - Created 5 nodes for page 7
+2024-12-10 16:23:54,189 - INFO - Created 5 nodes for page 8
+2024-12-10 16:23:54,189 - INFO - Created 6 nodes for page 9
+2024-12-10 16:23:54,189 - INFO - Created 6 nodes for page 10
+2024-12-10 16:23:54,189 - INFO - Created 12 nodes for page 11
+2024-12-10 16:23:54,189 - INFO - Created 3 nodes for page 12
+2024-12-10 16:23:54,189 - INFO - Created 7 nodes for page 13
+2024-12-10 16:23:54,190 - INFO - Created 3 nodes for page 14
+2024-12-10 16:23:54,190 - INFO - Created 5 nodes for page 15
+2024-12-10 16:23:54,190 - INFO - Created 6 nodes for page 16
+2024-12-10 16:23:54,190 - INFO - Created 5 nodes for page 17
+2024-12-10 16:23:54,190 - INFO - Created 3 nodes for page 18
+2024-12-10 16:23:54,190 - INFO - Created 6 nodes for page 19
+2024-12-10 16:23:54,190 - INFO - Created 3 nodes for page 20
+2024-12-10 16:23:54,190 - INFO - Created 8 nodes for page 21
+2024-12-10 16:23:54,190 - INFO - Created 4 nodes for page 22
+2024-12-10 16:23:54,191 - INFO - Created 8 nodes for page 23
+2024-12-10 16:23:54,191 - INFO - Created 4 nodes for page 24
+2024-12-10 16:23:54,191 - INFO - Created 7 nodes for page 25
+2024-12-10 16:23:54,191 - INFO - Created 4 nodes for page 26
+2024-12-10 16:23:54,191 - INFO - Created 6 nodes for page 27
+2024-12-10 16:23:54,191 - INFO - Created 3 nodes for page 28
+2024-12-10 16:23:54,191 - INFO - Created 5 nodes for page 29
+2024-12-10 16:23:54,191 - INFO - Created 6 nodes for page 30
+2024-12-10 16:23:54,192 - INFO - Created 5 nodes for page 31
+2024-12-10 16:23:54,192 - INFO - Created 4 nodes for page 32
+2024-12-10 16:28:41,001 - INFO - Beginning hierarchical node creation process...
+2024-12-10 16:28:41,004 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-10 16:28:41,004 - INFO - Created 5 nodes for page 1
+2024-12-10 16:28:41,004 - INFO - Created 6 nodes for page 2
+2024-12-10 16:28:41,005 - INFO - Created 5 nodes for page 3
+2024-12-10 16:28:41,005 - INFO - Created 6 nodes for page 4
+2024-12-10 16:28:41,005 - INFO - Created 6 nodes for page 5
+2024-12-10 16:28:41,005 - INFO - Created 3 nodes for page 6
+2024-12-10 16:28:41,005 - INFO - Created 5 nodes for page 7
+2024-12-10 16:28:41,005 - INFO - Created 5 nodes for page 8
+2024-12-10 16:28:41,005 - INFO - Created 6 nodes for page 9
+2024-12-10 16:28:41,005 - INFO - Created 6 nodes for page 10
+2024-12-10 16:28:41,006 - INFO - Created 12 nodes for page 11
+2024-12-10 16:28:41,006 - INFO - Created 3 nodes for page 12
+2024-12-10 16:28:41,006 - INFO - Created 7 nodes for page 13
+2024-12-10 16:28:41,006 - INFO - Created 3 nodes for page 14
+2024-12-10 16:28:41,006 - INFO - Created 5 nodes for page 15
+2024-12-10 16:28:41,006 - INFO - Created 6 nodes for page 16
+2024-12-10 16:28:41,006 - INFO - Created 5 nodes for page 17
+2024-12-10 16:28:41,006 - INFO - Created 3 nodes for page 18
+2024-12-10 16:28:41,007 - INFO - Created 6 nodes for page 19
+2024-12-10 16:28:41,007 - INFO - Created 3 nodes for page 20
+2024-12-10 16:28:41,007 - INFO - Created 8 nodes for page 21
+2024-12-10 16:28:41,007 - INFO - Created 4 nodes for page 22
+2024-12-10 16:28:41,007 - INFO - Created 8 nodes for page 23
+2024-12-10 16:28:41,007 - INFO - Created 4 nodes for page 24
+2024-12-10 16:28:41,007 - INFO - Created 7 nodes for page 25
+2024-12-10 16:28:41,007 - INFO - Created 4 nodes for page 26
+2024-12-10 16:28:41,008 - INFO - Created 6 nodes for page 27
+2024-12-10 16:28:41,008 - INFO - Created 3 nodes for page 28
+2024-12-10 16:28:41,008 - INFO - Created 5 nodes for page 29
+2024-12-10 16:28:41,008 - INFO - Created 6 nodes for page 30
+2024-12-10 16:28:41,008 - INFO - Created 5 nodes for page 31
+2024-12-10 16:28:41,008 - INFO - Created 4 nodes for page 32
+2024-12-10 16:28:41,010 - INFO - Analysis has been written to analysis/seventh_pipeline_hierarchy_analysis.txt
+2024-12-10 16:28:41,010 - INFO - Found 0 level 2 nodes on page 10
+2024-12-10 16:29:21,013 - INFO - Beginning hierarchical node creation process...
+2024-12-10 16:29:21,015 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-10 16:29:21,016 - INFO - Created 5 nodes for page 1
+2024-12-10 16:29:21,016 - INFO - Created 6 nodes for page 2
+2024-12-10 16:29:21,016 - INFO - Created 5 nodes for page 3
+2024-12-10 16:29:21,016 - INFO - Created 6 nodes for page 4
+2024-12-10 16:29:21,016 - INFO - Created 6 nodes for page 5
+2024-12-10 16:29:21,016 - INFO - Created 3 nodes for page 6
+2024-12-10 16:29:21,016 - INFO - Created 5 nodes for page 7
+2024-12-10 16:29:21,016 - INFO - Created 5 nodes for page 8
+2024-12-10 16:29:21,016 - INFO - Created 6 nodes for page 9
+2024-12-10 16:29:21,016 - INFO - Created 6 nodes for page 10
+2024-12-10 16:29:21,017 - INFO - Created 12 nodes for page 11
+2024-12-10 16:29:21,017 - INFO - Created 3 nodes for page 12
+2024-12-10 16:29:21,017 - INFO - Created 7 nodes for page 13
+2024-12-10 16:29:21,017 - INFO - Created 3 nodes for page 14
+2024-12-10 16:29:21,017 - INFO - Created 5 nodes for page 15
+2024-12-10 16:29:21,017 - INFO - Created 6 nodes for page 16
+2024-12-10 16:29:21,017 - INFO - Created 5 nodes for page 17
+2024-12-10 16:29:21,017 - INFO - Created 3 nodes for page 18
+2024-12-10 16:29:21,017 - INFO - Created 6 nodes for page 19
+2024-12-10 16:29:21,017 - INFO - Created 3 nodes for page 20
+2024-12-10 16:29:21,017 - INFO - Created 8 nodes for page 21
+2024-12-10 16:29:21,018 - INFO - Created 4 nodes for page 22
+2024-12-10 16:29:21,018 - INFO - Created 8 nodes for page 23
+2024-12-10 16:29:21,018 - INFO - Created 4 nodes for page 24
+2024-12-10 16:29:21,018 - INFO - Created 7 nodes for page 25
+2024-12-10 16:29:21,018 - INFO - Created 4 nodes for page 26
+2024-12-10 16:29:21,018 - INFO - Created 6 nodes for page 27
+2024-12-10 16:29:21,018 - INFO - Created 3 nodes for page 28
+2024-12-10 16:29:21,018 - INFO - Created 5 nodes for page 29
+2024-12-10 16:29:21,018 - INFO - Created 6 nodes for page 30
+2024-12-10 16:29:21,019 - INFO - Created 5 nodes for page 31
+2024-12-10 16:29:21,019 - INFO - Created 4 nodes for page 32
+2024-12-10 16:29:21,020 - INFO - Analysis has been written to analysis/seventh_pipeline_hierarchy_analysis.txt
+2024-12-10 16:29:21,020 - INFO - Found 5 level 2 nodes on page 10
+2024-12-10 16:31:51,746 - INFO - Beginning hierarchical node creation process...
+2024-12-10 16:31:51,748 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-10 16:31:51,748 - INFO - Created 5 nodes for page 1
+2024-12-10 16:31:51,748 - INFO - Created 6 nodes for page 2
+2024-12-10 16:31:51,748 - INFO - Created 5 nodes for page 3
+2024-12-10 16:31:51,748 - INFO - Created 6 nodes for page 4
+2024-12-10 16:31:51,749 - INFO - Created 6 nodes for page 5
+2024-12-10 16:31:51,749 - INFO - Created 3 nodes for page 6
+2024-12-10 16:31:51,749 - INFO - Created 5 nodes for page 7
+2024-12-10 16:31:51,749 - INFO - Created 5 nodes for page 8
+2024-12-10 16:31:51,749 - INFO - Created 6 nodes for page 9
+2024-12-10 16:31:51,749 - INFO - Created 6 nodes for page 10
+2024-12-10 16:31:51,749 - INFO - Created 12 nodes for page 11
+2024-12-10 16:31:51,749 - INFO - Created 3 nodes for page 12
+2024-12-10 16:31:51,749 - INFO - Created 7 nodes for page 13
+2024-12-10 16:31:51,749 - INFO - Created 3 nodes for page 14
+2024-12-10 16:31:51,749 - INFO - Created 5 nodes for page 15
+2024-12-10 16:31:51,750 - INFO - Created 6 nodes for page 16
+2024-12-10 16:31:51,750 - INFO - Created 5 nodes for page 17
+2024-12-10 16:31:51,750 - INFO - Created 3 nodes for page 18
+2024-12-10 16:31:51,750 - INFO - Created 6 nodes for page 19
+2024-12-10 16:31:51,750 - INFO - Created 3 nodes for page 20
+2024-12-10 16:31:51,750 - INFO - Created 8 nodes for page 21
+2024-12-10 16:31:51,750 - INFO - Created 4 nodes for page 22
+2024-12-10 16:31:51,750 - INFO - Created 8 nodes for page 23
+2024-12-10 16:31:51,750 - INFO - Created 4 nodes for page 24
+2024-12-10 16:31:51,750 - INFO - Created 7 nodes for page 25
+2024-12-10 16:31:51,750 - INFO - Created 4 nodes for page 26
+2024-12-10 16:31:51,751 - INFO - Created 6 nodes for page 27
+2024-12-10 16:31:51,751 - INFO - Created 3 nodes for page 28
+2024-12-10 16:31:51,751 - INFO - Created 5 nodes for page 29
+2024-12-10 16:31:51,751 - INFO - Created 6 nodes for page 30
+2024-12-10 16:31:51,751 - INFO - Created 5 nodes for page 31
+2024-12-10 16:31:51,751 - INFO - Created 4 nodes for page 32
+2024-12-10 16:31:51,752 - INFO - Found 1 level 0 nodes on page 10
+2024-12-10 16:31:51,752 - INFO - Found 5 level 1 nodes on page 10
+2024-12-10 16:31:51,752 - INFO - Found 0 level 2 nodes on page 10
+2024-12-10 16:31:51,752 - INFO - Detailed analysis has been written to analysis/seventh_pipeline_hierarchy_analysis.txt

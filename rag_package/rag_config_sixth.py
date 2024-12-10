@@ -173,15 +173,13 @@ class HierarchicalConfig:
             0
         )
 
+
 @dataclass
 class NodeCreationConfig:
     """Configuration for node creation."""
-    pipeline_name: str = 'seventh_pipeline'
+    pipeline_name: str = 'sixth_pipeline'
     parsed_results_path: str = 'parsed_results.json'
     output_dir: str = "node_outputs"
-
-    chunk_sizes: list[int] = field(default_factory=lambda: [2048, 512, 128])
-    chunk_overlap: int = 20
 
     # Keep the hierarchy config
     hierarchy_config: HierarchicalConfig = field(default_factory=HierarchicalConfig)
@@ -194,7 +192,6 @@ class NodeCreationConfig:
                 "name": self.pipeline_name
             }
         }
-    # base_metadata: dict[str, any] = field(default_factory=dict)
 
 
 # Global configuration instances
