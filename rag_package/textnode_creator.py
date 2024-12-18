@@ -1,18 +1,14 @@
 from pathlib import Path
 import json
-import pickle
 import time
 import re
-from datetime import datetime
 import logging
-from typing import List, Dict, Optional, Any, Tuple, Sequence
-from dataclasses import dataclass
+from typing import Any, Sequence
 from llama_index.core.schema import TextNode, Document, BaseNode
 from pydantic import Field, BaseModel
 from llama_index.core.node_parser import NodeParser
 from rag_package.errors import TextNodeCreationError
 from rag_package.rag_config import NodeCreationConfig
-
 
 class MarkdownHeaderSplitter(NodeParser, BaseModel):
     """
@@ -48,14 +44,14 @@ class MarkdownHeaderSplitter(NodeParser, BaseModel):
         nodes: Sequence[BaseNode],
         show_progress: bool = False,
         **kwargs: Any
-    ) -> List[BaseNode]:
+    ) -> list[BaseNode]:
         """
         Required implementation of NodeParser's abstract method.
         Acts as a pass-through since we handle the main processing in get_nodes_from_documents.
         """
         return list(nodes)
 
-    def _split_text_with_headers(self, text: str) -> List[Tuple[int, str, str]]:
+    def _split_text_with_headers(self, text: str) -> list[tuple[int, str, str]]:
         """
         Split text into sections based on markdown headers.
 
@@ -111,7 +107,7 @@ class MarkdownHeaderSplitter(NodeParser, BaseModel):
             self,
             text: str,
             metadata: dict,
-            header_info: Tuple[int, str]
+            header_info: tuple[int, str]
     ) -> BaseNode:
         """
         Create a node from a section of text with header information.
@@ -139,9 +135,9 @@ class MarkdownHeaderSplitter(NodeParser, BaseModel):
 
     def get_nodes_from_documents(
             self,
-            documents: List[Document],
+            documents: list[Document],
             show_progress: bool = False
-    ) -> List[BaseNode]:
+    ) -> list[BaseNode]:
         """
         Parse documents into nodes based on markdown structure.
 
@@ -197,7 +193,7 @@ class TextNodeCreator:
         # Initialize hierarchical parser with markdown awareness
         self.parsers = self._initialize_parsers()
 
-    def _initialize_parsers(self) -> Dict[str, MarkdownHeaderSplitter]:
+    def _initialize_parsers(self) -> dict[str, MarkdownHeaderSplitter]:
         """
         Initialize a set of markdown-aware parsers for different header levels.
         Each parser is configured to handle a specific level of document hierarchy.
@@ -223,7 +219,7 @@ class TextNodeCreator:
             self,
             content: str,
             base_metadata: dict,
-    ) -> List[BaseNode]:
+    ) -> list[BaseNode]:
         """
         Process document content using markdown-aware parsing.
 
@@ -252,7 +248,7 @@ class TextNodeCreator:
 
         return all_nodes
 
-    def _establish_relationships(self, nodes: List[BaseNode]) -> None:
+    def _establish_relationships(self, nodes: list[BaseNode]) -> None:
         """
         Establish hierarchical relationships between nodes based on their header levels.
 
@@ -288,8 +284,7 @@ class TextNodeCreator:
                     previous_node.relationships["child"].add(node.node_id)
                     break
 
-
-    def _get_parent_id(self, node: BaseNode) -> Optional[str]:
+    def _get_parent_id(self, node: BaseNode) -> str | None:
         """
         Get the parent ID from a node's relationships.
 
@@ -307,7 +302,7 @@ class TextNodeCreator:
         # Convert to list and get first element if exists, otherwise return None
         return list(parent_ids)[0] if parent_ids else None
 
-    def create_nodes(self) -> List[BaseNode]:
+    def create_nodes(self) -> list[BaseNode]:
         """
         Create hierarchical nodes from parsed markdown content.
         """
@@ -344,7 +339,6 @@ class TextNodeCreator:
                     )
 
             if all_nodes:
-                # self._save_outputs(all_nodes)
                 self.analyze_node_hierarchy(all_nodes)
 
             execution_time = time.time() - start_time
@@ -356,7 +350,7 @@ class TextNodeCreator:
             self.logger.error(f"Hierarchical node creation failed: {str(e)}")
             raise TextNodeCreationError(f"Failed to create nodes: {str(e)}")
 
-    def analyze_node_hierarchy(self, nodes: List[BaseNode]) -> None:
+    def analyze_node_hierarchy(self, nodes: list[BaseNode]) -> None:
         """
         Analyze the hierarchical structure of nodes, providing detailed information about
         nodes from levels 0, 1, and 2 on page 10. This helps understand how content is
@@ -421,77 +415,3 @@ class TextNodeCreator:
 
                     # Add a summary for this level
                     f.write(f"\n\nFound {len(page_10_level_nodes)} level {level} nodes on page 10\n")
-
-                    # Add a visual separator between levels
-                    f.write("\n" + "=" * 80 + "\n")
-
-            # Log a summary of what we found
-            for level in [0, 1, 2]:
-                level_count = len([
-                    node for node in nodes
-                    if (node.metadata["hierarchy_info"]["level"] == level and
-                        node.metadata["document_info"]["page_num"] == 10)
-                ])
-                self.logger.info(f"Found {level_count} level {level} nodes on page 10")
-
-            self.logger.info(f"Detailed analysis has been written to {analysis_path}")
-
-    def _get_hierarchy_statistics(self, nodes: List[BaseNode]) -> Dict[str, Any]:
-        """
-        Calculate statistics about the node hierarchy.
-
-        This method analyzes the distribution of nodes across different levels
-        and calculates metrics about parent-child relationships. It's important
-        to handle relationships consistently as sets throughout the analysis.
-        """
-        level_counts = {}
-        parent_child_counts = {}
-
-        for node in nodes:
-            # Count nodes per level
-            level = node.metadata["hierarchy_info"]["level"]
-            level_counts[level] = level_counts.get(level, 0) + 1
-
-            # Get child relationships, using set as default for consistency
-            children = node.relationships.get("child", set())
-            parent_child_counts[node.node_id] = len(children)
-
-        return {
-            "nodes_per_level": level_counts,
-            "average_children_per_node": sum(parent_child_counts.values()) / len(nodes),
-            "max_children_per_node": max(parent_child_counts.values(), default=0)
-        }
-
-    def _setup_logging(self):
-        """Configure logging to write to both a file and the console."""
-        # Clear any existing handlers
-        self.logger.handlers = []
-
-        # Create file handler
-        log_file = self.analysis_dir / "node_creation.log"
-        file_handler = logging.FileHandler(log_file)
-        file_handler.setLevel(logging.INFO)
-
-        # Create console handler
-        console_handler = logging.StreamHandler()
-        console_handler.setLevel(logging.INFO)
-
-        # Create formatter and add it to the handlers
-        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-        file_handler.setFormatter(formatter)
-        console_handler.setFormatter(formatter)
-
-        # Add the handlers to the logger
-        self.logger.addHandler(file_handler)
-        self.logger.addHandler(console_handler)
-
-    def _log_execution_time(self, execution_time: float) -> None:
-        """Log execution time with hierarchical processing details."""
-        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        timing_log = (
-            f"{timestamp} - Pipeline: {self.config.pipeline_name}, "
-            f"Hierarchical Processing Time: {execution_time:.2f} seconds\n"
-        )
-
-        with open(self.analysis_dir / "node_creation_times.txt", 'a') as f:
-            f.write(timing_log)
