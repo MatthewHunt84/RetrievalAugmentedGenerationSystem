@@ -5397,3 +5397,319 @@ AttributeError: 'TextNodeCreator' object has no attribute 'logge'. Did you mean:
 2024-12-19 14:37:01,462 - INFO - Enhanced node 1f768171-0545-4ff2-80af-ddf508da5cb3 with metadata
 2024-12-19 14:37:01,462 - INFO - Enhanced node 7ea54881-09ef-49a6-9eea-7b5c5f587a83 with metadata
 2024-12-19 14:37:01,462 - INFO - Enhanced 5 nodes with metadata
+2024-12-19 15:14:32,159 - INFO - Beginning hierarchical node creation process...
+2024-12-19 15:14:32,163 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-19 15:14:32,163 - ERROR - Hierarchical node creation failed: uuid5() missing 2 required positional arguments: 'namespace' and 'name'
+2024-12-19 15:15:18,487 - INFO - Beginning hierarchical node creation process...
+2024-12-19 15:15:18,490 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-19 15:15:18,490 - INFO - Created 5 nodes for page 1
+2024-12-19 15:15:18,490 - INFO - Created 6 nodes for page 2
+2024-12-19 15:15:18,491 - INFO - Created 5 nodes for page 3
+2024-12-19 15:15:18,491 - INFO - Created 6 nodes for page 4
+2024-12-19 15:15:18,491 - INFO - Created 6 nodes for page 5
+2024-12-19 15:15:18,491 - INFO - Created 3 nodes for page 6
+2024-12-19 15:15:18,491 - INFO - Created 5 nodes for page 7
+2024-12-19 15:15:18,491 - INFO - Created 5 nodes for page 8
+2024-12-19 15:15:18,491 - INFO - Created 6 nodes for page 9
+2024-12-19 15:15:18,492 - INFO - Created 6 nodes for page 10
+2024-12-19 15:15:18,492 - INFO - Created 12 nodes for page 11
+2024-12-19 15:15:18,492 - INFO - Created 3 nodes for page 12
+2024-12-19 15:15:18,492 - INFO - Created 7 nodes for page 13
+2024-12-19 15:15:18,492 - INFO - Created 3 nodes for page 14
+2024-12-19 15:15:18,492 - INFO - Created 5 nodes for page 15
+2024-12-19 15:15:18,492 - INFO - Created 6 nodes for page 16
+2024-12-19 15:15:18,492 - INFO - Created 5 nodes for page 17
+2024-12-19 15:15:18,493 - INFO - Created 3 nodes for page 18
+2024-12-19 15:15:18,493 - INFO - Created 6 nodes for page 19
+2024-12-19 15:15:18,493 - INFO - Created 3 nodes for page 20
+2024-12-19 15:15:18,493 - INFO - Created 8 nodes for page 21
+2024-12-19 15:15:18,493 - INFO - Created 4 nodes for page 22
+2024-12-19 15:15:18,493 - INFO - Created 8 nodes for page 23
+2024-12-19 15:15:18,493 - INFO - Created 4 nodes for page 24
+2024-12-19 15:15:18,493 - INFO - Created 7 nodes for page 25
+2024-12-19 15:15:18,494 - INFO - Created 4 nodes for page 26
+2024-12-19 15:15:18,494 - INFO - Created 6 nodes for page 27
+2024-12-19 15:15:18,494 - INFO - Created 3 nodes for page 28
+2024-12-19 15:15:18,494 - INFO - Created 5 nodes for page 29
+2024-12-19 15:15:18,494 - INFO - Created 6 nodes for page 30
+2024-12-19 15:15:18,494 - INFO - Created 5 nodes for page 31
+2024-12-19 15:15:18,494 - INFO - Created 4 nodes for page 32
+2024-12-19 15:15:18,494 - INFO - Found 6 nodes on page 10
+2024-12-19 15:15:21,474 - INFO - Created 1 batches from 6 nodes
+2024-12-19 15:15:21,475 - INFO - Processing batch of 6 nodes
+2024-12-19 15:15:21,475 - INFO - Batch content:
+2024-12-19 15:15:21,475 - INFO - Node f756e7ec-b584-47d5-b6b2-dbf16b7adfb3: BARRETO TRENCHERS
+2024-12-19 15:15:21,475 - INFO - Node 35b9a5b8-07da-449c-98e8-e285804dc7f4: 1324D Standard Trencher:
+2024-12-19 15:15:21,475 - INFO - Node 56c1b4ca-c842-455c-82aa-692d605a4e12: 912HM Mini Trencher:
+2024-12-19 15:15:21,475 - INFO - Node a466d886-57d6-4cdd-81de-7bb5131a9dd2: 712MT Micro Trencher:
+2024-12-19 15:15:21,475 - INFO - Node 9f1b9a5b-67be-4ede-932c-842050bebec7: 2024RTK Track Trencher:
+2024-12-19 15:15:21,475 - INFO - Node d1eb225c-15ac-47bb-963b-12a337264f6f: 1324STK Track Trencher:
+2024-12-19 15:15:28,626 - INFO - Updated model metadata. Current count: 5
+2024-12-19 15:15:28,627 - WARNING - No metadata found for node f756e7ec-b584-47d5-b6b2-dbf16b7adfb3
+2024-12-19 15:15:28,627 - INFO - Enhanced node 35b9a5b8-07da-449c-98e8-e285804dc7f4 with metadata
+2024-12-19 15:15:28,627 - INFO - Enhanced node 56c1b4ca-c842-455c-82aa-692d605a4e12 with metadata
+2024-12-19 15:15:28,627 - INFO - Enhanced node a466d886-57d6-4cdd-81de-7bb5131a9dd2 with metadata
+2024-12-19 15:15:28,627 - INFO - Enhanced node 9f1b9a5b-67be-4ede-932c-842050bebec7 with metadata
+2024-12-19 15:15:28,627 - INFO - Enhanced node d1eb225c-15ac-47bb-963b-12a337264f6f with metadata
+2024-12-19 15:15:28,627 - INFO - Enhanced 5 nodes with metadata
+2024-12-19 15:15:28,630 - ERROR - Hierarchical node creation failed: Object of type UUID is not JSON serializable
+2024-12-19 15:16:48,732 - INFO - Beginning hierarchical node creation process...
+2024-12-19 15:16:48,734 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-19 15:16:48,734 - INFO - Created 5 nodes for page 1
+2024-12-19 15:16:48,734 - INFO - Created 6 nodes for page 2
+2024-12-19 15:16:48,734 - INFO - Created 5 nodes for page 3
+2024-12-19 15:16:48,735 - INFO - Created 6 nodes for page 4
+2024-12-19 15:16:48,735 - INFO - Created 6 nodes for page 5
+2024-12-19 15:16:48,735 - INFO - Created 3 nodes for page 6
+2024-12-19 15:16:48,735 - INFO - Created 5 nodes for page 7
+2024-12-19 15:16:48,735 - INFO - Created 5 nodes for page 8
+2024-12-19 15:16:48,735 - INFO - Created 6 nodes for page 9
+2024-12-19 15:16:48,735 - INFO - Created 6 nodes for page 10
+2024-12-19 15:16:48,735 - INFO - Created 12 nodes for page 11
+2024-12-19 15:16:48,735 - INFO - Created 3 nodes for page 12
+2024-12-19 15:16:48,735 - INFO - Created 7 nodes for page 13
+2024-12-19 15:16:48,735 - INFO - Created 3 nodes for page 14
+2024-12-19 15:16:48,736 - INFO - Created 5 nodes for page 15
+2024-12-19 15:16:48,736 - INFO - Created 6 nodes for page 16
+2024-12-19 15:16:48,736 - INFO - Created 5 nodes for page 17
+2024-12-19 15:16:48,736 - INFO - Created 3 nodes for page 18
+2024-12-19 15:16:48,736 - INFO - Created 6 nodes for page 19
+2024-12-19 15:16:48,736 - INFO - Created 3 nodes for page 20
+2024-12-19 15:16:48,736 - INFO - Created 8 nodes for page 21
+2024-12-19 15:16:48,736 - INFO - Created 4 nodes for page 22
+2024-12-19 15:16:48,736 - INFO - Created 8 nodes for page 23
+2024-12-19 15:16:48,736 - INFO - Created 4 nodes for page 24
+2024-12-19 15:16:48,736 - INFO - Created 7 nodes for page 25
+2024-12-19 15:16:48,737 - INFO - Created 4 nodes for page 26
+2024-12-19 15:16:48,737 - INFO - Created 6 nodes for page 27
+2024-12-19 15:16:48,737 - INFO - Created 3 nodes for page 28
+2024-12-19 15:16:48,737 - INFO - Created 5 nodes for page 29
+2024-12-19 15:16:48,737 - INFO - Created 6 nodes for page 30
+2024-12-19 15:16:48,737 - INFO - Created 5 nodes for page 31
+2024-12-19 15:16:48,737 - INFO - Created 4 nodes for page 32
+2024-12-19 15:16:48,737 - INFO - Found 6 nodes on page 10
+2024-12-19 15:16:52,092 - INFO - Created 1 batches from 6 nodes
+2024-12-19 15:16:52,092 - INFO - Processing batch of 6 nodes
+2024-12-19 15:16:52,092 - INFO - Batch content:
+2024-12-19 15:16:52,092 - INFO - Node e490a986-d95f-4ca5-ab0f-42e71e75b2b8: BARRETO TRENCHERS
+2024-12-19 15:16:52,092 - INFO - Node 9f232bb3-ec2d-4324-8f72-fb682a1ddeab: 1324D Standard Trencher:
+2024-12-19 15:16:52,092 - INFO - Node 8d79666d-05ee-4e9b-8c9c-397cd3638902: 912HM Mini Trencher:
+2024-12-19 15:16:52,092 - INFO - Node cb7c0c45-04f8-4bd0-8441-93ec0d8f58d8: 712MT Micro Trencher:
+2024-12-19 15:16:52,092 - INFO - Node 1606be5e-6403-4fd2-ba14-226cfeb6c368: 2024RTK Track Trencher:
+2024-12-19 15:16:52,092 - INFO - Node fb5ed8cc-8611-439b-a589-a18e8cf2b486: 1324STK Track Trencher:
+2024-12-19 15:16:59,148 - INFO - Updated model metadata. Current count: 5
+2024-12-19 15:16:59,148 - WARNING - No metadata found for node e490a986-d95f-4ca5-ab0f-42e71e75b2b8
+2024-12-19 15:16:59,149 - INFO - Enhanced node 9f232bb3-ec2d-4324-8f72-fb682a1ddeab with metadata
+2024-12-19 15:16:59,149 - INFO - Enhanced node 8d79666d-05ee-4e9b-8c9c-397cd3638902 with metadata
+2024-12-19 15:16:59,149 - INFO - Enhanced node cb7c0c45-04f8-4bd0-8441-93ec0d8f58d8 with metadata
+2024-12-19 15:16:59,149 - INFO - Enhanced node 1606be5e-6403-4fd2-ba14-226cfeb6c368 with metadata
+2024-12-19 15:16:59,149 - INFO - Enhanced node fb5ed8cc-8611-439b-a589-a18e8cf2b486 with metadata
+2024-12-19 15:16:59,149 - INFO - Enhanced 5 nodes with metadata
+2024-12-19 15:30:40,518 - INFO - Beginning hierarchical node creation process...
+2024-12-19 15:30:40,521 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-19 15:30:40,521 - INFO - Created 5 nodes for page 1
+2024-12-19 15:30:40,521 - INFO - Created 6 nodes for page 2
+2024-12-19 15:30:40,521 - INFO - Created 5 nodes for page 3
+2024-12-19 15:30:40,521 - INFO - Created 6 nodes for page 4
+2024-12-19 15:30:40,521 - INFO - Created 6 nodes for page 5
+2024-12-19 15:30:40,522 - INFO - Created 3 nodes for page 6
+2024-12-19 15:30:40,522 - INFO - Created 5 nodes for page 7
+2024-12-19 15:30:40,522 - INFO - Created 5 nodes for page 8
+2024-12-19 15:30:40,522 - INFO - Created 6 nodes for page 9
+2024-12-19 15:30:40,522 - INFO - Created 6 nodes for page 10
+2024-12-19 15:30:40,522 - INFO - Created 12 nodes for page 11
+2024-12-19 15:30:40,522 - INFO - Created 3 nodes for page 12
+2024-12-19 15:30:40,522 - INFO - Created 7 nodes for page 13
+2024-12-19 15:30:40,522 - INFO - Created 3 nodes for page 14
+2024-12-19 15:30:40,522 - INFO - Created 5 nodes for page 15
+2024-12-19 15:30:40,523 - INFO - Created 6 nodes for page 16
+2024-12-19 15:30:40,523 - INFO - Created 5 nodes for page 17
+2024-12-19 15:30:40,523 - INFO - Created 3 nodes for page 18
+2024-12-19 15:30:40,523 - INFO - Created 6 nodes for page 19
+2024-12-19 15:30:40,523 - INFO - Created 3 nodes for page 20
+2024-12-19 15:30:40,523 - INFO - Created 8 nodes for page 21
+2024-12-19 15:30:40,523 - INFO - Created 4 nodes for page 22
+2024-12-19 15:30:40,523 - INFO - Created 8 nodes for page 23
+2024-12-19 15:30:40,523 - INFO - Created 4 nodes for page 24
+2024-12-19 15:30:40,523 - INFO - Created 7 nodes for page 25
+2024-12-19 15:30:40,523 - INFO - Created 4 nodes for page 26
+2024-12-19 15:30:40,524 - INFO - Created 6 nodes for page 27
+2024-12-19 15:30:40,524 - INFO - Created 3 nodes for page 28
+2024-12-19 15:30:40,524 - INFO - Created 5 nodes for page 29
+2024-12-19 15:30:40,524 - INFO - Created 6 nodes for page 30
+2024-12-19 15:30:40,524 - INFO - Created 5 nodes for page 31
+2024-12-19 15:30:40,524 - INFO - Created 4 nodes for page 32
+2024-12-19 15:30:40,524 - INFO - Found 6 nodes on page 10
+2024-12-19 15:30:43,785 - INFO - Created 1 batches from 6 nodes
+2024-12-19 15:30:43,785 - INFO - Processing batch of 6 nodes
+2024-12-19 15:30:43,785 - INFO - Batch content:
+2024-12-19 15:30:43,785 - INFO - Node 91108631-98bc-4dc4-9c44-4635bdf57bdf: BARRETO TRENCHERS
+2024-12-19 15:30:43,785 - INFO - Node 55b9553b-8a11-4e1f-bb17-2c93a91ccad2: 1324D Standard Trencher:
+2024-12-19 15:30:43,785 - INFO - Node 78e26dd0-bd38-47b2-8f21-35246aaaac5b: 912HM Mini Trencher:
+2024-12-19 15:30:43,785 - INFO - Node 10110001-aa03-4743-99b3-938aa17175b3: 712MT Micro Trencher:
+2024-12-19 15:30:43,785 - INFO - Node 640684ae-12de-4840-a996-826b3e4e7270: 2024RTK Track Trencher:
+2024-12-19 15:30:43,785 - INFO - Node b54f2e7c-c9f4-4ff6-ad0a-eeb76642bf0f: 1324STK Track Trencher:
+2024-12-19 15:30:49,962 - INFO - Updated model metadata. Current count: 5
+2024-12-19 15:30:49,963 - WARNING - No metadata found for node 91108631-98bc-4dc4-9c44-4635bdf57bdf
+2024-12-19 15:30:49,963 - INFO - Enhanced node 55b9553b-8a11-4e1f-bb17-2c93a91ccad2 with metadata
+2024-12-19 15:30:49,963 - INFO - Enhanced node 78e26dd0-bd38-47b2-8f21-35246aaaac5b with metadata
+2024-12-19 15:30:49,963 - INFO - Enhanced node 10110001-aa03-4743-99b3-938aa17175b3 with metadata
+2024-12-19 15:30:49,963 - INFO - Enhanced node 640684ae-12de-4840-a996-826b3e4e7270 with metadata
+2024-12-19 15:30:49,963 - INFO - Enhanced node b54f2e7c-c9f4-4ff6-ad0a-eeb76642bf0f with metadata
+2024-12-19 15:30:49,963 - INFO - Enhanced 5 nodes with metadata
+2024-12-19 15:51:43,716 - INFO - Beginning hierarchical node creation process...
+2024-12-19 15:51:43,719 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-19 15:51:43,719 - INFO - Created 5 nodes for page 1
+2024-12-19 15:51:43,719 - INFO - Created 6 nodes for page 2
+2024-12-19 15:51:43,720 - INFO - Created 5 nodes for page 3
+2024-12-19 15:51:43,720 - INFO - Created 6 nodes for page 4
+2024-12-19 15:51:43,720 - INFO - Created 6 nodes for page 5
+2024-12-19 15:51:43,720 - INFO - Created 3 nodes for page 6
+2024-12-19 15:51:43,720 - INFO - Created 5 nodes for page 7
+2024-12-19 15:51:43,720 - INFO - Created 5 nodes for page 8
+2024-12-19 15:51:43,720 - INFO - Created 6 nodes for page 9
+2024-12-19 15:51:43,720 - INFO - Created 6 nodes for page 10
+2024-12-19 15:51:43,721 - INFO - Created 12 nodes for page 11
+2024-12-19 15:51:43,721 - INFO - Created 3 nodes for page 12
+2024-12-19 15:51:43,721 - INFO - Created 7 nodes for page 13
+2024-12-19 15:51:43,721 - INFO - Created 3 nodes for page 14
+2024-12-19 15:51:43,721 - INFO - Created 5 nodes for page 15
+2024-12-19 15:51:43,721 - INFO - Created 6 nodes for page 16
+2024-12-19 15:51:43,721 - INFO - Created 5 nodes for page 17
+2024-12-19 15:51:43,721 - INFO - Created 3 nodes for page 18
+2024-12-19 15:51:43,721 - INFO - Created 6 nodes for page 19
+2024-12-19 15:51:43,722 - INFO - Created 3 nodes for page 20
+2024-12-19 15:51:43,722 - INFO - Created 8 nodes for page 21
+2024-12-19 15:51:43,722 - INFO - Created 4 nodes for page 22
+2024-12-19 15:51:43,722 - INFO - Created 8 nodes for page 23
+2024-12-19 15:51:43,722 - INFO - Created 4 nodes for page 24
+2024-12-19 15:51:43,722 - INFO - Created 7 nodes for page 25
+2024-12-19 15:51:43,722 - INFO - Created 4 nodes for page 26
+2024-12-19 15:51:43,722 - INFO - Created 6 nodes for page 27
+2024-12-19 15:51:43,723 - INFO - Created 3 nodes for page 28
+2024-12-19 15:51:43,723 - INFO - Created 5 nodes for page 29
+2024-12-19 15:51:43,723 - INFO - Created 6 nodes for page 30
+2024-12-19 15:51:43,723 - INFO - Created 5 nodes for page 31
+2024-12-19 15:51:43,723 - INFO - Created 4 nodes for page 32
+2024-12-19 15:51:43,723 - INFO - Found 6 nodes on page 10
+2024-12-19 15:51:46,417 - INFO - Created 1 batches from 6 nodes
+2024-12-19 15:51:46,418 - INFO - Processing batch of 6 nodes
+2024-12-19 15:51:46,418 - INFO - Batch content:
+2024-12-19 15:51:46,418 - INFO - Node a41f0ad9-a6a4-401c-9948-7f34c5cd26ce: BARRETO TRENCHERS
+2024-12-19 15:51:46,418 - INFO - Node 45824641-68f5-487f-ba18-b32a8274a1f7: 1324D Standard Trencher:
+2024-12-19 15:51:46,418 - INFO - Node 8d75c1b1-6cfd-4c88-a11f-a58b0ff01fb2: 912HM Mini Trencher:
+2024-12-19 15:51:46,418 - INFO - Node c0cab851-bf22-4bc1-805f-9ba17bfa14aa: 712MT Micro Trencher:
+2024-12-19 15:51:46,418 - INFO - Node 472df081-71fd-41f3-90a0-ef2d38063d59: 2024RTK Track Trencher:
+2024-12-19 15:51:46,418 - INFO - Node 3bae2bea-88d2-40b3-b20a-dcaaed95306f: 1324STK Track Trencher:
+2024-12-19 15:51:55,826 - INFO - Updated model metadata. Current count: 5
+2024-12-19 15:51:55,827 - WARNING - No metadata found for node a41f0ad9-a6a4-401c-9948-7f34c5cd26ce
+2024-12-19 15:51:55,827 - INFO - Enhanced node 45824641-68f5-487f-ba18-b32a8274a1f7 with metadata
+2024-12-19 15:51:55,827 - INFO - Enhanced node 8d75c1b1-6cfd-4c88-a11f-a58b0ff01fb2 with metadata
+2024-12-19 15:51:55,827 - INFO - Enhanced node c0cab851-bf22-4bc1-805f-9ba17bfa14aa with metadata
+2024-12-19 15:51:55,827 - INFO - Enhanced node 472df081-71fd-41f3-90a0-ef2d38063d59 with metadata
+2024-12-19 15:51:55,827 - INFO - Enhanced node 3bae2bea-88d2-40b3-b20a-dcaaed95306f with metadata
+2024-12-19 15:51:55,827 - INFO - Enhanced 5 nodes with metadata
+2024-12-19 16:00:14,779 - INFO - Beginning hierarchical node creation process...
+2024-12-19 16:00:14,782 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-19 16:00:14,782 - INFO - Created 5 nodes for page 1
+2024-12-19 16:00:14,782 - INFO - Created 6 nodes for page 2
+2024-12-19 16:00:14,782 - INFO - Created 5 nodes for page 3
+2024-12-19 16:00:14,782 - INFO - Created 6 nodes for page 4
+2024-12-19 16:00:14,782 - INFO - Created 6 nodes for page 5
+2024-12-19 16:00:14,782 - INFO - Created 3 nodes for page 6
+2024-12-19 16:00:14,782 - INFO - Created 5 nodes for page 7
+2024-12-19 16:00:14,782 - INFO - Created 5 nodes for page 8
+2024-12-19 16:00:14,782 - INFO - Created 6 nodes for page 9
+2024-12-19 16:00:14,783 - INFO - Created 6 nodes for page 10
+2024-12-19 16:00:14,783 - INFO - Created 12 nodes for page 11
+2024-12-19 16:00:14,783 - INFO - Created 3 nodes for page 12
+2024-12-19 16:00:14,783 - INFO - Created 7 nodes for page 13
+2024-12-19 16:00:14,783 - INFO - Created 3 nodes for page 14
+2024-12-19 16:00:14,783 - INFO - Created 5 nodes for page 15
+2024-12-19 16:00:14,783 - INFO - Created 6 nodes for page 16
+2024-12-19 16:00:14,783 - INFO - Created 5 nodes for page 17
+2024-12-19 16:00:14,783 - INFO - Created 3 nodes for page 18
+2024-12-19 16:00:14,783 - INFO - Created 6 nodes for page 19
+2024-12-19 16:00:14,784 - INFO - Created 3 nodes for page 20
+2024-12-19 16:00:14,784 - INFO - Created 8 nodes for page 21
+2024-12-19 16:00:14,784 - INFO - Created 4 nodes for page 22
+2024-12-19 16:00:14,784 - INFO - Created 8 nodes for page 23
+2024-12-19 16:00:14,784 - INFO - Created 4 nodes for page 24
+2024-12-19 16:00:14,784 - INFO - Created 7 nodes for page 25
+2024-12-19 16:00:14,784 - INFO - Created 4 nodes for page 26
+2024-12-19 16:00:14,784 - INFO - Created 6 nodes for page 27
+2024-12-19 16:00:14,784 - INFO - Created 3 nodes for page 28
+2024-12-19 16:00:14,784 - INFO - Created 5 nodes for page 29
+2024-12-19 16:00:14,784 - INFO - Created 6 nodes for page 30
+2024-12-19 16:00:14,785 - INFO - Created 5 nodes for page 31
+2024-12-19 16:00:14,785 - INFO - Created 4 nodes for page 32
+2024-12-19 16:00:14,785 - INFO - Found 6 nodes on page 10
+2024-12-19 16:00:17,827 - INFO - Created 1 batches from 6 nodes
+2024-12-19 16:00:17,827 - INFO - Processing batch of 6 nodes
+2024-12-19 16:00:17,827 - INFO - Batch content:
+2024-12-19 16:00:17,827 - INFO - Node 34966674-330b-456d-8df0-4e5a73e33743: BARRETO TRENCHERS
+2024-12-19 16:00:17,827 - INFO - Node 6c91d78a-3adf-4d7e-a988-0b149fa79867: 1324D Standard Trencher:
+2024-12-19 16:00:17,828 - INFO - Node 9aa631c2-9f8e-46ac-805f-ed51c1159287: 912HM Mini Trencher:
+2024-12-19 16:00:17,828 - INFO - Node 2f112c1f-15af-4b00-bbd4-139c80e6ace2: 712MT Micro Trencher:
+2024-12-19 16:00:17,828 - INFO - Node eb165a7c-5348-4d04-b88b-3e8695f5fb0b: 2024RTK Track Trencher:
+2024-12-19 16:00:17,828 - INFO - Node 3d31905c-77bf-47c2-882f-a26668ff59df: 1324STK Track Trencher:
+2024-12-19 16:00:27,548 - INFO - Updated model metadata. Current count: 5
+2024-12-19 16:00:27,549 - WARNING - No metadata found for node 34966674-330b-456d-8df0-4e5a73e33743
+2024-12-19 16:00:27,549 - INFO - Enhanced node 6c91d78a-3adf-4d7e-a988-0b149fa79867 with metadata
+2024-12-19 16:00:27,549 - INFO - Enhanced node 9aa631c2-9f8e-46ac-805f-ed51c1159287 with metadata
+2024-12-19 16:00:27,549 - INFO - Enhanced node 2f112c1f-15af-4b00-bbd4-139c80e6ace2 with metadata
+2024-12-19 16:00:27,549 - INFO - Enhanced node eb165a7c-5348-4d04-b88b-3e8695f5fb0b with metadata
+2024-12-19 16:00:27,549 - INFO - Enhanced node 3d31905c-77bf-47c2-882f-a26668ff59df with metadata
+2024-12-19 16:00:27,549 - INFO - Enhanced 5 nodes with metadata
+2024-12-19 16:02:25,303 - INFO - Beginning hierarchical node creation process...
+2024-12-19 16:02:25,305 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-19 16:02:25,305 - INFO - Created 5 nodes for page 1
+2024-12-19 16:02:25,305 - INFO - Created 6 nodes for page 2
+2024-12-19 16:02:25,305 - INFO - Created 5 nodes for page 3
+2024-12-19 16:02:25,306 - INFO - Created 6 nodes for page 4
+2024-12-19 16:02:25,306 - INFO - Created 6 nodes for page 5
+2024-12-19 16:02:25,306 - INFO - Created 3 nodes for page 6
+2024-12-19 16:02:25,306 - INFO - Created 5 nodes for page 7
+2024-12-19 16:02:25,306 - INFO - Created 5 nodes for page 8
+2024-12-19 16:02:25,306 - INFO - Created 6 nodes for page 9
+2024-12-19 16:02:25,306 - INFO - Created 6 nodes for page 10
+2024-12-19 16:02:25,306 - INFO - Created 12 nodes for page 11
+2024-12-19 16:02:25,306 - INFO - Created 3 nodes for page 12
+2024-12-19 16:02:25,307 - INFO - Created 7 nodes for page 13
+2024-12-19 16:02:25,307 - INFO - Created 3 nodes for page 14
+2024-12-19 16:02:25,307 - INFO - Created 5 nodes for page 15
+2024-12-19 16:02:25,307 - INFO - Created 6 nodes for page 16
+2024-12-19 16:02:25,307 - INFO - Created 5 nodes for page 17
+2024-12-19 16:02:25,307 - INFO - Created 3 nodes for page 18
+2024-12-19 16:02:25,307 - INFO - Created 6 nodes for page 19
+2024-12-19 16:02:25,307 - INFO - Created 3 nodes for page 20
+2024-12-19 16:02:25,307 - INFO - Created 8 nodes for page 21
+2024-12-19 16:02:25,307 - INFO - Created 4 nodes for page 22
+2024-12-19 16:02:25,308 - INFO - Created 8 nodes for page 23
+2024-12-19 16:02:25,308 - INFO - Created 4 nodes for page 24
+2024-12-19 16:02:25,308 - INFO - Created 7 nodes for page 25
+2024-12-19 16:02:25,308 - INFO - Created 4 nodes for page 26
+2024-12-19 16:02:25,308 - INFO - Created 6 nodes for page 27
+2024-12-19 16:02:25,308 - INFO - Created 3 nodes for page 28
+2024-12-19 16:02:25,308 - INFO - Created 5 nodes for page 29
+2024-12-19 16:02:25,308 - INFO - Created 6 nodes for page 30
+2024-12-19 16:02:25,308 - INFO - Created 5 nodes for page 31
+2024-12-19 16:02:25,308 - INFO - Created 4 nodes for page 32
+2024-12-19 16:02:25,308 - INFO - Found 6 nodes on page 10
+2024-12-19 16:02:28,230 - INFO - Created 1 batches from 6 nodes
+2024-12-19 16:02:28,230 - INFO - Processing batch of 6 nodes
+2024-12-19 16:02:28,230 - INFO - Batch content:
+2024-12-19 16:02:28,230 - INFO - Node 3e527222-ff2c-40eb-b9f5-6c3aab671dc9: BARRETO TRENCHERS
+2024-12-19 16:02:28,230 - INFO - Node fe1bb8a8-545a-4503-8c89-c84f17358cf0: 1324D Standard Trencher:
+2024-12-19 16:02:28,231 - INFO - Node 84b9cb4a-2a82-41a6-92c4-d8cc365abdaf: 912HM Mini Trencher:
+2024-12-19 16:02:28,231 - INFO - Node c8552378-9e94-4a0b-9abf-cb9b71970e24: 712MT Micro Trencher:
+2024-12-19 16:02:28,231 - INFO - Node 04d4538f-1aaf-4ec4-8a22-48cd2bb990d9: 2024RTK Track Trencher:
+2024-12-19 16:02:28,231 - INFO - Node 3a52646c-60f5-4c92-aeb0-d8e27ddc8b94: 1324STK Track Trencher:
+2024-12-19 16:02:38,401 - INFO - Updated model metadata. Current count: 5
+2024-12-19 16:02:38,401 - WARNING - No metadata found for node 3e527222-ff2c-40eb-b9f5-6c3aab671dc9
+2024-12-19 16:02:38,401 - INFO - Enhanced node fe1bb8a8-545a-4503-8c89-c84f17358cf0 with metadata
+2024-12-19 16:02:38,401 - INFO - Enhanced node 84b9cb4a-2a82-41a6-92c4-d8cc365abdaf with metadata
+2024-12-19 16:02:38,401 - INFO - Enhanced node c8552378-9e94-4a0b-9abf-cb9b71970e24 with metadata
+2024-12-19 16:02:38,401 - INFO - Enhanced node 04d4538f-1aaf-4ec4-8a22-48cd2bb990d9 with metadata
+2024-12-19 16:02:38,401 - INFO - Enhanced node 3a52646c-60f5-4c92-aeb0-d8e27ddc8b94 with metadata
+2024-12-19 16:02:38,401 - INFO - Enhanced 5 nodes with metadata

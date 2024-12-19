@@ -134,9 +134,9 @@ class EquipmentMetadata(BaseModel):
     category: str = Field(..., description="Main equipment category")
     subcategory: str | None = Field(None, description="More specific classification within the main category")
     year: str | None = Field(None, description="Manufacturing or model year if available")
-    document_type: str = Field(..., description="Type of document (e.g., 'catalog', 'manual', 'spec sheet')")
+    specifications: list[str] = Field(default_factory=list, description="Specifications for this model such as size and weight")
+    capabilities: list[str] = Field(default_factory=list, description="Any notable capabilities or features which would differentiate this model from similar models")
     content_types: list[str] = Field(default_factory=list, description="Types of content present for this model")
-
 
 @dataclass
 class MetadataExtractionConfig:
@@ -194,7 +194,7 @@ class MetadataExtractionConfig:
 @dataclass
 class NodeCreationConfig:
     """Configuration for node creation."""
-    pipeline_name: str = 'ninth_pipeline'
+    pipeline_name: str = 'tenth_pipeline'
     parsed_results_path: str = 'parsed_results.json'
     output_dir: str = "node_outputs"
     extraction_model: str = metadata_extraction_model

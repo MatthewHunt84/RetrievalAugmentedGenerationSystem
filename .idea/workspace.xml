@@ -6,34 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="13557991-094d-4fae-8b67-4e865e4684de" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis/hierarchy_analysis_20241210_102011.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis/hierarchy_analysis_20241210_133454.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis/hierarchy_analysis_20241210_143047.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis/page_10_analysis_20241210_102011.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis/page_10_analysis_20241210_133454.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis/page_10_analysis_20241210_143047.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_analysis.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_outputs/fifth_pipeline_nodes.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_outputs/fifth_pipeline_summary.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_outputs/first_pipeline_nodes.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_outputs/first_pipeline_summary.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_outputs/fourth_pipeline_nodes.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_outputs/fourth_pipeline_summary.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_outputs/second_pipeline_nodes.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_outputs/second_pipeline_summary.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_outputs/seventh_pipeline_nodes.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_outputs/seventh_pipeline_summary.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_outputs/sixth_pipeline_nodes.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_outputs/sixth_pipeline_summary.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_outputs/third_pipeline_nodes.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_outputs/third_pipeline_summary.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rag_package/rag_config_fifth_pipeline.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rag_package/rag_config_first_pipeline.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rag_package/rag_config_fourth_pipeline.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rag_package/rag_config_sixth.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rag_package/rag_config_third_pipeline.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rag_package/test_openai.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rag_package/textnode_creator_sixth.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/node_creation.log" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/node_creation.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/node_creation_times.txt" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/node_creation_times.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rag_package/rag_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/rag_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rag_package/textnode_creator.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/textnode_creator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

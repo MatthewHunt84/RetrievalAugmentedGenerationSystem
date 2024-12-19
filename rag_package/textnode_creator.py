@@ -1,3 +1,4 @@
+import uuid
 from pathlib import Path
 import json
 import time
@@ -325,7 +326,9 @@ class TextNodeCreator:
                         "document_info": {
                             "name": document_name,
                             "total_pages": len(result["pages"]),
-                            "page_num": idx + 1
+                            "page_num": idx + 1,
+                            "document_uuid": str(uuid.uuid4()),
+                            "ingestion_timestamp": datetime.now().isoformat()
                         }
                     }
 
@@ -414,32 +417,23 @@ class TextNodeCreator:
                             "node_id": node.node_id,
                             "text": node.text,
                             "metadata": {
-                                # Document and hierarchy information
+                                # Pipeline info
+                                "pipeline_info": node.metadata.get("pipeline_info", {}),
+                                # Hierarchy info
                                 "header_info": {
                                     "level": node.metadata.get("header_info", {}).get("level"),
                                     "text": node.metadata.get("header_info", {}).get("text")
-                                },
-                                "document_info": {
-                                    "name": node.metadata.get("document_info", {}).get("name"),
-                                    "total_pages": node.metadata.get("document_info", {}).get("total_pages"),
-                                    "page_num": node.metadata.get("document_info", {}).get("page_num")
                                 },
                                 "hierarchy_info": {
                                     "level": node.metadata.get("hierarchy_info", {}).get("level"),
                                     "parser": node.metadata.get("hierarchy_info", {}).get("parser")
                                 },
-                                # Pipeline information
-                                "pipeline_info": node.metadata.get("pipeline_info", {}),
-
-                                # Document-level metadata
-                                "document_metadata": {
-                                    "categories": node.metadata.get("document_metadata", {}).get("categories", []),
-                                    "manufacturer": node.metadata.get("document_metadata", {}).get("manufacturer"),
-                                    "document_type": node.metadata.get("document_metadata", {}).get("document_type"),
-                                    "year": node.metadata.get("document_metadata", {}).get("year")
+                                # Relationship info
+                                "relationships": {
+                                    "parents": sorted(list(node.relationships.get("parent", set()))),
+                                    "children": sorted(list(node.relationships.get("child", set())))
                                 },
-
-                                # Equipment-specific metadata (new structure)
+                                # Equipment-specific metadata
                                 "equipment_metadata": {
                                     "product_name": node.metadata.get("equipment_metadata", {}).get("product_name"),
                                     "model_number": node.metadata.get("equipment_metadata", {}).get("model_number"),
@@ -447,12 +441,30 @@ class TextNodeCreator:
                                     "category": node.metadata.get("equipment_metadata", {}).get("category"),
                                     "subcategory": node.metadata.get("equipment_metadata", {}).get("subcategory"),
                                     "year": node.metadata.get("equipment_metadata", {}).get("year"),
-                                    "document_type": node.metadata.get("equipment_metadata", {}).get("document_type"),
+                                    "specifications": node.metadata.get("equipment_metadata", {}).get("specifications",
+                                                                                                      []),
+                                    "capabilities": node.metadata.get("equipment_metadata", {}).get("capabilities",
+                                                                                                    []),
                                     "content_types": node.metadata.get("equipment_metadata", {}).get("content_types",
                                                                                                      [])
                                 },
-
-                                # Extraction information
+                                # Document info and metadata
+                                "document_info": {
+                                    "name": node.metadata.get("document_info", {}).get("name"),
+                                    "total_pages": node.metadata.get("document_info", {}).get("total_pages"),
+                                    "page_num": node.metadata.get("document_info", {}).get("page_num"),
+                                    "document_uuid": node.metadata.get("document_info", {}).get("document_uuid"),
+                                    "ingestion_timestamp": node.metadata.get("document_info", {}).get("ingestion_timestamp")
+                                },
+                                "document_metadata": {
+                                    "manufacturer": node.metadata.get("document_metadata", {}).get("manufacturer"),
+                                    "document_type": node.metadata.get("document_metadata", {}).get("document_type"),
+                                    "year_published": node.metadata.get("document_metadata", {}).get("year_published"),
+                                    "equipment_categories": node.metadata.get("document_metadata", {}).get(
+                                        "equipment_categories", []),
+                                    "models_included": node.metadata.get("document_metadata", {}).get("models_included",[]),
+                                },
+                                # Extraction process
                                 "extraction_info": {
                                     "extraction_model": node.metadata.get("extraction_info", {}).get(
                                         "extraction_model"),
@@ -461,10 +473,6 @@ class TextNodeCreator:
                                     "extraction_timestamp": node.metadata.get("extraction_info", {}).get(
                                         "extraction_timestamp")
                                 }
-                            },
-                            "relationships": {
-                                "parents": sorted(list(node.relationships.get("parent", set()))),
-                                "children": sorted(list(node.relationships.get("child", set())))
                             }
                         }
                         node_data.append(node_info)
@@ -562,10 +570,11 @@ class TextNodeCreator:
 
         Provide ONLY a JSON object with this exact structure:
         {{
-            "categories": ["list of equipment categories found"],
             "manufacturer": "primary manufacturer name",
-            "document_type": "type of document (e.g., catalog, brochure)",
-            "year": "publication or latest year mentioned"
+            "document_type": "type of document (e.g., catalog, brochure, spec sheet)",
+            "year_published": "publication or latest year mentioned",
+            "equipment_categories": ["list of equipment categories found"],
+            "models_included": ["list of all model numbers detailed in the file"],
         }}
 
         Text to analyze:
@@ -603,25 +612,28 @@ class TextNodeCreator:
                     self.logger.error(f"Failed to parse document metadata: {str(e)}")
                     self.logger.error(f"Raw response: {text_content}")
                     return {
-                        "categories": [],
                         "manufacturer": None,
                         "document_type": None,
-                        "year": None
+                        "year_published": None,
+                        "equipment_categories": [],
+                        "models_included": []
                     }
 
             return {
-                "categories": [],
                 "manufacturer": None,
                 "document_type": None,
-                "year": None
+                "year_published": None,
+                "equipment_categories": [],
+                "models_included": []
             }
         except Exception as e:
             self.logger.error(f"Document metadata extraction failed: {str(e)}")
             return {
-                "categories": [],
                 "manufacturer": None,
                 "document_type": None,
-                "year": None
+                "year_published": None,
+                "equipment_categories": [],
+                "models_included": []
             }
 
     def _extract_batch_metadata(self, batch: list[BaseNode]) -> dict[str, dict]:
@@ -640,7 +652,8 @@ class TextNodeCreator:
             "category": "equipment category",
             "subcategory": "more specific classification if applicable",
             "year": "manufacturing/model year if mentioned",
-            "document_type": "type of document (e.g., catalog, spec sheet)",
+            "specifications": "specifications for this model such as size, weight, capacity, power source etc",
+            "capabilities": "capabilities or features that would differentiate this model from others in the same category",
             "content_types": ["list of content types present in description"]
         }}
 
@@ -821,10 +834,11 @@ class TextNodeCreator:
                 # Ensure all required metadata fields exist
                 if "document_metadata" not in node.metadata:
                     node.metadata["document_metadata"] = {
-                        "categories": [],
                         "manufacturer": None,
                         "document_type": None,
-                        "year": None
+                        "year_published": None,
+                        "equipment_categories": [],
+                        "models_included": []
                     }
 
                 if "equipment_metadata" not in node.metadata:
@@ -835,7 +849,8 @@ class TextNodeCreator:
                         "category": None,
                         "subcategory": None,
                         "year": None,
-                        "document_type": None,
+                        "specifications": [],
+                        "capabilities": [],
                         "content_types": []
                     }
 
