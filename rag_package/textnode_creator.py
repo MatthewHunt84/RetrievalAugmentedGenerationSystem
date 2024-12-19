@@ -516,30 +516,40 @@ class TextNodeCreator:
     """
 
     def _batch_model_descriptions(self, nodes: list[BaseNode]) -> list[list[BaseNode]]:
-        """
-        Group similar model descriptions together for batch processing.
+        """Group similar model descriptions together for batch processing."""
 
-        Args:
-            nodes: List of nodes to process
+        # Approximate tokens per node (can be refined with actual tokenizer)
+        MAX_TOKENS_PER_BATCH = 12000  # Conservative limit for Claude
+        TOKENS_FOR_PROMPT = 500  # Reserve tokens for prompt template
+        TOKENS_FOR_RESPONSE = 2000  # Reserve tokens for response
+        AVAILABLE_TOKENS = MAX_TOKENS_PER_BATCH - TOKENS_FOR_PROMPT - TOKENS_FOR_RESPONSE
 
-        Returns:
-            List of node batches, where each batch contains related models
-        """
         batches = []
         current_batch = []
-        max_batch_size = self.config.metadata_extraction.batch_size
+        current_token_count = 0
 
         for node in nodes:
-            # Start new batch if current one is full
-            if len(current_batch) >= max_batch_size:
-                batches.append(current_batch)
-                current_batch = []
+            # Rough approximation: 4 chars = 1 token
+            estimated_tokens = len(node.text) // 4
+
+            # If adding this node would exceed token limit, start new batch
+            if current_token_count + estimated_tokens > AVAILABLE_TOKENS:
+                if current_batch:  # Only append if batch has items
+                    batches.append(current_batch)
+                    current_batch = []
+                    current_token_count = 0
 
             current_batch.append(node)
+            current_token_count += estimated_tokens
 
         # Add any remaining nodes
         if current_batch:
             batches.append(current_batch)
+
+        # Log batch statistics
+        self.logger.info(f"Created {len(batches)} batches from {len(nodes)} nodes")
+        for i, batch in enumerate(batches):
+            self.logger.debug(f"Batch {i + 1}: {len(batch)} nodes, ~{current_token_count} tokens")
 
         return batches
 
