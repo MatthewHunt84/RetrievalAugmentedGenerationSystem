@@ -8,7 +8,7 @@ Total LLM Calls: 3
 
 [
   {
-    "node_id": "8e63950f-de64-4278-b239-10eeb6751e57",
+    "node_id": "088773e5-5710-4d99-b6c2-2bd6ff9c1c02",
     "text": "# BARRETO TRENCHERS\n",
     "metadata": {
       "header_info": {
@@ -35,7 +35,7 @@ Total LLM Calls: 3
           "Track Trenchers"
         ],
         "manufacturer": "Barreto",
-        "document_type": "Product Catalog/Overview",
+        "document_type": "Product Catalog",
         "year": "2017"
       },
       "equipment_metadata": {
@@ -51,17 +51,17 @@ Total LLM Calls: 3
       "extraction_info": {
         "extraction_model": "claude-3-5-haiku-latest",
         "metadata_version": "1.0",
-        "extraction_timestamp": "2024-12-19T12:06:16.712574"
+        "extraction_timestamp": "2024-12-19T14:37:01.462311"
       }
     },
     "relationships": {
       "parents": [],
       "children": [
-        "6635ed9b-ee8a-4e5e-9bda-e9c342420ea5",
-        "7059a124-5baf-424c-8aad-40618aa42153",
-        "95349656-149d-467f-9c66-cea15f90943c",
-        "ddde6bbc-8910-4826-bcad-7890288ff5d4",
-        "dfc199cc-10af-48b2-bed0-a745c07a38a5"
+        "1f768171-0545-4ff2-80af-ddf508da5cb3",
+        "7ea54881-09ef-49a6-9eea-7b5c5f587a83",
+        "8889b068-3bf9-480d-a565-44aaf52033e6",
+        "8915175b-b2b2-4266-9c09-856b8742a700",
+        "d411a8c1-00d5-4e68-b83a-4176ceac374b"
       ]
     }
   }
@@ -75,7 +75,7 @@ Nodes with document metadata: 1
 
 [
   {
-    "node_id": "ddde6bbc-8910-4826-bcad-7890288ff5d4",
+    "node_id": "8915175b-b2b2-4266-9c09-856b8742a700",
     "text": "## 1324D Standard Trencher:\nThe first product in the Barreto line of walk-behind trenchers was the all-hydraulic 1324D standard trencher introduced in 1995. Built specifically for the rental market without belts, chains, or gears, the Barreto 1324D features a 900lb frame with a low center of gravity to provide stability. The hydraulic chain motor is attached directly to the head shaft, and the outboard bearing is designed to protect the auger shaft from bending due to impacting rocks and debris. The control panel is simple and understandable, and the safety clutch engages and disengages the wheel and chain drive.\n",
     "metadata": {
       "header_info": {
@@ -102,7 +102,7 @@ Nodes with document metadata: 1
           "Track Trenchers"
         ],
         "manufacturer": "Barreto",
-        "document_type": "Product Catalog/Overview",
+        "document_type": "Product Catalog",
         "year": "2017"
       },
       "equipment_metadata": {
@@ -121,18 +121,18 @@ Nodes with document metadata: 1
       "extraction_info": {
         "extraction_model": "claude-3-5-haiku-latest",
         "metadata_version": "1.0",
-        "extraction_timestamp": "2024-12-19T12:06:16.712574"
+        "extraction_timestamp": "2024-12-19T14:37:01.462311"
       }
     },
     "relationships": {
       "parents": [
-        "8e63950f-de64-4278-b239-10eeb6751e57"
+        "088773e5-5710-4d99-b6c2-2bd6ff9c1c02"
       ],
       "children": []
     }
   },
   {
-    "node_id": "6635ed9b-ee8a-4e5e-9bda-e9c342420ea5",
+    "node_id": "d411a8c1-00d5-4e68-b83a-4176ceac374b",
     "text": "## 912HM Mini Trencher:\nIn 2005, Barreto brought the first all-hydraulic, self-propelled mini walk-behind trencher to the rental market with the introduction of the 912HM Mini Trencher. Built to meet the needs of the residential contractor who may be working in tight spaces, this self propelled trencher can easily handle sprinkler systems, electrical lines, and other shallow trench applications. The 912HM saves on space while still providing the horsepower necessary to trench up to 24\" deep. The boom pivot design keeps high wear components out of the dirt and is easily maintained. The front end pivots on a pin instead of a boom pivot bushing, reducing maintenance issues caused by dirt and debris.\n",
     "metadata": {
       "header_info": {
@@ -159,7 +159,7 @@ Nodes with document metadata: 1
           "Track Trenchers"
         ],
         "manufacturer": "Barreto",
-        "document_type": "Product Catalog/Overview",
+        "document_type": "Product Catalog",
         "year": "2017"
       },
       "equipment_metadata": {
@@ -178,18 +178,18 @@ Nodes with document metadata: 1
       "extraction_info": {
         "extraction_model": "claude-3-5-haiku-latest",
         "metadata_version": "1.0",
-        "extraction_timestamp": "2024-12-19T12:06:16.712574"
+        "extraction_timestamp": "2024-12-19T14:37:01.462311"
       }
     },
     "relationships": {
       "parents": [
-        "8e63950f-de64-4278-b239-10eeb6751e57"
+        "088773e5-5710-4d99-b6c2-2bd6ff9c1c02"
       ],
       "children": []
     }
   },
   {
-    "node_id": "95349656-149d-467f-9c66-cea15f90943c",
+    "node_id": "8889b068-3bf9-480d-a565-44aaf52033e6",
     "text": "## 712MT Micro Trencher:\nThe Barreto line of walk-behind trenchers also includes the 712MT Micro Trencher, introduced to the rental market in 2010, and it is the trencher with instincts. The 712MT features a load sensing valve system that automatically adjusts the wheel speed to the trenching conditions. When the digging chain requires more power, the wheel speed slows without having to adjust any of the controls. Perfect for the novice, easy for the professional.\n",
     "metadata": {
       "header_info": {
@@ -216,7 +216,7 @@ Nodes with document metadata: 1
           "Track Trenchers"
         ],
         "manufacturer": "Barreto",
-        "document_type": "Product Catalog/Overview",
+        "document_type": "Product Catalog",
         "year": "2017"
       },
       "equipment_metadata": {
@@ -235,18 +235,18 @@ Nodes with document metadata: 1
       "extraction_info": {
         "extraction_model": "claude-3-5-haiku-latest",
         "metadata_version": "1.0",
-        "extraction_timestamp": "2024-12-19T12:06:16.712574"
+        "extraction_timestamp": "2024-12-19T14:37:01.462311"
       }
     },
     "relationships": {
       "parents": [
-        "8e63950f-de64-4278-b239-10eeb6751e57"
+        "088773e5-5710-4d99-b6c2-2bd6ff9c1c02"
       ],
       "children": []
     }
   },
   {
-    "node_id": "dfc199cc-10af-48b2-bed0-a745c07a38a5",
+    "node_id": "1f768171-0545-4ff2-80af-ddf508da5cb3",
     "text": "## 2024RTK Track Trencher:\nThe 2024RTK Stand-on Track Trencher from Barreto was released in 2015 and features a fixed platform and unique fine tuning control adjustment that uses rod linkage instead of cables. The new Adjustable Trenching Control (ATC) can be placed into position to modify the trenching speed of the tracks individually while on the go. Individual track controls can be adjusted separately during operation allowing the operator to keep their trench straight when working on uneven terrain.\n",
     "metadata": {
       "header_info": {
@@ -273,7 +273,7 @@ Nodes with document metadata: 1
           "Track Trenchers"
         ],
         "manufacturer": "Barreto",
-        "document_type": "Product Catalog/Overview",
+        "document_type": "Product Catalog",
         "year": "2017"
       },
       "equipment_metadata": {
@@ -292,18 +292,18 @@ Nodes with document metadata: 1
       "extraction_info": {
         "extraction_model": "claude-3-5-haiku-latest",
         "metadata_version": "1.0",
-        "extraction_timestamp": "2024-12-19T12:06:16.712574"
+        "extraction_timestamp": "2024-12-19T14:37:01.462311"
       }
     },
     "relationships": {
       "parents": [
-        "8e63950f-de64-4278-b239-10eeb6751e57"
+        "088773e5-5710-4d99-b6c2-2bd6ff9c1c02"
       ],
       "children": []
     }
   },
   {
-    "node_id": "7059a124-5baf-424c-8aad-40618aa42153",
+    "node_id": "7ea54881-09ef-49a6-9eea-7b5c5f587a83",
     "text": "## 1324STK Track Trencher:\nThe newest addition to the Barreto family of trenchers is the 1324STK walk-behind track trencher developed in 2017 as a response to customer demand for a smaller track trencher. The 1324STK is a smaller, more compact machine than the Barreto large track trenchers, allowing it to fit in tighter areas, while still reaching dig depths of 24-30\". The 1324STK features an innovative new track system and compact frame design that provides both stability and maneuverability. The floating track system utilizes independent undercarriage idlers that move in response to the terrain. The design keeps a significant portion of the track in contact with the terrain at all times, reducing ground pressure with increasing tension.",
     "metadata": {
       "header_info": {
@@ -330,7 +330,7 @@ Nodes with document metadata: 1
           "Track Trenchers"
         ],
         "manufacturer": "Barreto",
-        "document_type": "Product Catalog/Overview",
+        "document_type": "Product Catalog",
         "year": "2017"
       },
       "equipment_metadata": {
@@ -343,18 +343,18 @@ Nodes with document metadata: 1
         "document_type": "Product Description",
         "content_types": [
           "Technical Design",
-          "Terrain Adaptability"
+          "Market Response"
         ]
       },
       "extraction_info": {
         "extraction_model": "claude-3-5-haiku-latest",
         "metadata_version": "1.0",
-        "extraction_timestamp": "2024-12-19T12:06:16.712574"
+        "extraction_timestamp": "2024-12-19T14:37:01.462311"
       }
     },
     "relationships": {
       "parents": [
-        "8e63950f-de64-4278-b239-10eeb6751e57"
+        "088773e5-5710-4d99-b6c2-2bd6ff9c1c02"
       ],
       "children": []
     }

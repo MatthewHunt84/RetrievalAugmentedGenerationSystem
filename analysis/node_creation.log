@@ -5345,3 +5345,55 @@ AttributeError: 'TextNodeCreator' object has no attribute 'logge'. Did you mean:
 2024-12-19 12:06:16,712 - INFO - Enhanced node dfc199cc-10af-48b2-bed0-a745c07a38a5 with metadata
 2024-12-19 12:06:16,712 - INFO - Enhanced node 7059a124-5baf-424c-8aad-40618aa42153 with metadata
 2024-12-19 12:06:16,713 - INFO - Enhanced 5 nodes with metadata
+2024-12-19 14:36:52,299 - INFO - Beginning hierarchical node creation process...
+2024-12-19 14:36:52,302 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-19 14:36:52,303 - INFO - Created 5 nodes for page 1
+2024-12-19 14:36:52,303 - INFO - Created 6 nodes for page 2
+2024-12-19 14:36:52,303 - INFO - Created 5 nodes for page 3
+2024-12-19 14:36:52,303 - INFO - Created 6 nodes for page 4
+2024-12-19 14:36:52,303 - INFO - Created 6 nodes for page 5
+2024-12-19 14:36:52,303 - INFO - Created 3 nodes for page 6
+2024-12-19 14:36:52,303 - INFO - Created 5 nodes for page 7
+2024-12-19 14:36:52,303 - INFO - Created 5 nodes for page 8
+2024-12-19 14:36:52,304 - INFO - Created 6 nodes for page 9
+2024-12-19 14:36:52,304 - INFO - Created 6 nodes for page 10
+2024-12-19 14:36:52,304 - INFO - Created 12 nodes for page 11
+2024-12-19 14:36:52,304 - INFO - Created 3 nodes for page 12
+2024-12-19 14:36:52,304 - INFO - Created 7 nodes for page 13
+2024-12-19 14:36:52,304 - INFO - Created 3 nodes for page 14
+2024-12-19 14:36:52,304 - INFO - Created 5 nodes for page 15
+2024-12-19 14:36:52,305 - INFO - Created 6 nodes for page 16
+2024-12-19 14:36:52,305 - INFO - Created 5 nodes for page 17
+2024-12-19 14:36:52,305 - INFO - Created 3 nodes for page 18
+2024-12-19 14:36:52,305 - INFO - Created 6 nodes for page 19
+2024-12-19 14:36:52,305 - INFO - Created 3 nodes for page 20
+2024-12-19 14:36:52,305 - INFO - Created 8 nodes for page 21
+2024-12-19 14:36:52,305 - INFO - Created 4 nodes for page 22
+2024-12-19 14:36:52,305 - INFO - Created 8 nodes for page 23
+2024-12-19 14:36:52,305 - INFO - Created 4 nodes for page 24
+2024-12-19 14:36:52,306 - INFO - Created 7 nodes for page 25
+2024-12-19 14:36:52,306 - INFO - Created 4 nodes for page 26
+2024-12-19 14:36:52,306 - INFO - Created 6 nodes for page 27
+2024-12-19 14:36:52,306 - INFO - Created 3 nodes for page 28
+2024-12-19 14:36:52,306 - INFO - Created 5 nodes for page 29
+2024-12-19 14:36:52,306 - INFO - Created 6 nodes for page 30
+2024-12-19 14:36:52,306 - INFO - Created 5 nodes for page 31
+2024-12-19 14:36:52,306 - INFO - Created 4 nodes for page 32
+2024-12-19 14:36:52,306 - INFO - Found 6 nodes on page 10
+2024-12-19 14:36:54,815 - INFO - Created 1 batches from 6 nodes
+2024-12-19 14:36:54,815 - INFO - Processing batch of 6 nodes
+2024-12-19 14:36:54,815 - INFO - Batch content:
+2024-12-19 14:36:54,816 - INFO - Node 088773e5-5710-4d99-b6c2-2bd6ff9c1c02: BARRETO TRENCHERS
+2024-12-19 14:36:54,816 - INFO - Node 8915175b-b2b2-4266-9c09-856b8742a700: 1324D Standard Trencher:
+2024-12-19 14:36:54,816 - INFO - Node d411a8c1-00d5-4e68-b83a-4176ceac374b: 912HM Mini Trencher:
+2024-12-19 14:36:54,816 - INFO - Node 8889b068-3bf9-480d-a565-44aaf52033e6: 712MT Micro Trencher:
+2024-12-19 14:36:54,816 - INFO - Node 1f768171-0545-4ff2-80af-ddf508da5cb3: 2024RTK Track Trencher:
+2024-12-19 14:36:54,816 - INFO - Node 7ea54881-09ef-49a6-9eea-7b5c5f587a83: 1324STK Track Trencher:
+2024-12-19 14:37:01,461 - INFO - Updated model metadata. Current count: 5
+2024-12-19 14:37:01,462 - WARNING - No metadata found for node 088773e5-5710-4d99-b6c2-2bd6ff9c1c02
+2024-12-19 14:37:01,462 - INFO - Enhanced node 8915175b-b2b2-4266-9c09-856b8742a700 with metadata
+2024-12-19 14:37:01,462 - INFO - Enhanced node d411a8c1-00d5-4e68-b83a-4176ceac374b with metadata
+2024-12-19 14:37:01,462 - INFO - Enhanced node 8889b068-3bf9-480d-a565-44aaf52033e6 with metadata
+2024-12-19 14:37:01,462 - INFO - Enhanced node 1f768171-0545-4ff2-80af-ddf508da5cb3 with metadata
+2024-12-19 14:37:01,462 - INFO - Enhanced node 7ea54881-09ef-49a6-9eea-7b5c5f587a83 with metadata
+2024-12-19 14:37:01,462 - INFO - Enhanced 5 nodes with metadata
