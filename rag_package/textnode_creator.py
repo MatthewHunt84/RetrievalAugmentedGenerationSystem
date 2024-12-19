@@ -454,6 +454,8 @@ class TextNodeCreator:
 
                                 # Extraction information
                                 "extraction_info": {
+                                    "extraction_model": node.metadata.get("extraction_info", {}).get(
+                                        "extraction_model"),
                                     "metadata_version": node.metadata.get("extraction_info", {}).get(
                                         "metadata_version"),
                                     "extraction_timestamp": node.metadata.get("extraction_info", {}).get(
@@ -589,12 +591,12 @@ class TextNodeCreator:
                 else:
                     text_content = str(message.content)
 
-                self.logger.info(f"Document metadata raw response: {text_content}")
+                self.logger.debug(f"Document metadata raw response: {text_content}")
 
                 try:
                     # Parse the JSON directly from text_content
                     doc_metadata = json.loads(text_content)
-                    self.logger.info(f"Successfully parsed document metadata: {json.dumps(doc_metadata, indent=2)}")
+                    self.logger.debug(f"Successfully parsed document metadata: {json.dumps(doc_metadata, indent=2)}")
                     return doc_metadata
 
                 except json.JSONDecodeError as e:
@@ -667,12 +669,12 @@ class TextNodeCreator:
                 else:
                     text_content = str(message.content)
 
-                self.logger.info(f"Raw LLM response text: {text_content}")
+                self.logger.debug(f"Raw LLM response text: {text_content}")
 
                 try:
                     # Parse the JSON from the text content
                     metadata_list = json.loads(text_content)
-                    self.logger.info(f"Successfully parsed metadata: {json.dumps(metadata_list, indent=2)}")
+                    self.logger.debug(f"Successfully parsed metadata: {json.dumps(metadata_list, indent=2)}")
 
                     # Match metadata to nodes
                     return self._match_metadata_to_nodes(batch, metadata_list)
@@ -732,7 +734,7 @@ class TextNodeCreator:
 
             # Only require a minimum score of 0.1 for a match
             if best_match and best_score > 0.1:
-                self.logger.info(f"Matched node {node.node_id} with metadata: {json.dumps(best_match, indent=2)}")
+                self.logger.debug(f"Matched node {node.node_id} with metadata: {json.dumps(best_match, indent=2)}")
                 matched_metadata[node.node_id] = best_match
             else:
                 self.logger.debug(f"No strong match found for node {node.node_id} (best score: {best_score})")
@@ -792,7 +794,7 @@ class TextNodeCreator:
             # First, extract document-level metadata
             doc_text = "\n\n".join(node.text for node in page_10_nodes)
             doc_metadata = self._extract_document_metadata(doc_text)
-            self.logger.info(f"Extracted document metadata: {json.dumps(doc_metadata, indent=2)}")
+            self.logger.debug(f"Extracted document metadata: {json.dumps(doc_metadata, indent=2)}")
 
             # Process page 10 nodes in batches for equipment metadata
             model_metadata = {}
@@ -809,7 +811,7 @@ class TextNodeCreator:
                 else:
                     self.logger.warning("No metadata extracted from this batch")
 
-            self.logger.info(f"Final model metadata: {json.dumps(model_metadata, indent=2)}")
+            self.logger.debug(f"Final model metadata: {json.dumps(model_metadata, indent=2)}")
 
             # Initialize standard metadata structure for all nodes
             timestamp = datetime.now().isoformat()
@@ -839,12 +841,14 @@ class TextNodeCreator:
 
                 if "extraction_info" not in node.metadata:
                     node.metadata["extraction_info"] = {
+                        "extraction_model": None,
                         "metadata_version": None,
                         "extraction_timestamp": None
                     }
 
                 # Update document metadata
                 node.metadata["document_metadata"] = doc_metadata
+                node.metadata["extraction_info"]["extraction_model"] = self.config.extraction_model
                 node.metadata["extraction_info"]["metadata_version"] = "1.0"
                 node.metadata["extraction_info"]["extraction_timestamp"] = timestamp
 

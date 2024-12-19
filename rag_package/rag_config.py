@@ -23,10 +23,9 @@ import re
 # Global configuration instances
 input_data_folder: str = "raw_input_data"
 embedding_model_name = "text-embedding-3-large"
-# multimodal_model = "claude-3-5-sonnet-latest"
-multimodal_model = "claude-3-5-haiku-latest"
+multimodal_model = "claude-3-5-sonnet-latest"
 multimodal_llm = AnthropicMultiModal(model=multimodal_model)
-metadata_extraction_model = "claude-3-5-sonnet-latest"
+metadata_extraction_model = "claude-3-5-haiku-latest"
 
 @dataclass
 class ParserConfig:
@@ -183,7 +182,7 @@ class MetadataExtractionConfig:
     - Content types (types of information present in the description)
 
     Use natural, industry-standard categorizations. Be specific but consistent. 
-    If some of these properties are not mentioned please return an empty string as the value.
+    If some of these properties are not mentioned please return null as the value.
     Identify any content types that seem relevant (e.g., specifications, features, applications, maintenance).
 
     Text to analyze: {text}
@@ -195,9 +194,10 @@ class MetadataExtractionConfig:
 @dataclass
 class NodeCreationConfig:
     """Configuration for node creation."""
-    pipeline_name: str = 'eighth_pipeline'
+    pipeline_name: str = 'ninth_pipeline'
     parsed_results_path: str = 'parsed_results.json'
     output_dir: str = "node_outputs"
+    extraction_model: str = metadata_extraction_model
 
     chunk_sizes: list[int] = field(default_factory=lambda: [2048, 512, 128])
     chunk_overlap: int = 20
@@ -215,6 +215,7 @@ class NodeCreationConfig:
                 "name": self.pipeline_name
             },
             "extraction_info": {
+                "extraction_model": self.extraction_model,
                 "metadata_version": "1.0", # Metadata extraction info
                 "extraction_timestamp": None  # Will be set during processing
             }
