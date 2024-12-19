@@ -2087,3 +2087,2236 @@ Quick Analysis Summary:
 2024-12-19 08:56:22,219 - INFO - Processed batch of 5 nodes
 2024-12-19 08:56:26,348 - INFO - Processed batch of 1 nodes
 2024-12-19 08:56:26,349 - INFO - Successfully enhanced page 10 nodes with metadata
+2024-12-19 09:08:48,363 - INFO - Beginning hierarchical node creation process...
+2024-12-19 09:08:48,367 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-19 09:08:48,367 - INFO - Created 5 nodes for page 1
+2024-12-19 09:08:48,367 - INFO - Created 6 nodes for page 2
+2024-12-19 09:08:48,367 - INFO - Created 5 nodes for page 3
+2024-12-19 09:08:48,367 - INFO - Created 6 nodes for page 4
+2024-12-19 09:08:48,368 - INFO - Created 6 nodes for page 5
+2024-12-19 09:08:48,368 - INFO - Created 3 nodes for page 6
+2024-12-19 09:08:48,368 - INFO - Created 5 nodes for page 7
+2024-12-19 09:08:48,368 - INFO - Created 5 nodes for page 8
+2024-12-19 09:08:48,368 - INFO - Created 6 nodes for page 9
+2024-12-19 09:08:48,368 - INFO - Created 6 nodes for page 10
+2024-12-19 09:08:48,368 - INFO - Created 12 nodes for page 11
+2024-12-19 09:08:48,368 - INFO - Created 3 nodes for page 12
+2024-12-19 09:08:48,368 - INFO - Created 7 nodes for page 13
+2024-12-19 09:08:48,369 - INFO - Created 3 nodes for page 14
+2024-12-19 09:08:48,369 - INFO - Created 5 nodes for page 15
+2024-12-19 09:08:48,369 - INFO - Created 6 nodes for page 16
+2024-12-19 09:08:48,369 - INFO - Created 5 nodes for page 17
+2024-12-19 09:08:48,369 - INFO - Created 3 nodes for page 18
+2024-12-19 09:08:48,369 - INFO - Created 6 nodes for page 19
+2024-12-19 09:08:48,369 - INFO - Created 3 nodes for page 20
+2024-12-19 09:08:48,369 - INFO - Created 8 nodes for page 21
+2024-12-19 09:08:48,369 - INFO - Created 4 nodes for page 22
+2024-12-19 09:08:48,369 - INFO - Created 8 nodes for page 23
+2024-12-19 09:08:48,370 - INFO - Created 4 nodes for page 24
+2024-12-19 09:08:48,370 - INFO - Created 7 nodes for page 25
+2024-12-19 09:08:48,370 - INFO - Created 4 nodes for page 26
+2024-12-19 09:08:48,370 - INFO - Created 6 nodes for page 27
+2024-12-19 09:08:48,370 - INFO - Created 3 nodes for page 28
+2024-12-19 09:08:48,370 - INFO - Created 5 nodes for page 29
+2024-12-19 09:08:48,370 - INFO - Created 6 nodes for page 30
+2024-12-19 09:08:48,370 - INFO - Created 5 nodes for page 31
+2024-12-19 09:08:48,370 - INFO - Created 4 nodes for page 32
+2024-12-19 09:08:48,370 - INFO - Found 6 nodes on page 10
+2024-12-19 09:08:50,351 - INFO - Successfully extracted document metadata for page 10
+2024-12-19 09:08:56,201 - INFO - Processed batch of 5 nodes
+2024-12-19 09:09:01,864 - INFO - Processed batch of 1 nodes
+2024-12-19 09:09:01,866 - INFO - Successfully enhanced page 10 nodes with metadata
+2024-12-19 09:15:12,562 - INFO - Beginning hierarchical node creation process...
+2024-12-19 09:15:12,565 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-19 09:15:12,565 - INFO - Created 5 nodes for page 1
+2024-12-19 09:15:12,565 - INFO - Created 6 nodes for page 2
+2024-12-19 09:15:12,565 - INFO - Created 5 nodes for page 3
+2024-12-19 09:15:12,565 - INFO - Created 6 nodes for page 4
+2024-12-19 09:15:12,566 - INFO - Created 6 nodes for page 5
+2024-12-19 09:15:12,566 - INFO - Created 3 nodes for page 6
+2024-12-19 09:15:12,566 - INFO - Created 5 nodes for page 7
+2024-12-19 09:15:12,566 - INFO - Created 5 nodes for page 8
+2024-12-19 09:15:12,566 - INFO - Created 6 nodes for page 9
+2024-12-19 09:15:12,566 - INFO - Created 6 nodes for page 10
+2024-12-19 09:15:12,566 - INFO - Created 12 nodes for page 11
+2024-12-19 09:15:12,566 - INFO - Created 3 nodes for page 12
+2024-12-19 09:15:12,567 - INFO - Created 7 nodes for page 13
+2024-12-19 09:15:12,567 - INFO - Created 3 nodes for page 14
+2024-12-19 09:15:12,567 - INFO - Created 5 nodes for page 15
+2024-12-19 09:15:12,567 - INFO - Created 6 nodes for page 16
+2024-12-19 09:15:12,567 - INFO - Created 5 nodes for page 17
+2024-12-19 09:15:12,567 - INFO - Created 3 nodes for page 18
+2024-12-19 09:15:12,567 - INFO - Created 6 nodes for page 19
+2024-12-19 09:15:12,567 - INFO - Created 3 nodes for page 20
+2024-12-19 09:15:12,567 - INFO - Created 8 nodes for page 21
+2024-12-19 09:15:12,568 - INFO - Created 4 nodes for page 22
+2024-12-19 09:15:12,568 - INFO - Created 8 nodes for page 23
+2024-12-19 09:15:12,568 - INFO - Created 4 nodes for page 24
+2024-12-19 09:15:12,568 - INFO - Created 7 nodes for page 25
+2024-12-19 09:15:12,568 - INFO - Created 4 nodes for page 26
+2024-12-19 09:15:12,568 - INFO - Created 6 nodes for page 27
+2024-12-19 09:15:12,568 - INFO - Created 3 nodes for page 28
+2024-12-19 09:15:12,568 - INFO - Created 5 nodes for page 29
+2024-12-19 09:15:12,568 - INFO - Created 6 nodes for page 30
+2024-12-19 09:15:12,569 - INFO - Created 5 nodes for page 31
+2024-12-19 09:15:12,569 - INFO - Created 4 nodes for page 32
+2024-12-19 09:15:12,569 - INFO - Found 6 nodes on page 10
+2024-12-19 09:15:15,224 - INFO - Successfully extracted document metadata for page 10
+2024-12-19 09:15:22,009 - INFO - Processed batch of 5 nodes
+2024-12-19 09:15:24,843 - INFO - Processed batch of 1 nodes
+2024-12-19 09:15:24,844 - INFO - Successfully enhanced page 10 nodes with metadata
+2024-12-19 09:19:17,437 - INFO - Beginning hierarchical node creation process...
+2024-12-19 09:19:17,442 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-19 09:19:17,442 - INFO - Created 5 nodes for page 1
+2024-12-19 09:19:17,442 - INFO - Created 6 nodes for page 2
+2024-12-19 09:19:17,442 - INFO - Created 5 nodes for page 3
+2024-12-19 09:19:17,443 - INFO - Created 6 nodes for page 4
+2024-12-19 09:19:17,443 - INFO - Created 6 nodes for page 5
+2024-12-19 09:19:17,443 - INFO - Created 3 nodes for page 6
+2024-12-19 09:19:17,443 - INFO - Created 5 nodes for page 7
+2024-12-19 09:19:17,443 - INFO - Created 5 nodes for page 8
+2024-12-19 09:19:17,443 - INFO - Created 6 nodes for page 9
+2024-12-19 09:19:17,443 - INFO - Created 6 nodes for page 10
+2024-12-19 09:19:17,444 - INFO - Created 12 nodes for page 11
+2024-12-19 09:19:17,444 - INFO - Created 3 nodes for page 12
+2024-12-19 09:19:17,444 - INFO - Created 7 nodes for page 13
+2024-12-19 09:19:17,444 - INFO - Created 3 nodes for page 14
+2024-12-19 09:19:17,444 - INFO - Created 5 nodes for page 15
+2024-12-19 09:19:17,444 - INFO - Created 6 nodes for page 16
+2024-12-19 09:19:17,444 - INFO - Created 5 nodes for page 17
+2024-12-19 09:19:17,444 - INFO - Created 3 nodes for page 18
+2024-12-19 09:19:17,444 - INFO - Created 6 nodes for page 19
+2024-12-19 09:19:17,445 - INFO - Created 3 nodes for page 20
+2024-12-19 09:19:17,445 - INFO - Created 8 nodes for page 21
+2024-12-19 09:19:17,445 - INFO - Created 4 nodes for page 22
+2024-12-19 09:19:17,445 - INFO - Created 8 nodes for page 23
+2024-12-19 09:19:17,445 - INFO - Created 4 nodes for page 24
+2024-12-19 09:19:17,445 - INFO - Created 7 nodes for page 25
+2024-12-19 09:19:17,445 - INFO - Created 4 nodes for page 26
+2024-12-19 09:19:17,445 - INFO - Created 6 nodes for page 27
+2024-12-19 09:19:17,446 - INFO - Created 3 nodes for page 28
+2024-12-19 09:19:17,446 - INFO - Created 5 nodes for page 29
+2024-12-19 09:19:17,446 - INFO - Created 6 nodes for page 30
+2024-12-19 09:19:17,446 - INFO - Created 5 nodes for page 31
+2024-12-19 09:19:17,446 - INFO - Created 4 nodes for page 32
+2024-12-19 09:19:17,446 - INFO - Found 6 nodes on page 10
+2024-12-19 09:19:19,118 - INFO - Successfully extracted document metadata for page 10
+2024-12-19 09:19:25,347 - INFO - Processed batch of 5 nodes
+2024-12-19 09:19:27,535 - INFO - Processed batch of 1 nodes
+2024-12-19 09:19:27,536 - INFO - Successfully enhanced page 10 nodes with metadata
+2024-12-19 09:21:06,173 - INFO - Beginning hierarchical node creation process...
+2024-12-19 09:21:06,175 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-19 09:21:06,175 - INFO - Created 5 nodes for page 1
+2024-12-19 09:21:06,175 - INFO - Created 6 nodes for page 2
+2024-12-19 09:21:06,176 - INFO - Created 5 nodes for page 3
+2024-12-19 09:21:06,176 - INFO - Created 6 nodes for page 4
+2024-12-19 09:21:06,176 - INFO - Created 6 nodes for page 5
+2024-12-19 09:21:06,176 - INFO - Created 3 nodes for page 6
+2024-12-19 09:21:06,176 - INFO - Created 5 nodes for page 7
+2024-12-19 09:21:06,176 - INFO - Created 5 nodes for page 8
+2024-12-19 09:21:06,176 - INFO - Created 6 nodes for page 9
+2024-12-19 09:21:06,176 - INFO - Created 6 nodes for page 10
+2024-12-19 09:21:06,176 - INFO - Created 12 nodes for page 11
+2024-12-19 09:21:06,176 - INFO - Created 3 nodes for page 12
+2024-12-19 09:21:06,177 - INFO - Created 7 nodes for page 13
+2024-12-19 09:21:06,177 - INFO - Created 3 nodes for page 14
+2024-12-19 09:21:06,177 - INFO - Created 5 nodes for page 15
+2024-12-19 09:21:06,177 - INFO - Created 6 nodes for page 16
+2024-12-19 09:21:06,177 - INFO - Created 5 nodes for page 17
+2024-12-19 09:21:06,177 - INFO - Created 3 nodes for page 18
+2024-12-19 09:21:06,177 - INFO - Created 6 nodes for page 19
+2024-12-19 09:21:06,177 - INFO - Created 3 nodes for page 20
+2024-12-19 09:21:06,177 - INFO - Created 8 nodes for page 21
+2024-12-19 09:21:06,177 - INFO - Created 4 nodes for page 22
+2024-12-19 09:21:06,178 - INFO - Created 8 nodes for page 23
+2024-12-19 09:21:06,178 - INFO - Created 4 nodes for page 24
+2024-12-19 09:21:06,178 - INFO - Created 7 nodes for page 25
+2024-12-19 09:21:06,178 - INFO - Created 4 nodes for page 26
+2024-12-19 09:21:06,178 - INFO - Created 6 nodes for page 27
+2024-12-19 09:21:06,178 - INFO - Created 3 nodes for page 28
+2024-12-19 09:21:06,178 - INFO - Created 5 nodes for page 29
+2024-12-19 09:21:06,178 - INFO - Created 6 nodes for page 30
+2024-12-19 09:21:06,178 - INFO - Created 5 nodes for page 31
+2024-12-19 09:21:06,178 - INFO - Created 4 nodes for page 32
+2024-12-19 09:21:06,178 - ERROR - Hierarchical node creation failed: 'TextNodeCreator' object has no attribute '_enhance_page_10_nodes_with_metadata'
+2024-12-19 09:21:49,162 - INFO - Beginning hierarchical node creation process...
+2024-12-19 09:21:49,165 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-19 09:21:49,165 - INFO - Created 5 nodes for page 1
+2024-12-19 09:21:49,165 - INFO - Created 6 nodes for page 2
+2024-12-19 09:21:49,166 - INFO - Created 5 nodes for page 3
+2024-12-19 09:21:49,166 - INFO - Created 6 nodes for page 4
+2024-12-19 09:21:49,166 - INFO - Created 6 nodes for page 5
+2024-12-19 09:21:49,166 - INFO - Created 3 nodes for page 6
+2024-12-19 09:21:49,166 - INFO - Created 5 nodes for page 7
+2024-12-19 09:21:49,166 - INFO - Created 5 nodes for page 8
+2024-12-19 09:21:49,166 - INFO - Created 6 nodes for page 9
+2024-12-19 09:21:49,166 - INFO - Created 6 nodes for page 10
+2024-12-19 09:21:49,167 - INFO - Created 12 nodes for page 11
+2024-12-19 09:21:49,167 - INFO - Created 3 nodes for page 12
+2024-12-19 09:21:49,167 - INFO - Created 7 nodes for page 13
+2024-12-19 09:21:49,167 - INFO - Created 3 nodes for page 14
+2024-12-19 09:21:49,167 - INFO - Created 5 nodes for page 15
+2024-12-19 09:21:49,167 - INFO - Created 6 nodes for page 16
+2024-12-19 09:21:49,167 - INFO - Created 5 nodes for page 17
+2024-12-19 09:21:49,167 - INFO - Created 3 nodes for page 18
+2024-12-19 09:21:49,167 - INFO - Created 6 nodes for page 19
+2024-12-19 09:21:49,168 - INFO - Created 3 nodes for page 20
+2024-12-19 09:21:49,168 - INFO - Created 8 nodes for page 21
+2024-12-19 09:21:49,168 - INFO - Created 4 nodes for page 22
+2024-12-19 09:21:49,168 - INFO - Created 8 nodes for page 23
+2024-12-19 09:21:49,168 - INFO - Created 4 nodes for page 24
+2024-12-19 09:21:49,168 - INFO - Created 7 nodes for page 25
+2024-12-19 09:21:49,168 - INFO - Created 4 nodes for page 26
+2024-12-19 09:21:49,168 - INFO - Created 6 nodes for page 27
+2024-12-19 09:21:49,169 - INFO - Created 3 nodes for page 28
+2024-12-19 09:21:49,169 - INFO - Created 5 nodes for page 29
+2024-12-19 09:21:49,169 - INFO - Created 6 nodes for page 30
+2024-12-19 09:21:49,169 - INFO - Created 5 nodes for page 31
+2024-12-19 09:21:49,169 - INFO - Created 4 nodes for page 32
+2024-12-19 09:21:49,169 - INFO - Found 6 nodes on page 10
+2024-12-19 09:21:49,169 - INFO - Processing batch of 5 nodes
+2024-12-19 09:21:49,169 - INFO - Batch content:
+2024-12-19 09:21:49,169 - INFO - Node c117b093-5c09-48f4-8fc0-be0be7b376c8: BARRETO TRENCHERS
+2024-12-19 09:21:49,169 - INFO - Node b7219878-52c0-45b9-a770-9b0f531bdc61: 1324D Standard Trencher:
+2024-12-19 09:21:49,169 - INFO - Node 9622a87c-8d56-41f8-8f1d-565ebeeee455: 912HM Mini Trencher:
+2024-12-19 09:21:49,169 - INFO - Node c36fb91e-187c-4d17-9082-23527413ee38: 712MT Micro Trencher:
+2024-12-19 09:21:49,169 - INFO - Node cf4b6a80-433b-4052-8050-99041d1967fc: 2024RTK Track Trencher:
+2024-12-19 09:21:54,696 - INFO - Raw batch metadata: {}
+2024-12-19 09:21:54,696 - WARNING - No metadata extracted from this batch
+2024-12-19 09:21:54,696 - INFO - Processing batch of 1 nodes
+2024-12-19 09:21:54,696 - INFO - Batch content:
+2024-12-19 09:21:54,696 - INFO - Node 82a2dc8f-3871-4624-8214-b1a2a72ab215: 1324STK Track Trencher:
+2024-12-19 09:21:56,831 - INFO - Raw batch metadata: {}
+2024-12-19 09:21:56,832 - WARNING - No metadata extracted from this batch
+2024-12-19 09:21:56,832 - INFO - Final model metadata: {}
+2024-12-19 09:21:56,832 - WARNING - No metadata found for node c117b093-5c09-48f4-8fc0-be0be7b376c8
+2024-12-19 09:21:56,832 - WARNING - No metadata found for node b7219878-52c0-45b9-a770-9b0f531bdc61
+2024-12-19 09:21:56,832 - WARNING - No metadata found for node 9622a87c-8d56-41f8-8f1d-565ebeeee455
+2024-12-19 09:21:56,833 - WARNING - No metadata found for node c36fb91e-187c-4d17-9082-23527413ee38
+2024-12-19 09:21:56,833 - WARNING - No metadata found for node cf4b6a80-433b-4052-8050-99041d1967fc
+2024-12-19 09:21:56,833 - WARNING - No metadata found for node 82a2dc8f-3871-4624-8214-b1a2a72ab215
+2024-12-19 09:21:56,833 - INFO - Enhanced 0 nodes with metadata
+2024-12-19 09:24:50,659 - INFO - Beginning hierarchical node creation process...
+2024-12-19 09:24:50,662 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-19 09:24:50,662 - INFO - Created 5 nodes for page 1
+2024-12-19 09:24:50,662 - INFO - Created 6 nodes for page 2
+2024-12-19 09:24:50,662 - INFO - Created 5 nodes for page 3
+2024-12-19 09:24:50,662 - INFO - Created 6 nodes for page 4
+2024-12-19 09:24:50,663 - INFO - Created 6 nodes for page 5
+2024-12-19 09:24:50,663 - INFO - Created 3 nodes for page 6
+2024-12-19 09:24:50,663 - INFO - Created 5 nodes for page 7
+2024-12-19 09:24:50,663 - INFO - Created 5 nodes for page 8
+2024-12-19 09:24:50,663 - INFO - Created 6 nodes for page 9
+2024-12-19 09:24:50,663 - INFO - Created 6 nodes for page 10
+2024-12-19 09:24:50,663 - INFO - Created 12 nodes for page 11
+2024-12-19 09:24:50,663 - INFO - Created 3 nodes for page 12
+2024-12-19 09:24:50,664 - INFO - Created 7 nodes for page 13
+2024-12-19 09:24:50,664 - INFO - Created 3 nodes for page 14
+2024-12-19 09:24:50,664 - INFO - Created 5 nodes for page 15
+2024-12-19 09:24:50,664 - INFO - Created 6 nodes for page 16
+2024-12-19 09:24:50,664 - INFO - Created 5 nodes for page 17
+2024-12-19 09:24:50,664 - INFO - Created 3 nodes for page 18
+2024-12-19 09:24:50,664 - INFO - Created 6 nodes for page 19
+2024-12-19 09:24:50,664 - INFO - Created 3 nodes for page 20
+2024-12-19 09:24:50,664 - INFO - Created 8 nodes for page 21
+2024-12-19 09:24:50,665 - INFO - Created 4 nodes for page 22
+2024-12-19 09:24:50,665 - INFO - Created 8 nodes for page 23
+2024-12-19 09:24:50,665 - INFO - Created 4 nodes for page 24
+2024-12-19 09:24:50,665 - INFO - Created 7 nodes for page 25
+2024-12-19 09:24:50,665 - INFO - Created 4 nodes for page 26
+2024-12-19 09:24:50,665 - INFO - Created 6 nodes for page 27
+2024-12-19 09:24:50,665 - INFO - Created 3 nodes for page 28
+2024-12-19 09:24:50,665 - INFO - Created 5 nodes for page 29
+2024-12-19 09:24:50,666 - INFO - Created 6 nodes for page 30
+2024-12-19 09:24:50,666 - INFO - Created 5 nodes for page 31
+2024-12-19 09:24:50,666 - INFO - Created 4 nodes for page 32
+2024-12-19 09:24:50,666 - INFO - Found 6 nodes on page 10
+2024-12-19 09:24:50,666 - INFO - Processing batch of 5 nodes
+2024-12-19 09:24:50,666 - INFO - Batch content:
+2024-12-19 09:24:50,666 - INFO - Node 0b8a8e35-4a71-4725-9371-617cd97e04b2: BARRETO TRENCHERS
+2024-12-19 09:24:50,666 - INFO - Node 78467ce9-4033-43a0-9b38-00350cedbb42: 1324D Standard Trencher:
+2024-12-19 09:24:50,666 - INFO - Node bf32534a-f469-4c41-a513-a9a2dc4e623b: 912HM Mini Trencher:
+2024-12-19 09:24:50,666 - INFO - Node 0f134ec0-f593-4deb-a651-8497d995e7b1: 712MT Micro Trencher:
+2024-12-19 09:24:50,666 - INFO - Node cac15057-6c5e-4014-90ef-4df27572683a: 2024RTK Track Trencher:
+2024-12-19 09:24:56,780 - INFO - Successfully parsed metadata for 4 models
+2024-12-19 09:24:56,780 - INFO - Matched metadata to 0 nodes
+2024-12-19 09:24:56,780 - INFO - Raw batch metadata: {}
+2024-12-19 09:24:56,780 - WARNING - No metadata extracted from this batch
+2024-12-19 09:24:56,780 - INFO - Processing batch of 1 nodes
+2024-12-19 09:24:56,780 - INFO - Batch content:
+2024-12-19 09:24:56,780 - INFO - Node 5e66efce-968d-40e2-80a6-08997ee1b6d0: 1324STK Track Trencher:
+2024-12-19 09:25:00,034 - INFO - Successfully parsed metadata for 1 models
+2024-12-19 09:25:00,034 - INFO - Matched metadata to 0 nodes
+2024-12-19 09:25:00,034 - INFO - Raw batch metadata: {}
+2024-12-19 09:25:00,034 - WARNING - No metadata extracted from this batch
+2024-12-19 09:25:00,034 - INFO - Final model metadata: {}
+2024-12-19 09:25:00,034 - WARNING - No metadata found for node 0b8a8e35-4a71-4725-9371-617cd97e04b2
+2024-12-19 09:25:00,034 - WARNING - No metadata found for node 78467ce9-4033-43a0-9b38-00350cedbb42
+2024-12-19 09:25:00,034 - WARNING - No metadata found for node bf32534a-f469-4c41-a513-a9a2dc4e623b
+2024-12-19 09:25:00,034 - WARNING - No metadata found for node 0f134ec0-f593-4deb-a651-8497d995e7b1
+2024-12-19 09:25:00,034 - WARNING - No metadata found for node cac15057-6c5e-4014-90ef-4df27572683a
+2024-12-19 09:25:00,034 - WARNING - No metadata found for node 5e66efce-968d-40e2-80a6-08997ee1b6d0
+2024-12-19 09:25:00,034 - INFO - Enhanced 0 nodes with metadata
+2024-12-19 09:31:32,156 - INFO - Beginning hierarchical node creation process...
+2024-12-19 09:31:32,159 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-19 09:31:32,160 - INFO - Created 5 nodes for page 1
+2024-12-19 09:31:32,160 - INFO - Created 6 nodes for page 2
+2024-12-19 09:31:32,160 - INFO - Created 5 nodes for page 3
+2024-12-19 09:31:32,160 - INFO - Created 6 nodes for page 4
+2024-12-19 09:31:32,160 - INFO - Created 6 nodes for page 5
+2024-12-19 09:31:32,160 - INFO - Created 3 nodes for page 6
+2024-12-19 09:31:32,160 - INFO - Created 5 nodes for page 7
+2024-12-19 09:31:32,160 - INFO - Created 5 nodes for page 8
+2024-12-19 09:31:32,161 - INFO - Created 6 nodes for page 9
+2024-12-19 09:31:32,161 - INFO - Created 6 nodes for page 10
+2024-12-19 09:31:32,161 - INFO - Created 12 nodes for page 11
+2024-12-19 09:31:32,161 - INFO - Created 3 nodes for page 12
+2024-12-19 09:31:32,161 - INFO - Created 7 nodes for page 13
+2024-12-19 09:31:32,161 - INFO - Created 3 nodes for page 14
+2024-12-19 09:31:32,161 - INFO - Created 5 nodes for page 15
+2024-12-19 09:31:32,161 - INFO - Created 6 nodes for page 16
+2024-12-19 09:31:32,162 - INFO - Created 5 nodes for page 17
+2024-12-19 09:31:32,162 - INFO - Created 3 nodes for page 18
+2024-12-19 09:31:32,162 - INFO - Created 6 nodes for page 19
+2024-12-19 09:31:32,162 - INFO - Created 3 nodes for page 20
+2024-12-19 09:31:32,162 - INFO - Created 8 nodes for page 21
+2024-12-19 09:31:32,162 - INFO - Created 4 nodes for page 22
+2024-12-19 09:31:32,162 - INFO - Created 8 nodes for page 23
+2024-12-19 09:31:32,162 - INFO - Created 4 nodes for page 24
+2024-12-19 09:31:32,163 - INFO - Created 7 nodes for page 25
+2024-12-19 09:31:32,163 - INFO - Created 4 nodes for page 26
+2024-12-19 09:31:32,163 - INFO - Created 6 nodes for page 27
+2024-12-19 09:31:32,163 - INFO - Created 3 nodes for page 28
+2024-12-19 09:31:32,163 - INFO - Created 5 nodes for page 29
+2024-12-19 09:31:32,163 - INFO - Created 6 nodes for page 30
+2024-12-19 09:31:32,163 - INFO - Created 5 nodes for page 31
+2024-12-19 09:31:32,163 - INFO - Created 4 nodes for page 32
+2024-12-19 09:31:32,163 - INFO - Found 6 nodes on page 10
+2024-12-19 09:31:32,163 - INFO - Processing batch of 5 nodes
+2024-12-19 09:31:32,163 - INFO - Batch content:
+2024-12-19 09:31:32,163 - INFO - Node 90ffdb31-0dbd-4dcd-90e2-a5c1a2845bd2: BARRETO TRENCHERS
+2024-12-19 09:31:32,163 - INFO - Node bdb59b05-44bb-403e-9387-e16a3ac6fe19: 1324D Standard Trencher:
+2024-12-19 09:31:32,164 - INFO - Node 8457c689-96b9-4733-9f7a-c0aedadc6b73: 912HM Mini Trencher:
+2024-12-19 09:31:32,164 - INFO - Node a1c23767-94d6-4050-b925-d66061c6409d: 712MT Micro Trencher:
+2024-12-19 09:31:32,164 - INFO - Node 7e6d915b-6d4e-4aa7-8005-b28dbb485ca2: 2024RTK Track Trencher:
+2024-12-19 09:31:38,014 - INFO - Successfully parsed metadata for 4 models
+2024-12-19 09:31:38,015 - INFO - Matched metadata to 0 nodes
+2024-12-19 09:31:38,015 - INFO - Raw batch metadata: {}
+2024-12-19 09:31:38,015 - WARNING - No metadata extracted from this batch
+2024-12-19 09:31:38,015 - INFO - Processing batch of 1 nodes
+2024-12-19 09:31:38,015 - INFO - Batch content:
+2024-12-19 09:31:38,015 - INFO - Node 20e0f40d-33cb-4436-bd50-25170b1962a3: 1324STK Track Trencher:
+2024-12-19 09:31:40,702 - INFO - Successfully parsed metadata for 1 models
+2024-12-19 09:31:40,702 - INFO - Matched metadata to 0 nodes
+2024-12-19 09:31:40,702 - INFO - Raw batch metadata: {}
+2024-12-19 09:31:40,702 - WARNING - No metadata extracted from this batch
+2024-12-19 09:31:40,702 - INFO - Final model metadata: {}
+2024-12-19 09:31:40,702 - WARNING - No metadata found for node 90ffdb31-0dbd-4dcd-90e2-a5c1a2845bd2
+2024-12-19 09:31:40,702 - WARNING - No metadata found for node bdb59b05-44bb-403e-9387-e16a3ac6fe19
+2024-12-19 09:31:40,702 - WARNING - No metadata found for node 8457c689-96b9-4733-9f7a-c0aedadc6b73
+2024-12-19 09:31:40,702 - WARNING - No metadata found for node a1c23767-94d6-4050-b925-d66061c6409d
+2024-12-19 09:31:40,702 - WARNING - No metadata found for node 7e6d915b-6d4e-4aa7-8005-b28dbb485ca2
+2024-12-19 09:31:40,702 - WARNING - No metadata found for node 20e0f40d-33cb-4436-bd50-25170b1962a3
+2024-12-19 09:31:40,703 - INFO - Enhanced 0 nodes with metadata
+2024-12-19 09:42:07,421 - INFO - Beginning hierarchical node creation process...
+2024-12-19 09:42:07,423 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-19 09:42:07,424 - INFO - Created 5 nodes for page 1
+2024-12-19 09:42:07,424 - INFO - Created 6 nodes for page 2
+2024-12-19 09:42:07,424 - INFO - Created 5 nodes for page 3
+2024-12-19 09:42:07,424 - INFO - Created 6 nodes for page 4
+2024-12-19 09:42:07,424 - INFO - Created 6 nodes for page 5
+2024-12-19 09:42:07,424 - INFO - Created 3 nodes for page 6
+2024-12-19 09:42:07,424 - INFO - Created 5 nodes for page 7
+2024-12-19 09:42:07,424 - INFO - Created 5 nodes for page 8
+2024-12-19 09:42:07,424 - INFO - Created 6 nodes for page 9
+2024-12-19 09:42:07,425 - INFO - Created 6 nodes for page 10
+2024-12-19 09:42:07,425 - INFO - Created 12 nodes for page 11
+2024-12-19 09:42:07,425 - INFO - Created 3 nodes for page 12
+2024-12-19 09:42:07,425 - INFO - Created 7 nodes for page 13
+2024-12-19 09:42:07,425 - INFO - Created 3 nodes for page 14
+2024-12-19 09:42:07,425 - INFO - Created 5 nodes for page 15
+2024-12-19 09:42:07,425 - INFO - Created 6 nodes for page 16
+2024-12-19 09:42:07,425 - INFO - Created 5 nodes for page 17
+2024-12-19 09:42:07,425 - INFO - Created 3 nodes for page 18
+2024-12-19 09:42:07,425 - INFO - Created 6 nodes for page 19
+2024-12-19 09:42:07,425 - INFO - Created 3 nodes for page 20
+2024-12-19 09:42:07,426 - INFO - Created 8 nodes for page 21
+2024-12-19 09:42:07,426 - INFO - Created 4 nodes for page 22
+2024-12-19 09:42:07,426 - INFO - Created 8 nodes for page 23
+2024-12-19 09:42:07,426 - INFO - Created 4 nodes for page 24
+2024-12-19 09:42:07,426 - INFO - Created 7 nodes for page 25
+2024-12-19 09:42:07,426 - INFO - Created 4 nodes for page 26
+2024-12-19 09:42:07,426 - INFO - Created 6 nodes for page 27
+2024-12-19 09:42:07,426 - INFO - Created 3 nodes for page 28
+2024-12-19 09:42:07,426 - INFO - Created 5 nodes for page 29
+2024-12-19 09:42:07,426 - INFO - Created 6 nodes for page 30
+2024-12-19 09:42:07,426 - INFO - Created 5 nodes for page 31
+2024-12-19 09:42:07,427 - INFO - Created 4 nodes for page 32
+2024-12-19 09:42:07,427 - INFO - Found 6 nodes on page 10
+2024-12-19 09:42:07,427 - INFO - Processing batch of 5 nodes
+2024-12-19 09:42:07,427 - INFO - Batch content:
+2024-12-19 09:42:07,427 - INFO - Node 3e33d785-a776-4b68-9ad5-ea23f155f86d: BARRETO TRENCHERS
+2024-12-19 09:42:07,427 - INFO - Node e7642cec-971e-4076-bedb-2f1be9eba590: 1324D Standard Trencher:
+2024-12-19 09:42:07,427 - INFO - Node 427871c8-473a-4e46-8025-dd45afb42f56: 912HM Mini Trencher:
+2024-12-19 09:42:07,427 - INFO - Node f33e1e4f-4764-429c-bd0a-49ae6fb0488b: 712MT Micro Trencher:
+2024-12-19 09:42:07,427 - INFO - Node 17352d05-e34c-4177-8d98-3631931fc31e: 2024RTK Track Trencher:
+2024-12-19 09:42:13,160 - INFO - Complete LLM response: [TextBlock(text='[\n    {\n        "product_name": "Barreto 1324D Standard Trencher",\n        "model_number": "1324D",\n        "manufacturer": "Barreto",\n        "category": "Trencher",\n        "subcategory": "Walk-behind Trencher",\n        "year": "1995",\n        "document_type": "product description",\n        "content_types": ["specifications", "features", "technical details"]\n    },\n    {\n        "product_name": "Barreto 912HM Mini Trencher",\n        "model_number": "912HM",\n        "manufacturer": "Barreto",\n        "category": "Trencher",\n        "subcategory": "Mini Walk-behind Trencher",\n        "year": "2005",\n        "document_type": "product description",\n        "content_types": ["specifications", "features", "applications"]\n    },\n    {\n        "product_name": "Barreto 712MT Micro Trencher",\n        "model_number": "712MT",\n        "manufacturer": "Barreto",\n        "category": "Trencher",\n        "subcategory": "Micro Trencher",\n        "year": "2010",\n        "document_type": "product description",\n        "content_types": ["features", "technical details"]\n    },\n    {\n        "product_name": "Barreto 2024RTK Track Trencher",\n        "model_number": "2024RTK",\n        "manufacturer": "Barreto",\n        "category": "Trencher",\n        "subcategory": "Stand-on Track Trencher",\n        "year": "2015",\n        "document_type": "product description",\n        "content_types": ["features", "technical details", "operational details"]\n    }\n]', type='text')]
+2024-12-19 09:42:13,161 - INFO - Extracted JSON content: [TextBlock(text='[\n    {\n        "product_name": "Barreto 1324D Standard Trencher",\n        "model_number": "1324D",\n        "manufacturer": "Barreto",\n        "category": "Trencher",\n        "subcategory": "Walk-behind Trencher",\n        "year": "1995",\n        "document_type": "product description",\n        "content_types": ["specifications", "features", "technical details"]\n    },\n    {\n        "product_name": "Barreto 912HM Mini Trencher",\n        "model_number": "912HM",\n        "manufacturer": "Barreto",\n        "category": "Trencher",\n        "subcategory": "Mini Walk-behind Trencher",\n        "year": "2005",\n        "document_type": "product description",\n        "content_types": ["specifications", "features", "applications"]\n    },\n    {\n        "product_name": "Barreto 712MT Micro Trencher",\n        "model_number": "712MT",\n        "manufacturer": "Barreto",\n        "category": "Trencher",\n        "subcategory": "Micro Trencher",\n        "year": "2010",\n        "document_type": "product description",\n        "content_types": ["features", "technical details"]\n    },\n    {\n        "product_name": "Barreto 2024RTK Track Trencher",\n        "model_number": "2024RTK",\n        "manufacturer": "Barreto",\n        "category": "Trencher",\n        "subcategory": "Stand-on Track Trencher",\n        "year": "2015",\n        "document_type": "product description",\n        "content_types": ["features", "technical details", "operational details"]\n    }\n]', type='text')]
+2024-12-19 09:42:13,161 - ERROR - JSON parsing failed: Expecting value: line 1 column 2 (char 1)
+2024-12-19 09:42:13,161 - ERROR - Failed JSON content: [TextBlock(text='[\n    {\n        "product_name": "Barreto 1324D Standard Trencher",\n        "model_number": "1324D",\n        "manufacturer": "Barreto",\n        "category": "Trencher",\n        "subcategory": "Walk-behind Trencher",\n        "year": "1995",\n        "document_type": "product description",\n        "content_types": ["specifications", "features", "technical details"]\n    },\n    {\n        "product_name": "Barreto 912HM Mini Trencher",\n        "model_number": "912HM",\n        "manufacturer": "Barreto",\n        "category": "Trencher",\n        "subcategory": "Mini Walk-behind Trencher",\n        "year": "2005",\n        "document_type": "product description",\n        "content_types": ["specifications", "features", "applications"]\n    },\n    {\n        "product_name": "Barreto 712MT Micro Trencher",\n        "model_number": "712MT",\n        "manufacturer": "Barreto",\n        "category": "Trencher",\n        "subcategory": "Micro Trencher",\n        "year": "2010",\n        "document_type": "product description",\n        "content_types": ["features", "technical details"]\n    },\n    {\n        "product_name": "Barreto 2024RTK Track Trencher",\n        "model_number": "2024RTK",\n        "manufacturer": "Barreto",\n        "category": "Trencher",\n        "subcategory": "Stand-on Track Trencher",\n        "year": "2015",\n        "document_type": "product description",\n        "content_types": ["features", "technical details", "operational details"]\n    }\n]', type='text')]
+2024-12-19 09:42:13,161 - INFO - Raw batch metadata: {}
+2024-12-19 09:42:13,161 - WARNING - No metadata extracted from this batch
+2024-12-19 09:42:13,161 - INFO - Processing batch of 1 nodes
+2024-12-19 09:42:13,161 - INFO - Batch content:
+2024-12-19 09:42:13,161 - INFO - Node 08551167-4879-4c3d-8497-0f0de47ad64e: 1324STK Track Trencher:
+2024-12-19 09:42:15,771 - INFO - Complete LLM response: [TextBlock(text='[\n    {\n        "product_name": "1324STK Track Trencher",\n        "model_number": "1324STK",\n        "manufacturer": "Barreto",\n        "category": "Construction Equipment",\n        "subcategory": "Trencher",\n        "year": "2017",\n        "document_type": "product description",\n        "content_types": [\n            "technical specifications",\n            "product features",\n            "design details"\n        ]\n    }\n]', type='text')]
+2024-12-19 09:42:15,772 - INFO - Extracted JSON content: [TextBlock(text='[\n    {\n        "product_name": "1324STK Track Trencher",\n        "model_number": "1324STK",\n        "manufacturer": "Barreto",\n        "category": "Construction Equipment",\n        "subcategory": "Trencher",\n        "year": "2017",\n        "document_type": "product description",\n        "content_types": [\n            "technical specifications",\n            "product features",\n            "design details"\n        ]\n    }\n]', type='text')]
+2024-12-19 09:42:15,772 - ERROR - JSON parsing failed: Expecting value: line 1 column 2 (char 1)
+2024-12-19 09:42:15,772 - ERROR - Failed JSON content: [TextBlock(text='[\n    {\n        "product_name": "1324STK Track Trencher",\n        "model_number": "1324STK",\n        "manufacturer": "Barreto",\n        "category": "Construction Equipment",\n        "subcategory": "Trencher",\n        "year": "2017",\n        "document_type": "product description",\n        "content_types": [\n            "technical specifications",\n            "product features",\n            "design details"\n        ]\n    }\n]', type='text')]
+2024-12-19 09:42:15,772 - INFO - Raw batch metadata: {}
+2024-12-19 09:42:15,772 - WARNING - No metadata extracted from this batch
+2024-12-19 09:42:15,772 - INFO - Final model metadata: {}
+2024-12-19 09:42:15,772 - WARNING - No metadata found for node 3e33d785-a776-4b68-9ad5-ea23f155f86d
+2024-12-19 09:42:15,772 - WARNING - No metadata found for node e7642cec-971e-4076-bedb-2f1be9eba590
+2024-12-19 09:42:15,772 - WARNING - No metadata found for node 427871c8-473a-4e46-8025-dd45afb42f56
+2024-12-19 09:42:15,772 - WARNING - No metadata found for node f33e1e4f-4764-429c-bd0a-49ae6fb0488b
+2024-12-19 09:42:15,772 - WARNING - No metadata found for node 17352d05-e34c-4177-8d98-3631931fc31e
+2024-12-19 09:42:15,772 - WARNING - No metadata found for node 08551167-4879-4c3d-8497-0f0de47ad64e
+2024-12-19 09:42:15,772 - INFO - Enhanced 0 nodes with metadata
+2024-12-19 09:44:38,883 - INFO - Beginning hierarchical node creation process...
+2024-12-19 09:44:38,886 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-19 09:44:38,886 - INFO - Created 5 nodes for page 1
+2024-12-19 09:44:38,887 - INFO - Created 6 nodes for page 2
+2024-12-19 09:44:38,887 - INFO - Created 5 nodes for page 3
+2024-12-19 09:44:38,887 - INFO - Created 6 nodes for page 4
+2024-12-19 09:44:38,887 - INFO - Created 6 nodes for page 5
+2024-12-19 09:44:38,887 - INFO - Created 3 nodes for page 6
+2024-12-19 09:44:38,887 - INFO - Created 5 nodes for page 7
+2024-12-19 09:44:38,887 - INFO - Created 5 nodes for page 8
+2024-12-19 09:44:38,887 - INFO - Created 6 nodes for page 9
+2024-12-19 09:44:38,887 - INFO - Created 6 nodes for page 10
+2024-12-19 09:44:38,888 - INFO - Created 12 nodes for page 11
+2024-12-19 09:44:38,888 - INFO - Created 3 nodes for page 12
+2024-12-19 09:44:38,888 - INFO - Created 7 nodes for page 13
+2024-12-19 09:44:38,888 - INFO - Created 3 nodes for page 14
+2024-12-19 09:44:38,888 - INFO - Created 5 nodes for page 15
+2024-12-19 09:44:38,888 - INFO - Created 6 nodes for page 16
+2024-12-19 09:44:38,888 - INFO - Created 5 nodes for page 17
+2024-12-19 09:44:38,888 - INFO - Created 3 nodes for page 18
+2024-12-19 09:44:38,889 - INFO - Created 6 nodes for page 19
+2024-12-19 09:44:38,889 - INFO - Created 3 nodes for page 20
+2024-12-19 09:44:38,889 - INFO - Created 8 nodes for page 21
+2024-12-19 09:44:38,889 - INFO - Created 4 nodes for page 22
+2024-12-19 09:44:38,889 - INFO - Created 8 nodes for page 23
+2024-12-19 09:44:38,889 - INFO - Created 4 nodes for page 24
+2024-12-19 09:44:38,889 - INFO - Created 7 nodes for page 25
+2024-12-19 09:44:38,889 - INFO - Created 4 nodes for page 26
+2024-12-19 09:44:38,889 - INFO - Created 6 nodes for page 27
+2024-12-19 09:44:38,890 - INFO - Created 3 nodes for page 28
+2024-12-19 09:44:38,890 - INFO - Created 5 nodes for page 29
+2024-12-19 09:44:38,890 - INFO - Created 6 nodes for page 30
+2024-12-19 09:44:38,890 - INFO - Created 5 nodes for page 31
+2024-12-19 09:44:38,890 - INFO - Created 4 nodes for page 32
+2024-12-19 09:44:38,890 - INFO - Found 6 nodes on page 10
+2024-12-19 09:44:38,890 - INFO - Processing batch of 5 nodes
+2024-12-19 09:44:38,890 - INFO - Batch content:
+2024-12-19 09:44:38,890 - INFO - Node 3476734b-0606-4b2e-8e3d-c72c26308ec0: BARRETO TRENCHERS
+2024-12-19 09:44:38,890 - INFO - Node 29566d8b-ab2f-4838-a84c-663f9abd0805: 1324D Standard Trencher:
+2024-12-19 09:44:38,890 - INFO - Node 58dee168-2601-438f-a089-f8e1338ae2ef: 912HM Mini Trencher:
+2024-12-19 09:44:38,890 - INFO - Node 74bc1aa7-32bd-4b92-87c0-a6eb5a0efc35: 712MT Micro Trencher:
+2024-12-19 09:44:38,890 - INFO - Node 8c1b3232-c58f-4095-b3f2-088be157f930: 2024RTK Track Trencher:
+2024-12-19 09:44:40,996 - INFO - Extracted text content: I don't see any actual equipment model descriptions or batch text to analyze in your message. Please provide the specific text containing the equipment descriptions that you'd like me to analyze and I'll help extract the metadata in the requested JSON format.
+2024-12-19 09:44:40,996 - ERROR - JSON parsing failed: Expecting value: line 1 column 1 (char 0)
+2024-12-19 09:44:40,996 - ERROR - Raw text content: I don't see any actual equipment model descriptions or batch text to analyze in your message. Please provide the specific text containing the equipment descriptions that you'd like me to analyze and I'll help extract the metadata in the requested JSON format.
+2024-12-19 09:44:40,996 - INFO - Raw batch metadata: {}
+2024-12-19 09:44:40,996 - WARNING - No metadata extracted from this batch
+2024-12-19 09:44:40,996 - INFO - Processing batch of 1 nodes
+2024-12-19 09:44:40,997 - INFO - Batch content:
+2024-12-19 09:44:40,997 - INFO - Node e9ba2958-9f3c-495e-91fe-8ee496a90f4e: 1324STK Track Trencher:
+2024-12-19 09:44:42,325 - INFO - Extracted text content: I don't see any actual equipment model descriptions or batch text to analyze in your message. Please provide the specific text containing the equipment descriptions that you'd like me to analyze and I'll help extract the metadata in the requested JSON format.
+2024-12-19 09:44:42,325 - ERROR - JSON parsing failed: Expecting value: line 1 column 1 (char 0)
+2024-12-19 09:44:42,326 - ERROR - Raw text content: I don't see any actual equipment model descriptions or batch text to analyze in your message. Please provide the specific text containing the equipment descriptions that you'd like me to analyze and I'll help extract the metadata in the requested JSON format.
+2024-12-19 09:44:42,326 - INFO - Raw batch metadata: {}
+2024-12-19 09:44:42,326 - WARNING - No metadata extracted from this batch
+2024-12-19 09:44:42,326 - INFO - Final model metadata: {}
+2024-12-19 09:44:42,326 - WARNING - No metadata found for node 3476734b-0606-4b2e-8e3d-c72c26308ec0
+2024-12-19 09:44:42,326 - WARNING - No metadata found for node 29566d8b-ab2f-4838-a84c-663f9abd0805
+2024-12-19 09:44:42,326 - WARNING - No metadata found for node 58dee168-2601-438f-a089-f8e1338ae2ef
+2024-12-19 09:44:42,326 - WARNING - No metadata found for node 74bc1aa7-32bd-4b92-87c0-a6eb5a0efc35
+2024-12-19 09:44:42,326 - WARNING - No metadata found for node 8c1b3232-c58f-4095-b3f2-088be157f930
+2024-12-19 09:44:42,326 - WARNING - No metadata found for node e9ba2958-9f3c-495e-91fe-8ee496a90f4e
+2024-12-19 09:44:42,326 - INFO - Enhanced 0 nodes with metadata
+2024-12-19 09:47:28,791 - INFO - Beginning hierarchical node creation process...
+2024-12-19 09:47:28,793 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-19 09:47:28,794 - INFO - Created 5 nodes for page 1
+2024-12-19 09:47:28,794 - INFO - Created 6 nodes for page 2
+2024-12-19 09:47:28,794 - INFO - Created 5 nodes for page 3
+2024-12-19 09:47:28,794 - INFO - Created 6 nodes for page 4
+2024-12-19 09:47:28,794 - INFO - Created 6 nodes for page 5
+2024-12-19 09:47:28,794 - INFO - Created 3 nodes for page 6
+2024-12-19 09:47:28,794 - INFO - Created 5 nodes for page 7
+2024-12-19 09:47:28,795 - INFO - Created 5 nodes for page 8
+2024-12-19 09:47:28,795 - INFO - Created 6 nodes for page 9
+2024-12-19 09:47:28,795 - INFO - Created 6 nodes for page 10
+2024-12-19 09:47:28,795 - INFO - Created 12 nodes for page 11
+2024-12-19 09:47:28,795 - INFO - Created 3 nodes for page 12
+2024-12-19 09:47:28,795 - INFO - Created 7 nodes for page 13
+2024-12-19 09:47:28,795 - INFO - Created 3 nodes for page 14
+2024-12-19 09:47:28,795 - INFO - Created 5 nodes for page 15
+2024-12-19 09:47:28,796 - INFO - Created 6 nodes for page 16
+2024-12-19 09:47:28,796 - INFO - Created 5 nodes for page 17
+2024-12-19 09:47:28,796 - INFO - Created 3 nodes for page 18
+2024-12-19 09:47:28,796 - INFO - Created 6 nodes for page 19
+2024-12-19 09:47:28,796 - INFO - Created 3 nodes for page 20
+2024-12-19 09:47:28,796 - INFO - Created 8 nodes for page 21
+2024-12-19 09:47:28,796 - INFO - Created 4 nodes for page 22
+2024-12-19 09:47:28,796 - INFO - Created 8 nodes for page 23
+2024-12-19 09:47:28,796 - INFO - Created 4 nodes for page 24
+2024-12-19 09:47:28,797 - INFO - Created 7 nodes for page 25
+2024-12-19 09:47:28,797 - INFO - Created 4 nodes for page 26
+2024-12-19 09:47:28,797 - INFO - Created 6 nodes for page 27
+2024-12-19 09:47:28,797 - INFO - Created 3 nodes for page 28
+2024-12-19 09:47:28,797 - INFO - Created 5 nodes for page 29
+2024-12-19 09:47:28,797 - INFO - Created 6 nodes for page 30
+2024-12-19 09:47:28,797 - INFO - Created 5 nodes for page 31
+2024-12-19 09:47:28,797 - INFO - Created 4 nodes for page 32
+2024-12-19 09:47:28,797 - INFO - Found 6 nodes on page 10
+2024-12-19 09:47:28,797 - INFO - Processing batch of 5 nodes
+2024-12-19 09:47:28,797 - INFO - Batch content:
+2024-12-19 09:47:28,797 - INFO - Node ba0c425e-2578-4e9f-a82d-bc0b6fa435ab: BARRETO TRENCHERS
+2024-12-19 09:47:28,797 - INFO - Node 444e999a-68dc-435d-b222-f2bd592badb7: 1324D Standard Trencher:
+2024-12-19 09:47:28,797 - INFO - Node 3e572a73-a10b-4259-bfb2-91be079e876c: 912HM Mini Trencher:
+2024-12-19 09:47:28,797 - INFO - Node f31e554c-5dee-49ef-810b-d704273a2143: 712MT Micro Trencher:
+2024-12-19 09:47:28,797 - INFO - Node 2fce8afb-e0a7-46b3-bb36-c67cdae1712e: 2024RTK Track Trencher:
+2024-12-19 09:47:28,798 - ERROR - Page 10 metadata enhancement failed: '\n            "product_name"'
+2024-12-19 09:47:28,798 - ERROR - Full error: KeyError
+2024-12-19 09:47:28,799 - ERROR - Stack trace: Traceback (most recent call last):
+  File "/Users/matthew.hunt/Developer/python_projects/retrieval_augmented_generation/rag_package/textnode_creator.py", line 807, in _enhance_page_10_nodes_with_metadata
+    raw_batch_metadata = self._extract_batch_metadata(batch)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/matthew.hunt/Developer/python_projects/retrieval_augmented_generation/rag_package/textnode_creator.py", line 634, in _extract_batch_metadata
+    prompt = prompt_template.format(text=batch_text)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: '\n            "product_name"'
+
+2024-12-19 09:48:54,814 - INFO - Beginning hierarchical node creation process...
+2024-12-19 09:48:54,816 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-19 09:48:54,817 - INFO - Created 5 nodes for page 1
+2024-12-19 09:48:54,817 - INFO - Created 6 nodes for page 2
+2024-12-19 09:48:54,817 - INFO - Created 5 nodes for page 3
+2024-12-19 09:48:54,817 - INFO - Created 6 nodes for page 4
+2024-12-19 09:48:54,817 - INFO - Created 6 nodes for page 5
+2024-12-19 09:48:54,817 - INFO - Created 3 nodes for page 6
+2024-12-19 09:48:54,817 - INFO - Created 5 nodes for page 7
+2024-12-19 09:48:54,817 - INFO - Created 5 nodes for page 8
+2024-12-19 09:48:54,818 - INFO - Created 6 nodes for page 9
+2024-12-19 09:48:54,818 - INFO - Created 6 nodes for page 10
+2024-12-19 09:48:54,818 - INFO - Created 12 nodes for page 11
+2024-12-19 09:48:54,818 - INFO - Created 3 nodes for page 12
+2024-12-19 09:48:54,818 - INFO - Created 7 nodes for page 13
+2024-12-19 09:48:54,818 - INFO - Created 3 nodes for page 14
+2024-12-19 09:48:54,818 - INFO - Created 5 nodes for page 15
+2024-12-19 09:48:54,818 - INFO - Created 6 nodes for page 16
+2024-12-19 09:48:54,818 - INFO - Created 5 nodes for page 17
+2024-12-19 09:48:54,819 - INFO - Created 3 nodes for page 18
+2024-12-19 09:48:54,819 - INFO - Created 6 nodes for page 19
+2024-12-19 09:48:54,819 - INFO - Created 3 nodes for page 20
+2024-12-19 09:48:54,819 - INFO - Created 8 nodes for page 21
+2024-12-19 09:48:54,819 - INFO - Created 4 nodes for page 22
+2024-12-19 09:48:54,819 - INFO - Created 8 nodes for page 23
+2024-12-19 09:48:54,819 - INFO - Created 4 nodes for page 24
+2024-12-19 09:48:54,819 - INFO - Created 7 nodes for page 25
+2024-12-19 09:48:54,819 - INFO - Created 4 nodes for page 26
+2024-12-19 09:48:54,819 - INFO - Created 6 nodes for page 27
+2024-12-19 09:48:54,820 - INFO - Created 3 nodes for page 28
+2024-12-19 09:48:54,820 - INFO - Created 5 nodes for page 29
+2024-12-19 09:48:54,820 - INFO - Created 6 nodes for page 30
+2024-12-19 09:48:54,820 - INFO - Created 5 nodes for page 31
+2024-12-19 09:48:54,820 - INFO - Created 4 nodes for page 32
+2024-12-19 09:48:54,820 - INFO - Found 6 nodes on page 10
+2024-12-19 09:48:54,820 - INFO - Processing batch of 5 nodes
+2024-12-19 09:48:54,820 - INFO - Batch content:
+2024-12-19 09:48:54,820 - INFO - Node 816b39d5-fd61-4d02-9b96-ba9c9cdede2e: BARRETO TRENCHERS
+2024-12-19 09:48:54,820 - INFO - Node e4b1b26a-c023-4fd9-9724-412d85d8ca56: 1324D Standard Trencher:
+2024-12-19 09:48:54,820 - INFO - Node 65fd9ca8-f43f-4b9d-b0bf-ea8a2907ec8f: 912HM Mini Trencher:
+2024-12-19 09:48:54,820 - INFO - Node 2876ce64-5cfe-418e-9ea3-8131d019c8ac: 712MT Micro Trencher:
+2024-12-19 09:48:54,820 - INFO - Node 867fe0da-d9ff-408b-8d8d-953f40a88d5a: 2024RTK Track Trencher:
+2024-12-19 09:49:01,885 - INFO - Raw LLM response: [
+    {
+        "product_name": "Barreto 1324D Standard Trencher",
+        "model_number": "1324D",
+        "manufacturer": "Barreto",
+        "category": "Trencher",
+        "subcategory": "Walk-behind Trencher",
+        "year": "1995",
+        "document_type": "product description",
+        "content_types": ["specifications", "features", "technical details"]
+    },
+    {
+        "product_name": "Barreto 912HM Mini Trencher",
+        "model_number": "912HM",
+        "manufacturer": "Barreto",
+        "category": "Trencher",
+        "subcategory": "Mini Walk-behind Trencher",
+        "year": "2005",
+        "document_type": "product description",
+        "content_types": ["specifications", "features", "applications"]
+    },
+    {
+        "product_name": "Barreto 712MT Micro Trencher",
+        "model_number": "712MT",
+        "manufacturer": "Barreto",
+        "category": "Trencher",
+        "subcategory": "Micro Trencher",
+        "year": "2010",
+        "document_type": "product description",
+        "content_types": ["features", "technical details"]
+    },
+    {
+        "product_name": "Barreto 2024RTK Track Trencher",
+        "model_number": "2024RTK",
+        "manufacturer": "Barreto",
+        "category": "Trencher",
+        "subcategory": "Stand-on Track Trencher",
+        "year": "2015",
+        "document_type": "product description",
+        "content_types": ["features", "technical details", "operational information"]
+    }
+]
+2024-12-19 09:49:01,885 - INFO - Successfully parsed metadata: [
+  {
+    "product_name": "Barreto 1324D Standard Trencher",
+    "model_number": "1324D",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Walk-behind Trencher",
+    "year": "1995",
+    "document_type": "product description",
+    "content_types": [
+      "specifications",
+      "features",
+      "technical details"
+    ]
+  },
+  {
+    "product_name": "Barreto 912HM Mini Trencher",
+    "model_number": "912HM",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Mini Walk-behind Trencher",
+    "year": "2005",
+    "document_type": "product description",
+    "content_types": [
+      "specifications",
+      "features",
+      "applications"
+    ]
+  },
+  {
+    "product_name": "Barreto 712MT Micro Trencher",
+    "model_number": "712MT",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Micro Trencher",
+    "year": "2010",
+    "document_type": "product description",
+    "content_types": [
+      "features",
+      "technical details"
+    ]
+  },
+  {
+    "product_name": "Barreto 2024RTK Track Trencher",
+    "model_number": "2024RTK",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Stand-on Track Trencher",
+    "year": "2015",
+    "document_type": "product description",
+    "content_types": [
+      "features",
+      "technical details",
+      "operational information"
+    ]
+  }
+]
+2024-12-19 09:49:01,885 - INFO - Raw batch metadata: {}
+2024-12-19 09:49:01,886 - WARNING - No metadata extracted from this batch
+2024-12-19 09:49:01,886 - INFO - Processing batch of 1 nodes
+2024-12-19 09:49:01,886 - INFO - Batch content:
+2024-12-19 09:49:01,886 - INFO - Node c18154a8-0200-4dc9-831c-e605214b23ef: 1324STK Track Trencher:
+2024-12-19 09:49:04,097 - INFO - Raw LLM response: [
+    {
+        "product_name": "1324STK Track Trencher",
+        "model_number": "1324STK",
+        "manufacturer": "Barreto",
+        "category": "Construction Equipment",
+        "subcategory": "Trencher",
+        "year": "2017",
+        "document_type": "product description",
+        "content_types": [
+            "technical specifications",
+            "features",
+            "design details",
+            "performance capabilities"
+        ]
+    }
+]
+2024-12-19 09:49:04,098 - INFO - Successfully parsed metadata: [
+  {
+    "product_name": "1324STK Track Trencher",
+    "model_number": "1324STK",
+    "manufacturer": "Barreto",
+    "category": "Construction Equipment",
+    "subcategory": "Trencher",
+    "year": "2017",
+    "document_type": "product description",
+    "content_types": [
+      "technical specifications",
+      "features",
+      "design details",
+      "performance capabilities"
+    ]
+  }
+]
+2024-12-19 09:49:04,098 - INFO - Raw batch metadata: {}
+2024-12-19 09:49:04,098 - WARNING - No metadata extracted from this batch
+2024-12-19 09:49:04,098 - INFO - Final model metadata: {}
+2024-12-19 09:49:04,098 - WARNING - No metadata found for node 816b39d5-fd61-4d02-9b96-ba9c9cdede2e
+2024-12-19 09:49:04,098 - WARNING - No metadata found for node e4b1b26a-c023-4fd9-9724-412d85d8ca56
+2024-12-19 09:49:04,098 - WARNING - No metadata found for node 65fd9ca8-f43f-4b9d-b0bf-ea8a2907ec8f
+2024-12-19 09:49:04,098 - WARNING - No metadata found for node 2876ce64-5cfe-418e-9ea3-8131d019c8ac
+2024-12-19 09:49:04,098 - WARNING - No metadata found for node 867fe0da-d9ff-408b-8d8d-953f40a88d5a
+2024-12-19 09:49:04,098 - WARNING - No metadata found for node c18154a8-0200-4dc9-831c-e605214b23ef
+2024-12-19 09:49:04,098 - INFO - Enhanced 0 nodes with metadata
+2024-12-19 10:02:32,975 - INFO - Beginning hierarchical node creation process...
+2024-12-19 10:02:32,978 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-19 10:02:32,979 - INFO - Created 5 nodes for page 1
+2024-12-19 10:02:32,979 - INFO - Created 6 nodes for page 2
+2024-12-19 10:02:32,979 - INFO - Created 5 nodes for page 3
+2024-12-19 10:02:32,979 - INFO - Created 6 nodes for page 4
+2024-12-19 10:02:32,979 - INFO - Created 6 nodes for page 5
+2024-12-19 10:02:32,979 - INFO - Created 3 nodes for page 6
+2024-12-19 10:02:32,980 - INFO - Created 5 nodes for page 7
+2024-12-19 10:02:32,980 - INFO - Created 5 nodes for page 8
+2024-12-19 10:02:32,980 - INFO - Created 6 nodes for page 9
+2024-12-19 10:02:32,980 - INFO - Created 6 nodes for page 10
+2024-12-19 10:02:32,980 - INFO - Created 12 nodes for page 11
+2024-12-19 10:02:32,980 - INFO - Created 3 nodes for page 12
+2024-12-19 10:02:32,980 - INFO - Created 7 nodes for page 13
+2024-12-19 10:02:32,981 - INFO - Created 3 nodes for page 14
+2024-12-19 10:02:32,981 - INFO - Created 5 nodes for page 15
+2024-12-19 10:02:32,981 - INFO - Created 6 nodes for page 16
+2024-12-19 10:02:32,981 - INFO - Created 5 nodes for page 17
+2024-12-19 10:02:32,981 - INFO - Created 3 nodes for page 18
+2024-12-19 10:02:32,981 - INFO - Created 6 nodes for page 19
+2024-12-19 10:02:32,981 - INFO - Created 3 nodes for page 20
+2024-12-19 10:02:32,981 - INFO - Created 8 nodes for page 21
+2024-12-19 10:02:32,981 - INFO - Created 4 nodes for page 22
+2024-12-19 10:02:32,982 - INFO - Created 8 nodes for page 23
+2024-12-19 10:02:32,982 - INFO - Created 4 nodes for page 24
+2024-12-19 10:02:32,982 - INFO - Created 7 nodes for page 25
+2024-12-19 10:02:32,982 - INFO - Created 4 nodes for page 26
+2024-12-19 10:02:32,982 - INFO - Created 6 nodes for page 27
+2024-12-19 10:02:32,982 - INFO - Created 3 nodes for page 28
+2024-12-19 10:02:32,982 - INFO - Created 5 nodes for page 29
+2024-12-19 10:02:32,982 - INFO - Created 6 nodes for page 30
+2024-12-19 10:02:32,983 - INFO - Created 5 nodes for page 31
+2024-12-19 10:02:32,983 - INFO - Created 4 nodes for page 32
+2024-12-19 10:02:32,983 - INFO - Found 6 nodes on page 10
+2024-12-19 10:02:32,983 - INFO - Processing batch of 5 nodes
+2024-12-19 10:02:32,983 - INFO - Batch content:
+2024-12-19 10:02:32,983 - INFO - Node c2262558-a239-41b0-a84d-a779b2d141c0: BARRETO TRENCHERS
+2024-12-19 10:02:32,983 - INFO - Node da332cc1-48d9-4778-aef2-ea81bd282bdb: 1324D Standard Trencher:
+2024-12-19 10:02:32,983 - INFO - Node ba322cde-553f-4235-9e9f-4524fb44ed29: 912HM Mini Trencher:
+2024-12-19 10:02:32,983 - INFO - Node f83bd856-87a1-427b-8ce2-49e6a6a75610: 712MT Micro Trencher:
+2024-12-19 10:02:32,983 - INFO - Node 8c3490b1-efb9-4960-9b08-817b55dc0c8e: 2024RTK Track Trencher:
+2024-12-19 10:02:41,881 - INFO - Raw LLM response: [TextBlock(text='[\n    {\n        "product_name": "Barreto 1324D Standard Trencher",\n        "model_number": "1324D",\n        "manufacturer": "Barreto",\n        "category": "Trencher",\n        "subcategory": "Walk-behind Trencher",\n        "year": "1995",\n        "document_type": "product description",\n        "content_types": ["specifications", "features", "technical details"]\n    },\n    {\n        "product_name": "Barreto 912HM Mini Trencher",\n        "model_number": "912HM",\n        "manufacturer": "Barreto",\n        "category": "Trencher",\n        "subcategory": "Mini Walk-behind Trencher",\n        "year": "2005",\n        "document_type": "product description",\n        "content_types": ["specifications", "features", "applications"]\n    },\n    {\n        "product_name": "Barreto 712MT Micro Trencher",\n        "model_number": "712MT",\n        "manufacturer": "Barreto",\n        "category": "Trencher",\n        "subcategory": "Micro Trencher",\n        "year": "2010",\n        "document_type": "product description",\n        "content_types": ["features", "technical details"]\n    },\n    {\n        "product_name": "Barreto 2024RTK Track Trencher",\n        "model_number": "2024RTK",\n        "manufacturer": "Barreto",\n        "category": "Trencher",\n        "subcategory": "Stand-on Track Trencher",\n        "year": "2015",\n        "document_type": "product description",\n        "content_types": ["features", "technical details", "operational information"]\n    }\n]', type='text')]
+2024-12-19 10:02:41,881 - ERROR - JSON parsing failed: Expecting value: line 1 column 2 (char 1)
+2024-12-19 10:02:41,881 - ERROR - Raw text content: [TextBlock(text='[\n    {\n        "product_name": "Barreto 1324D Standard Trencher",\n        "model_number": "1324D",\n        "manufacturer": "Barreto",\n        "category": "Trencher",\n        "subcategory": "Walk-behind Trencher",\n        "year": "1995",\n        "document_type": "product description",\n        "content_types": ["specifications", "features", "technical details"]\n    },\n    {\n        "product_name": "Barreto 912HM Mini Trencher",\n        "model_number": "912HM",\n        "manufacturer": "Barreto",\n        "category": "Trencher",\n        "subcategory": "Mini Walk-behind Trencher",\n        "year": "2005",\n        "document_type": "product description",\n        "content_types": ["specifications", "features", "applications"]\n    },\n    {\n        "product_name": "Barreto 712MT Micro Trencher",\n        "model_number": "712MT",\n        "manufacturer": "Barreto",\n        "category": "Trencher",\n        "subcategory": "Micro Trencher",\n        "year": "2010",\n        "document_type": "product description",\n        "content_types": ["features", "technical details"]\n    },\n    {\n        "product_name": "Barreto 2024RTK Track Trencher",\n        "model_number": "2024RTK",\n        "manufacturer": "Barreto",\n        "category": "Trencher",\n        "subcategory": "Stand-on Track Trencher",\n        "year": "2015",\n        "document_type": "product description",\n        "content_types": ["features", "technical details", "operational information"]\n    }\n]', type='text')]
+2024-12-19 10:02:41,881 - INFO - Raw batch metadata: {}
+2024-12-19 10:02:41,881 - WARNING - No metadata extracted from this batch
+2024-12-19 10:02:41,882 - INFO - Processing batch of 1 nodes
+2024-12-19 10:02:41,882 - INFO - Batch content:
+2024-12-19 10:02:41,882 - INFO - Node e93d831f-ba81-4411-bdf0-b4f870ecd23d: 1324STK Track Trencher:
+2024-12-19 10:02:44,127 - INFO - Raw LLM response: [TextBlock(text='[\n    {\n        "product_name": "1324STK Track Trencher",\n        "model_number": "1324STK",\n        "manufacturer": "Barreto",\n        "category": "Construction Equipment",\n        "subcategory": "Trencher",\n        "year": "2017",\n        "document_type": "product description",\n        "content_types": [\n            "specifications",\n            "features",\n            "technical details",\n            "product introduction"\n        ]\n    }\n]', type='text')]
+2024-12-19 10:02:44,127 - ERROR - JSON parsing failed: Expecting value: line 1 column 2 (char 1)
+2024-12-19 10:02:44,127 - ERROR - Raw text content: [TextBlock(text='[\n    {\n        "product_name": "1324STK Track Trencher",\n        "model_number": "1324STK",\n        "manufacturer": "Barreto",\n        "category": "Construction Equipment",\n        "subcategory": "Trencher",\n        "year": "2017",\n        "document_type": "product description",\n        "content_types": [\n            "specifications",\n            "features",\n            "technical details",\n            "product introduction"\n        ]\n    }\n]', type='text')]
+2024-12-19 10:02:44,127 - INFO - Raw batch metadata: {}
+2024-12-19 10:02:44,127 - WARNING - No metadata extracted from this batch
+2024-12-19 10:02:44,128 - INFO - Final model metadata: {}
+2024-12-19 10:02:44,128 - WARNING - No metadata found for node c2262558-a239-41b0-a84d-a779b2d141c0
+2024-12-19 10:02:44,128 - WARNING - No metadata found for node da332cc1-48d9-4778-aef2-ea81bd282bdb
+2024-12-19 10:02:44,128 - WARNING - No metadata found for node ba322cde-553f-4235-9e9f-4524fb44ed29
+2024-12-19 10:02:44,128 - WARNING - No metadata found for node f83bd856-87a1-427b-8ce2-49e6a6a75610
+2024-12-19 10:02:44,128 - WARNING - No metadata found for node 8c3490b1-efb9-4960-9b08-817b55dc0c8e
+2024-12-19 10:02:44,128 - WARNING - No metadata found for node e93d831f-ba81-4411-bdf0-b4f870ecd23d
+2024-12-19 10:02:44,128 - INFO - Enhanced 0 nodes with metadata
+2024-12-19 10:07:59,880 - INFO - Beginning hierarchical node creation process...
+2024-12-19 10:07:59,883 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-19 10:07:59,883 - INFO - Created 5 nodes for page 1
+2024-12-19 10:07:59,883 - INFO - Created 6 nodes for page 2
+2024-12-19 10:07:59,883 - INFO - Created 5 nodes for page 3
+2024-12-19 10:07:59,884 - INFO - Created 6 nodes for page 4
+2024-12-19 10:07:59,884 - INFO - Created 6 nodes for page 5
+2024-12-19 10:07:59,884 - INFO - Created 3 nodes for page 6
+2024-12-19 10:07:59,884 - INFO - Created 5 nodes for page 7
+2024-12-19 10:07:59,884 - INFO - Created 5 nodes for page 8
+2024-12-19 10:07:59,884 - INFO - Created 6 nodes for page 9
+2024-12-19 10:07:59,884 - INFO - Created 6 nodes for page 10
+2024-12-19 10:07:59,885 - INFO - Created 12 nodes for page 11
+2024-12-19 10:07:59,885 - INFO - Created 3 nodes for page 12
+2024-12-19 10:07:59,885 - INFO - Created 7 nodes for page 13
+2024-12-19 10:07:59,885 - INFO - Created 3 nodes for page 14
+2024-12-19 10:07:59,885 - INFO - Created 5 nodes for page 15
+2024-12-19 10:07:59,885 - INFO - Created 6 nodes for page 16
+2024-12-19 10:07:59,885 - INFO - Created 5 nodes for page 17
+2024-12-19 10:07:59,885 - INFO - Created 3 nodes for page 18
+2024-12-19 10:07:59,885 - INFO - Created 6 nodes for page 19
+2024-12-19 10:07:59,886 - INFO - Created 3 nodes for page 20
+2024-12-19 10:07:59,886 - INFO - Created 8 nodes for page 21
+2024-12-19 10:07:59,886 - INFO - Created 4 nodes for page 22
+2024-12-19 10:07:59,886 - INFO - Created 8 nodes for page 23
+2024-12-19 10:07:59,886 - INFO - Created 4 nodes for page 24
+2024-12-19 10:07:59,886 - INFO - Created 7 nodes for page 25
+2024-12-19 10:07:59,886 - INFO - Created 4 nodes for page 26
+2024-12-19 10:07:59,886 - INFO - Created 6 nodes for page 27
+2024-12-19 10:07:59,887 - INFO - Created 3 nodes for page 28
+2024-12-19 10:07:59,887 - INFO - Created 5 nodes for page 29
+2024-12-19 10:07:59,887 - INFO - Created 6 nodes for page 30
+2024-12-19 10:07:59,887 - INFO - Created 5 nodes for page 31
+2024-12-19 10:07:59,887 - INFO - Created 4 nodes for page 32
+2024-12-19 10:07:59,887 - INFO - Found 6 nodes on page 10
+2024-12-19 10:07:59,887 - INFO - Processing batch of 5 nodes
+2024-12-19 10:07:59,887 - INFO - Batch content:
+2024-12-19 10:07:59,887 - INFO - Node c8b7ddf2-474c-4906-89ab-b05fecc78ea8: BARRETO TRENCHERS
+2024-12-19 10:07:59,887 - INFO - Node c225600b-3dd5-4717-b701-9e28b6b70ddc: 1324D Standard Trencher:
+2024-12-19 10:07:59,887 - INFO - Node 417ffa8b-b27f-4707-8445-6cf2bf292182: 912HM Mini Trencher:
+2024-12-19 10:07:59,887 - INFO - Node 048d6e73-c55c-4261-b504-dcff6c2f5303: 712MT Micro Trencher:
+2024-12-19 10:07:59,887 - INFO - Node 3aa11115-9484-4090-9c8b-127f988922dc: 2024RTK Track Trencher:
+2024-12-19 10:08:06,720 - INFO - Raw LLM response text: [
+    {
+        "product_name": "Barreto 1324D Standard Trencher",
+        "model_number": "1324D",
+        "manufacturer": "Barreto",
+        "category": "Trencher",
+        "subcategory": "Walk-behind Trencher",
+        "year": "1995",
+        "document_type": "product description",
+        "content_types": ["specifications", "features", "technical details"]
+    },
+    {
+        "product_name": "Barreto 912HM Mini Trencher",
+        "model_number": "912HM",
+        "manufacturer": "Barreto",
+        "category": "Trencher",
+        "subcategory": "Mini Walk-behind Trencher",
+        "year": "2005",
+        "document_type": "product description",
+        "content_types": ["specifications", "features", "applications"]
+    },
+    {
+        "product_name": "Barreto 712MT Micro Trencher",
+        "model_number": "712MT",
+        "manufacturer": "Barreto",
+        "category": "Trencher",
+        "subcategory": "Micro Trencher",
+        "year": "2010",
+        "document_type": "product description",
+        "content_types": ["features", "technical details"]
+    },
+    {
+        "product_name": "Barreto 2024RTK Track Trencher",
+        "model_number": "2024RTK",
+        "manufacturer": "Barreto",
+        "category": "Trencher",
+        "subcategory": "Stand-on Track Trencher",
+        "year": "2015",
+        "document_type": "product description",
+        "content_types": ["features", "technical details", "operational information"]
+    }
+]
+2024-12-19 10:08:06,721 - INFO - Successfully parsed metadata: [
+  {
+    "product_name": "Barreto 1324D Standard Trencher",
+    "model_number": "1324D",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Walk-behind Trencher",
+    "year": "1995",
+    "document_type": "product description",
+    "content_types": [
+      "specifications",
+      "features",
+      "technical details"
+    ]
+  },
+  {
+    "product_name": "Barreto 912HM Mini Trencher",
+    "model_number": "912HM",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Mini Walk-behind Trencher",
+    "year": "2005",
+    "document_type": "product description",
+    "content_types": [
+      "specifications",
+      "features",
+      "applications"
+    ]
+  },
+  {
+    "product_name": "Barreto 712MT Micro Trencher",
+    "model_number": "712MT",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Micro Trencher",
+    "year": "2010",
+    "document_type": "product description",
+    "content_types": [
+      "features",
+      "technical details"
+    ]
+  },
+  {
+    "product_name": "Barreto 2024RTK Track Trencher",
+    "model_number": "2024RTK",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Stand-on Track Trencher",
+    "year": "2015",
+    "document_type": "product description",
+    "content_types": [
+      "features",
+      "technical details",
+      "operational information"
+    ]
+  }
+]
+2024-12-19 10:08:06,721 - INFO - Matched node c225600b-3dd5-4717-b701-9e28b6b70ddc with metadata: {
+  "product_name": "Barreto 1324D Standard Trencher",
+  "model_number": "1324D",
+  "manufacturer": "Barreto",
+  "category": "Trencher",
+  "subcategory": "Walk-behind Trencher",
+  "year": "1995",
+  "document_type": "product description",
+  "content_types": [
+    "specifications",
+    "features",
+    "technical details"
+  ]
+}
+2024-12-19 10:08:06,722 - INFO - Matched node 417ffa8b-b27f-4707-8445-6cf2bf292182 with metadata: {
+  "product_name": "Barreto 912HM Mini Trencher",
+  "model_number": "912HM",
+  "manufacturer": "Barreto",
+  "category": "Trencher",
+  "subcategory": "Mini Walk-behind Trencher",
+  "year": "2005",
+  "document_type": "product description",
+  "content_types": [
+    "specifications",
+    "features",
+    "applications"
+  ]
+}
+2024-12-19 10:08:06,722 - INFO - Matched node 048d6e73-c55c-4261-b504-dcff6c2f5303 with metadata: {
+  "product_name": "Barreto 712MT Micro Trencher",
+  "model_number": "712MT",
+  "manufacturer": "Barreto",
+  "category": "Trencher",
+  "subcategory": "Micro Trencher",
+  "year": "2010",
+  "document_type": "product description",
+  "content_types": [
+    "features",
+    "technical details"
+  ]
+}
+2024-12-19 10:08:06,722 - INFO - Matched node 3aa11115-9484-4090-9c8b-127f988922dc with metadata: {
+  "product_name": "Barreto 2024RTK Track Trencher",
+  "model_number": "2024RTK",
+  "manufacturer": "Barreto",
+  "category": "Trencher",
+  "subcategory": "Stand-on Track Trencher",
+  "year": "2015",
+  "document_type": "product description",
+  "content_types": [
+    "features",
+    "technical details",
+    "operational information"
+  ]
+}
+2024-12-19 10:08:06,722 - INFO - Raw batch metadata: {
+  "c225600b-3dd5-4717-b701-9e28b6b70ddc": {
+    "product_name": "Barreto 1324D Standard Trencher",
+    "model_number": "1324D",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Walk-behind Trencher",
+    "year": "1995",
+    "document_type": "product description",
+    "content_types": [
+      "specifications",
+      "features",
+      "technical details"
+    ]
+  },
+  "417ffa8b-b27f-4707-8445-6cf2bf292182": {
+    "product_name": "Barreto 912HM Mini Trencher",
+    "model_number": "912HM",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Mini Walk-behind Trencher",
+    "year": "2005",
+    "document_type": "product description",
+    "content_types": [
+      "specifications",
+      "features",
+      "applications"
+    ]
+  },
+  "048d6e73-c55c-4261-b504-dcff6c2f5303": {
+    "product_name": "Barreto 712MT Micro Trencher",
+    "model_number": "712MT",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Micro Trencher",
+    "year": "2010",
+    "document_type": "product description",
+    "content_types": [
+      "features",
+      "technical details"
+    ]
+  },
+  "3aa11115-9484-4090-9c8b-127f988922dc": {
+    "product_name": "Barreto 2024RTK Track Trencher",
+    "model_number": "2024RTK",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Stand-on Track Trencher",
+    "year": "2015",
+    "document_type": "product description",
+    "content_types": [
+      "features",
+      "technical details",
+      "operational information"
+    ]
+  }
+}
+2024-12-19 10:08:06,722 - INFO - Updated model metadata. Current count: 4
+2024-12-19 10:08:06,722 - INFO - Processing batch of 1 nodes
+2024-12-19 10:08:06,722 - INFO - Batch content:
+2024-12-19 10:08:06,722 - INFO - Node eadacaaf-d32f-4612-8343-1c9b30d63a1a: 1324STK Track Trencher:
+2024-12-19 10:08:11,516 - INFO - Raw LLM response text: [
+    {
+        "product_name": "1324STK Track Trencher",
+        "model_number": "1324STK",
+        "manufacturer": "Barreto",
+        "category": "Construction Equipment",
+        "subcategory": "Trencher",
+        "year": "2017",
+        "document_type": "product description",
+        "content_types": [
+            "specifications",
+            "features",
+            "technical details",
+            "product introduction"
+        ]
+    }
+]
+2024-12-19 10:08:11,517 - INFO - Successfully parsed metadata: [
+  {
+    "product_name": "1324STK Track Trencher",
+    "model_number": "1324STK",
+    "manufacturer": "Barreto",
+    "category": "Construction Equipment",
+    "subcategory": "Trencher",
+    "year": "2017",
+    "document_type": "product description",
+    "content_types": [
+      "specifications",
+      "features",
+      "technical details",
+      "product introduction"
+    ]
+  }
+]
+2024-12-19 10:08:11,517 - INFO - Matched node eadacaaf-d32f-4612-8343-1c9b30d63a1a with metadata: {
+  "product_name": "1324STK Track Trencher",
+  "model_number": "1324STK",
+  "manufacturer": "Barreto",
+  "category": "Construction Equipment",
+  "subcategory": "Trencher",
+  "year": "2017",
+  "document_type": "product description",
+  "content_types": [
+    "specifications",
+    "features",
+    "technical details",
+    "product introduction"
+  ]
+}
+2024-12-19 10:08:11,517 - INFO - Raw batch metadata: {
+  "eadacaaf-d32f-4612-8343-1c9b30d63a1a": {
+    "product_name": "1324STK Track Trencher",
+    "model_number": "1324STK",
+    "manufacturer": "Barreto",
+    "category": "Construction Equipment",
+    "subcategory": "Trencher",
+    "year": "2017",
+    "document_type": "product description",
+    "content_types": [
+      "specifications",
+      "features",
+      "technical details",
+      "product introduction"
+    ]
+  }
+}
+2024-12-19 10:08:11,517 - INFO - Updated model metadata. Current count: 5
+2024-12-19 10:08:11,517 - INFO - Final model metadata: {
+  "c225600b-3dd5-4717-b701-9e28b6b70ddc": {
+    "product_name": "Barreto 1324D Standard Trencher",
+    "model_number": "1324D",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Walk-behind Trencher",
+    "year": "1995",
+    "document_type": "product description",
+    "content_types": [
+      "specifications",
+      "features",
+      "technical details"
+    ]
+  },
+  "417ffa8b-b27f-4707-8445-6cf2bf292182": {
+    "product_name": "Barreto 912HM Mini Trencher",
+    "model_number": "912HM",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Mini Walk-behind Trencher",
+    "year": "2005",
+    "document_type": "product description",
+    "content_types": [
+      "specifications",
+      "features",
+      "applications"
+    ]
+  },
+  "048d6e73-c55c-4261-b504-dcff6c2f5303": {
+    "product_name": "Barreto 712MT Micro Trencher",
+    "model_number": "712MT",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Micro Trencher",
+    "year": "2010",
+    "document_type": "product description",
+    "content_types": [
+      "features",
+      "technical details"
+    ]
+  },
+  "3aa11115-9484-4090-9c8b-127f988922dc": {
+    "product_name": "Barreto 2024RTK Track Trencher",
+    "model_number": "2024RTK",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Stand-on Track Trencher",
+    "year": "2015",
+    "document_type": "product description",
+    "content_types": [
+      "features",
+      "technical details",
+      "operational information"
+    ]
+  },
+  "eadacaaf-d32f-4612-8343-1c9b30d63a1a": {
+    "product_name": "1324STK Track Trencher",
+    "model_number": "1324STK",
+    "manufacturer": "Barreto",
+    "category": "Construction Equipment",
+    "subcategory": "Trencher",
+    "year": "2017",
+    "document_type": "product description",
+    "content_types": [
+      "specifications",
+      "features",
+      "technical details",
+      "product introduction"
+    ]
+  }
+}
+2024-12-19 10:08:11,517 - WARNING - No metadata found for node c8b7ddf2-474c-4906-89ab-b05fecc78ea8
+2024-12-19 10:08:11,517 - INFO - Enhanced node c225600b-3dd5-4717-b701-9e28b6b70ddc with metadata
+2024-12-19 10:08:11,517 - INFO - Enhanced node 417ffa8b-b27f-4707-8445-6cf2bf292182 with metadata
+2024-12-19 10:08:11,517 - INFO - Enhanced node 048d6e73-c55c-4261-b504-dcff6c2f5303 with metadata
+2024-12-19 10:08:11,518 - INFO - Enhanced node 3aa11115-9484-4090-9c8b-127f988922dc with metadata
+2024-12-19 10:08:11,518 - INFO - Enhanced node eadacaaf-d32f-4612-8343-1c9b30d63a1a with metadata
+2024-12-19 10:08:11,518 - INFO - Enhanced 5 nodes with metadata
+2024-12-19 10:14:08,288 - INFO - Beginning hierarchical node creation process...
+2024-12-19 10:14:08,291 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-19 10:14:08,291 - INFO - Created 5 nodes for page 1
+2024-12-19 10:14:08,291 - INFO - Created 6 nodes for page 2
+2024-12-19 10:14:08,292 - INFO - Created 5 nodes for page 3
+2024-12-19 10:14:08,292 - INFO - Created 6 nodes for page 4
+2024-12-19 10:14:08,292 - INFO - Created 6 nodes for page 5
+2024-12-19 10:14:08,292 - INFO - Created 3 nodes for page 6
+2024-12-19 10:14:08,292 - INFO - Created 5 nodes for page 7
+2024-12-19 10:14:08,292 - INFO - Created 5 nodes for page 8
+2024-12-19 10:14:08,292 - INFO - Created 6 nodes for page 9
+2024-12-19 10:14:08,292 - INFO - Created 6 nodes for page 10
+2024-12-19 10:14:08,293 - INFO - Created 12 nodes for page 11
+2024-12-19 10:14:08,293 - INFO - Created 3 nodes for page 12
+2024-12-19 10:14:08,293 - INFO - Created 7 nodes for page 13
+2024-12-19 10:14:08,293 - INFO - Created 3 nodes for page 14
+2024-12-19 10:14:08,293 - INFO - Created 5 nodes for page 15
+2024-12-19 10:14:08,293 - INFO - Created 6 nodes for page 16
+2024-12-19 10:14:08,293 - INFO - Created 5 nodes for page 17
+2024-12-19 10:14:08,293 - INFO - Created 3 nodes for page 18
+2024-12-19 10:14:08,294 - INFO - Created 6 nodes for page 19
+2024-12-19 10:14:08,294 - INFO - Created 3 nodes for page 20
+2024-12-19 10:14:08,294 - INFO - Created 8 nodes for page 21
+2024-12-19 10:14:08,294 - INFO - Created 4 nodes for page 22
+2024-12-19 10:14:08,294 - INFO - Created 8 nodes for page 23
+2024-12-19 10:14:08,294 - INFO - Created 4 nodes for page 24
+2024-12-19 10:14:08,294 - INFO - Created 7 nodes for page 25
+2024-12-19 10:14:08,294 - INFO - Created 4 nodes for page 26
+2024-12-19 10:14:08,295 - INFO - Created 6 nodes for page 27
+2024-12-19 10:14:08,295 - INFO - Created 3 nodes for page 28
+2024-12-19 10:14:08,295 - INFO - Created 5 nodes for page 29
+2024-12-19 10:14:08,295 - INFO - Created 6 nodes for page 30
+2024-12-19 10:14:08,295 - INFO - Created 5 nodes for page 31
+2024-12-19 10:14:08,295 - INFO - Created 4 nodes for page 32
+2024-12-19 10:14:08,295 - INFO - Found 6 nodes on page 10
+2024-12-19 10:14:08,314 - ERROR - Document metadata extraction failed: '\n            "categories"'
+2024-12-19 10:14:08,314 - INFO - Extracted document metadata: {
+  "categories": [],
+  "manufacturer": null,
+  "document_type": null,
+  "year": null
+}
+2024-12-19 10:14:08,314 - INFO - Processing batch of 5 nodes
+2024-12-19 10:14:08,314 - INFO - Batch content:
+2024-12-19 10:14:08,314 - INFO - Node 02706d2d-7aab-452b-a694-fa1375e239fc: BARRETO TRENCHERS
+2024-12-19 10:14:08,314 - INFO - Node aa6481c4-c95c-400a-8341-5e1bf1d28180: 1324D Standard Trencher:
+2024-12-19 10:14:08,314 - INFO - Node c82ff9a6-ac82-4b09-b266-b41ed573737f: 912HM Mini Trencher:
+2024-12-19 10:14:08,314 - INFO - Node 6e3f0116-122b-4541-9c60-adf05dbdc813: 712MT Micro Trencher:
+2024-12-19 10:14:08,314 - INFO - Node 56333815-26d6-435e-8e60-a1f8b5e59d47: 2024RTK Track Trencher:
+2024-12-19 10:14:15,061 - INFO - Raw LLM response text: [
+    {
+        "product_name": "Barreto 1324D Standard Trencher",
+        "model_number": "1324D",
+        "manufacturer": "Barreto",
+        "category": "Trencher",
+        "subcategory": "Walk-behind Trencher",
+        "year": "1995",
+        "document_type": "product description",
+        "content_types": ["specifications", "features", "technical details"]
+    },
+    {
+        "product_name": "Barreto 912HM Mini Trencher",
+        "model_number": "912HM",
+        "manufacturer": "Barreto",
+        "category": "Trencher",
+        "subcategory": "Mini Walk-behind Trencher",
+        "year": "2005",
+        "document_type": "product description",
+        "content_types": ["specifications", "features", "applications"]
+    },
+    {
+        "product_name": "Barreto 712MT Micro Trencher",
+        "model_number": "712MT",
+        "manufacturer": "Barreto",
+        "category": "Trencher",
+        "subcategory": "Micro Trencher",
+        "year": "2010",
+        "document_type": "product description",
+        "content_types": ["features", "technical details"]
+    },
+    {
+        "product_name": "Barreto 2024RTK Track Trencher",
+        "model_number": "2024RTK",
+        "manufacturer": "Barreto",
+        "category": "Trencher",
+        "subcategory": "Stand-on Track Trencher",
+        "year": "2015",
+        "document_type": "product description",
+        "content_types": ["features", "technical details", "operational information"]
+    }
+]
+2024-12-19 10:14:15,062 - INFO - Successfully parsed metadata: [
+  {
+    "product_name": "Barreto 1324D Standard Trencher",
+    "model_number": "1324D",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Walk-behind Trencher",
+    "year": "1995",
+    "document_type": "product description",
+    "content_types": [
+      "specifications",
+      "features",
+      "technical details"
+    ]
+  },
+  {
+    "product_name": "Barreto 912HM Mini Trencher",
+    "model_number": "912HM",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Mini Walk-behind Trencher",
+    "year": "2005",
+    "document_type": "product description",
+    "content_types": [
+      "specifications",
+      "features",
+      "applications"
+    ]
+  },
+  {
+    "product_name": "Barreto 712MT Micro Trencher",
+    "model_number": "712MT",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Micro Trencher",
+    "year": "2010",
+    "document_type": "product description",
+    "content_types": [
+      "features",
+      "technical details"
+    ]
+  },
+  {
+    "product_name": "Barreto 2024RTK Track Trencher",
+    "model_number": "2024RTK",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Stand-on Track Trencher",
+    "year": "2015",
+    "document_type": "product description",
+    "content_types": [
+      "features",
+      "technical details",
+      "operational information"
+    ]
+  }
+]
+2024-12-19 10:14:15,062 - INFO - Matched node aa6481c4-c95c-400a-8341-5e1bf1d28180 with metadata: {
+  "product_name": "Barreto 1324D Standard Trencher",
+  "model_number": "1324D",
+  "manufacturer": "Barreto",
+  "category": "Trencher",
+  "subcategory": "Walk-behind Trencher",
+  "year": "1995",
+  "document_type": "product description",
+  "content_types": [
+    "specifications",
+    "features",
+    "technical details"
+  ]
+}
+2024-12-19 10:14:15,062 - INFO - Matched node c82ff9a6-ac82-4b09-b266-b41ed573737f with metadata: {
+  "product_name": "Barreto 912HM Mini Trencher",
+  "model_number": "912HM",
+  "manufacturer": "Barreto",
+  "category": "Trencher",
+  "subcategory": "Mini Walk-behind Trencher",
+  "year": "2005",
+  "document_type": "product description",
+  "content_types": [
+    "specifications",
+    "features",
+    "applications"
+  ]
+}
+2024-12-19 10:14:15,062 - INFO - Matched node 6e3f0116-122b-4541-9c60-adf05dbdc813 with metadata: {
+  "product_name": "Barreto 712MT Micro Trencher",
+  "model_number": "712MT",
+  "manufacturer": "Barreto",
+  "category": "Trencher",
+  "subcategory": "Micro Trencher",
+  "year": "2010",
+  "document_type": "product description",
+  "content_types": [
+    "features",
+    "technical details"
+  ]
+}
+2024-12-19 10:14:15,062 - INFO - Matched node 56333815-26d6-435e-8e60-a1f8b5e59d47 with metadata: {
+  "product_name": "Barreto 2024RTK Track Trencher",
+  "model_number": "2024RTK",
+  "manufacturer": "Barreto",
+  "category": "Trencher",
+  "subcategory": "Stand-on Track Trencher",
+  "year": "2015",
+  "document_type": "product description",
+  "content_types": [
+    "features",
+    "technical details",
+    "operational information"
+  ]
+}
+2024-12-19 10:14:15,062 - INFO - Updated model metadata. Current count: 4
+2024-12-19 10:14:15,062 - INFO - Processing batch of 1 nodes
+2024-12-19 10:14:15,062 - INFO - Batch content:
+2024-12-19 10:14:15,062 - INFO - Node e7329551-4cba-484b-9d1b-4fae8bcaa151: 1324STK Track Trencher:
+2024-12-19 10:14:20,149 - INFO - Raw LLM response text: [
+    {
+        "product_name": "1324STK Track Trencher",
+        "model_number": "1324STK",
+        "manufacturer": "Barreto",
+        "category": "Construction Equipment",
+        "subcategory": "Trencher",
+        "year": "2017",
+        "document_type": "product description",
+        "content_types": [
+            "technical specifications",
+            "product features",
+            "design details",
+            "performance capabilities"
+        ]
+    }
+]
+2024-12-19 10:14:20,149 - INFO - Successfully parsed metadata: [
+  {
+    "product_name": "1324STK Track Trencher",
+    "model_number": "1324STK",
+    "manufacturer": "Barreto",
+    "category": "Construction Equipment",
+    "subcategory": "Trencher",
+    "year": "2017",
+    "document_type": "product description",
+    "content_types": [
+      "technical specifications",
+      "product features",
+      "design details",
+      "performance capabilities"
+    ]
+  }
+]
+2024-12-19 10:14:20,150 - INFO - Matched node e7329551-4cba-484b-9d1b-4fae8bcaa151 with metadata: {
+  "product_name": "1324STK Track Trencher",
+  "model_number": "1324STK",
+  "manufacturer": "Barreto",
+  "category": "Construction Equipment",
+  "subcategory": "Trencher",
+  "year": "2017",
+  "document_type": "product description",
+  "content_types": [
+    "technical specifications",
+    "product features",
+    "design details",
+    "performance capabilities"
+  ]
+}
+2024-12-19 10:14:20,150 - INFO - Updated model metadata. Current count: 5
+2024-12-19 10:14:20,150 - INFO - Final model metadata: {
+  "aa6481c4-c95c-400a-8341-5e1bf1d28180": {
+    "product_name": "Barreto 1324D Standard Trencher",
+    "model_number": "1324D",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Walk-behind Trencher",
+    "year": "1995",
+    "document_type": "product description",
+    "content_types": [
+      "specifications",
+      "features",
+      "technical details"
+    ]
+  },
+  "c82ff9a6-ac82-4b09-b266-b41ed573737f": {
+    "product_name": "Barreto 912HM Mini Trencher",
+    "model_number": "912HM",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Mini Walk-behind Trencher",
+    "year": "2005",
+    "document_type": "product description",
+    "content_types": [
+      "specifications",
+      "features",
+      "applications"
+    ]
+  },
+  "6e3f0116-122b-4541-9c60-adf05dbdc813": {
+    "product_name": "Barreto 712MT Micro Trencher",
+    "model_number": "712MT",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Micro Trencher",
+    "year": "2010",
+    "document_type": "product description",
+    "content_types": [
+      "features",
+      "technical details"
+    ]
+  },
+  "56333815-26d6-435e-8e60-a1f8b5e59d47": {
+    "product_name": "Barreto 2024RTK Track Trencher",
+    "model_number": "2024RTK",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Stand-on Track Trencher",
+    "year": "2015",
+    "document_type": "product description",
+    "content_types": [
+      "features",
+      "technical details",
+      "operational information"
+    ]
+  },
+  "e7329551-4cba-484b-9d1b-4fae8bcaa151": {
+    "product_name": "1324STK Track Trencher",
+    "model_number": "1324STK",
+    "manufacturer": "Barreto",
+    "category": "Construction Equipment",
+    "subcategory": "Trencher",
+    "year": "2017",
+    "document_type": "product description",
+    "content_types": [
+      "technical specifications",
+      "product features",
+      "design details",
+      "performance capabilities"
+    ]
+  }
+}
+2024-12-19 10:14:20,151 - ERROR - Page 10 metadata enhancement failed: 'extraction_info'
+2024-12-19 10:14:20,151 - ERROR - Full error: KeyError
+2024-12-19 10:14:20,155 - ERROR - Stack trace: Traceback (most recent call last):
+  File "/Users/matthew.hunt/Developer/python_projects/retrieval_augmented_generation/rag_package/textnode_creator.py", line 801, in _enhance_page_10_nodes_with_metadata
+    node.metadata["extraction_info"]["metadata_version"] = "1.0"
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+KeyError: 'extraction_info'
+
+2024-12-19 10:46:13,203 - INFO - Beginning hierarchical node creation process...
+2024-12-19 10:46:13,205 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-19 10:46:13,206 - INFO - Created 5 nodes for page 1
+2024-12-19 10:46:13,206 - INFO - Created 6 nodes for page 2
+2024-12-19 10:46:13,206 - INFO - Created 5 nodes for page 3
+2024-12-19 10:46:13,206 - INFO - Created 6 nodes for page 4
+2024-12-19 10:46:13,206 - INFO - Created 6 nodes for page 5
+2024-12-19 10:46:13,206 - INFO - Created 3 nodes for page 6
+2024-12-19 10:46:13,206 - INFO - Created 5 nodes for page 7
+2024-12-19 10:46:13,206 - INFO - Created 5 nodes for page 8
+2024-12-19 10:46:13,207 - INFO - Created 6 nodes for page 9
+2024-12-19 10:46:13,207 - INFO - Created 6 nodes for page 10
+2024-12-19 10:46:13,207 - INFO - Created 12 nodes for page 11
+2024-12-19 10:46:13,207 - INFO - Created 3 nodes for page 12
+2024-12-19 10:46:13,207 - INFO - Created 7 nodes for page 13
+2024-12-19 10:46:13,207 - INFO - Created 3 nodes for page 14
+2024-12-19 10:46:13,207 - INFO - Created 5 nodes for page 15
+2024-12-19 10:46:13,208 - INFO - Created 6 nodes for page 16
+2024-12-19 10:46:13,208 - INFO - Created 5 nodes for page 17
+2024-12-19 10:46:13,208 - INFO - Created 3 nodes for page 18
+2024-12-19 10:46:13,208 - INFO - Created 6 nodes for page 19
+2024-12-19 10:46:13,208 - INFO - Created 3 nodes for page 20
+2024-12-19 10:46:13,208 - INFO - Created 8 nodes for page 21
+2024-12-19 10:46:13,208 - INFO - Created 4 nodes for page 22
+2024-12-19 10:46:13,208 - INFO - Created 8 nodes for page 23
+2024-12-19 10:46:13,208 - INFO - Created 4 nodes for page 24
+2024-12-19 10:46:13,209 - INFO - Created 7 nodes for page 25
+2024-12-19 10:46:13,209 - INFO - Created 4 nodes for page 26
+2024-12-19 10:46:13,209 - INFO - Created 6 nodes for page 27
+2024-12-19 10:46:13,209 - INFO - Created 3 nodes for page 28
+2024-12-19 10:46:13,209 - INFO - Created 5 nodes for page 29
+2024-12-19 10:46:13,209 - INFO - Created 6 nodes for page 30
+2024-12-19 10:46:13,209 - INFO - Created 5 nodes for page 31
+2024-12-19 10:46:13,209 - INFO - Created 4 nodes for page 32
+2024-12-19 10:46:13,209 - ERROR - Hierarchical node creation failed: 'TextNodeCreator' object has no attribute '_enhance_page_10_nodes_with_metadata'
+2024-12-19 10:54:22,894 - INFO - Beginning hierarchical node creation process...
+2024-12-19 10:54:22,895 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-19 10:54:22,896 - INFO - Created 5 nodes for page 1
+2024-12-19 10:54:22,896 - INFO - Created 6 nodes for page 2
+2024-12-19 10:54:22,896 - INFO - Created 5 nodes for page 3
+2024-12-19 10:54:22,896 - INFO - Created 6 nodes for page 4
+2024-12-19 10:54:22,896 - INFO - Created 6 nodes for page 5
+2024-12-19 10:54:22,896 - INFO - Created 3 nodes for page 6
+2024-12-19 10:54:22,896 - INFO - Created 5 nodes for page 7
+2024-12-19 10:54:22,896 - INFO - Created 5 nodes for page 8
+2024-12-19 10:54:22,896 - INFO - Created 6 nodes for page 9
+2024-12-19 10:54:22,896 - INFO - Created 6 nodes for page 10
+2024-12-19 10:54:22,897 - INFO - Created 12 nodes for page 11
+2024-12-19 10:54:22,897 - INFO - Created 3 nodes for page 12
+2024-12-19 10:54:22,897 - INFO - Created 7 nodes for page 13
+2024-12-19 10:54:22,897 - INFO - Created 3 nodes for page 14
+2024-12-19 10:54:22,897 - INFO - Created 5 nodes for page 15
+2024-12-19 10:54:22,897 - INFO - Created 6 nodes for page 16
+2024-12-19 10:54:22,897 - INFO - Created 5 nodes for page 17
+2024-12-19 10:54:22,897 - INFO - Created 3 nodes for page 18
+2024-12-19 10:54:22,897 - INFO - Created 6 nodes for page 19
+2024-12-19 10:54:22,897 - INFO - Created 3 nodes for page 20
+2024-12-19 10:54:22,897 - INFO - Created 8 nodes for page 21
+2024-12-19 10:54:22,898 - INFO - Created 4 nodes for page 22
+2024-12-19 10:54:22,898 - INFO - Created 8 nodes for page 23
+2024-12-19 10:54:22,898 - INFO - Created 4 nodes for page 24
+2024-12-19 10:54:22,898 - INFO - Created 7 nodes for page 25
+2024-12-19 10:54:22,898 - INFO - Created 4 nodes for page 26
+2024-12-19 10:54:22,898 - INFO - Created 6 nodes for page 27
+2024-12-19 10:54:22,898 - INFO - Created 3 nodes for page 28
+2024-12-19 10:54:22,898 - INFO - Created 5 nodes for page 29
+2024-12-19 10:54:22,898 - INFO - Created 6 nodes for page 30
+2024-12-19 10:54:22,898 - INFO - Created 5 nodes for page 31
+2024-12-19 10:54:22,898 - INFO - Created 4 nodes for page 32
+2024-12-19 10:54:22,898 - INFO - Found 6 nodes on page 10
+2024-12-19 10:54:25,180 - INFO - Document metadata LLM response: [TextBlock(text='{\n    "categories": ["trenchers", "walk-behind trenchers", "track trenchers"],\n    "manufacturer": "Barreto",\n    "document_type": "product catalog",\n    "year": "2017"\n}', type='text')]
+2024-12-19 10:54:25,180 - ERROR - Failed to parse document metadata: Expecting value: line 1 column 2 (char 1)
+2024-12-19 10:54:25,181 - ERROR - Raw response: [TextBlock(text='{\n    "categories": ["trenchers", "walk-behind trenchers", "track trenchers"],\n    "manufacturer": "Barreto",\n    "document_type": "product catalog",\n    "year": "2017"\n}', type='text')]
+2024-12-19 10:54:25,181 - INFO - Extracted document metadata: {
+  "categories": [],
+  "manufacturer": null,
+  "document_type": null,
+  "year": null
+}
+2024-12-19 10:54:25,181 - INFO - Processing batch of 5 nodes
+2024-12-19 10:54:25,181 - INFO - Batch content:
+2024-12-19 10:54:25,181 - INFO - Node 13359fcc-ba75-46f1-aa3b-9037bffbebdf: BARRETO TRENCHERS
+2024-12-19 10:54:25,181 - INFO - Node 551ebdb6-d367-4cca-b4ba-9614a244e94a: 1324D Standard Trencher:
+2024-12-19 10:54:25,181 - INFO - Node 48bc1037-b217-4dad-8618-6160d7be2b95: 912HM Mini Trencher:
+2024-12-19 10:54:25,181 - INFO - Node 20280305-bdee-42eb-916e-69d222c1d785: 712MT Micro Trencher:
+2024-12-19 10:54:25,181 - INFO - Node 9b34200b-e6a1-4923-a4ac-964c6c6a48a1: 2024RTK Track Trencher:
+2024-12-19 10:54:31,064 - INFO - Raw LLM response text: [
+    {
+        "product_name": "Barreto 1324D Standard Trencher",
+        "model_number": "1324D",
+        "manufacturer": "Barreto",
+        "category": "Trencher",
+        "subcategory": "Walk-behind Trencher",
+        "year": "1995",
+        "document_type": "product description",
+        "content_types": ["specifications", "features", "technical details"]
+    },
+    {
+        "product_name": "Barreto 912HM Mini Trencher",
+        "model_number": "912HM",
+        "manufacturer": "Barreto",
+        "category": "Trencher",
+        "subcategory": "Mini Walk-behind Trencher",
+        "year": "2005",
+        "document_type": "product description",
+        "content_types": ["specifications", "features", "applications"]
+    },
+    {
+        "product_name": "Barreto 712MT Micro Trencher",
+        "model_number": "712MT",
+        "manufacturer": "Barreto",
+        "category": "Trencher",
+        "subcategory": "Micro Trencher",
+        "year": "2010",
+        "document_type": "product description",
+        "content_types": ["features", "technical details"]
+    },
+    {
+        "product_name": "Barreto 2024RTK Track Trencher",
+        "model_number": "2024RTK",
+        "manufacturer": "Barreto",
+        "category": "Trencher",
+        "subcategory": "Stand-on Track Trencher",
+        "year": "2015",
+        "document_type": "product description",
+        "content_types": ["features", "technical details", "operational information"]
+    }
+]
+2024-12-19 10:54:31,064 - INFO - Successfully parsed metadata: [
+  {
+    "product_name": "Barreto 1324D Standard Trencher",
+    "model_number": "1324D",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Walk-behind Trencher",
+    "year": "1995",
+    "document_type": "product description",
+    "content_types": [
+      "specifications",
+      "features",
+      "technical details"
+    ]
+  },
+  {
+    "product_name": "Barreto 912HM Mini Trencher",
+    "model_number": "912HM",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Mini Walk-behind Trencher",
+    "year": "2005",
+    "document_type": "product description",
+    "content_types": [
+      "specifications",
+      "features",
+      "applications"
+    ]
+  },
+  {
+    "product_name": "Barreto 712MT Micro Trencher",
+    "model_number": "712MT",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Micro Trencher",
+    "year": "2010",
+    "document_type": "product description",
+    "content_types": [
+      "features",
+      "technical details"
+    ]
+  },
+  {
+    "product_name": "Barreto 2024RTK Track Trencher",
+    "model_number": "2024RTK",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Stand-on Track Trencher",
+    "year": "2015",
+    "document_type": "product description",
+    "content_types": [
+      "features",
+      "technical details",
+      "operational information"
+    ]
+  }
+]
+2024-12-19 10:54:31,065 - INFO - Matched node 551ebdb6-d367-4cca-b4ba-9614a244e94a with metadata: {
+  "product_name": "Barreto 1324D Standard Trencher",
+  "model_number": "1324D",
+  "manufacturer": "Barreto",
+  "category": "Trencher",
+  "subcategory": "Walk-behind Trencher",
+  "year": "1995",
+  "document_type": "product description",
+  "content_types": [
+    "specifications",
+    "features",
+    "technical details"
+  ]
+}
+2024-12-19 10:54:31,065 - INFO - Matched node 48bc1037-b217-4dad-8618-6160d7be2b95 with metadata: {
+  "product_name": "Barreto 912HM Mini Trencher",
+  "model_number": "912HM",
+  "manufacturer": "Barreto",
+  "category": "Trencher",
+  "subcategory": "Mini Walk-behind Trencher",
+  "year": "2005",
+  "document_type": "product description",
+  "content_types": [
+    "specifications",
+    "features",
+    "applications"
+  ]
+}
+2024-12-19 10:54:31,065 - INFO - Matched node 20280305-bdee-42eb-916e-69d222c1d785 with metadata: {
+  "product_name": "Barreto 712MT Micro Trencher",
+  "model_number": "712MT",
+  "manufacturer": "Barreto",
+  "category": "Trencher",
+  "subcategory": "Micro Trencher",
+  "year": "2010",
+  "document_type": "product description",
+  "content_types": [
+    "features",
+    "technical details"
+  ]
+}
+2024-12-19 10:54:31,065 - INFO - Matched node 9b34200b-e6a1-4923-a4ac-964c6c6a48a1 with metadata: {
+  "product_name": "Barreto 2024RTK Track Trencher",
+  "model_number": "2024RTK",
+  "manufacturer": "Barreto",
+  "category": "Trencher",
+  "subcategory": "Stand-on Track Trencher",
+  "year": "2015",
+  "document_type": "product description",
+  "content_types": [
+    "features",
+    "technical details",
+    "operational information"
+  ]
+}
+2024-12-19 10:54:31,065 - INFO - Updated model metadata. Current count: 4
+2024-12-19 10:54:31,066 - INFO - Processing batch of 1 nodes
+2024-12-19 10:54:31,066 - INFO - Batch content:
+2024-12-19 10:54:31,066 - INFO - Node 03c4f553-c23c-412f-8665-ad7760597d5f: 1324STK Track Trencher:
+2024-12-19 10:54:33,553 - INFO - Raw LLM response text: [
+    {
+        "product_name": "1324STK Track Trencher",
+        "model_number": "1324STK",
+        "manufacturer": "Barreto",
+        "category": "Construction Equipment",
+        "subcategory": "Trencher",
+        "year": "2017",
+        "document_type": "product description",
+        "content_types": [
+            "specifications",
+            "features",
+            "technical details",
+            "product introduction"
+        ]
+    }
+]
+2024-12-19 10:54:33,554 - INFO - Successfully parsed metadata: [
+  {
+    "product_name": "1324STK Track Trencher",
+    "model_number": "1324STK",
+    "manufacturer": "Barreto",
+    "category": "Construction Equipment",
+    "subcategory": "Trencher",
+    "year": "2017",
+    "document_type": "product description",
+    "content_types": [
+      "specifications",
+      "features",
+      "technical details",
+      "product introduction"
+    ]
+  }
+]
+2024-12-19 10:54:33,554 - INFO - Matched node 03c4f553-c23c-412f-8665-ad7760597d5f with metadata: {
+  "product_name": "1324STK Track Trencher",
+  "model_number": "1324STK",
+  "manufacturer": "Barreto",
+  "category": "Construction Equipment",
+  "subcategory": "Trencher",
+  "year": "2017",
+  "document_type": "product description",
+  "content_types": [
+    "specifications",
+    "features",
+    "technical details",
+    "product introduction"
+  ]
+}
+2024-12-19 10:54:33,554 - INFO - Updated model metadata. Current count: 5
+2024-12-19 10:54:33,554 - INFO - Final model metadata: {
+  "551ebdb6-d367-4cca-b4ba-9614a244e94a": {
+    "product_name": "Barreto 1324D Standard Trencher",
+    "model_number": "1324D",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Walk-behind Trencher",
+    "year": "1995",
+    "document_type": "product description",
+    "content_types": [
+      "specifications",
+      "features",
+      "technical details"
+    ]
+  },
+  "48bc1037-b217-4dad-8618-6160d7be2b95": {
+    "product_name": "Barreto 912HM Mini Trencher",
+    "model_number": "912HM",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Mini Walk-behind Trencher",
+    "year": "2005",
+    "document_type": "product description",
+    "content_types": [
+      "specifications",
+      "features",
+      "applications"
+    ]
+  },
+  "20280305-bdee-42eb-916e-69d222c1d785": {
+    "product_name": "Barreto 712MT Micro Trencher",
+    "model_number": "712MT",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Micro Trencher",
+    "year": "2010",
+    "document_type": "product description",
+    "content_types": [
+      "features",
+      "technical details"
+    ]
+  },
+  "9b34200b-e6a1-4923-a4ac-964c6c6a48a1": {
+    "product_name": "Barreto 2024RTK Track Trencher",
+    "model_number": "2024RTK",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Stand-on Track Trencher",
+    "year": "2015",
+    "document_type": "product description",
+    "content_types": [
+      "features",
+      "technical details",
+      "operational information"
+    ]
+  },
+  "03c4f553-c23c-412f-8665-ad7760597d5f": {
+    "product_name": "1324STK Track Trencher",
+    "model_number": "1324STK",
+    "manufacturer": "Barreto",
+    "category": "Construction Equipment",
+    "subcategory": "Trencher",
+    "year": "2017",
+    "document_type": "product description",
+    "content_types": [
+      "specifications",
+      "features",
+      "technical details",
+      "product introduction"
+    ]
+  }
+}
+2024-12-19 10:54:33,554 - WARNING - No metadata found for node 13359fcc-ba75-46f1-aa3b-9037bffbebdf
+2024-12-19 10:54:33,554 - INFO - Enhanced node 551ebdb6-d367-4cca-b4ba-9614a244e94a with metadata
+2024-12-19 10:54:33,554 - INFO - Enhanced node 48bc1037-b217-4dad-8618-6160d7be2b95 with metadata
+2024-12-19 10:54:33,554 - INFO - Enhanced node 20280305-bdee-42eb-916e-69d222c1d785 with metadata
+2024-12-19 10:54:33,554 - INFO - Enhanced node 9b34200b-e6a1-4923-a4ac-964c6c6a48a1 with metadata
+2024-12-19 10:54:33,555 - INFO - Enhanced node 03c4f553-c23c-412f-8665-ad7760597d5f with metadata
+2024-12-19 10:54:33,555 - INFO - Enhanced 5 nodes with metadata
+2024-12-19 10:57:24,956 - INFO - Beginning hierarchical node creation process...
+2024-12-19 10:57:24,957 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-19 10:57:24,957 - INFO - Created 5 nodes for page 1
+2024-12-19 10:57:24,958 - INFO - Created 6 nodes for page 2
+2024-12-19 10:57:24,958 - INFO - Created 5 nodes for page 3
+2024-12-19 10:57:24,958 - INFO - Created 6 nodes for page 4
+2024-12-19 10:57:24,958 - INFO - Created 6 nodes for page 5
+2024-12-19 10:57:24,958 - INFO - Created 3 nodes for page 6
+2024-12-19 10:57:24,958 - INFO - Created 5 nodes for page 7
+2024-12-19 10:57:24,958 - INFO - Created 5 nodes for page 8
+2024-12-19 10:57:24,958 - INFO - Created 6 nodes for page 9
+2024-12-19 10:57:24,958 - INFO - Created 6 nodes for page 10
+2024-12-19 10:57:24,958 - INFO - Created 12 nodes for page 11
+2024-12-19 10:57:24,959 - INFO - Created 3 nodes for page 12
+2024-12-19 10:57:24,959 - INFO - Created 7 nodes for page 13
+2024-12-19 10:57:24,959 - INFO - Created 3 nodes for page 14
+2024-12-19 10:57:24,959 - INFO - Created 5 nodes for page 15
+2024-12-19 10:57:24,959 - INFO - Created 6 nodes for page 16
+2024-12-19 10:57:24,959 - INFO - Created 5 nodes for page 17
+2024-12-19 10:57:24,959 - INFO - Created 3 nodes for page 18
+2024-12-19 10:57:24,959 - INFO - Created 6 nodes for page 19
+2024-12-19 10:57:24,959 - INFO - Created 3 nodes for page 20
+2024-12-19 10:57:24,959 - INFO - Created 8 nodes for page 21
+2024-12-19 10:57:24,959 - INFO - Created 4 nodes for page 22
+2024-12-19 10:57:24,960 - INFO - Created 8 nodes for page 23
+2024-12-19 10:57:24,960 - INFO - Created 4 nodes for page 24
+2024-12-19 10:57:24,960 - INFO - Created 7 nodes for page 25
+2024-12-19 10:57:24,960 - INFO - Created 4 nodes for page 26
+2024-12-19 10:57:24,960 - INFO - Created 6 nodes for page 27
+2024-12-19 10:57:24,960 - INFO - Created 3 nodes for page 28
+2024-12-19 10:57:24,960 - INFO - Created 5 nodes for page 29
+2024-12-19 10:57:24,960 - INFO - Created 6 nodes for page 30
+2024-12-19 10:57:24,960 - INFO - Created 5 nodes for page 31
+2024-12-19 10:57:24,960 - INFO - Created 4 nodes for page 32
+2024-12-19 10:57:24,960 - INFO - Found 6 nodes on page 10
+2024-12-19 10:57:27,995 - INFO - Document metadata raw response: {
+    "categories": ["trenchers", "walk-behind trenchers", "track trenchers"],
+    "manufacturer": "Barreto",
+    "document_type": "product catalog",
+    "year": "2017"
+}
+2024-12-19 10:57:27,996 - INFO - Successfully parsed document metadata: {
+  "categories": [
+    "trenchers",
+    "walk-behind trenchers",
+    "track trenchers"
+  ],
+  "manufacturer": "Barreto",
+  "document_type": "product catalog",
+  "year": "2017"
+}
+2024-12-19 10:57:27,996 - INFO - Extracted document metadata: {
+  "categories": [
+    "trenchers",
+    "walk-behind trenchers",
+    "track trenchers"
+  ],
+  "manufacturer": "Barreto",
+  "document_type": "product catalog",
+  "year": "2017"
+}
+2024-12-19 10:57:27,996 - INFO - Processing batch of 5 nodes
+2024-12-19 10:57:27,996 - INFO - Batch content:
+2024-12-19 10:57:27,996 - INFO - Node 195f504c-de90-4593-9938-8b105d38d9cd: BARRETO TRENCHERS
+2024-12-19 10:57:27,996 - INFO - Node 0cb4e61b-c2a5-484d-a2fd-8f919378fa7d: 1324D Standard Trencher:
+2024-12-19 10:57:27,996 - INFO - Node 73fdbfc9-379c-4e6f-83ce-e013daa2c34c: 912HM Mini Trencher:
+2024-12-19 10:57:27,996 - INFO - Node c84e1a62-83c4-49a4-b0be-68568d026f0e: 712MT Micro Trencher:
+2024-12-19 10:57:27,996 - INFO - Node 62a6037a-35f0-45fb-988b-898b097d01e8: 2024RTK Track Trencher:
+2024-12-19 10:57:35,222 - INFO - Raw LLM response text: [
+    {
+        "product_name": "Barreto 1324D Standard Trencher",
+        "model_number": "1324D",
+        "manufacturer": "Barreto",
+        "category": "Trencher",
+        "subcategory": "Walk-behind Trencher",
+        "year": "1995",
+        "document_type": "product description",
+        "content_types": ["specifications", "features", "technical details"]
+    },
+    {
+        "product_name": "Barreto 912HM Mini Trencher",
+        "model_number": "912HM",
+        "manufacturer": "Barreto",
+        "category": "Trencher",
+        "subcategory": "Mini Walk-behind Trencher",
+        "year": "2005",
+        "document_type": "product description",
+        "content_types": ["specifications", "features", "applications"]
+    },
+    {
+        "product_name": "Barreto 712MT Micro Trencher",
+        "model_number": "712MT",
+        "manufacturer": "Barreto",
+        "category": "Trencher",
+        "subcategory": "Micro Trencher",
+        "year": "2010",
+        "document_type": "product description",
+        "content_types": ["features", "technical details"]
+    },
+    {
+        "product_name": "Barreto 2024RTK Track Trencher",
+        "model_number": "2024RTK",
+        "manufacturer": "Barreto",
+        "category": "Trencher",
+        "subcategory": "Stand-on Track Trencher",
+        "year": "2015",
+        "document_type": "product description",
+        "content_types": ["features", "technical details", "operational information"]
+    }
+]
+2024-12-19 10:57:35,222 - INFO - Successfully parsed metadata: [
+  {
+    "product_name": "Barreto 1324D Standard Trencher",
+    "model_number": "1324D",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Walk-behind Trencher",
+    "year": "1995",
+    "document_type": "product description",
+    "content_types": [
+      "specifications",
+      "features",
+      "technical details"
+    ]
+  },
+  {
+    "product_name": "Barreto 912HM Mini Trencher",
+    "model_number": "912HM",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Mini Walk-behind Trencher",
+    "year": "2005",
+    "document_type": "product description",
+    "content_types": [
+      "specifications",
+      "features",
+      "applications"
+    ]
+  },
+  {
+    "product_name": "Barreto 712MT Micro Trencher",
+    "model_number": "712MT",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Micro Trencher",
+    "year": "2010",
+    "document_type": "product description",
+    "content_types": [
+      "features",
+      "technical details"
+    ]
+  },
+  {
+    "product_name": "Barreto 2024RTK Track Trencher",
+    "model_number": "2024RTK",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Stand-on Track Trencher",
+    "year": "2015",
+    "document_type": "product description",
+    "content_types": [
+      "features",
+      "technical details",
+      "operational information"
+    ]
+  }
+]
+2024-12-19 10:57:35,223 - INFO - Matched node 0cb4e61b-c2a5-484d-a2fd-8f919378fa7d with metadata: {
+  "product_name": "Barreto 1324D Standard Trencher",
+  "model_number": "1324D",
+  "manufacturer": "Barreto",
+  "category": "Trencher",
+  "subcategory": "Walk-behind Trencher",
+  "year": "1995",
+  "document_type": "product description",
+  "content_types": [
+    "specifications",
+    "features",
+    "technical details"
+  ]
+}
+2024-12-19 10:57:35,223 - INFO - Matched node 73fdbfc9-379c-4e6f-83ce-e013daa2c34c with metadata: {
+  "product_name": "Barreto 912HM Mini Trencher",
+  "model_number": "912HM",
+  "manufacturer": "Barreto",
+  "category": "Trencher",
+  "subcategory": "Mini Walk-behind Trencher",
+  "year": "2005",
+  "document_type": "product description",
+  "content_types": [
+    "specifications",
+    "features",
+    "applications"
+  ]
+}
+2024-12-19 10:57:35,223 - INFO - Matched node c84e1a62-83c4-49a4-b0be-68568d026f0e with metadata: {
+  "product_name": "Barreto 712MT Micro Trencher",
+  "model_number": "712MT",
+  "manufacturer": "Barreto",
+  "category": "Trencher",
+  "subcategory": "Micro Trencher",
+  "year": "2010",
+  "document_type": "product description",
+  "content_types": [
+    "features",
+    "technical details"
+  ]
+}
+2024-12-19 10:57:35,224 - INFO - Matched node 62a6037a-35f0-45fb-988b-898b097d01e8 with metadata: {
+  "product_name": "Barreto 2024RTK Track Trencher",
+  "model_number": "2024RTK",
+  "manufacturer": "Barreto",
+  "category": "Trencher",
+  "subcategory": "Stand-on Track Trencher",
+  "year": "2015",
+  "document_type": "product description",
+  "content_types": [
+    "features",
+    "technical details",
+    "operational information"
+  ]
+}
+2024-12-19 10:57:35,224 - INFO - Updated model metadata. Current count: 4
+2024-12-19 10:57:35,224 - INFO - Processing batch of 1 nodes
+2024-12-19 10:57:35,224 - INFO - Batch content:
+2024-12-19 10:57:35,224 - INFO - Node e8bd3217-8f1a-45dc-b9b2-827b2439f56b: 1324STK Track Trencher:
+2024-12-19 10:57:37,859 - INFO - Raw LLM response text: [
+    {
+        "product_name": "1324STK Track Trencher",
+        "model_number": "1324STK",
+        "manufacturer": "Barreto",
+        "category": "Construction Equipment",
+        "subcategory": "Trencher",
+        "year": "2017",
+        "document_type": "product description",
+        "content_types": [
+            "specifications",
+            "features",
+            "technical details",
+            "product overview"
+        ]
+    }
+]
+2024-12-19 10:57:37,859 - INFO - Successfully parsed metadata: [
+  {
+    "product_name": "1324STK Track Trencher",
+    "model_number": "1324STK",
+    "manufacturer": "Barreto",
+    "category": "Construction Equipment",
+    "subcategory": "Trencher",
+    "year": "2017",
+    "document_type": "product description",
+    "content_types": [
+      "specifications",
+      "features",
+      "technical details",
+      "product overview"
+    ]
+  }
+]
+2024-12-19 10:57:37,859 - INFO - Matched node e8bd3217-8f1a-45dc-b9b2-827b2439f56b with metadata: {
+  "product_name": "1324STK Track Trencher",
+  "model_number": "1324STK",
+  "manufacturer": "Barreto",
+  "category": "Construction Equipment",
+  "subcategory": "Trencher",
+  "year": "2017",
+  "document_type": "product description",
+  "content_types": [
+    "specifications",
+    "features",
+    "technical details",
+    "product overview"
+  ]
+}
+2024-12-19 10:57:37,859 - INFO - Updated model metadata. Current count: 5
+2024-12-19 10:57:37,860 - INFO - Final model metadata: {
+  "0cb4e61b-c2a5-484d-a2fd-8f919378fa7d": {
+    "product_name": "Barreto 1324D Standard Trencher",
+    "model_number": "1324D",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Walk-behind Trencher",
+    "year": "1995",
+    "document_type": "product description",
+    "content_types": [
+      "specifications",
+      "features",
+      "technical details"
+    ]
+  },
+  "73fdbfc9-379c-4e6f-83ce-e013daa2c34c": {
+    "product_name": "Barreto 912HM Mini Trencher",
+    "model_number": "912HM",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Mini Walk-behind Trencher",
+    "year": "2005",
+    "document_type": "product description",
+    "content_types": [
+      "specifications",
+      "features",
+      "applications"
+    ]
+  },
+  "c84e1a62-83c4-49a4-b0be-68568d026f0e": {
+    "product_name": "Barreto 712MT Micro Trencher",
+    "model_number": "712MT",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Micro Trencher",
+    "year": "2010",
+    "document_type": "product description",
+    "content_types": [
+      "features",
+      "technical details"
+    ]
+  },
+  "62a6037a-35f0-45fb-988b-898b097d01e8": {
+    "product_name": "Barreto 2024RTK Track Trencher",
+    "model_number": "2024RTK",
+    "manufacturer": "Barreto",
+    "category": "Trencher",
+    "subcategory": "Stand-on Track Trencher",
+    "year": "2015",
+    "document_type": "product description",
+    "content_types": [
+      "features",
+      "technical details",
+      "operational information"
+    ]
+  },
+  "e8bd3217-8f1a-45dc-b9b2-827b2439f56b": {
+    "product_name": "1324STK Track Trencher",
+    "model_number": "1324STK",
+    "manufacturer": "Barreto",
+    "category": "Construction Equipment",
+    "subcategory": "Trencher",
+    "year": "2017",
+    "document_type": "product description",
+    "content_types": [
+      "specifications",
+      "features",
+      "technical details",
+      "product overview"
+    ]
+  }
+}
+2024-12-19 10:57:37,860 - WARNING - No metadata found for node 195f504c-de90-4593-9938-8b105d38d9cd
+2024-12-19 10:57:37,860 - INFO - Enhanced node 0cb4e61b-c2a5-484d-a2fd-8f919378fa7d with metadata
+2024-12-19 10:57:37,860 - INFO - Enhanced node 73fdbfc9-379c-4e6f-83ce-e013daa2c34c with metadata
+2024-12-19 10:57:37,860 - INFO - Enhanced node c84e1a62-83c4-49a4-b0be-68568d026f0e with metadata
+2024-12-19 10:57:37,860 - INFO - Enhanced node 62a6037a-35f0-45fb-988b-898b097d01e8 with metadata
+2024-12-19 10:57:37,860 - INFO - Enhanced node e8bd3217-8f1a-45dc-b9b2-827b2439f56b with metadata
+2024-12-19 10:57:37,860 - INFO - Enhanced 5 nodes with metadata

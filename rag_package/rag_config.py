@@ -23,7 +23,8 @@ import re
 # Global configuration instances
 input_data_folder: str = "raw_input_data"
 embedding_model_name = "text-embedding-3-large"
-multimodal_model = "claude-3-5-sonnet-latest"
+# multimodal_model = "claude-3-5-sonnet-latest"
+multimodal_model = "claude-3-5-haiku-latest"
 multimodal_llm = AnthropicMultiModal(model=multimodal_model)
 metadata_extraction_model = "claude-3-5-sonnet-latest"
 
