@@ -376,22 +376,20 @@ class TextNodeCreator:
 
     def analyze_node_hierarchy(self, nodes: list[BaseNode]) -> None:
         """
-        Analyze the hierarchical structure of nodes, providing detailed information about
-        nodes from levels 0, 1, and 2 on page 10, including all metadata fields and LLM call counts.
+        Analyze the hierarchical structure of nodes, showing the actual TextNode objects
+        rather than JSON representations.
         """
-        analysis_path = self.analysis_dir / f"{self.config.pipeline_name}_hierarchy_analysis.txt"
+        analysis_path = self.analysis_dir / f"{self.config.pipeline_name}_raw_node_analysis.txt"
 
         with open(analysis_path, 'w', encoding='utf-8') as f:
-            # Write LLM calls summary at the top
+            # Write LLM calls summary
             f.write("=== LLM Calls Analysis ===\n")
-            f.write(f"Document Metadata Extraction Calls: 1\n")  # One call for document-level metadata
-            # Calculate batch calls (number of batches processed)
+            f.write(f"Document Metadata Extraction Calls: 1\n")
             page_10_nodes = [
                 node for node in nodes
                 if node.metadata["document_info"]["page_num"] == 10
             ]
-            num_batches = (
-                                      len(page_10_nodes) + self.config.metadata_extraction.batch_size - 1) // self.config.metadata_extraction.batch_size
+            num_batches = (len(page_10_nodes) + self.config.metadata_extraction.batch_size - 1) // self.config.metadata_extraction.batch_size
             f.write(f"Batch Metadata Extraction Calls: {num_batches}\n")
             f.write(f"Total LLM Calls: {1 + num_batches}\n\n")
 
@@ -399,7 +397,7 @@ class TextNodeCreator:
             for level in [0, 1, 2]:
                 f.write(f"\n=== Level {level} Nodes from Page 10 ===\n\n")
 
-                # Filter nodes for the current level and page 10
+                # Filter nodes for current level and page 10
                 page_10_level_nodes = [
                     node for node in nodes
                     if (node.metadata["hierarchy_info"]["level"] == level and
@@ -409,83 +407,56 @@ class TextNodeCreator:
                 if not page_10_level_nodes:
                     f.write(f"No level {level} nodes found on page 10.\n")
                 else:
-                    # Convert node information to JSON-friendly format
-                    node_data = []
-                    for node in page_10_level_nodes:
-                        # Create a comprehensive dictionary representation of the node
-                        node_info = {
-                            "node_id": node.node_id,
-                            "text": node.text,
-                            "metadata": {
-                                # Pipeline info
-                                "pipeline_info": node.metadata.get("pipeline_info", {}),
-                                # Hierarchy info
-                                "header_info": {
-                                    "level": node.metadata.get("header_info", {}).get("level"),
-                                    "text": node.metadata.get("header_info", {}).get("text")
-                                },
-                                "hierarchy_info": {
-                                    "level": node.metadata.get("hierarchy_info", {}).get("level"),
-                                    "parser": node.metadata.get("hierarchy_info", {}).get("parser")
-                                },
-                                # Relationship info
-                                "relationships": {
-                                    "parents": sorted(list(node.relationships.get("parent", set()))),
-                                    "children": sorted(list(node.relationships.get("child", set())))
-                                },
-                                # Equipment-specific metadata
-                                "equipment_metadata": {
-                                    "product_name": node.metadata.get("equipment_metadata", {}).get("product_name"),
-                                    "model_number": node.metadata.get("equipment_metadata", {}).get("model_number"),
-                                    "manufacturer": node.metadata.get("equipment_metadata", {}).get("manufacturer"),
-                                    "category": node.metadata.get("equipment_metadata", {}).get("category"),
-                                    "subcategory": node.metadata.get("equipment_metadata", {}).get("subcategory"),
-                                    "year": node.metadata.get("equipment_metadata", {}).get("year"),
-                                    "specifications": node.metadata.get("equipment_metadata", {}).get("specifications",
-                                                                                                      []),
-                                    "capabilities": node.metadata.get("equipment_metadata", {}).get("capabilities",
-                                                                                                    []),
-                                    "content_types": node.metadata.get("equipment_metadata", {}).get("content_types",
-                                                                                                     [])
-                                },
-                                # Document info and metadata
-                                "document_info": {
-                                    "name": node.metadata.get("document_info", {}).get("name"),
-                                    "total_pages": node.metadata.get("document_info", {}).get("total_pages"),
-                                    "page_num": node.metadata.get("document_info", {}).get("page_num"),
-                                    "document_uuid": node.metadata.get("document_info", {}).get("document_uuid"),
-                                    "ingestion_timestamp": node.metadata.get("document_info", {}).get("ingestion_timestamp")
-                                },
-                                "document_metadata": {
-                                    "manufacturer": node.metadata.get("document_metadata", {}).get("manufacturer"),
-                                    "document_type": node.metadata.get("document_metadata", {}).get("document_type"),
-                                    "year_published": node.metadata.get("document_metadata", {}).get("year_published"),
-                                    "equipment_categories": node.metadata.get("document_metadata", {}).get(
-                                        "equipment_categories", []),
-                                    "models_included": node.metadata.get("document_metadata", {}).get("models_included",[]),
-                                },
-                                # Extraction process
-                                "extraction_info": {
-                                    "extraction_model": node.metadata.get("extraction_info", {}).get(
-                                        "extraction_model"),
-                                    "metadata_version": node.metadata.get("extraction_info", {}).get(
-                                        "metadata_version"),
-                                    "extraction_timestamp": node.metadata.get("extraction_info", {}).get(
-                                        "extraction_timestamp")
-                                }
-                            }
-                        }
-                        node_data.append(node_info)
+                    for i, node in enumerate(page_10_level_nodes, 1):
+                        f.write(f"Node {i}:\n")
+                        f.write("=" * 50 + "\n")
 
-                    # Write the JSON representation with proper formatting
-                    f.write(json.dumps(node_data, indent=2, ensure_ascii=False))
+                        # Display node attributes
+                        f.write(f"Node ID: {node.node_id}\n")
+                        f.write(f"Node Type: {node.__class__.__name__}\n")
 
-                    # Add summary statistics for this level
-                    f.write(f"\n\nTotal nodes at level {level}: {len(node_data)}\n")
+                        # Display text content
+                        f.write("\nText Content:\n")
+                        f.write("-" * 20 + "\n")
+                        f.write(f"{node.text}\n")
+
+                        # Display relationships
+                        f.write("\nRelationships:\n")
+                        f.write("-" * 20 + "\n")
+                        for rel_type, rel_ids in node.relationships.items():
+                            f.write(f"{rel_type}: {sorted(list(rel_ids))}\n")
+
+                        # Display metadata structure
+                        f.write("\nMetadata Structure:\n")
+                        f.write("-" * 20 + "\n")
+                        for key in node.metadata:
+                            if isinstance(node.metadata[key], dict):
+                                f.write(f"{key}:\n")
+                                for subkey in node.metadata[key]:
+                                    f.write(f"  {subkey}: {type(node.metadata[key][subkey]).__name__}\n")
+                            else:
+                                f.write(f"{key}: {type(node.metadata[key]).__name__}\n")
+
+                        # Display metadata values
+                        f.write("\nMetadata Values:\n")
+                        f.write("-" * 20 + "\n")
+                        for key, value in node.metadata.items():
+                            f.write(f"{key}:\n")
+                            if isinstance(value, dict):
+                                for subkey, subvalue in value.items():
+                                    f.write(f"  {subkey}: {subvalue}\n")
+                            else:
+                                f.write(f"  {value}\n")
+
+                        f.write("\n" + "=" * 50 + "\n\n")
+
+                    # Summary statistics
+                    f.write(f"\nTotal nodes at level {level}: {len(page_10_level_nodes)}\n")
                     f.write(
-                        f"Nodes with equipment metadata: {sum(1 for n in node_data if any(n['metadata']['equipment_metadata'].values()))}\n")
+                        f"Nodes with equipment metadata: {sum(1 for n in page_10_level_nodes if any(n.metadata.get('equipment_metadata', {}).values()))}\n")
                     f.write(
-                        f"Nodes with document metadata: {sum(1 for n in node_data if any(n['metadata']['document_metadata'].values()))}\n")
+                        f"Nodes with document metadata: {sum(1 for n in page_10_level_nodes if any(n.metadata.get('document_metadata', {}).values()))}\n")
+                    f.write("\n" + "=" * 50 + "\n\n")
 
     def _setup_logging(self):
         """Configure logging to write to both a file and the console."""

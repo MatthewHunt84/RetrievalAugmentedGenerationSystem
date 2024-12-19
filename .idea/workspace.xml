@@ -8,7 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/analysis/node_creation.log" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/node_creation.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/analysis/node_creation_times.txt" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/node_creation_times.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rag_package/rag_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/rag_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/tenth_pipeline_hierarchy_analysis.txt" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/tenth_pipeline_hierarchy_analysis_old.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rag_package/textnode_creator.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/textnode_creator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
