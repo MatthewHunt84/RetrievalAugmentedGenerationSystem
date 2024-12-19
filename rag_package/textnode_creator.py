@@ -3,12 +3,13 @@ import json
 import time
 import re
 import logging
-from typing import Any, Sequence
+from datetime import datetime
+from typing import Sequence
 from llama_index.core.schema import TextNode, Document, BaseNode
 from pydantic import Field, BaseModel
 from llama_index.core.node_parser import NodeParser
 from rag_package.errors import TextNodeCreationError
-from rag_package.rag_config import NodeCreationConfig
+from rag_package.rag_config import NodeCreationConfig, EquipmentSpecs
 
 class MarkdownHeaderSplitter(NodeParser, BaseModel):
     """
@@ -43,7 +44,7 @@ class MarkdownHeaderSplitter(NodeParser, BaseModel):
         self,
         nodes: Sequence[BaseNode],
         show_progress: bool = False,
-        **kwargs: Any
+        **kwargs: any
     ) -> list[BaseNode]:
         """
         Required implementation of NodeParser's abstract method.
@@ -337,6 +338,26 @@ class TextNodeCreator:
                     self.logger.info(
                         f"Created {len(nodes)} nodes for page {idx + 1}"
                     )
+            """
+            NEW (Metadata Extraction): Metadata extraction
+            """
+            if all_nodes:
+                self._enhance_page_10_nodes_with_metadata(all_nodes)
+            #     # Extract document-level metadata
+            #     doc_metadata = self._extract_document_metadata(
+            #         "\n".join(node.text for node in all_nodes)
+            #     )
+            #
+            #     # Process nodes in batches
+            #     model_metadata = {}
+            #     for batch in self._batch_model_descriptions(all_nodes):
+            #         batch_metadata = self._extract_batch_metadata(batch)
+            #         model_metadata.update(batch_metadata)
+            #
+            #     # Enhance nodes with metadata
+            #     self._enhance_nodes_with_metadata(
+            #         all_nodes, doc_metadata, model_metadata
+            #     )
 
             if all_nodes:
                 self.analyze_node_hierarchy(all_nodes)
@@ -359,22 +380,7 @@ class TextNodeCreator:
         analysis_path = self.analysis_dir / f"{self.config.pipeline_name}_hierarchy_analysis.txt"
 
         with open(analysis_path, 'w', encoding='utf-8') as f:
-            # First, create our overall summary of nodes across all pages
-            nodes_by_level = {}
-            for node in nodes:
-                level = node.metadata["hierarchy_info"]["level"]
-                if level not in nodes_by_level:
-                    nodes_by_level[level] = []
-                nodes_by_level[level].append(node)
-
-            # Write the summary statistics section
-            f.write("=== Node Hierarchy Analysis ===\n\n")
-            f.write(f"Total Nodes: {len(nodes)}\n")
-            f.write("Nodes per level:\n")
-            for level in sorted(nodes_by_level.keys()):
-                count = len(nodes_by_level[level])
-                f.write(f"Level {level}: {count} nodes\n")
-            f.write("\n")
+            # ... [existing summary code remains the same] ...
 
             # Now analyze each level for page 10
             for level in [0, 1, 2]:
@@ -400,7 +406,11 @@ class TextNodeCreator:
                             "metadata": {
                                 "header_info": node.metadata.get("header_info", {}),
                                 "document_info": node.metadata.get("document_info", {}),
-                                "hierarchy_info": node.metadata.get("hierarchy_info", {})
+                                "hierarchy_info": node.metadata.get("hierarchy_info", {}),
+                                # Add new metadata fields
+                                "document_metadata": node.metadata.get("document_metadata", {}),
+                                "equipment_specs": node.metadata.get("equipment_specs", {}),
+                                "extraction_info": node.metadata.get("extraction_info", {})
                             },
                             "relationships": {
                                 "parents": list(node.relationships.get("parent", set())),
@@ -410,8 +420,359 @@ class TextNodeCreator:
                         node_data.append(node_info)
 
                     # Write the JSON representation with proper formatting
-                    import json
                     f.write(json.dumps(node_data, indent=2, ensure_ascii=False))
 
-                    # Add a summary for this level
-                    f.write(f"\n\nFound {len(page_10_level_nodes)} level {level} nodes on page 10\n")
+    def _setup_logging(self):
+        """Configure logging to write to both a file and the console."""
+        # Clear any existing handlers
+        self.logger.handlers = []
+
+        # Create file handler
+        log_file = self.analysis_dir / "node_creation.log"
+        file_handler = logging.FileHandler(log_file)
+        file_handler.setLevel(logging.INFO)
+
+        # Create console handler
+        console_handler = logging.StreamHandler()
+        console_handler.setLevel(logging.INFO)
+
+        # Create formatter and add it to the handlers
+        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+        file_handler.setFormatter(formatter)
+        console_handler.setFormatter(formatter)
+
+        # Add the handlers to the logger
+        self.logger.addHandler(file_handler)
+        self.logger.addHandler(console_handler)
+
+    def _log_execution_time(self, execution_time: float) -> None:
+        """Log execution time with hierarchical processing details."""
+        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        timing_log = (
+            f"{timestamp} - Pipeline: {self.config.pipeline_name}, "
+            f"Hierarchical Processing Time: {execution_time:.2f} seconds\n"
+        )
+
+        with open(self.analysis_dir / "node_creation_times.txt", 'a') as f:
+            f.write(timing_log)
+
+    """
+    NEW (Metadata Extraction): New methods
+    """
+
+    def _batch_model_descriptions(self, nodes: list[BaseNode]) -> list[list[BaseNode]]:
+        """
+        Group similar model descriptions together for batch processing.
+
+        Args:
+            nodes: List of nodes to process
+
+        Returns:
+            List of node batches, where each batch contains related models
+        """
+        batches = []
+        current_batch = []
+        max_batch_size = self.config.metadata_extraction.batch_size
+
+        for node in nodes:
+            # Start new batch if current one is full
+            if len(current_batch) >= max_batch_size:
+                batches.append(current_batch)
+                current_batch = []
+
+            current_batch.append(node)
+
+        # Add any remaining nodes
+        if current_batch:
+            batches.append(current_batch)
+
+        return batches
+
+    def _extract_document_metadata(self, doc_content: str) -> dict[str, any]:
+        """
+        Extract document-level metadata using LLM.
+        """
+        prompt = f"""
+        Analyze the following text and extract metadata.
+
+        YOU MUST RESPOND WITH ONLY A VALID JSON OBJECT using this exact structure:
+        {{
+            "primary_categories": [list of equipment categories found],
+            "manufacturer": "main manufacturer name",
+            "document_type": "type of document (e.g., catalog, brochure)",
+            "document_date": "date if mentioned"
+        }}
+
+        Text to analyze:
+        {doc_content}
+        """
+
+        try:
+            client = self.config.metadata_extraction.get_client()
+            message = client.messages.create(
+                messages=[{
+                    "role": "user",
+                    "content": prompt
+                }],
+                model=self.config.metadata_extraction.model_name,
+                max_tokens=1000,
+                temperature=self.config.metadata_extraction.temperature,
+            )
+
+            if message.content:
+                try:
+                    # Extract text from TextBlock list
+                    if isinstance(message.content, list) and message.content:
+                        text_content = message.content[0].text
+                    else:
+                        text_content = str(message.content)
+
+                    self.logger.debug(f"Attempting to parse JSON: {text_content}")
+                    parsed_data = json.loads(text_content)
+                    self.logger.debug(f"Successfully parsed JSON: {parsed_data}")
+                    return parsed_data
+                except Exception as e:
+                    self.logger.error(f"Failed to process LLM response: {str(e)}")
+                    self.logger.error(f"Raw response was: {message.content}")
+                    return {}
+            return {}
+        except Exception as e:
+            self.logger.error(f"Document metadata extraction failed: {str(e)}")
+            self.logger.error(f"Full error: {str(e.__class__.__name__)}")
+            return {}
+
+    def _extract_batch_metadata(
+            self,
+            batch: list[BaseNode]
+    ) -> dict[str, EquipmentSpecs]:
+        """
+        Extract metadata for a batch of model descriptions.
+        """
+        batch_text = "\n\n".join(node.text for node in batch)
+        prompt = f"""
+        Extract metadata for each equipment model in the following text.
+
+        For each model, create a JSON object with this exact structure:
+        {{
+            "product_name": "full product name",
+            "model_number": "specific model identifier",
+            "product_category": "equipment category",
+            "manufacturer": "manufacturer name",
+            "specifications": {{
+                "dimensions": {{
+                    "size relevant measurements"
+                }},
+                "engine": {{
+                    "engine specifications"
+                }},
+                "performance": {{
+                    "performance metrics"
+                }}
+            }}
+        }}
+
+        Return an array of these objects, one for each model found.
+
+        Text to analyze:
+        {batch_text}
+        """
+
+        try:
+            client = self.config.metadata_extraction.get_client()
+            message = client.messages.create(
+                messages=[{
+                    "role": "user",
+                    "content": prompt
+                }],
+                model=self.config.metadata_extraction.model_name,
+                max_tokens=2000,
+                temperature=self.config.metadata_extraction.temperature,
+            )
+
+            if message.content:
+                try:
+                    # Extract text from TextBlock list
+                    if isinstance(message.content, list) and message.content:
+                        text_content = message.content[0].text
+                    else:
+                        text_content = str(message.content)
+
+                    self.logger.debug(f"Raw LLM response text: {text_content}")
+                    self.logger.debug(f"Attempting to parse JSON: {text_content}")
+                    metadata_list = json.loads(text_content)
+                    self.logger.debug(f"Successfully parsed JSON: {metadata_list}")
+                    # Clean up any explanatory text before the JSON
+                    if '[' in text_content:
+                        text_content = text_content[text_content.find('['):text_content.rfind(']') + 1]
+
+                    metadata_list = json.loads(text_content)
+                    if isinstance(metadata_list, list):
+                        return self._match_metadata_to_nodes(batch, metadata_list)
+                    return {}
+                except Exception as e:
+                    self.logger.error(f"Failed to process LLM response: {str(e)}")
+                    self.logger.error(f"Raw response was: {message.content}")
+                    return {}
+            return {}
+        except Exception as e:
+            self.logger.error(f"Batch metadata extraction failed: {str(e)}")
+            self.logger.error(f"Full error: {str(e.__class__.__name__)}")
+            return {}
+
+    def _match_metadata_to_nodes(
+            self,
+            nodes: list[BaseNode],
+            metadata_list: list[dict[str, any]]
+    ) -> dict[str, EquipmentSpecs]:
+        """
+        Match extracted metadata to the correct nodes.
+
+        Args:
+            nodes: List of nodes
+            metadata_list: List of extracted metadata dictionaries
+
+        Returns:
+            Dictionary mapping node IDs to matched metadata
+        """
+        matched_metadata = {}
+
+        for node in nodes:
+            node_text = node.text.lower()
+
+            # Find best matching metadata based on model number
+            best_match = None
+            best_score = 0
+
+            for metadata in metadata_list:
+                if not metadata.get("model_number"):
+                    continue
+
+                model_num = metadata["model_number"].lower()
+                if model_num in node_text:
+                    # Simple matching score based on text overlap
+                    score = len(model_num) / len(node_text)
+                    if score > best_score:
+                        best_score = score
+                        best_match = metadata
+
+            if best_match and best_score > self.config.metadata_extraction.confidence_threshold:
+                matched_metadata[node.node_id] = EquipmentSpecs(**best_match)
+
+        return matched_metadata
+
+    def _enhance_nodes_with_metadata(
+            self,
+            nodes: list[BaseNode],
+            doc_metadata: dict[str, any],
+            model_metadata: dict[str, EquipmentSpecs]
+    ) -> None:
+        """
+        Enhance nodes with extracted metadata.
+
+        Args:
+            nodes: List of nodes to enhance
+            doc_metadata: Document-level metadata
+            model_metadata: Model-specific metadata
+        """
+        timestamp = datetime.now().isoformat()
+
+        for node in nodes:
+            # Add document-level metadata to all nodes
+            node.metadata["document_metadata"] = doc_metadata
+            node.metadata["extraction_info"]["extraction_timestamp"] = timestamp
+
+            # Add model-specific metadata if available
+            if node.node_id in model_metadata:
+                node.metadata["equipment_specs"] = model_metadata[node.node_id].model_dump()
+
+
+
+    """
+    Test Method, may be deleted also
+    """
+
+    def _enhance_page_10_nodes_with_metadata(
+            self,
+            nodes: list[BaseNode]
+    ) -> None:
+        """
+        Test method to enhance only page 10 nodes with metadata.
+        """
+        # Filter for page 10 nodes
+        page_10_nodes = [
+            node for node in nodes
+            if node.metadata["document_info"]["page_num"] == 10
+        ]
+
+        if not page_10_nodes:
+            self.logger.info("No page 10 nodes found")
+            return
+
+        self.logger.info(f"Found {len(page_10_nodes)} nodes on page 10")
+
+        try:
+            # Extract document-level metadata for page 10 only
+            raw_doc_metadata = self._extract_document_metadata(
+                "\n".join(node.text for node in page_10_nodes)
+            )
+
+            # Add debug logging to see what we're trying to parse
+            self.logger.debug(f"Raw doc metadata type: {type(raw_doc_metadata)}")
+            self.logger.debug(f"Raw doc metadata content: {raw_doc_metadata}")
+
+            # No need to parse if it's already a dict
+            if isinstance(raw_doc_metadata, dict):
+                doc_metadata = raw_doc_metadata
+            else:
+                doc_metadata = json.loads(str(raw_doc_metadata))
+
+            self.logger.info("Successfully extracted document metadata for page 10")
+            self.logger.debug(f"Document metadata: {json.dumps(doc_metadata, indent=2)}")
+
+            # Process page 10 nodes in batches
+            model_metadata = {}
+            for batch in self._batch_model_descriptions(page_10_nodes):
+                raw_batch_metadata = self._extract_batch_metadata(batch)
+
+                # Add debug logging for batch metadata
+                self.logger.debug(f"Raw batch metadata type: {type(raw_batch_metadata)}")
+                self.logger.debug(f"Raw batch metadata content: {raw_batch_metadata}")
+
+                # If it's already a dict, use it directly
+                if isinstance(raw_batch_metadata, dict):
+                    batch_metadata = raw_batch_metadata
+                else:
+                    try:
+                        batch_metadata = json.loads(str(raw_batch_metadata))
+                    except json.JSONDecodeError as e:
+                        self.logger.error(f"Failed to parse batch metadata: {str(e)}")
+                        batch_metadata = {}
+
+                model_metadata.update(batch_metadata)
+                self.logger.info(f"Processed batch of {len(batch)} nodes")
+                self.logger.debug(f"Batch metadata: {json.dumps(batch_metadata, indent=2)}")
+
+            # Enhance only page 10 nodes
+            timestamp = datetime.now().isoformat()
+            for node in page_10_nodes:
+                # Initialize extraction_info if it doesn't exist
+                if 'extraction_info' not in node.metadata:
+                    node.metadata['extraction_info'] = {}
+
+                # Add document-level metadata to all nodes
+                node.metadata["document_metadata"] = doc_metadata
+                node.metadata["extraction_info"]["extraction_timestamp"] = timestamp
+
+                # Add model-specific metadata if available
+                if node.node_id in model_metadata:
+                    if isinstance(model_metadata[node.node_id], dict):
+                        node.metadata["equipment_specs"] = model_metadata[node.node_id]
+                    else:
+                        node.metadata["equipment_specs"] = model_metadata[node.node_id].model_dump()
+
+            self.logger.info("Successfully enhanced page 10 nodes with metadata")
+
+        except Exception as e:
+            self.logger.error(f"Page 10 metadata enhancement failed: {str(e)}")
+            self.logger.error(f"Full error: {str(e.__class__.__name__)}")
+            self.logger.error(f"Error occurred while processing metadata. Raw metadata content: {raw_doc_metadata}")

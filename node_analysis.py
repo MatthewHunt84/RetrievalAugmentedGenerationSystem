@@ -181,18 +181,19 @@ class NodeAnalyzer:
 
 # Example usage
 if __name__ == "__main__":
+    pass
     # Initialize the analyzer
-    analyzer = NodeAnalyzer()
-
-    # Example paths - replace with your actual paths
-    # pickle_files = ["node_outputs/fourth_pipeline_nodes.pkl", "node_outputs/third_pipeline_nodes.pkl", "node_outputs/second_pipeline_nodes.pkl", "node_outputs/first_pipeline_nodes.pkl"]
-    pickle_files = ["node_outputs/seventh_pipeline_nodes.pkl"]
-    # Analyze hierarchy levels
-    hierarchy_results = analyzer.analyze_hierarchy_levels(pickle_files)
-    print("\nHierarchy Level Analysis:")
-    print(hierarchy_results)
-
-    # Get nodes for a specific page
-    page_results = analyzer.get_page_nodes(pickle_files, page_number=10)
-    print("\nPage 10 Nodes:")
-    print(json.dumps(page_results, indent=2))
+    # analyzer = NodeAnalyzer()
+    #
+    # # Example paths - replace with your actual paths
+    # # pickle_files = ["node_outputs/fourth_pipeline_nodes.pkl", "node_outputs/third_pipeline_nodes.pkl", "node_outputs/second_pipeline_nodes.pkl", "node_outputs/first_pipeline_nodes.pkl"]
+    # pickle_files = ["node_outputs/eighth_pipeline_nodes.pkl"]
+    # # Analyze hierarchy levels
+    # hierarchy_results = analyzer.analyze_hierarchy_levels(pickle_files)
+    # print("\nHierarchy Level Analysis:")
+    # print(hierarchy_results)
+    #
+    # # Get nodes for a specific page
+    # page_results = analyzer.get_page_nodes(pickle_files, page_number=10)
+    # print("\nPage 10 Nodes:")
+    # print(json.dumps(page_results, indent=2))

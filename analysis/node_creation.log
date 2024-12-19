@@ -1163,3 +1163,888 @@ Quick Analysis Summary:
 2024-12-10 16:31:51,752 - INFO - Found 5 level 1 nodes on page 10
 2024-12-10 16:31:51,752 - INFO - Found 0 level 2 nodes on page 10
 2024-12-10 16:31:51,752 - INFO - Detailed analysis has been written to analysis/seventh_pipeline_hierarchy_analysis.txt
+2024-12-18 13:14:09,438 - INFO - Beginning hierarchical node creation process...
+2024-12-18 13:14:09,454 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-18 13:14:09,454 - INFO - Created 5 nodes for page 1
+2024-12-18 13:14:09,454 - INFO - Created 6 nodes for page 2
+2024-12-18 13:14:09,455 - INFO - Created 5 nodes for page 3
+2024-12-18 13:14:09,455 - INFO - Created 6 nodes for page 4
+2024-12-18 13:14:09,455 - INFO - Created 6 nodes for page 5
+2024-12-18 13:14:09,455 - INFO - Created 3 nodes for page 6
+2024-12-18 13:14:09,455 - INFO - Created 5 nodes for page 7
+2024-12-18 13:14:09,455 - INFO - Created 5 nodes for page 8
+2024-12-18 13:14:09,455 - INFO - Created 6 nodes for page 9
+2024-12-18 13:14:09,455 - INFO - Created 6 nodes for page 10
+2024-12-18 13:14:09,455 - INFO - Created 12 nodes for page 11
+2024-12-18 13:14:09,456 - INFO - Created 3 nodes for page 12
+2024-12-18 13:14:09,456 - INFO - Created 7 nodes for page 13
+2024-12-18 13:14:09,456 - INFO - Created 3 nodes for page 14
+2024-12-18 13:14:09,456 - INFO - Created 5 nodes for page 15
+2024-12-18 13:14:09,456 - INFO - Created 6 nodes for page 16
+2024-12-18 13:14:09,456 - INFO - Created 5 nodes for page 17
+2024-12-18 13:14:09,456 - INFO - Created 3 nodes for page 18
+2024-12-18 13:14:09,456 - INFO - Created 6 nodes for page 19
+2024-12-18 13:14:09,456 - INFO - Created 3 nodes for page 20
+2024-12-18 13:14:09,456 - INFO - Created 8 nodes for page 21
+2024-12-18 13:14:09,457 - INFO - Created 4 nodes for page 22
+2024-12-18 13:14:09,457 - INFO - Created 8 nodes for page 23
+2024-12-18 13:14:09,457 - INFO - Created 4 nodes for page 24
+2024-12-18 13:14:09,457 - INFO - Created 7 nodes for page 25
+2024-12-18 13:14:09,457 - INFO - Created 4 nodes for page 26
+2024-12-18 13:14:09,457 - INFO - Created 6 nodes for page 27
+2024-12-18 13:14:09,457 - INFO - Created 3 nodes for page 28
+2024-12-18 13:14:09,457 - INFO - Created 5 nodes for page 29
+2024-12-18 13:14:09,457 - INFO - Created 6 nodes for page 30
+2024-12-18 13:14:09,457 - INFO - Created 5 nodes for page 31
+2024-12-18 13:14:09,457 - INFO - Created 4 nodes for page 32
+2024-12-18 13:14:09,458 - ERROR - Document metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:14:09,458 - ERROR - Hierarchical node creation failed: 'extraction_info'
+2024-12-18 13:15:44,939 - INFO - Beginning hierarchical node creation process...
+2024-12-18 13:15:44,941 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-18 13:15:44,941 - INFO - Created 5 nodes for page 1
+2024-12-18 13:15:44,941 - INFO - Created 6 nodes for page 2
+2024-12-18 13:15:44,941 - INFO - Created 5 nodes for page 3
+2024-12-18 13:15:44,941 - INFO - Created 6 nodes for page 4
+2024-12-18 13:15:44,941 - INFO - Created 6 nodes for page 5
+2024-12-18 13:15:44,941 - INFO - Created 3 nodes for page 6
+2024-12-18 13:15:44,941 - INFO - Created 5 nodes for page 7
+2024-12-18 13:15:44,942 - INFO - Created 5 nodes for page 8
+2024-12-18 13:15:44,942 - INFO - Created 6 nodes for page 9
+2024-12-18 13:15:44,942 - INFO - Created 6 nodes for page 10
+2024-12-18 13:15:44,942 - INFO - Created 12 nodes for page 11
+2024-12-18 13:15:44,942 - INFO - Created 3 nodes for page 12
+2024-12-18 13:15:44,942 - INFO - Created 7 nodes for page 13
+2024-12-18 13:15:44,942 - INFO - Created 3 nodes for page 14
+2024-12-18 13:15:44,942 - INFO - Created 5 nodes for page 15
+2024-12-18 13:15:44,942 - INFO - Created 6 nodes for page 16
+2024-12-18 13:15:44,942 - INFO - Created 5 nodes for page 17
+2024-12-18 13:15:44,942 - INFO - Created 3 nodes for page 18
+2024-12-18 13:15:44,943 - INFO - Created 6 nodes for page 19
+2024-12-18 13:15:44,943 - INFO - Created 3 nodes for page 20
+2024-12-18 13:15:44,943 - INFO - Created 8 nodes for page 21
+2024-12-18 13:15:44,943 - INFO - Created 4 nodes for page 22
+2024-12-18 13:15:44,943 - INFO - Created 8 nodes for page 23
+2024-12-18 13:15:44,943 - INFO - Created 4 nodes for page 24
+2024-12-18 13:15:44,943 - INFO - Created 7 nodes for page 25
+2024-12-18 13:15:44,943 - INFO - Created 4 nodes for page 26
+2024-12-18 13:15:44,943 - INFO - Created 6 nodes for page 27
+2024-12-18 13:15:44,943 - INFO - Created 3 nodes for page 28
+2024-12-18 13:15:44,943 - INFO - Created 5 nodes for page 29
+2024-12-18 13:15:44,944 - INFO - Created 6 nodes for page 30
+2024-12-18 13:15:44,944 - INFO - Created 5 nodes for page 31
+2024-12-18 13:15:44,944 - INFO - Created 4 nodes for page 32
+2024-12-18 13:15:44,944 - ERROR - Document metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Batch metadata extraction failed: 'types.UnionType' object has no attribute 'messages'
+2024-12-18 13:15:44,944 - ERROR - Hierarchical node creation failed: 'extraction_info'
+2024-12-18 13:19:56,029 - INFO - Beginning hierarchical node creation process...
+2024-12-18 13:19:56,030 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-18 13:19:56,031 - INFO - Created 5 nodes for page 1
+2024-12-18 13:19:56,031 - INFO - Created 6 nodes for page 2
+2024-12-18 13:19:56,031 - INFO - Created 5 nodes for page 3
+2024-12-18 13:19:56,031 - INFO - Created 6 nodes for page 4
+2024-12-18 13:19:56,031 - INFO - Created 6 nodes for page 5
+2024-12-18 13:19:56,031 - INFO - Created 3 nodes for page 6
+2024-12-18 13:19:56,031 - INFO - Created 5 nodes for page 7
+2024-12-18 13:19:56,031 - INFO - Created 5 nodes for page 8
+2024-12-18 13:19:56,031 - INFO - Created 6 nodes for page 9
+2024-12-18 13:19:56,031 - INFO - Created 6 nodes for page 10
+2024-12-18 13:19:56,032 - INFO - Created 12 nodes for page 11
+2024-12-18 13:19:56,032 - INFO - Created 3 nodes for page 12
+2024-12-18 13:19:56,032 - INFO - Created 7 nodes for page 13
+2024-12-18 13:19:56,032 - INFO - Created 3 nodes for page 14
+2024-12-18 13:19:56,032 - INFO - Created 5 nodes for page 15
+2024-12-18 13:19:56,032 - INFO - Created 6 nodes for page 16
+2024-12-18 13:19:56,032 - INFO - Created 5 nodes for page 17
+2024-12-18 13:19:56,032 - INFO - Created 3 nodes for page 18
+2024-12-18 13:19:56,032 - INFO - Created 6 nodes for page 19
+2024-12-18 13:19:56,032 - INFO - Created 3 nodes for page 20
+2024-12-18 13:19:56,032 - INFO - Created 8 nodes for page 21
+2024-12-18 13:19:56,033 - INFO - Created 4 nodes for page 22
+2024-12-18 13:19:56,033 - INFO - Created 8 nodes for page 23
+2024-12-18 13:19:56,033 - INFO - Created 4 nodes for page 24
+2024-12-18 13:19:56,033 - INFO - Created 7 nodes for page 25
+2024-12-18 13:19:56,033 - INFO - Created 4 nodes for page 26
+2024-12-18 13:19:56,033 - INFO - Created 6 nodes for page 27
+2024-12-18 13:19:56,033 - INFO - Created 3 nodes for page 28
+2024-12-18 13:19:56,033 - INFO - Created 5 nodes for page 29
+2024-12-18 13:19:56,033 - INFO - Created 6 nodes for page 30
+2024-12-18 13:19:56,033 - INFO - Created 5 nodes for page 31
+2024-12-18 13:19:56,033 - INFO - Created 4 nodes for page 32
+2024-12-18 13:19:56,063 - ERROR - Document metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,063 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,063 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,063 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,063 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,063 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,063 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,063 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,063 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,063 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,063 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,063 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,063 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,063 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,063 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,063 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,063 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,063 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,063 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,063 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,063 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,063 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,063 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,063 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,063 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,063 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,063 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,064 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,064 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,064 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,064 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,064 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,064 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,064 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,064 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:19:56,064 - ERROR - Hierarchical node creation failed: 'extraction_info'
+2024-12-18 13:20:41,762 - INFO - Beginning hierarchical node creation process...
+2024-12-18 13:20:41,763 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-18 13:20:41,763 - INFO - Created 5 nodes for page 1
+2024-12-18 13:20:41,763 - INFO - Created 6 nodes for page 2
+2024-12-18 13:20:41,764 - INFO - Created 5 nodes for page 3
+2024-12-18 13:20:41,764 - INFO - Created 6 nodes for page 4
+2024-12-18 13:20:41,764 - INFO - Created 6 nodes for page 5
+2024-12-18 13:20:41,764 - INFO - Created 3 nodes for page 6
+2024-12-18 13:20:41,764 - INFO - Created 5 nodes for page 7
+2024-12-18 13:20:41,764 - INFO - Created 5 nodes for page 8
+2024-12-18 13:20:41,764 - INFO - Created 6 nodes for page 9
+2024-12-18 13:20:41,764 - INFO - Created 6 nodes for page 10
+2024-12-18 13:20:41,764 - INFO - Created 12 nodes for page 11
+2024-12-18 13:20:41,764 - INFO - Created 3 nodes for page 12
+2024-12-18 13:20:41,765 - INFO - Created 7 nodes for page 13
+2024-12-18 13:20:41,765 - INFO - Created 3 nodes for page 14
+2024-12-18 13:20:41,765 - INFO - Created 5 nodes for page 15
+2024-12-18 13:20:41,765 - INFO - Created 6 nodes for page 16
+2024-12-18 13:20:41,765 - INFO - Created 5 nodes for page 17
+2024-12-18 13:20:41,765 - INFO - Created 3 nodes for page 18
+2024-12-18 13:20:41,765 - INFO - Created 6 nodes for page 19
+2024-12-18 13:20:41,765 - INFO - Created 3 nodes for page 20
+2024-12-18 13:20:41,765 - INFO - Created 8 nodes for page 21
+2024-12-18 13:20:41,765 - INFO - Created 4 nodes for page 22
+2024-12-18 13:20:41,765 - INFO - Created 8 nodes for page 23
+2024-12-18 13:20:41,766 - INFO - Created 4 nodes for page 24
+2024-12-18 13:20:41,766 - INFO - Created 7 nodes for page 25
+2024-12-18 13:20:41,766 - INFO - Created 4 nodes for page 26
+2024-12-18 13:20:41,766 - INFO - Created 6 nodes for page 27
+2024-12-18 13:20:41,766 - INFO - Created 3 nodes for page 28
+2024-12-18 13:20:41,766 - INFO - Created 5 nodes for page 29
+2024-12-18 13:20:41,766 - INFO - Created 6 nodes for page 30
+2024-12-18 13:20:41,766 - INFO - Created 5 nodes for page 31
+2024-12-18 13:20:41,766 - INFO - Created 4 nodes for page 32
+2024-12-18 13:20:41,796 - ERROR - Document metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Batch metadata extraction failed: 'AnthropicMultiModal' object has no attribute 'messages'
+2024-12-18 13:20:41,796 - ERROR - Hierarchical node creation failed: 'extraction_info'
+2024-12-18 13:26:26,970 - INFO - Beginning hierarchical node creation process...
+2024-12-18 13:26:26,972 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-18 13:26:26,973 - INFO - Created 5 nodes for page 1
+2024-12-18 13:26:26,973 - INFO - Created 6 nodes for page 2
+2024-12-18 13:26:26,973 - INFO - Created 5 nodes for page 3
+2024-12-18 13:26:26,973 - INFO - Created 6 nodes for page 4
+2024-12-18 13:26:26,973 - INFO - Created 6 nodes for page 5
+2024-12-18 13:26:26,973 - INFO - Created 3 nodes for page 6
+2024-12-18 13:26:26,973 - INFO - Created 5 nodes for page 7
+2024-12-18 13:26:26,973 - INFO - Created 5 nodes for page 8
+2024-12-18 13:26:26,973 - INFO - Created 6 nodes for page 9
+2024-12-18 13:26:26,974 - INFO - Created 6 nodes for page 10
+2024-12-18 13:26:26,974 - INFO - Created 12 nodes for page 11
+2024-12-18 13:26:26,974 - INFO - Created 3 nodes for page 12
+2024-12-18 13:26:26,974 - INFO - Created 7 nodes for page 13
+2024-12-18 13:26:26,974 - INFO - Created 3 nodes for page 14
+2024-12-18 13:26:26,974 - INFO - Created 5 nodes for page 15
+2024-12-18 13:26:26,974 - INFO - Created 6 nodes for page 16
+2024-12-18 13:26:26,974 - INFO - Created 5 nodes for page 17
+2024-12-18 13:26:26,974 - INFO - Created 3 nodes for page 18
+2024-12-18 13:26:26,974 - INFO - Created 6 nodes for page 19
+2024-12-18 13:26:26,975 - INFO - Created 3 nodes for page 20
+2024-12-18 13:26:26,975 - INFO - Created 8 nodes for page 21
+2024-12-18 13:26:26,975 - INFO - Created 4 nodes for page 22
+2024-12-18 13:26:26,975 - INFO - Created 8 nodes for page 23
+2024-12-18 13:26:26,975 - INFO - Created 4 nodes for page 24
+2024-12-18 13:26:26,975 - INFO - Created 7 nodes for page 25
+2024-12-18 13:26:26,975 - INFO - Created 4 nodes for page 26
+2024-12-18 13:26:26,975 - INFO - Created 6 nodes for page 27
+2024-12-18 13:26:26,975 - INFO - Created 3 nodes for page 28
+2024-12-18 13:26:26,975 - INFO - Created 5 nodes for page 29
+2024-12-18 13:26:26,975 - INFO - Created 6 nodes for page 30
+2024-12-18 13:26:26,976 - INFO - Created 5 nodes for page 31
+2024-12-18 13:26:26,976 - INFO - Created 4 nodes for page 32
+2024-12-18 13:26:26,976 - ERROR - Document metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,976 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,976 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,976 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,976 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,976 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,976 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,976 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,976 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,976 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,976 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,976 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,976 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,976 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,976 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,976 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,976 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,976 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,976 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,976 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,976 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,976 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,976 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,976 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,976 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,976 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,976 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,976 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,976 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,976 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,976 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,976 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,976 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,976 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,976 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,976 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,976 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,976 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,976 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,976 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,976 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,976 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,976 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,976 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,976 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,976 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,976 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,976 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,976 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,976 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,976 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,976 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,976 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,976 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,977 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,977 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,977 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,977 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,977 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,977 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,977 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,977 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,977 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,977 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,977 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,977 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,977 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,977 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,977 - ERROR - Batch metadata extraction failed: 'MetadataExtractionConfig' object has no attribute 'llm'
+2024-12-18 13:26:26,977 - ERROR - Full error: AttributeError
+2024-12-18 13:26:26,977 - ERROR - Hierarchical node creation failed: 'extraction_info'
+2024-12-18 13:29:27,317 - INFO - Beginning hierarchical node creation process...
+2024-12-18 13:29:27,319 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-18 13:29:27,319 - INFO - Created 5 nodes for page 1
+2024-12-18 13:29:27,320 - INFO - Created 6 nodes for page 2
+2024-12-18 13:29:27,320 - INFO - Created 5 nodes for page 3
+2024-12-18 13:29:27,320 - INFO - Created 6 nodes for page 4
+2024-12-18 13:29:27,320 - INFO - Created 6 nodes for page 5
+2024-12-18 13:29:27,320 - INFO - Created 3 nodes for page 6
+2024-12-18 13:29:27,320 - INFO - Created 5 nodes for page 7
+2024-12-18 13:29:27,320 - INFO - Created 5 nodes for page 8
+2024-12-18 13:29:27,320 - INFO - Created 6 nodes for page 9
+2024-12-18 13:29:27,320 - INFO - Created 6 nodes for page 10
+2024-12-18 13:29:27,320 - INFO - Created 12 nodes for page 11
+2024-12-18 13:29:27,321 - INFO - Created 3 nodes for page 12
+2024-12-18 13:29:27,321 - INFO - Created 7 nodes for page 13
+2024-12-18 13:29:27,321 - INFO - Created 3 nodes for page 14
+2024-12-18 13:29:27,321 - INFO - Created 5 nodes for page 15
+2024-12-18 13:29:27,321 - INFO - Created 6 nodes for page 16
+2024-12-18 13:29:27,321 - INFO - Created 5 nodes for page 17
+2024-12-18 13:29:27,321 - INFO - Created 3 nodes for page 18
+2024-12-18 13:29:27,321 - INFO - Created 6 nodes for page 19
+2024-12-18 13:29:27,321 - INFO - Created 3 nodes for page 20
+2024-12-18 13:29:27,321 - INFO - Created 8 nodes for page 21
+2024-12-18 13:29:27,321 - INFO - Created 4 nodes for page 22
+2024-12-18 13:29:27,322 - INFO - Created 8 nodes for page 23
+2024-12-18 13:29:27,322 - INFO - Created 4 nodes for page 24
+2024-12-18 13:29:27,322 - INFO - Created 7 nodes for page 25
+2024-12-18 13:29:27,322 - INFO - Created 4 nodes for page 26
+2024-12-18 13:29:27,322 - INFO - Created 6 nodes for page 27
+2024-12-18 13:29:27,322 - INFO - Created 3 nodes for page 28
+2024-12-18 13:29:27,322 - INFO - Created 5 nodes for page 29
+2024-12-18 13:29:27,322 - INFO - Created 6 nodes for page 30
+2024-12-18 13:29:27,322 - INFO - Created 5 nodes for page 31
+2024-12-18 13:29:27,322 - INFO - Created 4 nodes for page 32
+2024-12-18 13:29:27,322 - INFO - Available LLM methods: ['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isascii', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'removeprefix', 'removesuffix', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+2024-12-18 13:29:27,322 - ERROR - Document metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,322 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Batch metadata extraction failed: 'str' object has no attribute 'complete'
+2024-12-18 13:29:27,323 - ERROR - Full error: AttributeError
+2024-12-18 13:29:27,323 - ERROR - Hierarchical node creation failed: 'extraction_info'
+2024-12-18 13:32:48,675 - INFO - Beginning hierarchical node creation process...
+2024-12-18 13:32:48,677 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-18 13:32:48,677 - INFO - Created 5 nodes for page 1
+2024-12-18 13:32:48,677 - INFO - Created 6 nodes for page 2
+2024-12-18 13:32:48,677 - INFO - Created 5 nodes for page 3
+2024-12-18 13:32:48,678 - INFO - Created 6 nodes for page 4
+2024-12-18 13:32:48,678 - INFO - Created 6 nodes for page 5
+2024-12-18 13:32:48,678 - INFO - Created 3 nodes for page 6
+2024-12-18 13:32:48,678 - INFO - Created 5 nodes for page 7
+2024-12-18 13:32:48,678 - INFO - Created 5 nodes for page 8
+2024-12-18 13:32:48,678 - INFO - Created 6 nodes for page 9
+2024-12-18 13:32:48,678 - INFO - Created 6 nodes for page 10
+2024-12-18 13:32:48,678 - INFO - Created 12 nodes for page 11
+2024-12-18 13:32:48,678 - INFO - Created 3 nodes for page 12
+2024-12-18 13:32:48,678 - INFO - Created 7 nodes for page 13
+2024-12-18 13:32:48,678 - INFO - Created 3 nodes for page 14
+2024-12-18 13:32:48,679 - INFO - Created 5 nodes for page 15
+2024-12-18 13:32:48,679 - INFO - Created 6 nodes for page 16
+2024-12-18 13:32:48,679 - INFO - Created 5 nodes for page 17
+2024-12-18 13:32:48,679 - INFO - Created 3 nodes for page 18
+2024-12-18 13:32:48,679 - INFO - Created 6 nodes for page 19
+2024-12-18 13:32:48,679 - INFO - Created 3 nodes for page 20
+2024-12-18 13:32:48,679 - INFO - Created 8 nodes for page 21
+2024-12-18 13:32:48,679 - INFO - Created 4 nodes for page 22
+2024-12-18 13:32:48,679 - INFO - Created 8 nodes for page 23
+2024-12-18 13:32:48,679 - INFO - Created 4 nodes for page 24
+2024-12-18 13:32:48,680 - INFO - Created 7 nodes for page 25
+2024-12-18 13:32:48,680 - INFO - Created 4 nodes for page 26
+2024-12-18 13:32:48,680 - INFO - Created 6 nodes for page 27
+2024-12-18 13:32:48,680 - INFO - Created 3 nodes for page 28
+2024-12-18 13:32:48,680 - INFO - Created 5 nodes for page 29
+2024-12-18 13:32:48,680 - INFO - Created 6 nodes for page 30
+2024-12-18 13:32:48,680 - INFO - Created 5 nodes for page 31
+2024-12-18 13:32:48,680 - INFO - Created 4 nodes for page 32
+2024-12-18 13:32:48,680 - INFO - Available LLM methods: ['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isascii', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'removeprefix', 'removesuffix', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+2024-12-18 13:32:48,711 - ERROR - Document metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,711 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,711 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,711 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,711 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,711 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,711 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,711 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,711 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,711 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,712 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,712 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,712 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,712 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,712 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,712 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,712 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,712 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,712 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,712 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,712 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,712 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,712 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,712 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,712 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,713 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,713 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,713 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,713 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,713 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,713 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,713 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,713 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,713 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,713 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,713 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,713 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,713 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,713 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,713 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,713 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,713 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,713 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,713 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,713 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,713 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,714 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,714 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,714 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,714 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,714 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,714 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,714 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,714 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,714 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,714 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,714 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,714 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,714 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,714 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,714 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,714 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,714 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,714 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,714 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,714 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,714 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,714 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,715 - ERROR - Batch metadata extraction failed: AnthropicMultiModal.complete() missing 1 required positional argument: 'image_documents'
+2024-12-18 13:32:48,715 - ERROR - Full error: TypeError
+2024-12-18 13:32:48,715 - ERROR - Hierarchical node creation failed: 'extraction_info'
+2024-12-18 13:49:41,426 - INFO - Beginning hierarchical node creation process...
+2024-12-18 13:49:41,427 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-18 13:49:41,428 - INFO - Created 5 nodes for page 1
+2024-12-18 13:49:41,428 - INFO - Created 6 nodes for page 2
+2024-12-18 13:49:41,428 - INFO - Created 5 nodes for page 3
+2024-12-18 13:49:41,428 - INFO - Created 6 nodes for page 4
+2024-12-18 13:49:41,428 - INFO - Created 6 nodes for page 5
+2024-12-18 13:49:41,428 - INFO - Created 3 nodes for page 6
+2024-12-18 13:49:41,428 - INFO - Created 5 nodes for page 7
+2024-12-18 13:49:41,428 - INFO - Created 5 nodes for page 8
+2024-12-18 13:49:41,428 - INFO - Created 6 nodes for page 9
+2024-12-18 13:49:41,429 - INFO - Created 6 nodes for page 10
+2024-12-18 13:49:41,429 - INFO - Created 12 nodes for page 11
+2024-12-18 13:49:41,429 - INFO - Created 3 nodes for page 12
+2024-12-18 13:49:41,429 - INFO - Created 7 nodes for page 13
+2024-12-18 13:49:41,429 - INFO - Created 3 nodes for page 14
+2024-12-18 13:49:41,429 - INFO - Created 5 nodes for page 15
+2024-12-18 13:49:41,429 - INFO - Created 6 nodes for page 16
+2024-12-18 13:49:41,429 - INFO - Created 5 nodes for page 17
+2024-12-18 13:49:41,429 - INFO - Created 3 nodes for page 18
+2024-12-18 13:49:41,429 - INFO - Created 6 nodes for page 19
+2024-12-18 13:49:41,429 - INFO - Created 3 nodes for page 20
+2024-12-18 13:49:41,430 - INFO - Created 8 nodes for page 21
+2024-12-18 13:49:41,430 - INFO - Created 4 nodes for page 22
+2024-12-18 13:49:41,430 - INFO - Created 8 nodes for page 23
+2024-12-18 13:49:41,430 - INFO - Created 4 nodes for page 24
+2024-12-18 13:49:41,430 - INFO - Created 7 nodes for page 25
+2024-12-18 13:49:41,430 - INFO - Created 4 nodes for page 26
+2024-12-18 13:49:41,430 - INFO - Created 6 nodes for page 27
+2024-12-18 13:49:41,430 - INFO - Created 3 nodes for page 28
+2024-12-18 13:49:41,430 - INFO - Created 5 nodes for page 29
+2024-12-18 13:49:41,430 - INFO - Created 6 nodes for page 30
+2024-12-18 13:49:41,430 - INFO - Created 5 nodes for page 31
+2024-12-18 13:49:41,431 - INFO - Created 4 nodes for page 32
+2024-12-18 13:49:50,280 - ERROR - Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+2024-12-18 13:49:56,171 - ERROR - Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+2024-12-18 13:50:02,548 - ERROR - Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+2024-12-18 13:59:09,000 - INFO - Beginning hierarchical node creation process...
+2024-12-18 13:59:09,002 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-18 13:59:09,002 - INFO - Created 5 nodes for page 1
+2024-12-18 13:59:09,002 - INFO - Created 6 nodes for page 2
+2024-12-18 13:59:09,002 - INFO - Created 5 nodes for page 3
+2024-12-18 13:59:09,003 - INFO - Created 6 nodes for page 4
+2024-12-18 13:59:09,003 - INFO - Created 6 nodes for page 5
+2024-12-18 13:59:09,003 - INFO - Created 3 nodes for page 6
+2024-12-18 13:59:09,003 - INFO - Created 5 nodes for page 7
+2024-12-18 13:59:09,003 - INFO - Created 5 nodes for page 8
+2024-12-18 13:59:09,003 - INFO - Created 6 nodes for page 9
+2024-12-18 13:59:09,003 - INFO - Created 6 nodes for page 10
+2024-12-18 13:59:09,003 - INFO - Created 12 nodes for page 11
+2024-12-18 13:59:09,003 - INFO - Created 3 nodes for page 12
+2024-12-18 13:59:09,003 - INFO - Created 7 nodes for page 13
+2024-12-18 13:59:09,003 - INFO - Created 3 nodes for page 14
+2024-12-18 13:59:09,004 - INFO - Created 5 nodes for page 15
+2024-12-18 13:59:09,004 - INFO - Created 6 nodes for page 16
+2024-12-18 13:59:09,004 - INFO - Created 5 nodes for page 17
+2024-12-18 13:59:09,004 - INFO - Created 3 nodes for page 18
+2024-12-18 13:59:09,004 - INFO - Created 6 nodes for page 19
+2024-12-18 13:59:09,004 - INFO - Created 3 nodes for page 20
+2024-12-18 13:59:09,004 - INFO - Created 8 nodes for page 21
+2024-12-18 13:59:09,004 - INFO - Created 4 nodes for page 22
+2024-12-18 13:59:09,004 - INFO - Created 8 nodes for page 23
+2024-12-18 13:59:09,004 - INFO - Created 4 nodes for page 24
+2024-12-18 13:59:09,004 - INFO - Created 7 nodes for page 25
+2024-12-18 13:59:09,005 - INFO - Created 4 nodes for page 26
+2024-12-18 13:59:09,005 - INFO - Created 6 nodes for page 27
+2024-12-18 13:59:09,005 - INFO - Created 3 nodes for page 28
+2024-12-18 13:59:09,005 - INFO - Created 5 nodes for page 29
+2024-12-18 13:59:09,005 - INFO - Created 6 nodes for page 30
+2024-12-18 13:59:09,005 - INFO - Created 5 nodes for page 31
+2024-12-18 13:59:09,005 - INFO - Created 4 nodes for page 32
+2024-12-18 13:59:09,005 - INFO - Found 6 nodes on page 10
+2024-12-18 13:59:09,020 - ERROR - Document metadata extraction failed: Messages.create() got an unexpected keyword argument 'response_format'
+2024-12-18 13:59:09,020 - ERROR - Full error: TypeError
+2024-12-18 13:59:09,020 - INFO - Successfully extracted document metadata for page 10
+2024-12-18 13:59:09,020 - ERROR - Batch metadata extraction failed: Messages.create() got an unexpected keyword argument 'response_format'
+2024-12-18 13:59:09,020 - ERROR - Full error: TypeError
+2024-12-18 13:59:09,020 - INFO - Processed batch of 5 nodes
+2024-12-18 13:59:09,020 - ERROR - Batch metadata extraction failed: Messages.create() got an unexpected keyword argument 'response_format'
+2024-12-18 13:59:09,020 - ERROR - Full error: TypeError
+2024-12-18 13:59:09,020 - INFO - Processed batch of 1 nodes
+2024-12-18 13:59:09,020 - INFO - Successfully enhanced page 10 nodes with metadata
+2024-12-18 14:21:41,484 - INFO - Beginning hierarchical node creation process...
+2024-12-18 14:21:41,486 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-18 14:21:41,486 - INFO - Created 5 nodes for page 1
+2024-12-18 14:21:41,487 - INFO - Created 6 nodes for page 2
+2024-12-18 14:21:41,487 - INFO - Created 5 nodes for page 3
+2024-12-18 14:21:41,487 - INFO - Created 6 nodes for page 4
+2024-12-18 14:21:41,487 - INFO - Created 6 nodes for page 5
+2024-12-18 14:21:41,487 - INFO - Created 3 nodes for page 6
+2024-12-18 14:21:41,487 - INFO - Created 5 nodes for page 7
+2024-12-18 14:21:41,487 - INFO - Created 5 nodes for page 8
+2024-12-18 14:21:41,487 - INFO - Created 6 nodes for page 9
+2024-12-18 14:21:41,487 - INFO - Created 6 nodes for page 10
+2024-12-18 14:21:41,487 - INFO - Created 12 nodes for page 11
+2024-12-18 14:21:41,488 - INFO - Created 3 nodes for page 12
+2024-12-18 14:21:41,488 - INFO - Created 7 nodes for page 13
+2024-12-18 14:21:41,488 - INFO - Created 3 nodes for page 14
+2024-12-18 14:21:41,488 - INFO - Created 5 nodes for page 15
+2024-12-18 14:21:41,488 - INFO - Created 6 nodes for page 16
+2024-12-18 14:21:41,488 - INFO - Created 5 nodes for page 17
+2024-12-18 14:21:41,488 - INFO - Created 3 nodes for page 18
+2024-12-18 14:21:41,488 - INFO - Created 6 nodes for page 19
+2024-12-18 14:21:41,488 - INFO - Created 3 nodes for page 20
+2024-12-18 14:21:41,488 - INFO - Created 8 nodes for page 21
+2024-12-18 14:21:41,489 - INFO - Created 4 nodes for page 22
+2024-12-18 14:21:41,489 - INFO - Created 8 nodes for page 23
+2024-12-18 14:21:41,489 - INFO - Created 4 nodes for page 24
+2024-12-18 14:21:41,489 - INFO - Created 7 nodes for page 25
+2024-12-18 14:21:41,489 - INFO - Created 4 nodes for page 26
+2024-12-18 14:21:41,489 - INFO - Created 6 nodes for page 27
+2024-12-18 14:21:41,489 - INFO - Created 3 nodes for page 28
+2024-12-18 14:21:41,489 - INFO - Created 5 nodes for page 29
+2024-12-18 14:21:41,489 - INFO - Created 6 nodes for page 30
+2024-12-18 14:21:41,489 - INFO - Created 5 nodes for page 31
+2024-12-18 14:21:41,489 - INFO - Created 4 nodes for page 32
+2024-12-18 14:21:41,489 - INFO - Found 6 nodes on page 10
+2024-12-18 14:21:41,504 - ERROR - Document metadata extraction failed: Missing required arguments; Expected either ('max_tokens', 'messages' and 'model') or ('max_tokens', 'messages', 'model' and 'stream') arguments to be given
+2024-12-18 14:21:41,504 - ERROR - Full error: TypeError
+2024-12-18 14:21:41,504 - INFO - Successfully extracted document metadata for page 10
+2024-12-18 14:21:41,505 - ERROR - Batch metadata extraction failed: Missing required arguments; Expected either ('max_tokens', 'messages' and 'model') or ('max_tokens', 'messages', 'model' and 'stream') arguments to be given
+2024-12-18 14:21:41,505 - ERROR - Full error: TypeError
+2024-12-18 14:21:41,505 - INFO - Processed batch of 5 nodes
+2024-12-18 14:21:41,505 - ERROR - Batch metadata extraction failed: Missing required arguments; Expected either ('max_tokens', 'messages' and 'model') or ('max_tokens', 'messages', 'model' and 'stream') arguments to be given
+2024-12-18 14:21:41,505 - ERROR - Full error: TypeError
+2024-12-18 14:21:41,505 - INFO - Processed batch of 1 nodes
+2024-12-18 14:21:41,505 - INFO - Successfully enhanced page 10 nodes with metadata
+2024-12-18 14:22:41,965 - INFO - Beginning hierarchical node creation process...
+2024-12-18 14:22:41,967 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-18 14:22:41,967 - INFO - Created 5 nodes for page 1
+2024-12-18 14:22:41,967 - INFO - Created 6 nodes for page 2
+2024-12-18 14:22:41,968 - INFO - Created 5 nodes for page 3
+2024-12-18 14:22:41,968 - INFO - Created 6 nodes for page 4
+2024-12-18 14:22:41,968 - INFO - Created 6 nodes for page 5
+2024-12-18 14:22:41,968 - INFO - Created 3 nodes for page 6
+2024-12-18 14:22:41,968 - INFO - Created 5 nodes for page 7
+2024-12-18 14:22:41,968 - INFO - Created 5 nodes for page 8
+2024-12-18 14:22:41,968 - INFO - Created 6 nodes for page 9
+2024-12-18 14:22:41,968 - INFO - Created 6 nodes for page 10
+2024-12-18 14:22:41,968 - INFO - Created 12 nodes for page 11
+2024-12-18 14:22:41,968 - INFO - Created 3 nodes for page 12
+2024-12-18 14:22:41,969 - INFO - Created 7 nodes for page 13
+2024-12-18 14:22:41,969 - INFO - Created 3 nodes for page 14
+2024-12-18 14:22:41,969 - INFO - Created 5 nodes for page 15
+2024-12-18 14:22:41,969 - INFO - Created 6 nodes for page 16
+2024-12-18 14:22:41,969 - INFO - Created 5 nodes for page 17
+2024-12-18 14:22:41,969 - INFO - Created 3 nodes for page 18
+2024-12-18 14:22:41,969 - INFO - Created 6 nodes for page 19
+2024-12-18 14:22:41,969 - INFO - Created 3 nodes for page 20
+2024-12-18 14:22:41,969 - INFO - Created 8 nodes for page 21
+2024-12-18 14:22:41,969 - INFO - Created 4 nodes for page 22
+2024-12-18 14:22:41,969 - INFO - Created 8 nodes for page 23
+2024-12-18 14:22:41,970 - INFO - Created 4 nodes for page 24
+2024-12-18 14:22:41,970 - INFO - Created 7 nodes for page 25
+2024-12-18 14:22:41,970 - INFO - Created 4 nodes for page 26
+2024-12-18 14:22:41,970 - INFO - Created 6 nodes for page 27
+2024-12-18 14:22:41,970 - INFO - Created 3 nodes for page 28
+2024-12-18 14:22:41,970 - INFO - Created 5 nodes for page 29
+2024-12-18 14:22:41,970 - INFO - Created 6 nodes for page 30
+2024-12-18 14:22:41,970 - INFO - Created 5 nodes for page 31
+2024-12-18 14:22:41,970 - INFO - Created 4 nodes for page 32
+2024-12-18 14:22:41,970 - INFO - Found 6 nodes on page 10
+2024-12-18 14:22:44,351 - INFO - Successfully extracted document metadata for page 10
+2024-12-18 14:22:44,351 - ERROR - Page 10 metadata enhancement failed: Object of type TextBlock is not JSON serializable
+2024-12-18 14:22:44,351 - ERROR - Full error: TypeError
+2024-12-18 14:26:40,304 - INFO - Beginning hierarchical node creation process...
+2024-12-18 14:26:40,306 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-18 14:26:40,306 - INFO - Created 5 nodes for page 1
+2024-12-18 14:26:40,306 - INFO - Created 6 nodes for page 2
+2024-12-18 14:26:40,306 - INFO - Created 5 nodes for page 3
+2024-12-18 14:26:40,307 - INFO - Created 6 nodes for page 4
+2024-12-18 14:26:40,307 - INFO - Created 6 nodes for page 5
+2024-12-18 14:26:40,307 - INFO - Created 3 nodes for page 6
+2024-12-18 14:26:40,307 - INFO - Created 5 nodes for page 7
+2024-12-18 14:26:40,307 - INFO - Created 5 nodes for page 8
+2024-12-18 14:26:40,307 - INFO - Created 6 nodes for page 9
+2024-12-18 14:26:40,307 - INFO - Created 6 nodes for page 10
+2024-12-18 14:26:40,307 - INFO - Created 12 nodes for page 11
+2024-12-18 14:26:40,307 - INFO - Created 3 nodes for page 12
+2024-12-18 14:26:40,307 - INFO - Created 7 nodes for page 13
+2024-12-18 14:26:40,308 - INFO - Created 3 nodes for page 14
+2024-12-18 14:26:40,308 - INFO - Created 5 nodes for page 15
+2024-12-18 14:26:40,308 - INFO - Created 6 nodes for page 16
+2024-12-18 14:26:40,308 - INFO - Created 5 nodes for page 17
+2024-12-18 14:26:40,308 - INFO - Created 3 nodes for page 18
+2024-12-18 14:26:40,308 - INFO - Created 6 nodes for page 19
+2024-12-18 14:26:40,308 - INFO - Created 3 nodes for page 20
+2024-12-18 14:26:40,308 - INFO - Created 8 nodes for page 21
+2024-12-18 14:26:40,308 - INFO - Created 4 nodes for page 22
+2024-12-18 14:26:40,308 - INFO - Created 8 nodes for page 23
+2024-12-18 14:26:40,308 - INFO - Created 4 nodes for page 24
+2024-12-18 14:26:40,308 - INFO - Created 7 nodes for page 25
+2024-12-18 14:26:40,309 - INFO - Created 4 nodes for page 26
+2024-12-18 14:26:40,309 - INFO - Created 6 nodes for page 27
+2024-12-18 14:26:40,309 - INFO - Created 3 nodes for page 28
+2024-12-18 14:26:40,309 - INFO - Created 5 nodes for page 29
+2024-12-18 14:26:40,309 - INFO - Created 6 nodes for page 30
+2024-12-18 14:26:40,309 - INFO - Created 5 nodes for page 31
+2024-12-18 14:26:40,309 - INFO - Created 4 nodes for page 32
+2024-12-18 14:26:40,309 - INFO - Found 6 nodes on page 10
+2024-12-18 14:26:42,064 - ERROR - Failed to process LLM response: Expecting value: line 1 column 2 (char 1)
+2024-12-18 14:26:42,065 - ERROR - Raw response was: [TextBlock(text='{\n    "primary_categories": ["trenchers", "walk-behind trenchers", "track trenchers"],\n    "manufacturer": "Barreto",\n    "document_type": "catalog",\n    "document_date": "2017"\n}', type='text')]
+2024-12-18 14:26:42,065 - INFO - Successfully extracted document metadata for page 10
+2024-12-18 14:26:51,735 - ERROR - Failed to process LLM response: Expecting value: line 1 column 2 (char 1)
+2024-12-18 14:26:51,735 - ERROR - Raw response was: [TextBlock(text='[\n    {\n        "product_name": "Barreto 1324D Standard Trencher",\n        "model_number": "1324D",\n        "product_category": "Walk-Behind Trencher",\n        "manufacturer": "Barreto",\n        "specifications": {\n            "dimensions": {\n                "weight": "900 lbs"\n            },\n            "engine": {\n                "type": "hydraulic chain motor"\n            },\n            "performance": {\n                "features": [\n                    "all-hydraulic system",\n                    "no belts, chains, or gears",\n                    "low center of gravity",\n                    "outboard bearing protection",\n                    "safety clutch for wheel and chain drive"\n                ]\n            }\n        }\n    },\n    {\n        "product_name": "Barreto 912HM Mini Trencher",\n        "model_number": "912HM",\n        "product_category": "Mini Walk-Behind Trencher",\n        "manufacturer": "Barreto",\n        "specifications": {\n            "dimensions": {\n                "max_trench_depth": "24 inches"\n            },\n            "engine": {\n                "type": "all-hydraulic"\n            },\n            "performance": {\n                "features": [\n                    "self-propelled",\n                    "suitable for tight spaces",\n                    "front end pivot design",\n                    "ideal for sprinkler systems and electrical lines"\n                ]\n            }\n        }\n    },\n    {\n        "product_name": "Barreto 712MT Micro Trencher",\n        "model_number": "712MT",\n        "product_category": "Micro Walk-Behind Trencher",\n        "manufacturer": "Barreto",\n        "specifications": {\n            "dimensions": {},\n            "engine": {},\n            "performance": {\n                "features": [\n                    "load sensing valve system",\n                    "automatic wheel speed adjustment",\n                    "adaptive trenching control"\n                ]\n            }\n        }\n    },\n    {\n        "product_name": "Barreto 2024RTK Track Trencher",\n        "model_number": "2024RTK",\n        "product_category": "Stand-on Track Trencher",\n        "manufacturer": "Barreto",\n        "specifications": {\n            "dimensions": {},\n            "engine": {},\n            "performance": {\n                "features": [\n                    "fixed platform",\n                    "rod linkage control adjustment",\n                    "Adjustable Trenching Control (ATC)",\n                    "individual track speed control",\n                    "suitable for uneven terrain"\n                ]\n            }\n        }\n    }\n]', type='text')]
+2024-12-18 14:26:51,735 - INFO - Processed batch of 5 nodes
+2024-12-18 14:26:57,619 - ERROR - Failed to process LLM response: Expecting value: line 1 column 2 (char 1)
+2024-12-18 14:26:57,619 - ERROR - Raw response was: [TextBlock(text='Here\'s the extracted metadata in the requested JSON format:\n\n[\n    {\n        "product_name": "1324STK Track Trencher",\n        "model_number": "1324STK",\n        "product_category": "Walk-Behind Track Trencher",\n        "manufacturer": "Barreto",\n        "specifications": {\n            "dimensions": {\n                "description": "Compact design, smaller than standard track trenchers"\n            },\n            "performance": {\n                "dig_depth": "24-30 inches",\n                "features": [\n                    "Floating track system",\n                    "Independent undercarriage idlers",\n                    "Reduced ground pressure",\n                    "Enhanced terrain response"\n                ]\n            }\n        }\n    }\n]\n\nNote: Some specification fields are left out as they weren\'t mentioned in the source text. The provided information focuses on the machine\'s dimensions and performance characteristics, with no specific engine details mentioned in the original text.', type='text')]
+2024-12-18 14:26:57,619 - INFO - Processed batch of 1 nodes
+2024-12-18 14:26:57,619 - INFO - Successfully enhanced page 10 nodes with metadata
+2024-12-18 14:32:50,341 - INFO - Beginning hierarchical node creation process...
+2024-12-18 14:32:50,343 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-18 14:32:50,343 - INFO - Created 5 nodes for page 1
+2024-12-18 14:32:50,343 - INFO - Created 6 nodes for page 2
+2024-12-18 14:32:50,343 - INFO - Created 5 nodes for page 3
+2024-12-18 14:32:50,343 - INFO - Created 6 nodes for page 4
+2024-12-18 14:32:50,344 - INFO - Created 6 nodes for page 5
+2024-12-18 14:32:50,344 - INFO - Created 3 nodes for page 6
+2024-12-18 14:32:50,344 - INFO - Created 5 nodes for page 7
+2024-12-18 14:32:50,344 - INFO - Created 5 nodes for page 8
+2024-12-18 14:32:50,344 - INFO - Created 6 nodes for page 9
+2024-12-18 14:32:50,344 - INFO - Created 6 nodes for page 10
+2024-12-18 14:32:50,344 - INFO - Created 12 nodes for page 11
+2024-12-18 14:32:50,345 - INFO - Created 3 nodes for page 12
+2024-12-18 14:32:50,345 - INFO - Created 7 nodes for page 13
+2024-12-18 14:32:50,345 - INFO - Created 3 nodes for page 14
+2024-12-18 14:32:50,345 - INFO - Created 5 nodes for page 15
+2024-12-18 14:32:50,345 - INFO - Created 6 nodes for page 16
+2024-12-18 14:32:50,345 - INFO - Created 5 nodes for page 17
+2024-12-18 14:32:50,345 - INFO - Created 3 nodes for page 18
+2024-12-18 14:32:50,345 - INFO - Created 6 nodes for page 19
+2024-12-18 14:32:50,345 - INFO - Created 3 nodes for page 20
+2024-12-18 14:32:50,345 - INFO - Created 8 nodes for page 21
+2024-12-18 14:32:50,346 - INFO - Created 4 nodes for page 22
+2024-12-18 14:32:50,346 - INFO - Created 8 nodes for page 23
+2024-12-18 14:32:50,346 - INFO - Created 4 nodes for page 24
+2024-12-18 14:32:50,346 - INFO - Created 7 nodes for page 25
+2024-12-18 14:32:50,346 - INFO - Created 4 nodes for page 26
+2024-12-18 14:32:50,346 - INFO - Created 6 nodes for page 27
+2024-12-18 14:32:50,346 - INFO - Created 3 nodes for page 28
+2024-12-18 14:32:50,346 - INFO - Created 5 nodes for page 29
+2024-12-18 14:32:50,346 - INFO - Created 6 nodes for page 30
+2024-12-18 14:32:50,346 - INFO - Created 5 nodes for page 31
+2024-12-18 14:32:50,346 - INFO - Created 4 nodes for page 32
+2024-12-18 14:32:50,346 - INFO - Found 6 nodes on page 10
+2024-12-18 14:32:53,537 - ERROR - Page 10 metadata enhancement failed: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2024-12-18 14:32:53,537 - ERROR - Full error: JSONDecodeError
+2024-12-18 14:35:58,167 - INFO - Beginning hierarchical node creation process...
+2024-12-18 14:35:58,169 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-18 14:35:58,169 - INFO - Created 5 nodes for page 1
+2024-12-18 14:35:58,169 - INFO - Created 6 nodes for page 2
+2024-12-18 14:35:58,169 - INFO - Created 5 nodes for page 3
+2024-12-18 14:35:58,169 - INFO - Created 6 nodes for page 4
+2024-12-18 14:35:58,169 - INFO - Created 6 nodes for page 5
+2024-12-18 14:35:58,170 - INFO - Created 3 nodes for page 6
+2024-12-18 14:35:58,170 - INFO - Created 5 nodes for page 7
+2024-12-18 14:35:58,170 - INFO - Created 5 nodes for page 8
+2024-12-18 14:35:58,170 - INFO - Created 6 nodes for page 9
+2024-12-18 14:35:58,170 - INFO - Created 6 nodes for page 10
+2024-12-18 14:35:58,170 - INFO - Created 12 nodes for page 11
+2024-12-18 14:35:58,170 - INFO - Created 3 nodes for page 12
+2024-12-18 14:35:58,170 - INFO - Created 7 nodes for page 13
+2024-12-18 14:35:58,170 - INFO - Created 3 nodes for page 14
+2024-12-18 14:35:58,170 - INFO - Created 5 nodes for page 15
+2024-12-18 14:35:58,171 - INFO - Created 6 nodes for page 16
+2024-12-18 14:35:58,171 - INFO - Created 5 nodes for page 17
+2024-12-18 14:35:58,171 - INFO - Created 3 nodes for page 18
+2024-12-18 14:35:58,171 - INFO - Created 6 nodes for page 19
+2024-12-18 14:35:58,171 - INFO - Created 3 nodes for page 20
+2024-12-18 14:35:58,171 - INFO - Created 8 nodes for page 21
+2024-12-18 14:35:58,171 - INFO - Created 4 nodes for page 22
+2024-12-18 14:35:58,171 - INFO - Created 8 nodes for page 23
+2024-12-18 14:35:58,171 - INFO - Created 4 nodes for page 24
+2024-12-18 14:35:58,171 - INFO - Created 7 nodes for page 25
+2024-12-18 14:35:58,171 - INFO - Created 4 nodes for page 26
+2024-12-18 14:35:58,172 - INFO - Created 6 nodes for page 27
+2024-12-18 14:35:58,172 - INFO - Created 3 nodes for page 28
+2024-12-18 14:35:58,172 - INFO - Created 5 nodes for page 29
+2024-12-18 14:35:58,172 - INFO - Created 6 nodes for page 30
+2024-12-18 14:35:58,172 - INFO - Created 5 nodes for page 31
+2024-12-18 14:35:58,172 - INFO - Created 4 nodes for page 32
+2024-12-18 14:35:58,172 - INFO - Found 6 nodes on page 10
+2024-12-18 14:36:00,829 - INFO - Successfully extracted document metadata for page 10
+2024-12-18 14:36:08,465 - INFO - Processed batch of 5 nodes
+2024-12-18 14:36:12,397 - ERROR - Failed to process LLM response: Expecting value: line 1 column 1 (char 0)
+2024-12-18 14:36:12,397 - ERROR - Raw response was: [TextBlock(text='Here\'s the extracted metadata in the requested JSON format:\n\n[\n    {\n        "product_name": "1324STK Track Trencher",\n        "model_number": "1324STK",\n        "product_category": "Walk-Behind Track Trencher",\n        "manufacturer": "Barreto",\n        "specifications": {\n            "dimensions": {\n                "description": "Compact design, smaller than standard track trenchers"\n            },\n            "performance": {\n                "dig_depth": "24-30 inches",\n                "features": [\n                    "Floating track system",\n                    "Independent undercarriage idlers",\n                    "Reduced ground pressure",\n                    "Enhanced terrain response"\n                ]\n            }\n        }\n    }\n]\n\nNote: Some specification fields are left out as they weren\'t explicitly mentioned in the text. The provided information focuses on the key features and specifications that were directly stated in the source text.', type='text')]
+2024-12-18 14:36:12,397 - INFO - Processed batch of 1 nodes
+2024-12-18 14:36:12,397 - INFO - Successfully enhanced page 10 nodes with metadata

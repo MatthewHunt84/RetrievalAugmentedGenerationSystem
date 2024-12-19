@@ -12,11 +12,20 @@ Private variables are prefixed with an underscore: _private_variable
 from dataclasses import dataclass, field
 from llama_index.embeddings.openai import OpenAIEmbedding
 from llama_index.multi_modal_llms.anthropic import AnthropicMultiModal
+from anthropic import Anthropic, Client  # Add this import
 from llama_index.core import Settings
+from pydantic import BaseModel, Field
 import re
 
 # Base directory for raw input data files
+
+
+# Global configuration instances
 input_data_folder: str = "raw_input_data"
+embedding_model_name = "text-embedding-3-large"
+multimodal_model = "claude-3-5-sonnet-latest"
+multimodal_llm = AnthropicMultiModal(model=multimodal_model)
+metadata_extraction_model = "claude-3-5-sonnet-latest"
 
 @dataclass
 class ParserConfig:
@@ -66,65 +75,6 @@ class ParserConfig:
 use_cached_files: bool = True
 parsing_config = ParserConfig()
 
-
-@dataclass
-class Measurement:
-    """
-    Represents a numerical measurement with its unit and context. Handles both
-    single values and ranges while maintaining the original context.
-    """
-    value: float | int
-    unit: str
-    context: str | None = None
-    confidence: float = 1.0
-
-    def __post_init__(self) -> None:
-        # Handle string inputs that might contain ranges
-        if isinstance(self.value, str):
-            if '-' in self.value:
-                low, high = map(float, self.value.split('-'))
-                self.value = (low + high) / 2  # Use average for now
-                self.context = f"Range: {low}-{high} {self.unit}"
-            else:
-                self.value = float(self.value)
-
-
-@dataclass
-class EquipmentSpecifications:
-    """
-    Flexible specification structure for equipment metadata.
-    """
-    # Basic identification information
-    basic_info: dict[str, str] = field(default_factory=dict)
-
-    # Specifications with values and units
-    specifications: dict[str, Measurement] = field(default_factory=dict)
-
-    # Features and capabilities
-    features: list[str] = field(default_factory=list)
-
-    def add_specification(self, name: str, value: float | str, unit: str,
-                          context: str | None = None) -> None:
-        """Add a numerical specification with associated metadata."""
-        spec_key = name.lower().replace(' ', '_')
-        self.specifications[spec_key] = Measurement(value, unit, context)
-
-    def add_feature(self, feature: str) -> None:
-        """Add a descriptive feature."""
-        normalized_feature = feature.lower().strip()
-        if normalized_feature not in self.features:
-            self.features.append(normalized_feature)
-
-    def to_dict(self) -> dict:
-        """Convert specifications to a serializable dictionary format."""
-        return {
-            "basic_info": self.basic_info,
-            "specifications": {
-                k: v.__dict__ for k, v in self.specifications.items()
-            },
-            "features": self.features
-        }
-
 @dataclass
 class HierarchicalConfig:
     """
@@ -173,10 +123,72 @@ class HierarchicalConfig:
             0
         )
 
+"""
+NEW (Metadata Extraction): Pydantic models for equipment metadata
+"""
+class EquipmentSpecs(BaseModel):
+    """Metadata schema for equipment product information."""
+    product_name: str = Field(..., description="The full name of the product")
+    model_number: str = Field(..., description="The specific model number/identifier of the product")
+    product_category: str = Field(..., description="The category of equipment")
+    manufacturer: str = Field(..., description="The manufacturer of the equipment")
+    specifications: dict[str, any] = Field(..., description="Technical specifications including dimensions and performance metrics")
+
+@dataclass
+class MetadataExtractionConfig:
+    """Configuration settings for metadata extraction process."""
+
+    # Batch size for processing model descriptions
+    batch_size: int = 5
+
+    # LLM model configuration
+    model_name: str = metadata_extraction_model
+    temperature: float = 0.1
+
+    # Store the actual LLM instance
+    _llm_instance: [Client] = None
+
+    def get_client(self) -> Client:
+        """Get or create the Anthropic client instance."""
+        if self._llm_instance is None:
+            self._llm_instance = Anthropic()
+        return self._llm_instance
+
+    # Extraction prompts
+    document_level_prompt: str = """You are analyzing a technical equipment catalog. 
+    Extract the following document-level information:
+    - Primary equipment categories
+    - Manufacturer information
+    - Any global specifications or standards
+
+    Text to analyze: {text}
+    """
+
+    model_batch_prompt: str = """You are extracting detailed specifications for multiple equipment models. 
+    For each distinct model in the provided text, extract:
+    - Full product name
+    - Model number
+    - Product category
+    - Manufacturer
+    - All specifications (dimensions, performance metrics, etc.)
+
+    Respond with a list of structured data, one for each model.
+
+    Text to analyze: {text}
+    """
+
+    # Patterns for identifying model sections
+    model_indicators: list[str] = field(default_factory=lambda: [
+        "model", "series", "type", "unit", "machine"
+    ])
+
+    # Minimum confidence threshold for metadata extraction
+    confidence_threshold: float = 0.8
+
 @dataclass
 class NodeCreationConfig:
     """Configuration for node creation."""
-    pipeline_name: str = 'seventh_pipeline'
+    pipeline_name: str = 'eighth_pipeline'
     parsed_results_path: str = 'parsed_results.json'
     output_dir: str = "node_outputs"
 
@@ -186,22 +198,22 @@ class NodeCreationConfig:
     # Keep the hierarchy config
     hierarchy_config: HierarchicalConfig = field(default_factory=HierarchicalConfig)
 
+    # Metadata extraction config
+    metadata_extraction: MetadataExtractionConfig = field(default_factory=MetadataExtractionConfig)
+
     @property
     def base_metadata(self) -> dict:
-        """Provide base metadata structure for all nodes."""
         return {
             "pipeline_info": {
                 "name": self.pipeline_name
+            },
+            "extraction_info": {
+                "metadata_version": "1.0", # Metadata extraction info
+                "extraction_timestamp": None  # Will be set during processing
             }
         }
-    # base_metadata: dict[str, any] = field(default_factory=dict)
 
-
-# Global configuration instances
 node_config = NodeCreationConfig()
-embedding_model_name = "text-embedding-3-large"
-multimodal_model = "claude-3-5-sonnet-latest"
-multimodal_llm = AnthropicMultiModal(model=multimodal_model)
 
 def get_embed_model() -> OpenAIEmbedding:
     """
