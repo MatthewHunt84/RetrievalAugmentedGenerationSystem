@@ -124,15 +124,19 @@ class HierarchicalConfig:
         )
 
 """
-NEW (Metadata Extraction): Pydantic models for equipment metadata
+Metadata Extraction: Pydantic models for equipment metadata
 """
-class EquipmentSpecs(BaseModel):
+class EquipmentMetadata(BaseModel):
     """Metadata schema for equipment product information."""
     product_name: str = Field(..., description="The full name of the product")
     model_number: str = Field(..., description="The specific model number/identifier of the product")
-    product_category: str = Field(..., description="The category of equipment")
     manufacturer: str = Field(..., description="The manufacturer of the equipment")
-    specifications: dict[str, any] = Field(..., description="Technical specifications including dimensions and performance metrics")
+    category: str = Field(..., description="Main equipment category")
+    subcategory: str | None = Field(None, description="More specific classification within the main category")
+    year: str | None = Field(None, description="Manufacturing or model year if available")
+    document_type: str = Field(..., description="Type of document (e.g., 'catalog', 'manual', 'spec sheet')")
+    content_types: list[str] = Field(default_factory=list, description="Types of content present for this model")
+
 
 @dataclass
 class MetadataExtractionConfig:
@@ -154,35 +158,37 @@ class MetadataExtractionConfig:
             self._llm_instance = Anthropic()
         return self._llm_instance
 
-    # Extraction prompts
+    # Updated extraction prompts
     document_level_prompt: str = """You are analyzing a technical equipment catalog. 
-    Extract the following document-level information:
-    - Primary equipment categories
+    Extract the following document-level information in JSON format:
+    - Equipment categories present in the document
     - Manufacturer information
-    - Any global specifications or standards
+    - Document type (e.g., catalog, manual, spec sheet)
+    - Publication year if available
+
+    Categorize equipment naturally based on industry standards and the document's content.
 
     Text to analyze: {text}
     """
 
-    model_batch_prompt: str = """You are extracting detailed specifications for multiple equipment models. 
-    For each distinct model in the provided text, extract:
+    model_batch_prompt: str = """You are extracting metadata for equipment models.
+    For each distinct model in the provided text, extract in JSON format:
     - Full product name
     - Model number
-    - Product category
     - Manufacturer
-    - All specifications (dimensions, performance metrics, etc.)
+    - Category (determine based on equipment type and industry standards)
+    - Subcategory (more specific classification if applicable)
+    - Year (if mentioned)
+    - Content types (types of information present in the description)
 
-    Respond with a list of structured data, one for each model.
+    Use natural, industry-standard categorizations. Be specific but consistent. 
+    If some of these properties are not mentioned please return an empty string as the value.
+    Identify any content types that seem relevant (e.g., specifications, features, applications, maintenance).
 
     Text to analyze: {text}
     """
 
-    # Patterns for identifying model sections
-    model_indicators: list[str] = field(default_factory=lambda: [
-        "model", "series", "type", "unit", "machine"
-    ])
-
-    # Minimum confidence threshold for metadata extraction
+    # Confidence threshold for metadata matching
     confidence_threshold: float = 0.8
 
 @dataclass

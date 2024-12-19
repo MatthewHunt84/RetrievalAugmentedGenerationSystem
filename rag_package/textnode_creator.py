@@ -9,7 +9,7 @@ from llama_index.core.schema import TextNode, Document, BaseNode
 from pydantic import Field, BaseModel
 from llama_index.core.node_parser import NodeParser
 from rag_package.errors import TextNodeCreationError
-from rag_package.rag_config import NodeCreationConfig, EquipmentSpecs
+from rag_package.rag_config import NodeCreationConfig, EquipmentMetadata
 
 class MarkdownHeaderSplitter(NodeParser, BaseModel):
     """
@@ -497,10 +497,10 @@ class TextNodeCreator:
 
         YOU MUST RESPOND WITH ONLY A VALID JSON OBJECT using this exact structure:
         {{
-            "primary_categories": [list of equipment categories found],
+            "categories": [list of equipment categories found],
             "manufacturer": "main manufacturer name",
             "document_type": "type of document (e.g., catalog, brochure)",
-            "document_date": "date if mentioned"
+            "year": "publication year if mentioned"
         }}
 
         Text to analyze:
@@ -527,10 +527,15 @@ class TextNodeCreator:
                     else:
                         text_content = str(message.content)
 
-                    self.logger.debug(f"Attempting to parse JSON: {text_content}")
-                    parsed_data = json.loads(text_content)
-                    self.logger.debug(f"Successfully parsed JSON: {parsed_data}")
-                    return parsed_data
+                    # Find and extract just the JSON if there's explanatory text
+                    start_idx = text_content.find('{')
+                    end_idx = text_content.rfind('}')
+                    if start_idx != -1 and end_idx != -1:
+                        json_content = text_content[start_idx:end_idx + 1]
+                        self.logger.debug(f"Extracted JSON content: {json_content}")
+                        return json.loads(json_content)
+
+                    return {}
                 except Exception as e:
                     self.logger.error(f"Failed to process LLM response: {str(e)}")
                     self.logger.error(f"Raw response was: {message.content}")
@@ -544,10 +549,8 @@ class TextNodeCreator:
     def _extract_batch_metadata(
             self,
             batch: list[BaseNode]
-    ) -> dict[str, EquipmentSpecs]:
-        """
-        Extract metadata for a batch of model descriptions.
-        """
+    ) -> dict[str, EquipmentMetadata]:
+        """Extract metadata for a batch of model descriptions."""
         batch_text = "\n\n".join(node.text for node in batch)
         prompt = f"""
         Extract metadata for each equipment model in the following text.
@@ -556,19 +559,12 @@ class TextNodeCreator:
         {{
             "product_name": "full product name",
             "model_number": "specific model identifier",
-            "product_category": "equipment category",
             "manufacturer": "manufacturer name",
-            "specifications": {{
-                "dimensions": {{
-                    "size relevant measurements"
-                }},
-                "engine": {{
-                    "engine specifications"
-                }},
-                "performance": {{
-                    "performance metrics"
-                }}
-            }}
+            "category": "equipment category",
+            "subcategory": "more specific classification if applicable",
+            "year": "manufacturing/model year if mentioned",
+            "document_type": "type of document (e.g., catalog, spec sheet)",
+            "content_types": ["list of content types present in description"]
         }}
 
         Return an array of these objects, one for each model found.
@@ -597,17 +593,15 @@ class TextNodeCreator:
                     else:
                         text_content = str(message.content)
 
-                    self.logger.debug(f"Raw LLM response text: {text_content}")
-                    self.logger.debug(f"Attempting to parse JSON: {text_content}")
-                    metadata_list = json.loads(text_content)
-                    self.logger.debug(f"Successfully parsed JSON: {metadata_list}")
-                    # Clean up any explanatory text before the JSON
-                    if '[' in text_content:
-                        text_content = text_content[text_content.find('['):text_content.rfind(']') + 1]
-
-                    metadata_list = json.loads(text_content)
-                    if isinstance(metadata_list, list):
-                        return self._match_metadata_to_nodes(batch, metadata_list)
+                    # Find and extract just the JSON array
+                    start_idx = text_content.find('[')
+                    end_idx = text_content.rfind(']')
+                    if start_idx != -1 and end_idx != -1:
+                        json_content = text_content[start_idx:end_idx + 1]
+                        self.logger.debug(f"Extracted JSON content: {json_content}")
+                        metadata_list = json.loads(json_content)
+                        if isinstance(metadata_list, list):
+                            return self._match_metadata_to_nodes(batch, metadata_list)
                     return {}
                 except Exception as e:
                     self.logger.error(f"Failed to process LLM response: {str(e)}")
@@ -623,17 +617,8 @@ class TextNodeCreator:
             self,
             nodes: list[BaseNode],
             metadata_list: list[dict[str, any]]
-    ) -> dict[str, EquipmentSpecs]:
-        """
-        Match extracted metadata to the correct nodes.
-
-        Args:
-            nodes: List of nodes
-            metadata_list: List of extracted metadata dictionaries
-
-        Returns:
-            Dictionary mapping node IDs to matched metadata
-        """
+    ) -> dict[str, EquipmentMetadata]:
+        """Match extracted metadata to the correct nodes."""
         matched_metadata = {}
 
         for node in nodes:
@@ -656,7 +641,7 @@ class TextNodeCreator:
                         best_match = metadata
 
             if best_match and best_score > self.config.metadata_extraction.confidence_threshold:
-                matched_metadata[node.node_id] = EquipmentSpecs(**best_match)
+                matched_metadata[node.node_id] = EquipmentMetadata(**best_match)
 
         return matched_metadata
 
@@ -664,7 +649,7 @@ class TextNodeCreator:
             self,
             nodes: list[BaseNode],
             doc_metadata: dict[str, any],
-            model_metadata: dict[str, EquipmentSpecs]
+            model_metadata: dict[str, EquipmentMetadata]
     ) -> None:
         """
         Enhance nodes with extracted metadata.

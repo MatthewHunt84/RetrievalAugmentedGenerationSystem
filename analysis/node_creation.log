@@ -2048,3 +2048,42 @@ Quick Analysis Summary:
 2024-12-18 14:36:12,397 - ERROR - Raw response was: [TextBlock(text='Here\'s the extracted metadata in the requested JSON format:\n\n[\n    {\n        "product_name": "1324STK Track Trencher",\n        "model_number": "1324STK",\n        "product_category": "Walk-Behind Track Trencher",\n        "manufacturer": "Barreto",\n        "specifications": {\n            "dimensions": {\n                "description": "Compact design, smaller than standard track trenchers"\n            },\n            "performance": {\n                "dig_depth": "24-30 inches",\n                "features": [\n                    "Floating track system",\n                    "Independent undercarriage idlers",\n                    "Reduced ground pressure",\n                    "Enhanced terrain response"\n                ]\n            }\n        }\n    }\n]\n\nNote: Some specification fields are left out as they weren\'t explicitly mentioned in the text. The provided information focuses on the key features and specifications that were directly stated in the source text.', type='text')]
 2024-12-18 14:36:12,397 - INFO - Processed batch of 1 nodes
 2024-12-18 14:36:12,397 - INFO - Successfully enhanced page 10 nodes with metadata
+2024-12-19 08:56:14,932 - INFO - Beginning hierarchical node creation process...
+2024-12-19 08:56:14,960 - INFO - Processing document: 920-3000 20230321_Brochure-WebSize.pdf
+2024-12-19 08:56:14,960 - INFO - Created 5 nodes for page 1
+2024-12-19 08:56:14,960 - INFO - Created 6 nodes for page 2
+2024-12-19 08:56:14,961 - INFO - Created 5 nodes for page 3
+2024-12-19 08:56:14,961 - INFO - Created 6 nodes for page 4
+2024-12-19 08:56:14,961 - INFO - Created 6 nodes for page 5
+2024-12-19 08:56:14,961 - INFO - Created 3 nodes for page 6
+2024-12-19 08:56:14,961 - INFO - Created 5 nodes for page 7
+2024-12-19 08:56:14,961 - INFO - Created 5 nodes for page 8
+2024-12-19 08:56:14,962 - INFO - Created 6 nodes for page 9
+2024-12-19 08:56:14,962 - INFO - Created 6 nodes for page 10
+2024-12-19 08:56:14,962 - INFO - Created 12 nodes for page 11
+2024-12-19 08:56:14,962 - INFO - Created 3 nodes for page 12
+2024-12-19 08:56:14,962 - INFO - Created 7 nodes for page 13
+2024-12-19 08:56:14,962 - INFO - Created 3 nodes for page 14
+2024-12-19 08:56:14,962 - INFO - Created 5 nodes for page 15
+2024-12-19 08:56:14,963 - INFO - Created 6 nodes for page 16
+2024-12-19 08:56:14,963 - INFO - Created 5 nodes for page 17
+2024-12-19 08:56:14,963 - INFO - Created 3 nodes for page 18
+2024-12-19 08:56:14,963 - INFO - Created 6 nodes for page 19
+2024-12-19 08:56:14,963 - INFO - Created 3 nodes for page 20
+2024-12-19 08:56:14,963 - INFO - Created 8 nodes for page 21
+2024-12-19 08:56:14,963 - INFO - Created 4 nodes for page 22
+2024-12-19 08:56:14,964 - INFO - Created 8 nodes for page 23
+2024-12-19 08:56:14,964 - INFO - Created 4 nodes for page 24
+2024-12-19 08:56:14,964 - INFO - Created 7 nodes for page 25
+2024-12-19 08:56:14,964 - INFO - Created 4 nodes for page 26
+2024-12-19 08:56:14,964 - INFO - Created 6 nodes for page 27
+2024-12-19 08:56:14,964 - INFO - Created 3 nodes for page 28
+2024-12-19 08:56:14,964 - INFO - Created 5 nodes for page 29
+2024-12-19 08:56:14,965 - INFO - Created 6 nodes for page 30
+2024-12-19 08:56:14,965 - INFO - Created 5 nodes for page 31
+2024-12-19 08:56:14,965 - INFO - Created 4 nodes for page 32
+2024-12-19 08:56:14,965 - INFO - Found 6 nodes on page 10
+2024-12-19 08:56:17,012 - INFO - Successfully extracted document metadata for page 10
+2024-12-19 08:56:22,219 - INFO - Processed batch of 5 nodes
+2024-12-19 08:56:26,348 - INFO - Processed batch of 1 nodes
+2024-12-19 08:56:26,349 - INFO - Successfully enhanced page 10 nodes with metadata
