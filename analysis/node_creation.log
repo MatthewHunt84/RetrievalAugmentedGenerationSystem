@@ -5765,3 +5765,100 @@ AttributeError: 'TextNodeCreator' object has no attribute 'logge'. Did you mean:
 2024-12-19 16:26:57,635 - INFO - Enhanced node aa0863be-c29b-4eeb-8671-20a325ae374c with metadata
 2024-12-19 16:26:57,635 - INFO - Enhanced node c53c3d04-c1ac-48e8-a06a-c145e077d0d0 with metadata
 2024-12-19 16:26:57,635 - INFO - Enhanced 5 nodes with metadata
+2024-12-20 11:24:06,833 - INFO - Beginning hierarchical node creation process...
+2024-12-20 11:24:06,839 - INFO - Processing document: 920-3066 2015 Ditch Witch S2B utility trailer in Park City, KS _ Item DQ4920 sold _ Purple Wave.pdf
+2024-12-20 11:24:06,839 - INFO - Created 7 nodes for page 1
+2024-12-20 11:24:06,840 - INFO - Created 6 nodes for page 2
+2024-12-20 11:24:06,840 - INFO - No page 10 nodes found
+2024-12-20 12:39:25,808 - INFO - Beginning hierarchical node creation process...
+2024-12-20 12:39:25,810 - INFO - Processing document: 920-3066 2015 Ditch Witch S2B utility trailer in Park City, KS _ Item DQ4920 sold _ Purple Wave.pdf
+2024-12-20 12:39:25,811 - INFO - Created 7 nodes for page 1
+2024-12-20 12:39:25,811 - INFO - Created 6 nodes for page 2
+2024-12-20 12:39:25,811 - INFO - No page 10 nodes found
+2024-12-20 12:44:36,200 - INFO - Beginning hierarchical node creation process...
+2024-12-20 12:44:36,202 - INFO - Processing document: 920-3066 2015 Ditch Witch S2B utility trailer in Park City, KS _ Item DQ4920 sold _ Purple Wave.pdf
+2024-12-20 12:44:36,202 - INFO - Created 7 nodes for page 1
+2024-12-20 12:44:36,202 - INFO - Created 6 nodes for page 2
+2024-12-20 12:44:36,202 - INFO - No page 10 nodes found
+2024-12-20 12:49:41,066 - INFO - Beginning hierarchical node creation process...
+2024-12-20 12:49:41,068 - INFO - Processing document: 920-3066 2015 Ditch Witch S2B utility trailer in Park City, KS _ Item DQ4920 sold _ Purple Wave.pdf
+2024-12-20 12:49:41,069 - INFO - Created 7 nodes for page 1
+2024-12-20 12:49:41,069 - INFO - Created 6 nodes for page 2
+2024-12-20 12:49:41,069 - INFO - Enhancing metadata for 13 nodes
+2024-12-20 12:49:41,069 - INFO - Processing pages: [1, 2]
+2024-12-20 12:49:43,694 - INFO - Created 1 batches from 13 nodes
+2024-12-20 12:49:43,694 - INFO - Processing batch of 13 nodes
+2024-12-20 12:49:43,694 - INFO - Batch content:
+2024-12-20 12:49:43,694 - INFO - Node fb6a2443-540f-4d9c-b9b2-a6ac3272b64b (Page 1): 2015 Ditch Witch S2B Utility Trailer
+2024-12-20 12:49:43,694 - INFO - Node dcc66895-d38c-4ab1-ba5f-86a38f88297d (Page 1): Product Details
+2024-12-20 12:49:43,694 - INFO - Node e9e13d40-bd3e-4ca6-aa06-a7b2113ed303 (Page 1): Specifications
+2024-12-20 12:49:43,694 - INFO - Node 73483c24-48be-4707-9d8b-1236715eec7a (Page 1): Features
+2024-12-20 12:49:43,694 - INFO - Node 5f166482-6cde-442a-b0af-092f1a1380e4 (Page 1): Tires
+2024-12-20 12:49:43,694 - INFO - Node 41ddbfa1-dcf0-478c-b406-c3bb5b6d489d (Page 1): Auction Details
+2024-12-20 12:49:43,694 - INFO - Node 41e8aece-dfb0-4077-857d-b3f216580ea0 (Page 1): Pricing Information
+2024-12-20 12:49:43,695 - INFO - Node c85a2527-44eb-483e-9e97-55af8bd9d51e (Page 2): 2015 Ditch Witch S2B Utility Trailer
+2024-12-20 12:49:43,695 - INFO - Node d1451a95-95d0-4478-8429-00461e0d64b4 (Page 2): Product Details
+2024-12-20 12:49:43,695 - INFO - Node 6f68428c-1090-4d22-959f-d7895e091938 (Page 2): Sale Information
+2024-12-20 12:49:43,695 - INFO - Node 1b620082-d5cc-4b02-ae8b-880772c0a1d7 (Page 2): Additional Information
+2024-12-20 12:49:43,695 - INFO - Node 39ae9dec-5903-490a-a409-7c71fd6ae038 (Page 2): Available Information Sections
+2024-12-20 12:49:43,695 - INFO - Node 2ebe269f-4681-4c8e-8f82-b8ea6a6a1acf (Page 2): Transfer of Ownership
+2024-12-20 12:49:48,712 - INFO - Updated model metadata. Current count: 6
+2024-12-20 12:49:48,713 - INFO - Enhanced node fb6a2443-540f-4d9c-b9b2-a6ac3272b64b (Page 1) with metadata
+2024-12-20 12:49:48,713 - INFO - Enhanced node dcc66895-d38c-4ab1-ba5f-86a38f88297d (Page 1) with metadata
+2024-12-20 12:49:48,713 - WARNING - No metadata found for node e9e13d40-bd3e-4ca6-aa06-a7b2113ed303 (Page 1)
+2024-12-20 12:49:48,713 - WARNING - No metadata found for node 73483c24-48be-4707-9d8b-1236715eec7a (Page 1)
+2024-12-20 12:49:48,713 - WARNING - No metadata found for node 5f166482-6cde-442a-b0af-092f1a1380e4 (Page 1)
+2024-12-20 12:49:48,713 - WARNING - No metadata found for node 41ddbfa1-dcf0-478c-b406-c3bb5b6d489d (Page 1)
+2024-12-20 12:49:48,713 - INFO - Enhanced node 41e8aece-dfb0-4077-857d-b3f216580ea0 (Page 1) with metadata
+2024-12-20 12:49:48,714 - INFO - Enhanced node c85a2527-44eb-483e-9e97-55af8bd9d51e (Page 2) with metadata
+2024-12-20 12:49:48,714 - INFO - Enhanced node d1451a95-95d0-4478-8429-00461e0d64b4 (Page 2) with metadata
+2024-12-20 12:49:48,714 - WARNING - No metadata found for node 6f68428c-1090-4d22-959f-d7895e091938 (Page 2)
+2024-12-20 12:49:48,714 - INFO - Enhanced node 1b620082-d5cc-4b02-ae8b-880772c0a1d7 (Page 2) with metadata
+2024-12-20 12:49:48,714 - WARNING - No metadata found for node 39ae9dec-5903-490a-a409-7c71fd6ae038 (Page 2)
+2024-12-20 12:49:48,714 - WARNING - No metadata found for node 2ebe269f-4681-4c8e-8f82-b8ea6a6a1acf (Page 2)
+2024-12-20 12:49:48,714 - INFO - Enhanced 6 out of 13 nodes with metadata
+2024-12-23 10:48:09,024 - ERROR - Document metadata extraction failed: '\n            "manufacturer"'
+2024-12-23 10:48:09,025 - ERROR - Batch metadata extraction failed: '\n            "product_name"'
+2024-12-23 10:48:09,025 - ERROR - Full error: KeyError
+2024-12-23 10:48:09,026 - ERROR - Stack trace: Traceback (most recent call last):
+  File "/Users/matthew.hunt/Developer/python_projects/retrieval_augmented_generation/rag_package/new_textnode_creator.py", line 520, in _extract_batch_metadata
+    "content": self.config.metadata_extraction.model_batch_prompt.format(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: '\n            "product_name"'
+
+2024-12-23 10:48:09,026 - WARNING - No metadata extracted from this batch
+2024-12-23 10:48:09,026 - WARNING - No metadata found for node c984348a-ae95-4bdd-91fb-5e8c598daa07 (Page 1)
+2024-12-23 10:48:09,026 - WARNING - No metadata found for node cc4bbc82-fa89-4d2f-a54e-023de6924673 (Page 1)
+2024-12-23 10:48:09,026 - WARNING - No metadata found for node 23ccb7f5-d2e9-4828-bf25-7906df17a7d6 (Page 1)
+2024-12-23 10:48:09,027 - WARNING - No metadata found for node f6c49e95-6d11-4ed6-ab76-cf34ce769461 (Page 1)
+2024-12-23 10:48:09,027 - WARNING - No metadata found for node 56d654c1-a207-4e85-a849-ea6ca20b5450 (Page 1)
+2024-12-23 10:48:09,027 - WARNING - No metadata found for node 2e554b7d-2042-4354-9f5f-053310b402ac (Page 1)
+2024-12-23 10:48:09,027 - WARNING - No metadata found for node 63cc370c-6377-4e19-aacf-f82ae0d91538 (Page 1)
+2024-12-23 10:48:09,027 - WARNING - No metadata found for node ae418e12-dd8a-43df-9c02-11cdd1e8a9cb (Page 2)
+2024-12-23 10:48:09,027 - WARNING - No metadata found for node 6b258738-58f8-4077-9a39-68b47bfc8d0e (Page 2)
+2024-12-23 10:48:09,027 - WARNING - No metadata found for node 5e8cbafd-bfdd-4ca3-822f-ae5453c7d9bd (Page 2)
+2024-12-23 10:48:09,027 - WARNING - No metadata found for node a9f261d1-3395-4799-9f15-0e76c0ea8c3f (Page 2)
+2024-12-23 10:48:09,027 - WARNING - No metadata found for node 9ad7fe5a-9bbe-43dc-9320-f3f4b4d85401 (Page 2)
+2024-12-23 10:48:09,027 - WARNING - No metadata found for node 8e974b10-1bfc-44b4-be82-fe47359e7ff9 (Page 2)
+2024-12-23 10:52:06,070 - WARNING - No metadata found for node b8b2e90a-9192-4060-af1e-8129d3c5e2eb (Page 1)
+2024-12-23 10:52:06,072 - WARNING - No metadata found for node 83947ad4-ff30-4d99-94f2-e5cef52de922 (Page 1)
+2024-12-23 10:52:06,072 - WARNING - No metadata found for node 099b88c8-7c4c-4b3e-9baf-9d42b9fb0d6a (Page 1)
+2024-12-23 10:52:06,072 - WARNING - No metadata found for node ea075942-6fb7-4bb7-bf2e-985ec3eddd96 (Page 1)
+2024-12-23 10:52:06,072 - WARNING - No metadata found for node 17faa533-dbea-44e2-a7e3-f0eab2648edc (Page 2)
+2024-12-23 10:52:06,072 - WARNING - No metadata found for node 92edcaec-84ef-45c0-a97b-dec529ad1cb9 (Page 2)
+2024-12-23 10:52:06,072 - WARNING - No metadata found for node e791bd34-b005-4857-bbfb-d9cec39f5b9f (Page 2)
+2024-12-23 11:02:50,982 - WARNING - No metadata found for node 5197de32-2613-4ab5-ad4a-14eed6a25070 (Page 1)
+2024-12-23 11:02:50,984 - WARNING - No metadata found for node 803829d4-18b2-46d5-8cce-b13f724ce072 (Page 1)
+2024-12-23 11:02:50,984 - WARNING - No metadata found for node c1ae5d54-3f63-4e24-ba2d-91d9e0d88ff7 (Page 1)
+2024-12-23 11:02:50,984 - WARNING - No metadata found for node aadc2b46-d876-4fae-b86f-da8193bd0dab (Page 1)
+2024-12-23 11:02:50,984 - WARNING - No metadata found for node 8b199acf-ba0f-409f-98c8-6d37b38b19e6 (Page 2)
+2024-12-23 11:02:50,984 - WARNING - No metadata found for node 1ec90b46-20d9-41ce-9464-b979a487f8da (Page 2)
+2024-12-23 11:02:50,984 - WARNING - No metadata found for node 47bfe26e-36bd-4f85-9729-9a675d224f69 (Page 2)
+2024-12-23 11:12:15,871 - ERROR - Hierarchical node creation failed: 'NodeCreationConfig' object has no attribute 'mode'
+2024-12-23 11:13:48,375 - WARNING - No metadata found for node 008025b7-ff07-4e44-abd0-9008c4720a6d (Page 1)
+2024-12-23 11:13:48,376 - WARNING - No metadata found for node 983b0b0d-947c-4075-a00e-78860913fb59 (Page 1)
+2024-12-23 11:13:48,376 - WARNING - No metadata found for node 3a0374ba-dbea-4d16-9b81-8a7c710b27ba (Page 1)
+2024-12-23 11:13:48,376 - WARNING - No metadata found for node 9e41668c-7ba7-4905-b863-35be45d4ec35 (Page 1)
+2024-12-23 11:13:48,376 - WARNING - No metadata found for node fbf7e5b1-3ece-43cb-af36-19c3bcf7b621 (Page 2)
+2024-12-23 11:13:48,376 - WARNING - No metadata found for node 5a20b990-84cf-436e-a04c-aea3d5339bbc (Page 2)
+2024-12-23 11:13:48,376 - WARNING - No metadata found for node 151bd589-f24b-4d6c-9f71-f8311b44bf62 (Page 2)

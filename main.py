@@ -1,28 +1,45 @@
 # main.py
 from dotenv import load_dotenv
+from torch.utils.model_dump import hierarchical_pickle
+
+from rag_package.config.hierarchical_config import HierarchicalConfig
+from rag_package.config.metadata_extraction_config import MetadataExtractionConfig
 from rag_package.document_processor import DocumentProcessor
 from rag_package.vector_index_manager import VectorIndexManager
 from rag_package.textnode_creator import TextNodeCreator
 from rag_package.query_engine_builder import QueryEngineBuilder
 from rag_package.query_engine_builder import QueryManager
 from rag_package.error_handler import ErrorHandler
-from rag_package import rag_config
-
+from rag_package.config.parser_config import ParserConfig
+from rag_package.config.node_creation_config import NodeCreationConfig
+from rag_package.config.embedding_config import get_embed_model
 
 def main():
     load_dotenv()
     error_handler = ErrorHandler()
-    embed_model = rag_config.get_embed_model()
+    embed_model = get_embed_model() ## Add me to a class when we get back to embedding
 
     try:
+
         # index_manager = VectorIndexManager(embed_model=embed_model)
 
         # If we need to parse files and create nodes
         # if not index_manager.index_exists():
-        # document_processor = DocumentProcessor(parsing_config=rag_config.parsing_config)
-        # document_processor.process_all(use_cached_files=rag_config.use_cached_files)
-        node_creator = TextNodeCreator(node_config=rag_config.node_config)
+
+        # Config initialization. These will soon be composed into a single RAGConfig class
+        # parser = ParserConfig(model="sonnet_multimodal", use_cached_files=True)
+        #
+        # document_processor = DocumentProcessor(parsing_config=parser)
+        # document_processor.process_all()
+
+        node_creation_config = NodeCreationConfig(pipeline_name="twelfth_pipeline",
+                                                  hierarchical_config=HierarchicalConfig(),
+                                                  metadata_extraction=MetadataExtractionConfig(model="haiku"),
+                                                  test_pages=[1,2])
+
+        node_creator = TextNodeCreator(node_config=node_creation_config)
         nodes = node_creator.create_nodes()
+
     #         # Create new index
     #         index = index_manager.get_or_create_index(text_nodes)
     #     else:

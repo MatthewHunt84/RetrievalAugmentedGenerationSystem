@@ -1,0 +1,1268 @@
+=== LLM Calls Analysis ===
+Document Metadata Extraction Calls: 1
+Batch Metadata Extraction Calls: 3
+Total LLM Calls: 4
+
+
+=== Level 0 Nodes ===
+
+Node 1:
+==================================================
+Node ID: fb6a2443-540f-4d9c-b9b2-a6ac3272b64b
+Node Type: TextNode
+Page Number: 1
+
+Text Content:
+--------------------
+# 2015 Ditch Witch S2B Utility Trailer
+
+
+Relationships:
+--------------------
+child: ['dcc66895-d38c-4ab1-ba5f-86a38f88297d']
+
+Metadata Structure:
+--------------------
+pipeline_info:
+  name: str
+document_info:
+  name: str
+  total_pages: int
+  page_num: int
+  document_uuid: str
+  ingestion_timestamp: str
+header_info:
+  level: int
+  text: str
+hierarchy_info:
+  level: int
+  parser: str
+document_metadata:
+  manufacturer: str
+  document_type: str
+  year_published: str
+  equipment_categories: list
+  models_included: list
+equipment_metadata:
+  product_name: str
+  model_number: str
+  manufacturer: str
+  category: str
+  subcategory: str
+  year: str
+  specifications: dict
+  capabilities: list
+  content_types: list
+extraction_info:
+  extraction_model: str
+  metadata_version: str
+  extraction_timestamp: str
+
+Metadata Values:
+--------------------
+pipeline_info:
+  name: eleventh_pipeline
+document_info:
+  name: 920-3066 2015 Ditch Witch S2B utility trailer in Park City, KS _ Item DQ4920 sold _ Purple Wave.pdf
+  total_pages: 2
+  page_num: 1
+  document_uuid: fbdc307a-a7bc-43c4-875f-f343f5d959b7
+  ingestion_timestamp: 2024-12-20T12:49:41.068917
+header_info:
+  level: 1
+  text: 2015 Ditch Witch S2B Utility Trailer
+hierarchy_info:
+  level: 0
+  parser: h1_sections
+document_metadata:
+  manufacturer: Ditch Witch
+  document_type: auction listing
+  year_published: 2015
+  equipment_categories: ['utility trailer', 'construction equipment']
+  models_included: ['S2B']
+equipment_metadata:
+  product_name: Ditch Witch S2B Utility Trailer
+  model_number: S2B
+  manufacturer: Ditch Witch
+  category: Construction Equipment
+  subcategory: Utility Trailer
+  year: 2015
+  specifications: {'dimensions': {'overall_length': '10\' 8"', 'overall_width': '64"', 'deck_length': "8'", 'deck_width': '64"'}, 'ramps': 'Manual', 'deck_type': 'Steel', 'landing_gear': 'Single', 'suspension': 'Spring', 'GVWR': '3,500 lbs', 'wheels': {'number': 2, 'tire_size': '205/75D15'}}
+  capabilities: ['Towing', 'Equipment transportation', 'Mounting points for additional equipment']
+  content_types: ['Product Details', 'Specifications', 'Features', 'Tires', 'Auction Details', 'Pricing Information']
+extraction_info:
+  extraction_model: claude-3-5-haiku-latest
+  metadata_version: 1.0
+  extraction_timestamp: 2024-12-20T12:49:48.713478
+
+==================================================
+
+Node 2:
+==================================================
+Node ID: c85a2527-44eb-483e-9e97-55af8bd9d51e
+Node Type: TextNode
+Page Number: 2
+
+Text Content:
+--------------------
+# 2015 Ditch Witch S2B Utility Trailer
+
+
+Relationships:
+--------------------
+child: ['d1451a95-95d0-4478-8429-00461e0d64b4']
+
+Metadata Structure:
+--------------------
+pipeline_info:
+  name: str
+document_info:
+  name: str
+  total_pages: int
+  page_num: int
+  document_uuid: str
+  ingestion_timestamp: str
+header_info:
+  level: int
+  text: str
+hierarchy_info:
+  level: int
+  parser: str
+document_metadata:
+  manufacturer: str
+  document_type: str
+  year_published: str
+  equipment_categories: list
+  models_included: list
+equipment_metadata:
+  product_name: str
+  model_number: str
+  manufacturer: str
+  category: str
+  subcategory: str
+  year: str
+  specifications: dict
+  capabilities: list
+  content_types: list
+extraction_info:
+  extraction_model: str
+  metadata_version: str
+  extraction_timestamp: str
+
+Metadata Values:
+--------------------
+pipeline_info:
+  name: eleventh_pipeline
+document_info:
+  name: 920-3066 2015 Ditch Witch S2B utility trailer in Park City, KS _ Item DQ4920 sold _ Purple Wave.pdf
+  total_pages: 2
+  page_num: 2
+  document_uuid: 5329d834-00b8-489a-9b80-bd83119fb6da
+  ingestion_timestamp: 2024-12-20T12:49:41.069190
+header_info:
+  level: 1
+  text: 2015 Ditch Witch S2B Utility Trailer
+hierarchy_info:
+  level: 0
+  parser: h1_sections
+document_metadata:
+  manufacturer: Ditch Witch
+  document_type: auction listing
+  year_published: 2015
+  equipment_categories: ['utility trailer', 'construction equipment']
+  models_included: ['S2B']
+equipment_metadata:
+  product_name: Ditch Witch S2B Utility Trailer
+  model_number: S2B
+  manufacturer: Ditch Witch
+  category: Construction Equipment
+  subcategory: Utility Trailer
+  year: 2015
+  specifications: {'dimensions': {'overall_length': '10\' 8"', 'overall_width': '64"', 'deck_length': "8'", 'deck_width': '64"'}, 'ramps': 'Manual', 'deck_type': 'Steel', 'landing_gear': 'Single', 'suspension': 'Spring', 'GVWR': '3,500 lbs', 'wheels': {'number': 2, 'tire_size': '205/75D15'}}
+  capabilities: ['Towing', 'Equipment transportation', 'Mounting points for additional equipment']
+  content_types: ['Product Details', 'Specifications', 'Features', 'Tires', 'Auction Details', 'Pricing Information']
+extraction_info:
+  extraction_model: claude-3-5-haiku-latest
+  metadata_version: 1.0
+  extraction_timestamp: 2024-12-20T12:49:48.713478
+
+==================================================
+
+
+Total nodes at level 0: 2
+Nodes with equipment metadata: 2
+Nodes with document metadata: 2
+
+==================================================
+
+
+=== Level 1 Nodes ===
+
+Node 1:
+==================================================
+Node ID: dcc66895-d38c-4ab1-ba5f-86a38f88297d
+Node Type: TextNode
+Page Number: 1
+
+Text Content:
+--------------------
+## Product Details
+
+- Model: Ditch Witch S2B utility trailer
+- Year: 2015
+- VIN: 1D9BT1219FV100067
+- Lot #: 27
+
+
+Relationships:
+--------------------
+parent: ['fb6a2443-540f-4d9c-b9b2-a6ac3272b64b']
+child: ['41ddbfa1-dcf0-478c-b406-c3bb5b6d489d', '41e8aece-dfb0-4077-857d-b3f216580ea0', '5f166482-6cde-442a-b0af-092f1a1380e4', '73483c24-48be-4707-9d8b-1236715eec7a', 'e9e13d40-bd3e-4ca6-aa06-a7b2113ed303']
+
+Metadata Structure:
+--------------------
+pipeline_info:
+  name: str
+document_info:
+  name: str
+  total_pages: int
+  page_num: int
+  document_uuid: str
+  ingestion_timestamp: str
+header_info:
+  level: int
+  text: str
+hierarchy_info:
+  level: int
+  parser: str
+document_metadata:
+  manufacturer: str
+  document_type: str
+  year_published: str
+  equipment_categories: list
+  models_included: list
+equipment_metadata:
+  product_name: str
+  model_number: str
+  manufacturer: str
+  category: str
+  subcategory: str
+  year: str
+  specifications: dict
+  capabilities: list
+  content_types: list
+extraction_info:
+  extraction_model: str
+  metadata_version: str
+  extraction_timestamp: str
+
+Metadata Values:
+--------------------
+pipeline_info:
+  name: eleventh_pipeline
+document_info:
+  name: 920-3066 2015 Ditch Witch S2B utility trailer in Park City, KS _ Item DQ4920 sold _ Purple Wave.pdf
+  total_pages: 2
+  page_num: 1
+  document_uuid: fbdc307a-a7bc-43c4-875f-f343f5d959b7
+  ingestion_timestamp: 2024-12-20T12:49:41.068917
+header_info:
+  level: 2
+  text: Product Details
+hierarchy_info:
+  level: 1
+  parser: h2_sections
+document_metadata:
+  manufacturer: Ditch Witch
+  document_type: auction listing
+  year_published: 2015
+  equipment_categories: ['utility trailer', 'construction equipment']
+  models_included: ['S2B']
+equipment_metadata:
+  product_name: Ditch Witch S2B Utility Trailer
+  model_number: S2B
+  manufacturer: Ditch Witch
+  category: Construction Equipment
+  subcategory: Utility Trailer
+  year: 2015
+  specifications: {'dimensions': {'overall_length': '10\' 8"', 'overall_width': '64"', 'deck_length': "8'", 'deck_width': '64"'}, 'ramps': 'Manual', 'deck_type': 'Steel', 'landing_gear': 'Single', 'suspension': 'Spring', 'GVWR': '3,500 lbs', 'wheels': {'number': 2, 'tire_size': '205/75D15'}}
+  capabilities: ['Towing', 'Equipment transportation', 'Mounting points for additional equipment']
+  content_types: ['Product Details', 'Specifications', 'Features', 'Tires', 'Auction Details', 'Pricing Information']
+extraction_info:
+  extraction_model: claude-3-5-haiku-latest
+  metadata_version: 1.0
+  extraction_timestamp: 2024-12-20T12:49:48.713478
+
+==================================================
+
+Node 2:
+==================================================
+Node ID: d1451a95-95d0-4478-8429-00461e0d64b4
+Node Type: TextNode
+Page Number: 2
+
+Text Content:
+--------------------
+## Product Details
+
+- Model: Ditch Witch S2B utility trailer
+- Year: 2015
+- Location: Park City, KS
+- Item Number: DQ4920
+- Auction Platform: Purple Wave
+
+
+Relationships:
+--------------------
+parent: ['c85a2527-44eb-483e-9e97-55af8bd9d51e']
+child: ['1b620082-d5cc-4b02-ae8b-880772c0a1d7', '2ebe269f-4681-4c8e-8f82-b8ea6a6a1acf', '39ae9dec-5903-490a-a409-7c71fd6ae038', '6f68428c-1090-4d22-959f-d7895e091938']
+
+Metadata Structure:
+--------------------
+pipeline_info:
+  name: str
+document_info:
+  name: str
+  total_pages: int
+  page_num: int
+  document_uuid: str
+  ingestion_timestamp: str
+header_info:
+  level: int
+  text: str
+hierarchy_info:
+  level: int
+  parser: str
+document_metadata:
+  manufacturer: str
+  document_type: str
+  year_published: str
+  equipment_categories: list
+  models_included: list
+equipment_metadata:
+  product_name: str
+  model_number: str
+  manufacturer: str
+  category: str
+  subcategory: str
+  year: str
+  specifications: dict
+  capabilities: list
+  content_types: list
+extraction_info:
+  extraction_model: str
+  metadata_version: str
+  extraction_timestamp: str
+
+Metadata Values:
+--------------------
+pipeline_info:
+  name: eleventh_pipeline
+document_info:
+  name: 920-3066 2015 Ditch Witch S2B utility trailer in Park City, KS _ Item DQ4920 sold _ Purple Wave.pdf
+  total_pages: 2
+  page_num: 2
+  document_uuid: 5329d834-00b8-489a-9b80-bd83119fb6da
+  ingestion_timestamp: 2024-12-20T12:49:41.069190
+header_info:
+  level: 2
+  text: Product Details
+hierarchy_info:
+  level: 1
+  parser: h2_sections
+document_metadata:
+  manufacturer: Ditch Witch
+  document_type: auction listing
+  year_published: 2015
+  equipment_categories: ['utility trailer', 'construction equipment']
+  models_included: ['S2B']
+equipment_metadata:
+  product_name: Ditch Witch S2B Utility Trailer
+  model_number: S2B
+  manufacturer: Ditch Witch
+  category: Construction Equipment
+  subcategory: Utility Trailer
+  year: 2015
+  specifications: {'dimensions': {'overall_length': '10\' 8"', 'overall_width': '64"', 'deck_length': "8'", 'deck_width': '64"'}, 'ramps': 'Manual', 'deck_type': 'Steel', 'landing_gear': 'Single', 'suspension': 'Spring', 'GVWR': '3,500 lbs', 'wheels': {'number': 2, 'tire_size': '205/75D15'}}
+  capabilities: ['Towing', 'Equipment transportation', 'Mounting points for additional equipment']
+  content_types: ['Product Details', 'Specifications', 'Features', 'Tires', 'Auction Details', 'Pricing Information']
+extraction_info:
+  extraction_model: claude-3-5-haiku-latest
+  metadata_version: 1.0
+  extraction_timestamp: 2024-12-20T12:49:48.713478
+
+==================================================
+
+
+Total nodes at level 1: 2
+Nodes with equipment metadata: 2
+Nodes with document metadata: 2
+
+==================================================
+
+
+=== Level 2 Nodes ===
+
+Node 1:
+==================================================
+Node ID: e9e13d40-bd3e-4ca6-aa06-a7b2113ed303
+Node Type: TextNode
+Page Number: 1
+
+Text Content:
+--------------------
+### Specifications
+
+- Dimensions:
+  - Overall: 10' 8" L x 64" W
+  - Deck: 8' L x 64" W
+- Ramps: Manual
+- Length: 83"
+
+
+Relationships:
+--------------------
+parent: ['dcc66895-d38c-4ab1-ba5f-86a38f88297d']
+
+Metadata Structure:
+--------------------
+pipeline_info:
+  name: str
+document_info:
+  name: str
+  total_pages: int
+  page_num: int
+  document_uuid: str
+  ingestion_timestamp: str
+header_info:
+  level: int
+  text: str
+hierarchy_info:
+  level: int
+  parser: str
+document_metadata:
+  manufacturer: str
+  document_type: str
+  year_published: str
+  equipment_categories: list
+  models_included: list
+equipment_metadata:
+  product_name: NoneType
+  model_number: NoneType
+  manufacturer: NoneType
+  category: NoneType
+  subcategory: NoneType
+  year: NoneType
+  specifications: list
+  capabilities: list
+  content_types: list
+extraction_info:
+  extraction_model: str
+  metadata_version: str
+  extraction_timestamp: str
+
+Metadata Values:
+--------------------
+pipeline_info:
+  name: eleventh_pipeline
+document_info:
+  name: 920-3066 2015 Ditch Witch S2B utility trailer in Park City, KS _ Item DQ4920 sold _ Purple Wave.pdf
+  total_pages: 2
+  page_num: 1
+  document_uuid: fbdc307a-a7bc-43c4-875f-f343f5d959b7
+  ingestion_timestamp: 2024-12-20T12:49:41.068917
+header_info:
+  level: 3
+  text: Specifications
+hierarchy_info:
+  level: 2
+  parser: h3_sections
+document_metadata:
+  manufacturer: Ditch Witch
+  document_type: auction listing
+  year_published: 2015
+  equipment_categories: ['utility trailer', 'construction equipment']
+  models_included: ['S2B']
+equipment_metadata:
+  product_name: None
+  model_number: None
+  manufacturer: None
+  category: None
+  subcategory: None
+  year: None
+  specifications: []
+  capabilities: []
+  content_types: []
+extraction_info:
+  extraction_model: claude-3-5-haiku-latest
+  metadata_version: 1.0
+  extraction_timestamp: 2024-12-20T12:49:48.713478
+
+==================================================
+
+Node 2:
+==================================================
+Node ID: 73483c24-48be-4707-9d8b-1236715eec7a
+Node Type: TextNode
+Page Number: 1
+
+Text Content:
+--------------------
+### Features
+
+- Deck type: Steel
+- Landing gear: Single
+- Suspension: Spring
+- GVWR: 3,500 lbs
+
+
+Relationships:
+--------------------
+parent: ['dcc66895-d38c-4ab1-ba5f-86a38f88297d']
+
+Metadata Structure:
+--------------------
+pipeline_info:
+  name: str
+document_info:
+  name: str
+  total_pages: int
+  page_num: int
+  document_uuid: str
+  ingestion_timestamp: str
+header_info:
+  level: int
+  text: str
+hierarchy_info:
+  level: int
+  parser: str
+document_metadata:
+  manufacturer: str
+  document_type: str
+  year_published: str
+  equipment_categories: list
+  models_included: list
+equipment_metadata:
+  product_name: NoneType
+  model_number: NoneType
+  manufacturer: NoneType
+  category: NoneType
+  subcategory: NoneType
+  year: NoneType
+  specifications: list
+  capabilities: list
+  content_types: list
+extraction_info:
+  extraction_model: str
+  metadata_version: str
+  extraction_timestamp: str
+
+Metadata Values:
+--------------------
+pipeline_info:
+  name: eleventh_pipeline
+document_info:
+  name: 920-3066 2015 Ditch Witch S2B utility trailer in Park City, KS _ Item DQ4920 sold _ Purple Wave.pdf
+  total_pages: 2
+  page_num: 1
+  document_uuid: fbdc307a-a7bc-43c4-875f-f343f5d959b7
+  ingestion_timestamp: 2024-12-20T12:49:41.068917
+header_info:
+  level: 3
+  text: Features
+hierarchy_info:
+  level: 2
+  parser: h3_sections
+document_metadata:
+  manufacturer: Ditch Witch
+  document_type: auction listing
+  year_published: 2015
+  equipment_categories: ['utility trailer', 'construction equipment']
+  models_included: ['S2B']
+equipment_metadata:
+  product_name: None
+  model_number: None
+  manufacturer: None
+  category: None
+  subcategory: None
+  year: None
+  specifications: []
+  capabilities: []
+  content_types: []
+extraction_info:
+  extraction_model: claude-3-5-haiku-latest
+  metadata_version: 1.0
+  extraction_timestamp: 2024-12-20T12:49:48.713478
+
+==================================================
+
+Node 3:
+==================================================
+Node ID: 5f166482-6cde-442a-b0af-092f1a1380e4
+Node Type: TextNode
+Page Number: 1
+
+Text Content:
+--------------------
+### Tires
+
+- Number of wheels: 2
+- Size: 205/75D15
+
+
+Relationships:
+--------------------
+parent: ['dcc66895-d38c-4ab1-ba5f-86a38f88297d']
+
+Metadata Structure:
+--------------------
+pipeline_info:
+  name: str
+document_info:
+  name: str
+  total_pages: int
+  page_num: int
+  document_uuid: str
+  ingestion_timestamp: str
+header_info:
+  level: int
+  text: str
+hierarchy_info:
+  level: int
+  parser: str
+document_metadata:
+  manufacturer: str
+  document_type: str
+  year_published: str
+  equipment_categories: list
+  models_included: list
+equipment_metadata:
+  product_name: NoneType
+  model_number: NoneType
+  manufacturer: NoneType
+  category: NoneType
+  subcategory: NoneType
+  year: NoneType
+  specifications: list
+  capabilities: list
+  content_types: list
+extraction_info:
+  extraction_model: str
+  metadata_version: str
+  extraction_timestamp: str
+
+Metadata Values:
+--------------------
+pipeline_info:
+  name: eleventh_pipeline
+document_info:
+  name: 920-3066 2015 Ditch Witch S2B utility trailer in Park City, KS _ Item DQ4920 sold _ Purple Wave.pdf
+  total_pages: 2
+  page_num: 1
+  document_uuid: fbdc307a-a7bc-43c4-875f-f343f5d959b7
+  ingestion_timestamp: 2024-12-20T12:49:41.068917
+header_info:
+  level: 3
+  text: Tires
+hierarchy_info:
+  level: 2
+  parser: h3_sections
+document_metadata:
+  manufacturer: Ditch Witch
+  document_type: auction listing
+  year_published: 2015
+  equipment_categories: ['utility trailer', 'construction equipment']
+  models_included: ['S2B']
+equipment_metadata:
+  product_name: None
+  model_number: None
+  manufacturer: None
+  category: None
+  subcategory: None
+  year: None
+  specifications: []
+  capabilities: []
+  content_types: []
+extraction_info:
+  extraction_model: claude-3-5-haiku-latest
+  metadata_version: 1.0
+  extraction_timestamp: 2024-12-20T12:49:48.713478
+
+==================================================
+
+Node 4:
+==================================================
+Node ID: 41ddbfa1-dcf0-478c-b406-c3bb5b6d489d
+Node Type: TextNode
+Page Number: 1
+
+Text Content:
+--------------------
+### Auction Details
+
+- Location: Park City, KS
+- Auction Date: 10/10/23, 11:16 AM
+- Item Number: DQ4920
+- Sold by: Purple Wave
+
+
+Relationships:
+--------------------
+parent: ['dcc66895-d38c-4ab1-ba5f-86a38f88297d']
+
+Metadata Structure:
+--------------------
+pipeline_info:
+  name: str
+document_info:
+  name: str
+  total_pages: int
+  page_num: int
+  document_uuid: str
+  ingestion_timestamp: str
+header_info:
+  level: int
+  text: str
+hierarchy_info:
+  level: int
+  parser: str
+document_metadata:
+  manufacturer: str
+  document_type: str
+  year_published: str
+  equipment_categories: list
+  models_included: list
+equipment_metadata:
+  product_name: NoneType
+  model_number: NoneType
+  manufacturer: NoneType
+  category: NoneType
+  subcategory: NoneType
+  year: NoneType
+  specifications: list
+  capabilities: list
+  content_types: list
+extraction_info:
+  extraction_model: str
+  metadata_version: str
+  extraction_timestamp: str
+
+Metadata Values:
+--------------------
+pipeline_info:
+  name: eleventh_pipeline
+document_info:
+  name: 920-3066 2015 Ditch Witch S2B utility trailer in Park City, KS _ Item DQ4920 sold _ Purple Wave.pdf
+  total_pages: 2
+  page_num: 1
+  document_uuid: fbdc307a-a7bc-43c4-875f-f343f5d959b7
+  ingestion_timestamp: 2024-12-20T12:49:41.068917
+header_info:
+  level: 3
+  text: Auction Details
+hierarchy_info:
+  level: 2
+  parser: h3_sections
+document_metadata:
+  manufacturer: Ditch Witch
+  document_type: auction listing
+  year_published: 2015
+  equipment_categories: ['utility trailer', 'construction equipment']
+  models_included: ['S2B']
+equipment_metadata:
+  product_name: None
+  model_number: None
+  manufacturer: None
+  category: None
+  subcategory: None
+  year: None
+  specifications: []
+  capabilities: []
+  content_types: []
+extraction_info:
+  extraction_model: claude-3-5-haiku-latest
+  metadata_version: 1.0
+  extraction_timestamp: 2024-12-20T12:49:48.713478
+
+==================================================
+
+Node 5:
+==================================================
+Node ID: 41e8aece-dfb0-4077-857d-b3f216580ea0
+Node Type: TextNode
+Page Number: 1
+
+Text Content:
+--------------------
+### Pricing Information
+
+- Contract Price: $807.50
+- High Bidder: 85753
+
+This 2015 Ditch Witch S2B utility trailer was part of a construction equipment auction. The image shows the trailer in an outdoor setting, surrounded by other construction equipment. The trailer is bright orange in color, with a single axle and a flat deck. It features a V-shaped tongue for towing and appears to have mounting points for additional equipment on the deck.
+
+Relationships:
+--------------------
+parent: ['dcc66895-d38c-4ab1-ba5f-86a38f88297d']
+
+Metadata Structure:
+--------------------
+pipeline_info:
+  name: str
+document_info:
+  name: str
+  total_pages: int
+  page_num: int
+  document_uuid: str
+  ingestion_timestamp: str
+header_info:
+  level: int
+  text: str
+hierarchy_info:
+  level: int
+  parser: str
+document_metadata:
+  manufacturer: str
+  document_type: str
+  year_published: str
+  equipment_categories: list
+  models_included: list
+equipment_metadata:
+  product_name: str
+  model_number: str
+  manufacturer: str
+  category: str
+  subcategory: str
+  year: str
+  specifications: dict
+  capabilities: list
+  content_types: list
+extraction_info:
+  extraction_model: str
+  metadata_version: str
+  extraction_timestamp: str
+
+Metadata Values:
+--------------------
+pipeline_info:
+  name: eleventh_pipeline
+document_info:
+  name: 920-3066 2015 Ditch Witch S2B utility trailer in Park City, KS _ Item DQ4920 sold _ Purple Wave.pdf
+  total_pages: 2
+  page_num: 1
+  document_uuid: fbdc307a-a7bc-43c4-875f-f343f5d959b7
+  ingestion_timestamp: 2024-12-20T12:49:41.068917
+header_info:
+  level: 3
+  text: Pricing Information
+hierarchy_info:
+  level: 2
+  parser: h3_sections
+document_metadata:
+  manufacturer: Ditch Witch
+  document_type: auction listing
+  year_published: 2015
+  equipment_categories: ['utility trailer', 'construction equipment']
+  models_included: ['S2B']
+equipment_metadata:
+  product_name: Ditch Witch S2B Utility Trailer
+  model_number: S2B
+  manufacturer: Ditch Witch
+  category: Construction Equipment
+  subcategory: Utility Trailer
+  year: 2015
+  specifications: {'dimensions': {'overall_length': '10\' 8"', 'overall_width': '64"', 'deck_length': "8'", 'deck_width': '64"'}, 'ramps': 'Manual', 'deck_type': 'Steel', 'landing_gear': 'Single', 'suspension': 'Spring', 'GVWR': '3,500 lbs', 'wheels': {'number': 2, 'tire_size': '205/75D15'}}
+  capabilities: ['Towing', 'Equipment transportation', 'Mounting points for additional equipment']
+  content_types: ['Product Details', 'Specifications', 'Features', 'Tires', 'Auction Details', 'Pricing Information']
+extraction_info:
+  extraction_model: claude-3-5-haiku-latest
+  metadata_version: 1.0
+  extraction_timestamp: 2024-12-20T12:49:48.713478
+
+==================================================
+
+Node 6:
+==================================================
+Node ID: 6f68428c-1090-4d22-959f-d7895e091938
+Node Type: TextNode
+Page Number: 2
+
+Text Content:
+--------------------
+### Sale Information
+
+- Sale Date: December 29th, 2022
+- Sale Price: $662.50
+
+
+Relationships:
+--------------------
+parent: ['d1451a95-95d0-4478-8429-00461e0d64b4']
+
+Metadata Structure:
+--------------------
+pipeline_info:
+  name: str
+document_info:
+  name: str
+  total_pages: int
+  page_num: int
+  document_uuid: str
+  ingestion_timestamp: str
+header_info:
+  level: int
+  text: str
+hierarchy_info:
+  level: int
+  parser: str
+document_metadata:
+  manufacturer: str
+  document_type: str
+  year_published: str
+  equipment_categories: list
+  models_included: list
+equipment_metadata:
+  product_name: NoneType
+  model_number: NoneType
+  manufacturer: NoneType
+  category: NoneType
+  subcategory: NoneType
+  year: NoneType
+  specifications: list
+  capabilities: list
+  content_types: list
+extraction_info:
+  extraction_model: str
+  metadata_version: str
+  extraction_timestamp: str
+
+Metadata Values:
+--------------------
+pipeline_info:
+  name: eleventh_pipeline
+document_info:
+  name: 920-3066 2015 Ditch Witch S2B utility trailer in Park City, KS _ Item DQ4920 sold _ Purple Wave.pdf
+  total_pages: 2
+  page_num: 2
+  document_uuid: 5329d834-00b8-489a-9b80-bd83119fb6da
+  ingestion_timestamp: 2024-12-20T12:49:41.069190
+header_info:
+  level: 3
+  text: Sale Information
+hierarchy_info:
+  level: 2
+  parser: h3_sections
+document_metadata:
+  manufacturer: Ditch Witch
+  document_type: auction listing
+  year_published: 2015
+  equipment_categories: ['utility trailer', 'construction equipment']
+  models_included: ['S2B']
+equipment_metadata:
+  product_name: None
+  model_number: None
+  manufacturer: None
+  category: None
+  subcategory: None
+  year: None
+  specifications: []
+  capabilities: []
+  content_types: []
+extraction_info:
+  extraction_model: claude-3-5-haiku-latest
+  metadata_version: 1.0
+  extraction_timestamp: 2024-12-20T12:49:48.713478
+
+==================================================
+
+Node 7:
+==================================================
+Node ID: 1b620082-d5cc-4b02-ae8b-880772c0a1d7
+Node Type: TextNode
+Page Number: 2
+
+Text Content:
+--------------------
+### Additional Information
+
+The 2015 Ditch Witch S2B utility trailer will sell to the highest bidder regardless of price.
+
+
+Relationships:
+--------------------
+parent: ['d1451a95-95d0-4478-8429-00461e0d64b4']
+
+Metadata Structure:
+--------------------
+pipeline_info:
+  name: str
+document_info:
+  name: str
+  total_pages: int
+  page_num: int
+  document_uuid: str
+  ingestion_timestamp: str
+header_info:
+  level: int
+  text: str
+hierarchy_info:
+  level: int
+  parser: str
+document_metadata:
+  manufacturer: str
+  document_type: str
+  year_published: str
+  equipment_categories: list
+  models_included: list
+equipment_metadata:
+  product_name: str
+  model_number: str
+  manufacturer: str
+  category: str
+  subcategory: str
+  year: str
+  specifications: dict
+  capabilities: list
+  content_types: list
+extraction_info:
+  extraction_model: str
+  metadata_version: str
+  extraction_timestamp: str
+
+Metadata Values:
+--------------------
+pipeline_info:
+  name: eleventh_pipeline
+document_info:
+  name: 920-3066 2015 Ditch Witch S2B utility trailer in Park City, KS _ Item DQ4920 sold _ Purple Wave.pdf
+  total_pages: 2
+  page_num: 2
+  document_uuid: 5329d834-00b8-489a-9b80-bd83119fb6da
+  ingestion_timestamp: 2024-12-20T12:49:41.069190
+header_info:
+  level: 3
+  text: Additional Information
+hierarchy_info:
+  level: 2
+  parser: h3_sections
+document_metadata:
+  manufacturer: Ditch Witch
+  document_type: auction listing
+  year_published: 2015
+  equipment_categories: ['utility trailer', 'construction equipment']
+  models_included: ['S2B']
+equipment_metadata:
+  product_name: Ditch Witch S2B Utility Trailer
+  model_number: S2B
+  manufacturer: Ditch Witch
+  category: Construction Equipment
+  subcategory: Utility Trailer
+  year: 2015
+  specifications: {'dimensions': {'overall_length': '10\' 8"', 'overall_width': '64"', 'deck_length': "8'", 'deck_width': '64"'}, 'ramps': 'Manual', 'deck_type': 'Steel', 'landing_gear': 'Single', 'suspension': 'Spring', 'GVWR': '3,500 lbs', 'wheels': {'number': 2, 'tire_size': '205/75D15'}}
+  capabilities: ['Towing', 'Equipment transportation', 'Mounting points for additional equipment']
+  content_types: ['Product Details', 'Specifications', 'Features', 'Tires', 'Auction Details', 'Pricing Information']
+extraction_info:
+  extraction_model: claude-3-5-haiku-latest
+  metadata_version: 1.0
+  extraction_timestamp: 2024-12-20T12:49:48.713478
+
+==================================================
+
+Node 8:
+==================================================
+Node ID: 39ae9dec-5903-490a-a409-7c71fd6ae038
+Node Type: TextNode
+Page Number: 2
+
+Text Content:
+--------------------
+### Available Information Sections
+
+- Equipment Financing
+- Shipping and Transportation
+- Item Description
+- Find Similar
+- Bid Increments
+
+Note: Each of these sections is marked with a '+' symbol, indicating that more information is available but not displayed in the current view.
+
+
+Relationships:
+--------------------
+parent: ['d1451a95-95d0-4478-8429-00461e0d64b4']
+
+Metadata Structure:
+--------------------
+pipeline_info:
+  name: str
+document_info:
+  name: str
+  total_pages: int
+  page_num: int
+  document_uuid: str
+  ingestion_timestamp: str
+header_info:
+  level: int
+  text: str
+hierarchy_info:
+  level: int
+  parser: str
+document_metadata:
+  manufacturer: str
+  document_type: str
+  year_published: str
+  equipment_categories: list
+  models_included: list
+equipment_metadata:
+  product_name: NoneType
+  model_number: NoneType
+  manufacturer: NoneType
+  category: NoneType
+  subcategory: NoneType
+  year: NoneType
+  specifications: list
+  capabilities: list
+  content_types: list
+extraction_info:
+  extraction_model: str
+  metadata_version: str
+  extraction_timestamp: str
+
+Metadata Values:
+--------------------
+pipeline_info:
+  name: eleventh_pipeline
+document_info:
+  name: 920-3066 2015 Ditch Witch S2B utility trailer in Park City, KS _ Item DQ4920 sold _ Purple Wave.pdf
+  total_pages: 2
+  page_num: 2
+  document_uuid: 5329d834-00b8-489a-9b80-bd83119fb6da
+  ingestion_timestamp: 2024-12-20T12:49:41.069190
+header_info:
+  level: 3
+  text: Available Information Sections
+hierarchy_info:
+  level: 2
+  parser: h3_sections
+document_metadata:
+  manufacturer: Ditch Witch
+  document_type: auction listing
+  year_published: 2015
+  equipment_categories: ['utility trailer', 'construction equipment']
+  models_included: ['S2B']
+equipment_metadata:
+  product_name: None
+  model_number: None
+  manufacturer: None
+  category: None
+  subcategory: None
+  year: None
+  specifications: []
+  capabilities: []
+  content_types: []
+extraction_info:
+  extraction_model: claude-3-5-haiku-latest
+  metadata_version: 1.0
+  extraction_timestamp: 2024-12-20T12:49:48.713478
+
+==================================================
+
+Node 9:
+==================================================
+Node ID: 2ebe269f-4681-4c8e-8f82-b8ea6a6a1acf
+Node Type: TextNode
+Page Number: 2
+
+Text Content:
+--------------------
+### Transfer of Ownership
+
+Transfer of ownership documentation will be a bill of sale.
+
+Relationships:
+--------------------
+parent: ['d1451a95-95d0-4478-8429-00461e0d64b4']
+
+Metadata Structure:
+--------------------
+pipeline_info:
+  name: str
+document_info:
+  name: str
+  total_pages: int
+  page_num: int
+  document_uuid: str
+  ingestion_timestamp: str
+header_info:
+  level: int
+  text: str
+hierarchy_info:
+  level: int
+  parser: str
+document_metadata:
+  manufacturer: str
+  document_type: str
+  year_published: str
+  equipment_categories: list
+  models_included: list
+equipment_metadata:
+  product_name: NoneType
+  model_number: NoneType
+  manufacturer: NoneType
+  category: NoneType
+  subcategory: NoneType
+  year: NoneType
+  specifications: list
+  capabilities: list
+  content_types: list
+extraction_info:
+  extraction_model: str
+  metadata_version: str
+  extraction_timestamp: str
+
+Metadata Values:
+--------------------
+pipeline_info:
+  name: eleventh_pipeline
+document_info:
+  name: 920-3066 2015 Ditch Witch S2B utility trailer in Park City, KS _ Item DQ4920 sold _ Purple Wave.pdf
+  total_pages: 2
+  page_num: 2
+  document_uuid: 5329d834-00b8-489a-9b80-bd83119fb6da
+  ingestion_timestamp: 2024-12-20T12:49:41.069190
+header_info:
+  level: 3
+  text: Transfer of Ownership
+hierarchy_info:
+  level: 2
+  parser: h3_sections
+document_metadata:
+  manufacturer: Ditch Witch
+  document_type: auction listing
+  year_published: 2015
+  equipment_categories: ['utility trailer', 'construction equipment']
+  models_included: ['S2B']
+equipment_metadata:
+  product_name: None
+  model_number: None
+  manufacturer: None
+  category: None
+  subcategory: None
+  year: None
+  specifications: []
+  capabilities: []
+  content_types: []
+extraction_info:
+  extraction_model: claude-3-5-haiku-latest
+  metadata_version: 1.0
+  extraction_timestamp: 2024-12-20T12:49:48.713478
+
+==================================================
+
+
+Total nodes at level 2: 9
+Nodes with equipment metadata: 2
+Nodes with document metadata: 9
+
+==================================================
+

@@ -5,11 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13557991-094d-4fae-8b67-4e865e4684de" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/node_analysis.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag_package/config/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag_package/config/embedding_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag_package/config/hierarchical_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag_package/config/logging_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag_package/config/metadata_extraction_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag_package/config/node_creation_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag_package/config/parser_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag_package/config/path_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag_package/models/equipment_metadata.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag_package/parsers/markdown_header_splitter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/raw_input_data/920-3066 2015 Ditch Witch S2B utility trailer in Park City, KS _ Item DQ4920 sold _ Purple Wave.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/analysis/node_creation.log" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/node_creation.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/analysis/node_creation_times.txt" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/node_creation_times.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis/tenth_pipeline_hierarchy_analysis.txt" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/tenth_pipeline_hierarchy_analysis_old.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parsed_results.json" beforeDir="false" afterPath="$PROJECT_DIR$/parsed_results_saved.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rag_package/document_processor.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/document_processor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rag_package/query_engine_builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/query_engine_builder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rag_package/rag_config.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rag_package/textnode_creator.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/textnode_creator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/raw_input_data/920-3000 20230321_Brochure-WebSize.pdf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +42,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -55,6 +75,7 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/raw_input_data" />
+      <recent name="$PROJECT_DIR$/rag_package/config" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/rag_package" />
     </key>

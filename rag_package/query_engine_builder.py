@@ -4,7 +4,6 @@ from llama_index.multi_modal_llms.anthropic import AnthropicMultiModal
 from llama_index.postprocessor.cohere_rerank import CohereRerank
 from rag_package.query_engine import MultimodalQueryEngine, QA_PROMPT
 from rag_package.errors import  QueryEngineError, QueryManagerError
-from . import rag_config
 
 class QueryEngineBuilder:
     """
@@ -29,7 +28,7 @@ class QueryEngineBuilder:
         self.similarity_top_k = similarity_top_k
         # Store the multimodal LLM or create a default one if not provided
         self.multimodal_llm = multimodal_llm or AnthropicMultiModal(
-            model=rag_config.multimodal_model,
+            model="anthropic-sonnet-3.5", # this might be wrong, changed from reference to rag_config.multimodal_model after that file was removed
             api_key=os.getenv("ANTHROPIC_API_KEY")
         )
 
