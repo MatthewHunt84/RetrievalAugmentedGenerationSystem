@@ -23,44 +23,6 @@ Relationships:
 --------------------
 child: ['55487330-db07-4e91-a91e-cce0a764283e', '6fd79f62-1daa-467e-afae-fb11ee4c2630', 'ad613538-fa2e-4e0b-bdca-e362672d4fc3', 'e0865f01-7f09-4f4b-97a3-fd338cedbc07', 'e992569a-db91-4dcc-a5a1-ef20083f4162']
 
-Metadata Structure:
---------------------
-pipeline_info:
-  name: str
-  processing_timestamp: str
-document_info:
-  name: str
-  total_pages: int
-  page_num: int
-  document_uuid: str
-  ingestion_timestamp: str
-header_info:
-  level: int
-  text: str
-hierarchy_info:
-  level: int
-  parser: str
-document_metadata:
-  manufacturer: str
-  document_type: str
-  year_published: str
-  equipment_categories: list
-  models_included: list
-equipment_metadata:
-  product_name: NoneType
-  model_number: NoneType
-  manufacturer: NoneType
-  category: NoneType
-  subcategory: NoneType
-  year: NoneType
-  specifications: list
-  capabilities: list
-  content_types: list
-extraction_info:
-  extraction_model: str
-  metadata_version: str
-  extraction_timestamp: str
-
 Metadata Values:
 --------------------
 pipeline_info:
@@ -128,44 +90,6 @@ Relationships:
 --------------------
 parent: ['61db28ac-4aa9-4f21-8801-dd7cc6352c09']
 
-Metadata Structure:
---------------------
-pipeline_info:
-  name: str
-  processing_timestamp: str
-document_info:
-  name: str
-  total_pages: int
-  page_num: int
-  document_uuid: str
-  ingestion_timestamp: str
-header_info:
-  level: int
-  text: str
-hierarchy_info:
-  level: int
-  parser: str
-document_metadata:
-  manufacturer: str
-  document_type: str
-  year_published: str
-  equipment_categories: list
-  models_included: list
-equipment_metadata:
-  product_name: str
-  model_number: str
-  manufacturer: str
-  category: str
-  subcategory: str
-  year: str
-  specifications: list
-  capabilities: list
-  content_types: list
-extraction_info:
-  extraction_model: str
-  metadata_version: str
-  extraction_timestamp: str
-
 Metadata Values:
 --------------------
 pipeline_info:
@@ -222,44 +146,6 @@ In 2005, Barreto brought the first all-hydraulic, self-propelled mini walk-behin
 Relationships:
 --------------------
 parent: ['61db28ac-4aa9-4f21-8801-dd7cc6352c09']
-
-Metadata Structure:
---------------------
-pipeline_info:
-  name: str
-  processing_timestamp: str
-document_info:
-  name: str
-  total_pages: int
-  page_num: int
-  document_uuid: str
-  ingestion_timestamp: str
-header_info:
-  level: int
-  text: str
-hierarchy_info:
-  level: int
-  parser: str
-document_metadata:
-  manufacturer: str
-  document_type: str
-  year_published: str
-  equipment_categories: list
-  models_included: list
-equipment_metadata:
-  product_name: str
-  model_number: str
-  manufacturer: str
-  category: str
-  subcategory: str
-  year: str
-  specifications: list
-  capabilities: list
-  content_types: list
-extraction_info:
-  extraction_model: str
-  metadata_version: str
-  extraction_timestamp: str
 
 Metadata Values:
 --------------------
@@ -318,44 +204,6 @@ Relationships:
 --------------------
 parent: ['61db28ac-4aa9-4f21-8801-dd7cc6352c09']
 
-Metadata Structure:
---------------------
-pipeline_info:
-  name: str
-  processing_timestamp: str
-document_info:
-  name: str
-  total_pages: int
-  page_num: int
-  document_uuid: str
-  ingestion_timestamp: str
-header_info:
-  level: int
-  text: str
-hierarchy_info:
-  level: int
-  parser: str
-document_metadata:
-  manufacturer: str
-  document_type: str
-  year_published: str
-  equipment_categories: list
-  models_included: list
-equipment_metadata:
-  product_name: str
-  model_number: str
-  manufacturer: str
-  category: str
-  subcategory: str
-  year: str
-  specifications: list
-  capabilities: list
-  content_types: list
-extraction_info:
-  extraction_model: str
-  metadata_version: str
-  extraction_timestamp: str
-
 Metadata Values:
 --------------------
 pipeline_info:
@@ -413,44 +261,6 @@ Relationships:
 --------------------
 parent: ['61db28ac-4aa9-4f21-8801-dd7cc6352c09']
 
-Metadata Structure:
---------------------
-pipeline_info:
-  name: str
-  processing_timestamp: str
-document_info:
-  name: str
-  total_pages: int
-  page_num: int
-  document_uuid: str
-  ingestion_timestamp: str
-header_info:
-  level: int
-  text: str
-hierarchy_info:
-  level: int
-  parser: str
-document_metadata:
-  manufacturer: str
-  document_type: str
-  year_published: str
-  equipment_categories: list
-  models_included: list
-equipment_metadata:
-  product_name: str
-  model_number: str
-  manufacturer: str
-  category: str
-  subcategory: str
-  year: str
-  specifications: list
-  capabilities: list
-  content_types: list
-extraction_info:
-  extraction_model: str
-  metadata_version: str
-  extraction_timestamp: str
-
 Metadata Values:
 --------------------
 pipeline_info:
@@ -506,44 +316,6 @@ The newest addition to the Barreto family of trenchers is the 1324STK walk-behin
 Relationships:
 --------------------
 parent: ['61db28ac-4aa9-4f21-8801-dd7cc6352c09']
-
-Metadata Structure:
---------------------
-pipeline_info:
-  name: str
-  processing_timestamp: str
-document_info:
-  name: str
-  total_pages: int
-  page_num: int
-  document_uuid: str
-  ingestion_timestamp: str
-header_info:
-  level: int
-  text: str
-hierarchy_info:
-  level: int
-  parser: str
-document_metadata:
-  manufacturer: str
-  document_type: str
-  year_published: str
-  equipment_categories: list
-  models_included: list
-equipment_metadata:
-  product_name: str
-  model_number: str
-  manufacturer: str
-  category: str
-  subcategory: str
-  year: str
-  specifications: list
-  capabilities: list
-  content_types: list
-extraction_info:
-  extraction_model: str
-  metadata_version: str
-  extraction_timestamp: str
 
 Metadata Values:
 --------------------
