@@ -183,75 +183,37 @@ class TextNodeCreator:
         Create hierarchical nodes from parsed markdown content.
 
         Args:
-            metadata_extraction_test_pages: List of page numbers to enhance with metadata,
-                or None to enhance all pages
-            node_analysis_pages: List of page numbers to include in analysis output,
-                or None to analyze page 1 only
+            metadata_extraction_test_pages: List of page numbers to enhance with metadata.
+                If None, will use test_pages from config
+            node_analysis_pages: List of page numbers to include in analysis output.
+                If None, will use the same pages as metadata_extraction_test_pages
         """
         start_time = time.time()
 
         try:
             self.logger.info("Beginning hierarchical node creation process...")
-            if not self.parsed_results_path.exists():
-                raise TextNodeCreationError(
-                    f"Parsed results file not found at {self.parsed_results_path}"
-                )
 
-            with open(self.parsed_results_path, 'r', encoding='utf-8') as f:
-                try:
-                    md_json_objs = json.load(f)
-                except json.JSONDecodeError as e:
-                    raise TextNodeCreationError(
-                        f"Failed to parse results file: {str(e)}"
-                    )
+            # Create all nodes first
+            all_nodes = self._create_base_nodes()
 
-            all_nodes = []
-            for result in md_json_objs:
-                document_name = Path(result["file_path"]).name
-                self.logger.info(f"Processing document: {document_name}")
+            # Use config test pages if no specific pages provided
+            metadata_pages = (metadata_extraction_test_pages if metadata_extraction_test_pages is not None
+                              else self.config.test_pages)
 
-                for idx, page_dict in enumerate(result["pages"]):
-                    base_metadata = {
-                        "pipeline_info": self.config.base_metadata["pipeline_info"],
-                        "document_info": {
-                            "name": document_name,
-                            "total_pages": len(result["pages"]),
-                            "page_num": idx + 1,
-                            "document_uuid": str(uuid.uuid4()),
-                            "ingestion_timestamp": datetime.now().isoformat()
-                        }
-                    }
-
-                    # Process content using hierarchical parser
-                    nodes = self._process_document_content(
-                        page_dict["md"],
-                        base_metadata
-                    )
-                    all_nodes.extend(nodes)
-                    self.logger.info(
-                        f"Created {len(nodes)} nodes for page {idx + 1}"
-                    )
-
-            if all_nodes:
-                # Filter nodes for metadata enhancement
-                metadata_nodes = self._filter_nodes_by_pages(
-                    all_nodes,
-                    metadata_extraction_test_pages
-                )
+            # For metadata extraction
+            if metadata_pages:
+                self.logger.info(f"Extracting metadata for pages: {metadata_pages}")
+                metadata_nodes = self._filter_nodes_by_pages(all_nodes, metadata_pages)
                 if metadata_nodes:
                     self._enhance_nodes_with_metadata(metadata_nodes)
 
-                # Set default analysis pages to [1] if None
-                if node_analysis_pages is None:
-                    node_analysis_pages = [1]
-
-                # Filter nodes for analysis
-                analysis_nodes = self._filter_nodes_by_pages(
-                    all_nodes,
-                    node_analysis_pages
-                )
-                if analysis_nodes:
-                    self.analyze_node_hierarchy(analysis_nodes)
+                # For analysis output - use metadata pages if no specific analysis pages given
+                analysis_pages = node_analysis_pages if node_analysis_pages is not None else metadata_pages
+                if analysis_pages:
+                    self.logger.info(f"Analyzing nodes from pages: {analysis_pages}")
+                    analysis_nodes = self._filter_nodes_by_pages(all_nodes, analysis_pages)
+                    if analysis_nodes:
+                        self.analyze_node_hierarchy(analysis_nodes)
 
             execution_time = time.time() - start_time
             self._log_execution_time(execution_time)
@@ -262,17 +224,67 @@ class TextNodeCreator:
             self.logger.error(f"Hierarchical node creation failed: {str(e)}")
             raise TextNodeCreationError(f"Failed to create nodes: {str(e)}")
 
+    def _create_base_nodes(self) -> list[BaseNode]:
+        """Create the initial set of nodes from the parsed content."""
+        if not self.parsed_results_path.exists():
+            raise TextNodeCreationError(
+                f"Parsed results file not found at {self.parsed_results_path}"
+            )
+
+        with open(self.parsed_results_path, 'r', encoding='utf-8') as f:
+            try:
+                md_json_objs = json.load(f)
+            except json.JSONDecodeError as e:
+                raise TextNodeCreationError(
+                    f"Failed to parse results file: {str(e)}"
+                )
+
+        all_nodes = []
+        for result in md_json_objs:
+            document_name = Path(result["file_path"]).name
+            self.logger.info(f"Processing document: {document_name}")
+
+            for idx, page_dict in enumerate(result["pages"]):
+                base_metadata = {
+                    "pipeline_info": self.config.base_metadata["pipeline_info"],
+                    "document_info": {
+                        "name": document_name,
+                        "total_pages": len(result["pages"]),
+                        "page_num": idx + 1,
+                        "document_uuid": str(uuid.uuid4()),
+                        "ingestion_timestamp": datetime.now().isoformat()
+                    }
+                }
+
+                nodes = self._process_document_content(
+                    page_dict["md"],
+                    base_metadata
+                )
+                all_nodes.extend(nodes)
+                self.logger.info(
+                    f"Created {len(nodes)} nodes for page {idx + 1}"
+                )
+
+        return all_nodes
+
+
     def analyze_node_hierarchy(self, nodes: list[BaseNode]) -> None:
         """
-        Analyze the hierarchical structure of nodes, showing the actual TextNode objects
-        rather than JSON representations.
-        """
+        Analyze the hierarchical structure of nodes, focusing on nodes that underwent
+        metadata extraction. This provides visibility into how metadata decoration
+        affected specific nodes in our document.
 
+        The analysis creates a detailed report showing the structure, relationships,
+        and metadata of nodes from the pages we're processing. This helps us verify
+        that our metadata extraction and decoration is working as expected.
+
+        Args:
+            nodes: List of nodes that were processed for metadata extraction
+        """
         analysis_path = self.analysis_dir / f"{self.config.pipeline_name}_raw_node_analysis.txt"
 
-        if self.config.verbose:
-            self.logger.info(f"Analyzing hierarchy for {len(nodes)} nodes")
-            self.logger.info(f"Writing analysis to {analysis_path}")
+        self.logger.info(f"Starting node hierarchy analysis for {len(nodes)} nodes")
+        self.logger.info(f"Writing analysis to {analysis_path}")
 
         with open(analysis_path, 'w', encoding='utf-8') as f:
             # Write LLM calls summary
@@ -282,6 +294,10 @@ class TextNodeCreator:
                                       len(nodes) + self.config.metadata_extraction.batch_size - 1) // self.config.metadata_extraction.batch_size
             f.write(f"Batch Metadata Extraction Calls: {num_batches}\n")
             f.write(f"Total LLM Calls: {1 + num_batches}\n\n")
+
+            # Get the unique pages we're analyzing
+            pages = sorted(set(node.metadata["document_info"]["page_num"] for node in nodes))
+            f.write(f"Analyzing nodes from pages: {pages}\n\n")
 
             # Analyze each level
             for level in [0, 1, 2]:
@@ -294,16 +310,25 @@ class TextNodeCreator:
                 ]
 
                 if not level_nodes:
-                    f.write(f"No level {level} nodes found.\n")
+                    f.write(f"No level {level} nodes found in the analyzed pages.\n")
                 else:
+                    # Sort nodes by page number and position for clearer output
+                    level_nodes.sort(
+                        key=lambda n: (
+                            n.metadata["document_info"]["page_num"],
+                            n.text.find(n.metadata["header_info"]["text"])
+                        )
+                    )
+
                     for i, node in enumerate(level_nodes, 1):
-                        f.write(f"Node {i}:\n")
+                        page_num = node.metadata["document_info"]["page_num"]
+                        f.write(f"Node {i} (Page {page_num}):\n")
                         f.write("=" * 50 + "\n")
 
                         # Display node attributes
                         f.write(f"Node ID: {node.node_id}\n")
                         f.write(f"Node Type: {node.__class__.__name__}\n")
-                        f.write(f"Page Number: {node.metadata['document_info']['page_num']}\n")
+                        f.write(f"Page Number: {page_num}\n")
 
                         # Display text content
                         f.write("\nText Content:\n")
@@ -316,18 +341,18 @@ class TextNodeCreator:
                         for rel_type, rel_ids in node.relationships.items():
                             f.write(f"{rel_type}: {sorted(list(rel_ids))}\n")
 
-                        # Display metadata structure
-                        f.write("\nMetadata Structure:\n")
-                        f.write("-" * 20 + "\n")
-                        for key in node.metadata:
-                            if isinstance(node.metadata[key], dict):
-                                f.write(f"{key}:\n")
-                                for subkey in node.metadata[key]:
-                                    f.write(f"  {subkey}: {type(node.metadata[key][subkey]).__name__}\n")
-                            else:
-                                f.write(f"{key}: {type(node.metadata[key]).__name__}\n")
+                        # Display metadata structure (turned this off for now)
+                        # f.write("\nMetadata Structure:\n")
+                        # f.write("-" * 20 + "\n")
+                        # for key in node.metadata:
+                        #     if isinstance(node.metadata[key], dict):
+                        #         f.write(f"{key}:\n")
+                        #         for subkey in node.metadata[key]:
+                        #             f.write(f"  {subkey}: {type(node.metadata[key][subkey]).__name__}\n")
+                        #     else:
+                        #         f.write(f"{key}: {type(node.metadata[key]).__name__}\n")
 
-                        # Display metadata values
+                        # Display metadata values with special attention to equipment metadata
                         f.write("\nMetadata Values:\n")
                         f.write("-" * 20 + "\n")
                         for key, value in node.metadata.items():
@@ -338,26 +363,33 @@ class TextNodeCreator:
                             else:
                                 f.write(f"  {value}\n")
 
+                            # Highlight if equipment metadata was successfully extracted
+                            if key == "equipment_metadata" and any(value.values()):
+                                f.write("  ** This node has equipment metadata **\n")
+
                         f.write("\n" + "=" * 50 + "\n\n")
 
-                    # Summary statistics
-                    f.write(f"\nTotal nodes at level {level}: {len(level_nodes)}\n")
+                    # Summary statistics for this level
+                    f.write(f"\nSummary for level {level}:\n")
+                    f.write(f"Total nodes at level {level}: {len(level_nodes)}\n")
                     f.write(
                         f"Nodes with equipment metadata: {sum(1 for n in level_nodes if any(n.metadata.get('equipment_metadata', {}).values()))}\n")
                     f.write(
                         f"Nodes with document metadata: {sum(1 for n in level_nodes if any(n.metadata.get('document_metadata', {}).values()))}\n")
                     f.write("\n" + "=" * 50 + "\n\n")
 
+
     def _setup_logging(self):
         """
-        Configure logging based on the logging configuration.
-        Supports both file and console logging with configurable formats.
+        Configure logging with proper level setting for both logger and handlers.
         """
         # Clear any existing handlers
         self.logger.handlers = []
 
+        # Set the logger's level first
+        self.logger.setLevel(self.config.logging_config.level)
+
         if self.config.logging_config.log_to_file:
-            # Create file handler using paths from config
             log_file = self.config.paths_config.analysis_dir / "node_creation.log"
             file_handler = logging.FileHandler(log_file)
             file_handler.setLevel(self.config.logging_config.level)
@@ -367,13 +399,16 @@ class TextNodeCreator:
             self.logger.addHandler(file_handler)
 
         if self.config.logging_config.log_to_console:
-            # Create console handler
             console_handler = logging.StreamHandler()
             console_handler.setLevel(self.config.logging_config.level)
             console_handler.setFormatter(
                 logging.Formatter(self.config.logging_config.format)
             )
             self.logger.addHandler(console_handler)
+
+        # Verify configuration
+        if self.config.verbose:
+            self.logger.info(f"Logger level set to: {self.logger.level}")
 
 
     def _log_execution_time(self, execution_time: float) -> None:
@@ -388,24 +423,6 @@ class TextNodeCreator:
             f"{mode_info}"
             f"Hierarchical Processing Time: {execution_time:.2f} seconds\n"
         )
-
-    # def _log_execution_time(self, execution_time: float) -> None:
-    #     """
-    #     Log execution time with hierarchical processing details to the configured analysis directory.
-    #
-    #     This method creates a persistent record of processing times, which can be useful
-    #     for performance monitoring and optimization.
-    #     """
-    #     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    #     timing_log = (
-    #         f"{timestamp} - Pipeline: {self.config.pipeline_name}, "
-    #         f"Mode: {self.config.mode}, "
-    #         f"Hierarchical Processing Time: {execution_time:.2f} seconds\n"
-    #     )
-    #
-    #     timing_log_path = self.config.paths_config.analysis_dir / "node_creation_times.txt"
-    #     with open(timing_log_path, 'a') as f:
-    #         f.write(timing_log)
 
     """
     NEW (Metadata Extraction): New methods
@@ -456,6 +473,8 @@ class TextNodeCreator:
         Uses prompt template and settings from metadata extraction configuration.
         """
         try:
+            self.logger.info("Starting document metadata extraction...")
+
             client = self.config.metadata_extraction.get_client()
             message = client.messages.create(
                 messages=[{
@@ -464,10 +483,12 @@ class TextNodeCreator:
                         text=doc_content
                     )
                 }],
-                model=self.config.metadata_extraction.model_name, #changed by me from vendor_multimodal_model_name
+                model=self.config.metadata_extraction.model_name,
                 max_tokens=1000,
                 temperature=self.config.metadata_extraction.temperature,
             )
+
+            self._inspect_llm_response(message, "Document Metadata Extraction")
 
             if message.content:
                 text_content = (
@@ -476,21 +497,26 @@ class TextNodeCreator:
                     else str(message.content)
                 )
 
-                try:
-                    doc_metadata = json.loads(text_content)
+                # Extract JSON using our helper method
+                json_str, error = self._extract_json_from_text(text_content, is_array=False)
+
+                if json_str:
+                    doc_metadata = json.loads(json_str)
+                    self.logger.info("Successfully extracted document metadata")
                     if self.config.verbose:
-                        self.logger.debug(
-                            f"Successfully parsed document metadata: {json.dumps(doc_metadata, indent=2)}")
+                        self.logger.info(f"Document metadata content: {json.dumps(doc_metadata, indent=2)}")
                     return doc_metadata
-                except json.JSONDecodeError as e:
-                    self.logger.error(f"Failed to parse document metadata: {str(e)}")
+                else:
+                    self.logger.error(f"Failed to extract document metadata: {error}")
                     return self._get_default_doc_metadata()
 
+            self.logger.info("No content in LLM response, using default metadata")
             return self._get_default_doc_metadata()
 
         except Exception as e:
             self.logger.error(f"Document metadata extraction failed: {str(e)}")
             return self._get_default_doc_metadata()
+
 
     def _get_default_doc_metadata(self) -> dict:
         """Helper method to return default document metadata structure."""
@@ -505,14 +531,12 @@ class TextNodeCreator:
     def _extract_batch_metadata(self, batch: list[BaseNode]) -> dict[str, dict]:
         """
         Extract metadata for a batch of model descriptions using the configured LLM.
-
-        This method constructs a single text from all nodes in the batch, sends it to the
-        LLM for metadata extraction, and returns the matched metadata for each node.
         """
-        # Combine all node texts with clear separation
         batch_text = "\n\n".join(node.text for node in batch)
 
         try:
+            self.logger.info(f"Processing batch of {len(batch)} nodes for metadata extraction")
+
             client = self.config.metadata_extraction.get_client()
             message = client.messages.create(
                 messages=[{
@@ -526,6 +550,8 @@ class TextNodeCreator:
                 temperature=self.config.metadata_extraction.temperature,
             )
 
+            self._inspect_llm_response(message, "Batch Metadata Extraction")
+
             if message.content:
                 text_content = (
                     message.content[0].text
@@ -533,19 +559,20 @@ class TextNodeCreator:
                     else str(message.content)
                 )
 
-                if self.config.verbose:
-                    self.logger.debug(f"Raw LLM response text: {text_content}")
+                # Extract JSON using our helper method
+                json_str, error = self._extract_json_from_text(text_content, is_array=True)
 
-                try:
-                    metadata_list = json.loads(text_content)
+                if json_str:
+                    metadata_list = json.loads(json_str)
+                    self.logger.info(f"Successfully extracted metadata for batch")
                     if self.config.verbose:
-                        self.logger.debug(f"Successfully parsed metadata: {json.dumps(metadata_list, indent=2)}")
+                        self.logger.info(f"Processing metadata for {len(metadata_list)} models")
                     return self._match_metadata_to_nodes(batch, metadata_list)
-
-                except json.JSONDecodeError as e:
-                    self.logger.error(f"JSON parsing failed: {str(e)}")
+                else:
+                    self.logger.error(f"Failed to extract batch metadata: {error}")
                     return {}
 
+            self.logger.info("No content in LLM response")
             return {}
 
         except Exception as e:
@@ -562,8 +589,14 @@ class TextNodeCreator:
             metadata_list: list[dict[str, any]]
     ) -> dict[str, dict]:
         """
-        Match extracted metadata to nodes based on model numbers and headers.
-        Uses matching threshold from metadata extraction configuration.
+        Enhanced matching logic that considers various content patterns.
+        First, we gather a batch of nodes that contain text about equipment (like product descriptions, specifications, features, etc.)
+        We send all this text to the LLM with a prompt like "Extract metadata for any equipment models you find in this text."
+        The LLM then returns a JSON array of metadata objects, each representing a different piece of equipment it found.
+        Then comes the tricky part - we need to figure out which metadata object belongs to which node.
+        We currently do this by looking for matching text patterns (like model numbers or product names) because the LLM doesn't know anything about our node IDs.
+        It's just seeing text and extracting information from it.
+        This is a better approach compared to passing up the node IDs with the batches, because often metadata spans multiple nodes and this matching approach is more likely to put things in the right place.
         """
         matched_metadata = {}
         threshold = self.config.metadata_extraction.metadata_matching_threshold
@@ -573,20 +606,36 @@ class TextNodeCreator:
             header_text = node.metadata.get("header_info", {}).get("text", "").lower()
 
             if self.config.verbose:
-                self.logger.debug(f"\nAttempting to match node: {node.node_id}")
-                self.logger.debug(f"Header text: {header_text}")
+                self.logger.info(f"\nAttempting to match node: {node.node_id}")
+                self.logger.info(f"Header text: {header_text}")
 
             best_match = None
             best_score = 0
 
             for metadata in metadata_list:
+                # Multiple matching criteria
                 model_num = metadata.get("model_number", "").lower()
-                if not model_num:
-                    continue
+                product_name = metadata.get("product_name", "").lower()
 
-                header_exact_match = 1.0 if model_num in header_text else 0.0
-                text_match = 1.0 if model_num in node_text else 0.0
-                score = max(header_exact_match, text_match)
+                # Calculate various match scores
+                model_in_header = float(model_num in header_text) if model_num else 0.0
+                model_in_text = float(model_num in node_text) if model_num else 0.0
+                product_in_header = float(product_name in header_text) if product_name else 0.0
+                product_in_text = float(product_name in node_text) if product_name else 0.0
+
+                # Additional matching for specification sections
+                spec_match = 0.0
+                if any(keyword in header_text for keyword in ["specifications", "features", "details"]):
+                    spec_match = float(model_num in node_text or product_name in node_text)
+
+                # Combined score with weights
+                score = max(
+                    model_in_header * 1.0,  # Highest priority
+                    model_in_text * 0.8,
+                    product_in_header * 0.7,
+                    product_in_text * 0.6,
+                    spec_match * 0.5
+                )
 
                 if score > best_score:
                     best_score = score
@@ -595,31 +644,49 @@ class TextNodeCreator:
             if best_match and best_score > threshold:
                 matched_metadata[node.node_id] = best_match
                 if self.config.verbose:
-                    self.logger.debug(f"Matched node {node.node_id} with score {best_score}")
+                    self.logger.info(f"Matched node {node.node_id} with score {best_score}")
+                    self.logger.info(f"Matched to model: {best_match.get('model_number')}")
             else:
                 if self.config.verbose:
-                    self.logger.debug(f"No strong match found for node {node.node_id}")
+                    self.logger.info(f"No strong match found for node {node.node_id}")
 
         return matched_metadata
+
 
     def _filter_nodes_by_pages(self, nodes: list[BaseNode], pages: list[int] | None) -> list[BaseNode]:
         """
         Filter nodes based on specified page numbers.
-
-        Args:
-            nodes: List of nodes to filter
-            pages: List of page numbers to include, or None for all pages
-
-        Returns:
-            Filtered list of nodes
         """
         if pages is None:
+            self.logger.info("No pages specified for filtering, returning all nodes")
             return nodes
 
-        return [
+        filtered_nodes = [
             node for node in nodes
             if node.metadata["document_info"]["page_num"] in pages
         ]
+
+        self.logger.info(f"Filtered {len(nodes)} nodes to {len(filtered_nodes)} nodes from pages {pages}")
+        return filtered_nodes
+
+    # def _filter_nodes_by_pages(self, nodes: list[BaseNode], pages: list[int] | None) -> list[BaseNode]:
+    #     """
+    #     Filter nodes based on specified page numbers.
+    #
+    #     Args:
+    #         nodes: List of nodes to filter
+    #         pages: List of page numbers to include, or None for all pages
+    #
+    #     Returns:
+    #         Filtered list of nodes
+    #     """
+    #     if pages is None:
+    #         return nodes
+    #
+    #     return [
+    #         node for node in nodes
+    #         if node.metadata["document_info"]["page_num"] in pages
+    #     ]
 
     """
     Test Method, may be deleted also
@@ -729,3 +796,76 @@ class TextNodeCreator:
             self.logger.error(f"Full error: {str(e.__class__.__name__)}")
             import traceback
             self.logger.error(f"Stack trace: {traceback.format_exc()}")
+
+    def _extract_json_from_text(self, text_content: str, is_array: bool = False) -> tuple[str | None, str | None]:
+        """
+        Extract JSON content from text that may contain additional context or formatting.
+        Sometimes the LLM likes to add an introductory sentence like "Here is the JSON you requested:" before the valid JSON
+        This extracts relevant JSON only
+
+        Args:
+            text_content: The full text response that contains JSON
+            is_array: Whether to look for array brackets ([]) or object brackets ({})
+
+        Returns:
+            tuple: (extracted JSON string or None, error message or None)
+            If successful, returns (json_str, None)
+            If unsuccessful, returns (None, error_message)
+        """
+        try:
+            # Determine which brackets to look for based on expected JSON type
+            start_char = '[' if is_array else '{'
+            end_char = ']' if is_array else '}'
+
+            # Find the JSON boundaries
+            json_start = text_content.find(start_char)
+            json_end = text_content.rfind(end_char)
+
+            if json_start != -1 and json_end != -1:
+                json_str = text_content[json_start:json_end + 1]
+
+                # Validate that we can parse it
+                json.loads(json_str)  # This will raise JSONDecodeError if invalid
+                return json_str, None
+
+            return None, f"Could not find matching {start_char}{end_char} in response"
+
+        except json.JSONDecodeError as e:
+            return None, f"Invalid JSON structure: {str(e)}"
+
+    def _inspect_llm_response(self, response, context: str) -> None:
+        """
+        Will only run in verbose logging mode.
+        Logs diagnostic information about LLM responses for troubleshooting.
+
+        This lightweight inspection helps identify structural issues with responses
+        before they reach the JSON extraction stage. It focuses on response format
+        and content presence rather than JSON parsing, which is handled separately.
+
+        Args:
+            response: The raw response from the LLM
+            context: A string describing where this inspection is happening
+        """
+        if self.config.verbose:
+            self.logger.info(f"\n=== LLM Response Overview ({context}) ===")
+
+            # Check basic response structure
+            self.logger.info(f"Response type: {type(response)}")
+
+            # Examine content structure
+            if hasattr(response, 'content'):
+                content = response.content
+                self.logger.info(f"Content type: {type(content)}")
+
+                if isinstance(content, list):
+                    self.logger.info(f"Content is a list with {len(content)} elements")
+                    for i, item in enumerate(content):
+                        self.logger.info(f"Element {i} type: {type(item)}")
+                elif isinstance(content, str):
+                    self.logger.info(f"Content is a string of length {len(content)}")
+                else:
+                    self.logger.info(f"Unexpected content type: {type(content)}")
+            else:
+                self.logger.info("Response has no content attribute")
+
+            self.logger.info("=== End Response Overview ===\n")

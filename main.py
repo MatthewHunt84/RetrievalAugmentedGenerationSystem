@@ -32,10 +32,11 @@ def main():
         # document_processor = DocumentProcessor(parsing_config=parser)
         # document_processor.process_all()
 
-        node_creation_config = NodeCreationConfig(pipeline_name="twelfth_pipeline",
+        node_creation_config = NodeCreationConfig(pipeline_name="thirteenth_pipeline",
                                                   hierarchical_config=HierarchicalConfig(),
                                                   metadata_extraction=MetadataExtractionConfig(model="haiku"),
-                                                  test_pages=[1,2])
+                                                  test_pages=[10])
+
 
         node_creator = TextNodeCreator(node_config=node_creation_config)
         nodes = node_creator.create_nodes()

@@ -5,28 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13557991-094d-4fae-8b67-4e865e4684de" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/node_analysis.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rag_package/config/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rag_package/config/embedding_config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rag_package/config/hierarchical_config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rag_package/config/logging_config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rag_package/config/metadata_extraction_config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rag_package/config/node_creation_config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rag_package/config/parser_config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rag_package/config/path_config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rag_package/models/equipment_metadata.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rag_package/parsers/markdown_header_splitter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/raw_input_data/920-3066 2015 Ditch Witch S2B utility trailer in Park City, KS _ Item DQ4920 sold _ Purple Wave.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/raw_input_data/Barreto_Brochure.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/analysis/node_creation.log" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/node_creation.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis/node_creation_times.txt" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/node_creation_times.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parsed_results.json" beforeDir="false" afterPath="$PROJECT_DIR$/parsed_results_saved.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rag_package/document_processor.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/document_processor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rag_package/query_engine_builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/query_engine_builder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rag_package/rag_config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_analysis.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/parsed_results.json" beforeDir="false" afterPath="$PROJECT_DIR$/saved_parsed_results/parsed_results_ditch_witch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parsed_results_saved.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rag_package/textnode_creator.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/textnode_creator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/raw_input_data/920-3000 20230321_Brochure-WebSize.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/raw_input_data/920-3066 2015 Ditch Witch S2B utility trailer in Park City, KS _ Item DQ4920 sold _ Purple Wave.pdf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,11 +56,16 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;useNewDataSource&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+    &quot;last_opened_file_path&quot;: &quot;/Users/matthew.hunt/Developer/python_projects/retrieval_augmented_generation/raw_input_data&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/raw_input_data" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/saved_parsed_results" />
       <recent name="$PROJECT_DIR$/raw_input_data" />
       <recent name="$PROJECT_DIR$/rag_package/config" />
       <recent name="$PROJECT_DIR$" />
@@ -126,5 +118,16 @@
       <updated>1733176466950</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/rag_package/config/parser_config.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
