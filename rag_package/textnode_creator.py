@@ -341,17 +341,6 @@ class TextNodeCreator:
                         for rel_type, rel_ids in node.relationships.items():
                             f.write(f"{rel_type}: {sorted(list(rel_ids))}\n")
 
-                        # Display metadata structure (turned this off for now)
-                        # f.write("\nMetadata Structure:\n")
-                        # f.write("-" * 20 + "\n")
-                        # for key in node.metadata:
-                        #     if isinstance(node.metadata[key], dict):
-                        #         f.write(f"{key}:\n")
-                        #         for subkey in node.metadata[key]:
-                        #             f.write(f"  {subkey}: {type(node.metadata[key][subkey]).__name__}\n")
-                        #     else:
-                        #         f.write(f"{key}: {type(node.metadata[key]).__name__}\n")
-
                         # Display metadata values with special attention to equipment metadata
                         f.write("\nMetadata Values:\n")
                         f.write("-" * 20 + "\n")
@@ -468,38 +457,21 @@ class TextNodeCreator:
         return batches
 
     def _extract_document_metadata(self, doc_content: str) -> dict[str, any]:
-        """
-        Extract document-level metadata using LLM.
-        Uses prompt template and settings from metadata extraction configuration.
-        """
         try:
             self.logger.info("Starting document metadata extraction...")
 
             client = self.config.metadata_extraction.get_client()
-            message = client.messages.create(
-                messages=[{
-                    "role": "user",
-                    "content": self.config.metadata_extraction.document_level_prompt.format(
-                        text=doc_content
-                    )
-                }],
-                model=self.config.metadata_extraction.model_name,
-                max_tokens=1000,
-                temperature=self.config.metadata_extraction.temperature,
+            response = client.create_message(
+                prompt=self.config.metadata_extraction.document_level_prompt.format(
+                    text=doc_content
+                ),
+                max_tokens=1000
             )
 
-            self._inspect_llm_response(message, "Document Metadata Extraction")
+            self._inspect_llm_response(response, "Document Metadata Extraction")
 
-            if message.content:
-                text_content = (
-                    message.content[0].text
-                    if isinstance(message.content, list) and message.content
-                    else str(message.content)
-                )
-
-                # Extract JSON using our helper method
-                json_str, error = self._extract_json_from_text(text_content, is_array=False)
-
+            if response["content"]:  # Access content from our standardized response format
+                json_str, error = self._extract_json_from_text(response["content"], is_array=False)
                 if json_str:
                     doc_metadata = json.loads(json_str)
                     self.logger.info("Successfully extracted document metadata")
@@ -531,36 +503,31 @@ class TextNodeCreator:
     def _extract_batch_metadata(self, batch: list[BaseNode]) -> dict[str, dict]:
         """
         Extract metadata for a batch of model descriptions using the configured LLM.
+
+        This method processes multiple nodes at once to extract equipment metadata,
+        using the standardized interface provided by our LLM clients.
         """
         batch_text = "\n\n".join(node.text for node in batch)
 
         try:
             self.logger.info(f"Processing batch of {len(batch)} nodes for metadata extraction")
 
+            # Get the LLM client from the config
             client = self.config.metadata_extraction.get_client()
-            message = client.messages.create(
-                messages=[{
-                    "role": "user",
-                    "content": self.config.metadata_extraction.model_batch_prompt.format(
-                        text=batch_text
-                    )
-                }],
-                model=self.config.metadata_extraction.model_name,
-                max_tokens=2000,
-                temperature=self.config.metadata_extraction.temperature,
+
+            # Use the standardized create_message interface instead of direct API calls
+            response = client.create_message(
+                prompt=self.config.metadata_extraction.model_batch_prompt.format(
+                    text=batch_text
+                ),
+                max_tokens=2000
             )
 
-            self._inspect_llm_response(message, "Batch Metadata Extraction")
+            self._inspect_llm_response(response, "Batch Metadata Extraction")
 
-            if message.content:
-                text_content = (
-                    message.content[0].text
-                    if isinstance(message.content, list) and message.content
-                    else str(message.content)
-                )
-
+            if response["content"]:  # Note: we now access content from our standardized response format
                 # Extract JSON using our helper method
-                json_str, error = self._extract_json_from_text(text_content, is_array=True)
+                json_str, error = self._extract_json_from_text(response["content"], is_array=True)
 
                 if json_str:
                     metadata_list = json.loads(json_str)
@@ -583,6 +550,7 @@ class TextNodeCreator:
                 self.logger.error(f"Stack trace: {traceback.format_exc()}")
             return {}
 
+
     def _match_metadata_to_nodes(
             self,
             nodes: list[BaseNode],
@@ -598,16 +566,32 @@ class TextNodeCreator:
         It's just seeing text and extracting information from it.
         This is a better approach compared to passing up the node IDs with the batches, because often metadata spans multiple nodes and this matching approach is more likely to put things in the right place.
         """
+
         matched_metadata = {}
         threshold = self.config.metadata_extraction.metadata_matching_threshold
 
         for node in nodes:
             node_text = node.text.lower()
             header_text = node.metadata.get("header_info", {}).get("text", "").lower()
+            header_level = node.metadata.get("header_info", {}).get("level", 0)
 
             if self.config.verbose:
-                self.logger.info(f"\nAttempting to match node: {node.node_id}")
+                self.logger.info(f"\nEvaluating node: {node.node_id}")
                 self.logger.info(f"Header text: {header_text}")
+                self.logger.info(f"Header level: {header_level}")
+
+            # Check hierarchy level from hierarchy_info (0 = top level)
+            hierarchy_level = node.metadata.get("hierarchy_info", {}).get("level", 0)
+
+            # Check if this is a top-level category/section header
+            if hierarchy_level == 0 and any(keyword in header_text for keyword in
+                                            ["overview", "section", "category", "products", "trenchers", "equipment"]):
+                self.logger.info(
+                    f"Node {node.node_id} is a top-level category header "
+                    f"({header_text}) at hierarchy level {hierarchy_level}. "
+                    f"Metadata extraction not applicable for structural nodes."
+                )
+                continue
 
             best_match = None
             best_score = 0
@@ -644,14 +628,28 @@ class TextNodeCreator:
             if best_match and best_score > threshold:
                 matched_metadata[node.node_id] = best_match
                 if self.config.verbose:
-                    self.logger.info(f"Matched node {node.node_id} with score {best_score}")
-                    self.logger.info(f"Matched to model: {best_match.get('model_number')}")
+                    self.logger.info(
+                        f"Successfully matched node {node.node_id} "
+                        f"to model {best_match.get('model_number')} "
+                        f"with confidence score {best_score:.2f}"
+                    )
             else:
-                if self.config.verbose:
-                    self.logger.info(f"No strong match found for node {node.node_id}")
+                if hierarchy_level > 0:
+                    # This is a content node that we expected to match but couldn't
+                    self.logger.warning(
+                        f"Unable to find matching metadata for content node {node.node_id} "
+                        f"(Page {node.metadata['document_info']['page_num']}, "
+                        f"Header: {header_text}, Hierarchy Level: {hierarchy_level})"
+                    )
+                else:
+                    # This is a structural node (header, category, etc.)
+                    self.logger.debug(
+                        f"No metadata match needed for structural node {node.node_id} "
+                        f"(Page {node.metadata['document_info']['page_num']}, "
+                        f"Header: {header_text}, Hierarchy Level: {hierarchy_level})"
+                    )
 
         return matched_metadata
-
 
     def _filter_nodes_by_pages(self, nodes: list[BaseNode], pages: list[int] | None) -> list[BaseNode]:
         """
@@ -669,24 +667,6 @@ class TextNodeCreator:
         self.logger.info(f"Filtered {len(nodes)} nodes to {len(filtered_nodes)} nodes from pages {pages}")
         return filtered_nodes
 
-    # def _filter_nodes_by_pages(self, nodes: list[BaseNode], pages: list[int] | None) -> list[BaseNode]:
-    #     """
-    #     Filter nodes based on specified page numbers.
-    #
-    #     Args:
-    #         nodes: List of nodes to filter
-    #         pages: List of page numbers to include, or None for all pages
-    #
-    #     Returns:
-    #         Filtered list of nodes
-    #     """
-    #     if pages is None:
-    #         return nodes
-    #
-    #     return [
-    #         node for node in nodes
-    #         if node.metadata["document_info"]["page_num"] in pages
-    #     ]
 
     """
     Test Method, may be deleted also
@@ -835,37 +815,76 @@ class TextNodeCreator:
 
     def _inspect_llm_response(self, response, context: str) -> None:
         """
-        Will only run in verbose logging mode.
-        Logs diagnostic information about LLM responses for troubleshooting.
+        Inspects LLM responses with support for both Anthropic and OpenAI formats.
 
-        This lightweight inspection helps identify structural issues with responses
-        before they reach the JSON extraction stage. It focuses on response format
-        and content presence rather than JSON parsing, which is handled separately.
+        This method provides detailed inspection of LLM responses regardless of their source.
+        It intelligently detects the response format and extracts relevant information
+        in a consistent way for logging and debugging purposes.
 
         Args:
-            response: The raw response from the LLM
+            response: The raw response from either Anthropic or OpenAI
             context: A string describing where this inspection is happening
         """
         if self.config.verbose:
             self.logger.info(f"\n=== LLM Response Overview ({context}) ===")
 
-            # Check basic response structure
-            self.logger.info(f"Response type: {type(response)}")
+            # First, let's identify the response type
+            response_type = type(response).__name__
+            self.logger.info(f"Response type: {response_type}")
 
-            # Examine content structure
-            if hasattr(response, 'content'):
-                content = response.content
-                self.logger.info(f"Content type: {type(content)}")
+            # Extract content based on the response type
+            content = None
+            api_source = None
 
-                if isinstance(content, list):
-                    self.logger.info(f"Content is a list with {len(content)} elements")
-                    for i, item in enumerate(content):
-                        self.logger.info(f"Element {i} type: {type(item)}")
-                elif isinstance(content, str):
-                    self.logger.info(f"Content is a string of length {len(content)}")
+            if hasattr(response, 'choices'):
+                # This is likely an OpenAI response
+                api_source = 'OpenAI'
+                if response.choices:
+                    content = response.choices[0].message.content
+                    self.logger.info(f"Model used: {getattr(response, 'model', 'unknown')}")
+                    self.logger.info(f"Total tokens: {getattr(response, 'usage', {}).get('total_tokens', 'unknown')}")
+
+            elif hasattr(response, 'content'):
+                # This is likely an Anthropic response
+                api_source = 'Anthropic'
+                if isinstance(response.content, list):
+                    # Handle Anthropic's list-style content
+                    content = response.content[0].text if response.content else None
                 else:
-                    self.logger.info(f"Unexpected content type: {type(content)}")
+                    # Handle Anthropic's string content
+                    content = str(response.content)
+
+                self.logger.info(f"Model used: {getattr(response, 'model', 'unknown')}")
+
+            self.logger.info(f"API Source: {api_source or 'Unknown'}")
+
+            # Process the extracted content consistently, regardless of source
+            if content:
+                self.logger.info(f"Content type: {type(content)}")
+                self.logger.info(f"Content length: {len(content)}")
+
+                # Provide a preview of the content
+                preview_length = 500
+                content_preview = content[:preview_length]
+                if len(content) > preview_length:
+                    content_preview += "..."
+                self.logger.info(f"Content preview:\n{content_preview}")
+
+                # Check if content looks like JSON
+                try:
+                    json.loads(content)
+                    self.logger.info("Content appears to be valid JSON")
+                except json.JSONDecodeError as e:
+                    self.logger.info(f"Content is not valid JSON: {str(e)}")
+
+                    # Look for JSON-like structures that might need extraction
+                    if '{' in content and '}' in content:
+                        self.logger.info("Content contains JSON-like structures that may need extraction")
             else:
-                self.logger.info("Response has no content attribute")
+                self.logger.info("No content found in response")
+
+            # Log any additional metadata that might be helpful
+            if hasattr(response, 'created'):
+                self.logger.info(f"Response timestamp: {response.created}")
 
             self.logger.info("=== End Response Overview ===\n")

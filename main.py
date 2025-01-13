@@ -32,11 +32,10 @@ def main():
         # document_processor = DocumentProcessor(parsing_config=parser)
         # document_processor.process_all()
 
-        node_creation_config = NodeCreationConfig(pipeline_name="thirteenth_pipeline",
+        node_creation_config = NodeCreationConfig(pipeline_name="fifteenth_pipeline_gpt_instruct",
                                                   hierarchical_config=HierarchicalConfig(),
-                                                  metadata_extraction=MetadataExtractionConfig(model="haiku"),
+                                                  metadata_extraction=MetadataExtractionConfig(model="gpt-3.5-turbo-instruct"),
                                                   test_pages=[10])
-
 
         node_creator = TextNodeCreator(node_config=node_creation_config)
         nodes = node_creator.create_nodes()

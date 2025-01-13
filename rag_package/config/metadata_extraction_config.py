@@ -2,16 +2,14 @@
 Configuration module for metadata extraction in the RAG pipeline.
 
 This module defines the MetadataExtractionConfig class which manages settings
-for extracting metadata from technical documentation.
+for extracting metadata from technical documentation, supporting multiple LLM providers.
 """
 from dataclasses import dataclass, field
 from typing import Optional, Literal, TypeAlias
+from rag_package.models.llm_clients import BaseLLMClient, create_llm_client
 
-from anthropic import Client
-
-# Type definitions for metadata extraction configuration
-ModelChoice: TypeAlias = Literal["haiku", "sonnet"]
-
+# Updated type definitions to include OpenAI models
+ModelChoice: TypeAlias = Literal["haiku", "sonnet", "gpt-4", "gpt-3.5-turbo", "gpt-3.5-turbo-instruct"]
 
 @dataclass
 class MetadataExtractionConfig:
@@ -19,7 +17,8 @@ class MetadataExtractionConfig:
     Configuration settings for metadata extraction process.
 
     Required Parameters:
-        model: The model choice for metadata extraction ("haiku", "sonnet", "opus")
+        model: The model choice for metadata extraction
+              ("haiku", "sonnet", "gpt-4", "gpt-3.5-turbo")
 
     Optional Parameters:
         batch_size: Number of model descriptions to process in a batch
@@ -28,7 +27,7 @@ class MetadataExtractionConfig:
 
     Example:
         metadata_config = MetadataExtractionConfig(
-            model="haiku"
+            model="gpt-3.5-turbo"
         )
     """
     # Required parameters
@@ -46,18 +45,19 @@ class MetadataExtractionConfig:
     metadata_matching_threshold: float = 0.1
 
     # Private fields
-    _llm_instance: Optional[Client] = None
+    _llm_client: Optional[BaseLLMClient] = None
     model_name: str = field(init=False)
 
     def __post_init__(self):
-        """Set the full model name based on the model choice."""
-        self.model_name = MODEL_VENDOR_MAPPING[self.model]
+        """Initialize the LLM client based on the model choice."""
+        self._llm_client = create_llm_client(self.model, self.temperature)
+        self.model_name = self._llm_client.model_name
 
-    def get_client(self) -> Client:
-        """Get or create the Anthropic client instance."""
-        if self._llm_instance is None:
-            self._llm_instance = Client()
-        return self._llm_instance
+    def get_client(self) -> BaseLLMClient:
+        """Get the LLM client instance."""
+        if self._llm_client is None:
+            self._llm_client = create_llm_client(self.model, self.temperature)
+        return self._llm_client
 
     # Extraction prompts
     document_level_prompt: str = '''Analyze this text and extract document-level metadata.
@@ -93,9 +93,3 @@ class MetadataExtractionConfig:
 
         Remember: Respond ONLY with the JSON array containing metadata for each model found.
         '''
-
-
-MODEL_VENDOR_MAPPING = {
-    "haiku": "claude-3-5-haiku-latest",
-    "sonnet": "claude-3-5-sonnet-latest",
-}
