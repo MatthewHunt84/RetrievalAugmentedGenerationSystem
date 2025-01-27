@@ -38,10 +38,10 @@ class MetadataExtractionConfig:
     temperature: float = 0.1
     confidence_threshold: float = 0.8
 
-    # Token management
-    max_tokens_per_batch: int = 12000
-    tokens_for_prompt: int = 500
-    tokens_for_response: int = 2000
+    # Token management (reduced for use with GPT-3.5-turbo-instruct)
+    max_tokens_per_batch: int = 4000 #2000
+    tokens_for_prompt: int = 1000
+    tokens_for_response: int = 1000
     metadata_matching_threshold: float = 0.1
 
     # Private fields

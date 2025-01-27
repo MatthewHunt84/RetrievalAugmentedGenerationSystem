@@ -446,6 +446,7 @@ class TextNodeCreator:
             # Rough approximation: 4 chars = 1 token
             estimated_tokens = len(node.text) // 4
 
+            # If adding this node would exceed our token limit, start a new batch
             if current_token_count + estimated_tokens > available_tokens and current_batch:
                 batches.append(current_batch)
                 current_batch = []
@@ -453,6 +454,13 @@ class TextNodeCreator:
 
             current_batch.append(node)
             current_token_count += estimated_tokens
+
+            # If the current batch is getting large, start a new one
+            # This helps prevent batches from getting too close to the limit
+            if current_token_count > (available_tokens * 0.8):  # 80% of available tokens
+                batches.append(current_batch)
+                current_batch = []
+                current_token_count = 0
 
         # Add any remaining nodes
         if current_batch:
@@ -470,10 +478,15 @@ class TextNodeCreator:
         try:
             self.logger.info("Starting document metadata extraction...")
 
+            # Take only the first few pages or sections to get document-level info
+            # Estimate 4 chars per token, aim for ~2000 tokens
+            content_limit = 8000  # 2000 tokens * 4 chars/token
+            truncated_content = doc_content[:content_limit]
+
             client = self.config.metadata_extraction.get_client()
             response = client.create_message(
                 prompt=self.config.metadata_extraction.document_level_prompt.format(
-                    text=doc_content
+                    text=truncated_content
                 ),
                 max_tokens=1000
             )

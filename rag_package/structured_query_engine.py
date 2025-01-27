@@ -1,112 +1,128 @@
 from llama_index.core import VectorStoreIndex
-from llama_index.program.openai import OpenAIPydanticProgram
 from pydantic import BaseModel, Field, create_model
 from llama_index.llms.openai import OpenAI
 import re
+import json
 
 
-# class StructuredQueryEngineBuilder:
+class AttributeMapper:
+    def __init__(self, attributes: list[dict]):
+        ## Store original attributes for later reference
+        self.original_attributes = attributes
+        self.name_to_id = {}
+        self.name_to_group = {}
+        self.name_to_original = {}
 
-mock_data = [
-{
-"attribute_id": "bg6t6xhlfxbw",
-"name": "Weight",
-"description": "The weight of the item's frame",
-"unit": "pounds",
-"format": "number",
-"options": [],
-"attribute_group_id": "askfdjs;lj",
-"attribute_group_name": "Model Information"
-},
-{
-"attribute_id": "bnccqpc9nwtd",
-"name": "Has safety clutch",
-"description": "Does the item have a safety clutch, true or false",
-"unit": "",
-"format": "boolean",
-"options": [],
-"attribute_group_id": "askfdjsalj",
-"attribute_group_name": "Model Information"
-}
-]
+        for attr in attributes:
+            cleaned_name = self._clean_attr_name(attr['name'])
+            self.name_to_id[cleaned_name] = attr['attribute_id']
+            self.name_to_group[cleaned_name] = attr['attribute_group_id']
+            self.name_to_original[cleaned_name] = attr['name']
 
-## Helper function to create model friendly names
-## This might need to return a tuple or hashmap so we can map the model names back to their original names later on, but I'm not going to overcomplicate it for now
-def clean_attr_name(name) -> str:
-    ## Convert to lowercase
-    name = name.lower()
-    ## Replace spaces and parentheses with underscores
-    name = re.sub(r'[\s\(\)]', '_', name)
-    ## Remove any non-alphanumeric characters (except underscores)
-    name = re.sub(r'[^\w]', '', name)
-    ## Remove trailing underscores
-    name = name.strip('_')
-    return name
+    def _clean_attr_name(self, name: str) -> str:
+        name = name.lower()
+        name = re.sub(r'[\s\(\)]', '_', name)
+        name = re.sub(r'[^\w]', '', name)
+        name = name.strip('_')
+        return name
 
-def create_dynamic_attr_model(attributes: list[dict], model_name: str = "1324D_Standard_Trencher") -> type[BaseModel]:
-    ## We need to pass the llm an empty model with fields to populate for:
-    ## each attribute name  with the provided description, or at least a pretty good default string to help the llm
-    ## We will need to clean up the names so they can be used as model parameters. No spaces, parens, etc
-    ## Unit & Format can be bundled into the description if they exist
-    ## Options is a weird one - it's hard to nail down what this means for the llm call exactly. Need clarification from Garrett.
+    def enrich_response(self, llm_response: dict) -> list[dict]:
+        ## We don't want to bloat the LLM call with things like attribute_ids which use up tokens but aren't useful.
+        ## So we enrich the attribute data with the llm responses here after the call.
+        enriched_response = []
 
-    ## The llm must also know the make & model of the item we are interested in, but that should be in the prompt from the query engine rather than the pydantic model
+        for clean_name, value in llm_response.items():
+            enriched_response.append({
+                'attribute_id': self.name_to_id.get(clean_name),
+                'attribute_group_id': self.name_to_group.get(clean_name),
+                'attribute': self.name_to_original.get(clean_name),
+                'value': value if value is not None else "NO VALUE FOUND"
+            })
 
-    ## We care about attribute_id because we need to keep those things linked.
+        return enriched_response
 
-    attr_fields = {
-        clean_attr_name(attr['name']): (
-            str,
-            make_description(
-                name=attr['name'],
-                description=attr.get('description'),
-                unit=attr.get('unit'),
-                format=attr.get('format')
+
+class StructuredQueryEngineBuilder:
+    def __init__(self, make: str, model: str, attributes: list[dict],
+                 prompt: str, llm_model: str):
+        self.make = make
+        self.model = model
+        self.attributes = attributes
+        self.attribute_mapper = AttributeMapper(attributes)
+        self.prompt = prompt
+        self.llm_model = llm_model
+
+    def _clean_attr_name(self, name: str) -> str:
+        return self.attribute_mapper._clean_attr_name(name)
+
+    def _make_description(self, name: str, description: str = None,
+                          unit: str = None, format: str = None) -> Field:
+        if description:
+            base_desc = description
+        else:
+            base_desc = f"The {name.lower()} of the item, if present"
+
+        additional_info = []
+        if format:
+            additional_info.append(f"a {format}")
+        if unit:
+            additional_info.append(f"in {unit}")
+
+        if additional_info:
+            final_desc = f"{base_desc}. The value should be {' '.join(additional_info)}."
+        else:
+            final_desc = f"{base_desc}."
+
+        return Field(description=final_desc, default=None)
+
+    def create_dynamic_attr_model(self, model_name: str = "DynamicModel") -> type[BaseModel]:
+        ## Model name is meaningless, but we must have something for the pydantic create_model method
+        attr_fields = {
+            self._clean_attr_name(attr['name']): (
+                str,  # Use str for all fields to handle various types uniformly
+                self._make_description(
+                    name=attr['name'],
+                    description=attr.get('description'),
+                    unit=attr.get('unit'),
+                    format=attr.get('format')
+                )
             )
+            for attr in self.attributes
+        }
+
+        return create_model(model_name, **attr_fields)
+
+    def query(self, index: VectorStoreIndex) -> list[dict]:
+        structured_attr_model = self.create_dynamic_attr_model()
+
+        llm = OpenAI(model=self.llm_model)
+        query_engine = index.as_query_engine(
+            output_cls=structured_attr_model,
+            response_mode="compact",
+            llm=llm
         )
-        for attr in attributes
-    }
 
-    dynamic_model = create_model(model_name, **attr_fields)
-    return dynamic_model
+        ## Sometimes the LLM returns a string instead of a model. We are building in a single retry before raising an error
+        response = query_engine.query(self.prompt)
 
-## Helper function to create descriptions for the model fields to assist the LLM call
-def make_description(name: str, description: str = None, unit: str = None, format: str = None) -> Field:
-    ## Start with base description.
-    ## If a description is provided, default to that. Else create a description string using the name of the attribute
-    if description:
-        base_desc = description
-    else:
-        base_desc = f"The {name.lower()} of the item, if present"
+        if isinstance(response, str):
+            ## Retry with prompt being even more explicit about not returning a string.
+            ## We could put this in all caps maybe - but that feels like yelling at a robot
+            retry_prompt = f"{self.prompt} Do not return a string response - only return the requested attribute values."
+            response = query_engine.query(retry_prompt)
 
-    ## If we have format and/or unit info, we'll create an additional_info string.
-    ## (We're not doing anything with options yet - this might live here as well, or in the llm prompt with the make and model info)
-    additional_info = []
-    if format:
-        additional_info.append(f"a {format}")
-    if unit:
-        additional_info.append(f"in {unit}")
+            ## If still getting a string, it means the LLM sent back strings twice in a row. We'll raise an error here
+            if isinstance(response, str):
+                raise ValueError("LLM repeatedly returned string response instead of structured data")
 
-    ## Combine description with additional info if any exists
-    if additional_info:
-        final_desc = f"{base_desc}. The value should be {' '.join(additional_info)}."
-    else:
-        final_desc = f"{base_desc}."
+        ## Next we're going to map the LLM responses back to their attribute IDs, before returning that object
+        response_dict = (
+            response.dict() if hasattr(response, 'dict')
+            else response if isinstance(response, dict)
+            else json.loads(str(response))
+        )
 
-    ## Pydantic models need a default for a basic instantiation or else they will throw
-    return Field(description=final_desc, default=None)
+        enriched_response = self.attribute_mapper.enrich_response(response_dict)
 
-def query(index: VectorStoreIndex):
-
-    structured_attr_model = create_dynamic_attr_model(mock_data)
-    print("DYNAMIC MODEL CREATED")
-    print(structured_attr_model)
-
-    llm = OpenAI(model="gpt-4o-mini")
-    query_engine = index.as_query_engine(output_cls=structured_attr_model, ressponse_mode="compact", llm=llm)
-    print("QUERY ENGINE CREATED")
-    response = query_engine.query("Add attributes to model if found, or None for the specific model 1324D Standard Trencher")
-
-    print("RESPONSE")
-    print(response)
+        return enriched_response
 

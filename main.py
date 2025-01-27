@@ -14,7 +14,10 @@ from rag_package.config.parser_config import ParserConfig
 from rag_package.config.node_creation_config import NodeCreationConfig
 from rag_package.config.embedding_config import get_embed_model
 from rag_package import structured_query_engine
+
+from rag_package.structured_query_engine import StructuredQueryEngineBuilder
 import llama_index
+import json
 
 def main():
     load_dotenv()
@@ -42,35 +45,58 @@ def main():
         # document_processor = DocumentProcessor(parsing_config=parser)
         # document_processor.process_all()
         #
-        node_creation_config = NodeCreationConfig(pipeline_name="seventeenth_pipeline_gpt_instruct",
-                                                  hierarchical_config=HierarchicalConfig(),
-                                                  metadata_extraction=MetadataExtractionConfig(model="gpt-3.5-turbo-instruct"),
-                                                  test_pages=[10])
-
-        node_creator = TextNodeCreator(node_config=node_creation_config)
-
-        text_nodes = node_creator.create_or_load_nodes()
-
-        # embed_model = get_embed_model()
-
-        # index_manager = VectorIndexManager(embed_model=embed_model)
+        # node_creation_config = NodeCreationConfig(pipeline_name="eighteenth_pipeline_gpt_instruct",
+        #                                           hierarchical_config=HierarchicalConfig(),
+        #                                           metadata_extraction=MetadataExtractionConfig(model="gpt-3.5-turbo-instruct"))
+        # #
+        # node_creator = TextNodeCreator(node_config=node_creation_config)
+        # #
+        # text_nodes = node_creator.create_or_load_nodes()
+        # #
+        embed_model = get_embed_model()
+        # #
+        index_manager = VectorIndexManager(embed_model=embed_model)
         # index = index_manager.get_or_create_index(text_nodes)
-
-        # structured_query_engine.query(index)
-
+        index = index_manager.get_or_create_index()
 
 
+        make = "Baretto"
+        model = "1324D Standard Trencher"
 
+        mock_data = [
+            {
+                "attribute_id": "bg6t6xhlfxbw",
+                "name": "Weight",
+                "description": "The weight of the equipment's frame",
+                "unit": "pounds",
+                "format": "number",
+                "options": [],
+                "attribute_group_id": "askfdjsrlj",
+                "attribute_group_name": "Information"
+            },
+            {
+                "attribute_id": "bnccqpc9nwtd",
+                "name": "Has safety clutch",
+                "description": "Does this equipment have a safety clutch, answer true or false.",
+                "unit": "boolean",
+                "format": "string",
+                "options": [],
+                "attribute_group_id": "askfdjsalj",
+                "attribute_group_name": "Information"
+            }
+        ]
 
-    #     # Create query engine
-    #     engine_builder = QueryEngineBuilder(index)
-    #     query_engine = engine_builder.build_engine(use_reranker=False)
-    #     query_manager = QueryManager(query_engine)
-    #
-    #     # Submit query to llm
-    #     test_query = "What parts are included in the Uppspel?"
-    #     print(f"Sending test query: {test_query}")  # Add debug print
-    #     response = query_manager.query(test_query, get_sources=True)
+        query_builder = StructuredQueryEngineBuilder(
+            make="Baretto",
+            model="1324D Standard Trencher",
+            attributes=mock_data,
+            prompt=f"Add attributes to model if found, or None for a {make} {model}",
+            llm_model="gpt-4o-mini"
+        )
+
+        response = query_builder.query(index)
+        print(json.dumps(response, indent=2))
+
     #
 
 
