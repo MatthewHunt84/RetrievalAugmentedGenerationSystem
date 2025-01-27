@@ -183,10 +183,12 @@ class TextNodeCreator:
     ) -> list[BaseNode]:
         """
         Create hierarchical nodes from parsed markdown content.
+        If no pages are specified for metadata extraction, processes all pages.
 
         Args:
             metadata_extraction_test_pages: List of page numbers to enhance with metadata.
-                If None, will use test_pages from config
+                If None, will use test_pages from config.
+                If config test_pages is also None, will process all pages.
             node_analysis_pages: List of page numbers to include in analysis output.
                 If None, will use the same pages as metadata_extraction_test_pages
         """
@@ -198,24 +200,30 @@ class TextNodeCreator:
             # Create all nodes first
             all_nodes = self._create_base_nodes()
 
-            # Use config test pages if no specific pages provided
-            metadata_pages = (metadata_extraction_test_pages if metadata_extraction_test_pages is not None
-                              else self.config.test_pages)
+            # Use config test pages if no specific pages provided, otherwise use all pages
+            metadata_pages = (
+                metadata_extraction_test_pages if metadata_extraction_test_pages is not None
+                else (
+                    self.config.test_pages if hasattr(self.config, 'test_pages') and self.config.test_pages is not None
+                    else None)  # None here will cause _filter_nodes_by_pages to return all nodes
+            )
 
-            # For metadata extraction
-            if metadata_pages:
-                self.logger.info(f"Extracting metadata for pages: {metadata_pages}")
-                metadata_nodes = self._filter_nodes_by_pages(all_nodes, metadata_pages)
-                if metadata_nodes:
-                    self._enhance_nodes_with_metadata(metadata_nodes)
+            # For metadata extraction - now will process all pages if metadata_pages is None
+            self.logger.info(
+                "Extracting metadata for all pages" if metadata_pages is None
+                else f"Extracting metadata for pages: {metadata_pages}"
+            )
+            metadata_nodes = self._filter_nodes_by_pages(all_nodes, metadata_pages)
+            if metadata_nodes:
+                self._enhance_nodes_with_metadata(metadata_nodes)
 
-                # For analysis output - use metadata pages if no specific analysis pages given
-                analysis_pages = node_analysis_pages if node_analysis_pages is not None else metadata_pages
-                if analysis_pages:
-                    self.logger.info(f"Analyzing nodes from pages: {analysis_pages}")
-                    analysis_nodes = self._filter_nodes_by_pages(all_nodes, analysis_pages)
-                    if analysis_nodes:
-                        self.analyze_node_hierarchy(analysis_nodes)
+            # For analysis output - use metadata pages if no specific analysis pages given
+            analysis_pages = node_analysis_pages if node_analysis_pages is not None else metadata_pages
+            if analysis_pages is not None:  # Only filter for analysis if specific pages requested
+                self.logger.info(f"Analyzing nodes from pages: {analysis_pages}")
+                analysis_nodes = self._filter_nodes_by_pages(all_nodes, analysis_pages)
+                if analysis_nodes:
+                    self.analyze_node_hierarchy(analysis_nodes)
 
             execution_time = time.time() - start_time
             self._log_execution_time(execution_time)
@@ -656,6 +664,7 @@ class TextNodeCreator:
     def _filter_nodes_by_pages(self, nodes: list[BaseNode], pages: list[int] | None) -> list[BaseNode]:
         """
         Filter nodes based on specified page numbers.
+        If pages is None, returns all nodes.
         """
         if pages is None:
             self.logger.info("No pages specified for filtering, returning all nodes")
