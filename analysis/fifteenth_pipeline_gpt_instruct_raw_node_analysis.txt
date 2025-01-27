@@ -10,7 +10,7 @@ Analyzing nodes from pages: [10]
 
 Node 1 (Page 10):
 ==================================================
-Node ID: 13d9aec9-0ddc-40aa-9439-931249c628ed
+Node ID: 101bdfaf-8cbd-454c-bfbe-362c6ded727e
 Node Type: TextNode
 Page Number: 10
 
@@ -21,19 +21,19 @@ Text Content:
 
 Relationships:
 --------------------
-child: ['22bd8837-ebaa-446f-974a-08288eaf3065', 'aa6be8cf-5922-4d33-afb7-994b55c6f7ff', 'd3e20123-612f-43ce-9b8c-d2b76c3ce60d', 'ea04aab4-0bc1-48c6-8077-2eb045d9d867', 'fab54aac-20a5-49f9-ab49-1fb77bbc49bb']
+child: ['01004338-17a1-491d-a855-94780df54f2d', '04ec2077-4fe0-4df9-9864-b396a0e54b6e', '1aee79d0-a653-4b84-8064-91efbd45af23', '398a5334-84bf-42a0-b42b-1114ef2a53e2', '465c5803-5ece-4046-aaf0-9cd80c23e2f1']
 
 Metadata Values:
 --------------------
 pipeline_info:
   name: fifteenth_pipeline_gpt_instruct
-  processing_timestamp: 2025-01-13T11:39:15.033124
+  processing_timestamp: 2025-01-24T15:58:54.700205
 document_info:
   name: Barreto_Brochure.pdf
   total_pages: 32
   page_num: 10
-  document_uuid: 5f77416b-bcb8-497a-a408-7554d5a225b1
-  ingestion_timestamp: 2025-01-13T11:39:15.033136
+  document_uuid: ab392f1d-12e4-4df7-80c0-c1a2700d5ee6
+  ingestion_timestamp: 2025-01-24T15:58:54.700209
 header_info:
   level: 1
   text: BARRETO TRENCHERS
@@ -44,8 +44,8 @@ document_metadata:
   manufacturer: Barreto
   document_type: catalog
   year_published: 2017
-  equipment_categories: ['walk-behind trenchers', 'mini trenchers', 'micro trenchers', 'track trenchers']
-  models_included: ['1324D', '912HM', '712MT', '2024RTK', '1324STK']
+  equipment_categories: ['trenchers']
+  models_included: ['1324D Standard Trencher', '912HM Mini Trencher', '712MT Micro Trencher', '2024RTK Track Trencher', '1324STK Track Trencher']
 equipment_metadata:
   product_name: None
   model_number: None
@@ -59,7 +59,7 @@ equipment_metadata:
 extraction_info:
   extraction_model: gpt-3.5-turbo-instruct
   metadata_version: 1.0
-  extraction_timestamp: 2025-01-13T11:39:24.143871
+  extraction_timestamp: 2025-01-24T15:59:36.985373
 
 ==================================================
 
@@ -76,7 +76,7 @@ Nodes with document metadata: 1
 
 Node 1 (Page 10):
 ==================================================
-Node ID: d3e20123-612f-43ce-9b8c-d2b76c3ce60d
+Node ID: 04ec2077-4fe0-4df9-9864-b396a0e54b6e
 Node Type: TextNode
 Page Number: 10
 
@@ -88,19 +88,19 @@ The first product in the Barreto line of walk-behind trenchers was the all-hydra
 
 Relationships:
 --------------------
-parent: ['13d9aec9-0ddc-40aa-9439-931249c628ed']
+parent: ['101bdfaf-8cbd-454c-bfbe-362c6ded727e']
 
 Metadata Values:
 --------------------
 pipeline_info:
   name: fifteenth_pipeline_gpt_instruct
-  processing_timestamp: 2025-01-13T11:39:15.033124
+  processing_timestamp: 2025-01-24T15:58:54.700205
 document_info:
   name: Barreto_Brochure.pdf
   total_pages: 32
   page_num: 10
-  document_uuid: 5f77416b-bcb8-497a-a408-7554d5a225b1
-  ingestion_timestamp: 2025-01-13T11:39:15.033136
+  document_uuid: ab392f1d-12e4-4df7-80c0-c1a2700d5ee6
+  ingestion_timestamp: 2025-01-24T15:58:54.700209
 header_info:
   level: 2
   text: 1324D Standard Trencher:
@@ -111,29 +111,28 @@ document_metadata:
   manufacturer: Barreto
   document_type: catalog
   year_published: 2017
-  equipment_categories: ['walk-behind trenchers', 'mini trenchers', 'micro trenchers', 'track trenchers']
-  models_included: ['1324D', '912HM', '712MT', '2024RTK', '1324STK']
+  equipment_categories: ['trenchers']
+  models_included: ['1324D Standard Trencher', '912HM Mini Trencher', '712MT Micro Trencher', '2024RTK Track Trencher', '1324STK Track Trencher']
 equipment_metadata:
-  product_name: 1324D Standard Trencher
-  model_number: 1324D
-  manufacturer: Barreto
-  category: walk-behind trencher
-  subcategory: standard
-  year: 1995
-  specifications: ['900lb frame', 'low center of gravity']
-  capabilities: ['all-hydraulic', 'rental market specific', 'no belts, chains, or gears']
-  content_types: ['sprinkler systems', 'electrical lines', 'shallow trench applications']
-  ** This node has equipment metadata **
+  product_name: None
+  model_number: None
+  manufacturer: None
+  category: None
+  subcategory: None
+  year: None
+  specifications: []
+  capabilities: []
+  content_types: []
 extraction_info:
   extraction_model: gpt-3.5-turbo-instruct
   metadata_version: 1.0
-  extraction_timestamp: 2025-01-13T11:39:24.143871
+  extraction_timestamp: 2025-01-24T15:59:36.985373
 
 ==================================================
 
 Node 2 (Page 10):
 ==================================================
-Node ID: ea04aab4-0bc1-48c6-8077-2eb045d9d867
+Node ID: 465c5803-5ece-4046-aaf0-9cd80c23e2f1
 Node Type: TextNode
 Page Number: 10
 
@@ -145,19 +144,19 @@ In 2005, Barreto brought the first all-hydraulic, self-propelled mini walk-behin
 
 Relationships:
 --------------------
-parent: ['13d9aec9-0ddc-40aa-9439-931249c628ed']
+parent: ['101bdfaf-8cbd-454c-bfbe-362c6ded727e']
 
 Metadata Values:
 --------------------
 pipeline_info:
   name: fifteenth_pipeline_gpt_instruct
-  processing_timestamp: 2025-01-13T11:39:15.033124
+  processing_timestamp: 2025-01-24T15:58:54.700205
 document_info:
   name: Barreto_Brochure.pdf
   total_pages: 32
   page_num: 10
-  document_uuid: 5f77416b-bcb8-497a-a408-7554d5a225b1
-  ingestion_timestamp: 2025-01-13T11:39:15.033136
+  document_uuid: ab392f1d-12e4-4df7-80c0-c1a2700d5ee6
+  ingestion_timestamp: 2025-01-24T15:58:54.700209
 header_info:
   level: 2
   text: 912HM Mini Trencher:
@@ -168,29 +167,28 @@ document_metadata:
   manufacturer: Barreto
   document_type: catalog
   year_published: 2017
-  equipment_categories: ['walk-behind trenchers', 'mini trenchers', 'micro trenchers', 'track trenchers']
-  models_included: ['1324D', '912HM', '712MT', '2024RTK', '1324STK']
+  equipment_categories: ['trenchers']
+  models_included: ['1324D Standard Trencher', '912HM Mini Trencher', '712MT Micro Trencher', '2024RTK Track Trencher', '1324STK Track Trencher']
 equipment_metadata:
-  product_name: 912HM Mini Trencher
-  model_number: 912HM
-  manufacturer: Barreto
-  category: walk-behind trencher
-  subcategory: mini
-  year: 2005
-  specifications: ['self-propelled', 'can trench up to 24" deep']
-  capabilities: ['all-hydraulic', 'residential contractor specific']
-  content_types: ['sprinkler systems', 'electrical lines', 'shallow trench applications']
-  ** This node has equipment metadata **
+  product_name: None
+  model_number: None
+  manufacturer: None
+  category: None
+  subcategory: None
+  year: None
+  specifications: []
+  capabilities: []
+  content_types: []
 extraction_info:
   extraction_model: gpt-3.5-turbo-instruct
   metadata_version: 1.0
-  extraction_timestamp: 2025-01-13T11:39:24.143871
+  extraction_timestamp: 2025-01-24T15:59:36.985373
 
 ==================================================
 
 Node 3 (Page 10):
 ==================================================
-Node ID: aa6be8cf-5922-4d33-afb7-994b55c6f7ff
+Node ID: 398a5334-84bf-42a0-b42b-1114ef2a53e2
 Node Type: TextNode
 Page Number: 10
 
@@ -202,19 +200,19 @@ The Barreto line of walk-behind trenchers also includes the 712MT Micro Trencher
 
 Relationships:
 --------------------
-parent: ['13d9aec9-0ddc-40aa-9439-931249c628ed']
+parent: ['101bdfaf-8cbd-454c-bfbe-362c6ded727e']
 
 Metadata Values:
 --------------------
 pipeline_info:
   name: fifteenth_pipeline_gpt_instruct
-  processing_timestamp: 2025-01-13T11:39:15.033124
+  processing_timestamp: 2025-01-24T15:58:54.700205
 document_info:
   name: Barreto_Brochure.pdf
   total_pages: 32
   page_num: 10
-  document_uuid: 5f77416b-bcb8-497a-a408-7554d5a225b1
-  ingestion_timestamp: 2025-01-13T11:39:15.033136
+  document_uuid: ab392f1d-12e4-4df7-80c0-c1a2700d5ee6
+  ingestion_timestamp: 2025-01-24T15:58:54.700209
 header_info:
   level: 2
   text: 712MT Micro Trencher:
@@ -225,29 +223,28 @@ document_metadata:
   manufacturer: Barreto
   document_type: catalog
   year_published: 2017
-  equipment_categories: ['walk-behind trenchers', 'mini trenchers', 'micro trenchers', 'track trenchers']
-  models_included: ['1324D', '912HM', '712MT', '2024RTK', '1324STK']
+  equipment_categories: ['trenchers']
+  models_included: ['1324D Standard Trencher', '912HM Mini Trencher', '712MT Micro Trencher', '2024RTK Track Trencher', '1324STK Track Trencher']
 equipment_metadata:
-  product_name: 712MT Micro Trencher
-  model_number: 712MT
-  manufacturer: Barreto
-  category: walk-behind trencher
-  subcategory: micro
-  year: 2010
-  specifications: ['load sensing valve system', 'automatic wheel speed adjustment']
-  capabilities: ['all-hydraulic', 'novice friendly', 'professional grade']
-  content_types: ['sprinkler systems', 'electrical lines', 'shallow trench applications']
-  ** This node has equipment metadata **
+  product_name: None
+  model_number: None
+  manufacturer: None
+  category: None
+  subcategory: None
+  year: None
+  specifications: []
+  capabilities: []
+  content_types: []
 extraction_info:
   extraction_model: gpt-3.5-turbo-instruct
   metadata_version: 1.0
-  extraction_timestamp: 2025-01-13T11:39:24.143871
+  extraction_timestamp: 2025-01-24T15:59:36.985373
 
 ==================================================
 
 Node 4 (Page 10):
 ==================================================
-Node ID: 22bd8837-ebaa-446f-974a-08288eaf3065
+Node ID: 1aee79d0-a653-4b84-8064-91efbd45af23
 Node Type: TextNode
 Page Number: 10
 
@@ -259,19 +256,19 @@ The 2024RTK Stand-on Track Trencher from Barreto was released in 2015 and featur
 
 Relationships:
 --------------------
-parent: ['13d9aec9-0ddc-40aa-9439-931249c628ed']
+parent: ['101bdfaf-8cbd-454c-bfbe-362c6ded727e']
 
 Metadata Values:
 --------------------
 pipeline_info:
   name: fifteenth_pipeline_gpt_instruct
-  processing_timestamp: 2025-01-13T11:39:15.033124
+  processing_timestamp: 2025-01-24T15:58:54.700205
 document_info:
   name: Barreto_Brochure.pdf
   total_pages: 32
   page_num: 10
-  document_uuid: 5f77416b-bcb8-497a-a408-7554d5a225b1
-  ingestion_timestamp: 2025-01-13T11:39:15.033136
+  document_uuid: ab392f1d-12e4-4df7-80c0-c1a2700d5ee6
+  ingestion_timestamp: 2025-01-24T15:58:54.700209
 header_info:
   level: 2
   text: 2024RTK Track Trencher:
@@ -282,29 +279,28 @@ document_metadata:
   manufacturer: Barreto
   document_type: catalog
   year_published: 2017
-  equipment_categories: ['walk-behind trenchers', 'mini trenchers', 'micro trenchers', 'track trenchers']
-  models_included: ['1324D', '912HM', '712MT', '2024RTK', '1324STK']
+  equipment_categories: ['trenchers']
+  models_included: ['1324D Standard Trencher', '912HM Mini Trencher', '712MT Micro Trencher', '2024RTK Track Trencher', '1324STK Track Trencher']
 equipment_metadata:
-  product_name: 2024RTK Track Trencher
-  model_number: 2024RTK
-  manufacturer: Barreto
-  category: stand-on track trencher
-  subcategory: fixed platform
-  year: 2015
-  specifications: ['unique fine tuning control adjustment', 'Adjustable Trenching Control (ATC)']
-  capabilities: ['fixed platform', 'fine tuning control', 'individual track controls']
-  content_types: ['uneven terrain']
-  ** This node has equipment metadata **
+  product_name: None
+  model_number: None
+  manufacturer: None
+  category: None
+  subcategory: None
+  year: None
+  specifications: []
+  capabilities: []
+  content_types: []
 extraction_info:
   extraction_model: gpt-3.5-turbo-instruct
   metadata_version: 1.0
-  extraction_timestamp: 2025-01-13T11:39:24.143871
+  extraction_timestamp: 2025-01-24T15:59:36.985373
 
 ==================================================
 
 Node 5 (Page 10):
 ==================================================
-Node ID: fab54aac-20a5-49f9-ab49-1fb77bbc49bb
+Node ID: 01004338-17a1-491d-a855-94780df54f2d
 Node Type: TextNode
 Page Number: 10
 
@@ -315,19 +311,19 @@ The newest addition to the Barreto family of trenchers is the 1324STK walk-behin
 
 Relationships:
 --------------------
-parent: ['13d9aec9-0ddc-40aa-9439-931249c628ed']
+parent: ['101bdfaf-8cbd-454c-bfbe-362c6ded727e']
 
 Metadata Values:
 --------------------
 pipeline_info:
   name: fifteenth_pipeline_gpt_instruct
-  processing_timestamp: 2025-01-13T11:39:15.033124
+  processing_timestamp: 2025-01-24T15:58:54.700205
 document_info:
   name: Barreto_Brochure.pdf
   total_pages: 32
   page_num: 10
-  document_uuid: 5f77416b-bcb8-497a-a408-7554d5a225b1
-  ingestion_timestamp: 2025-01-13T11:39:15.033136
+  document_uuid: ab392f1d-12e4-4df7-80c0-c1a2700d5ee6
+  ingestion_timestamp: 2025-01-24T15:58:54.700209
 header_info:
   level: 2
   text: 1324STK Track Trencher:
@@ -338,30 +334,29 @@ document_metadata:
   manufacturer: Barreto
   document_type: catalog
   year_published: 2017
-  equipment_categories: ['walk-behind trenchers', 'mini trenchers', 'micro trenchers', 'track trenchers']
-  models_included: ['1324D', '912HM', '712MT', '2024RTK', '1324STK']
+  equipment_categories: ['trenchers']
+  models_included: ['1324D Standard Trencher', '912HM Mini Trencher', '712MT Micro Trencher', '2024RTK Track Trencher', '1324STK Track Trencher']
 equipment_metadata:
-  product_name: 1324STK Track Trencher
-  model_number: 1324STK
-  manufacturer: Barreto
-  category: walk-behind track trencher
-  subcategory: compact
-  year: 2017
-  specifications: ['innovative track system', 'compact frame design']
-  capabilities: ['smaller size', 'reduced ground pressure', 'maneuverability']
-  content_types: ['tight areas', 'uneven terrain']
-  ** This node has equipment metadata **
+  product_name: None
+  model_number: None
+  manufacturer: None
+  category: None
+  subcategory: None
+  year: None
+  specifications: []
+  capabilities: []
+  content_types: []
 extraction_info:
   extraction_model: gpt-3.5-turbo-instruct
   metadata_version: 1.0
-  extraction_timestamp: 2025-01-13T11:39:24.143871
+  extraction_timestamp: 2025-01-24T15:59:36.985373
 
 ==================================================
 
 
 Summary for level 1:
 Total nodes at level 1: 5
-Nodes with equipment metadata: 5
+Nodes with equipment metadata: 0
 Nodes with document metadata: 5
 
 ==================================================

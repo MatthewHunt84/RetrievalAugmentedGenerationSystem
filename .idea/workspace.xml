@@ -6,7 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="13557991-094d-4fae-8b67-4e865e4684de" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis/thirteenth_pipeline_raw_node_analysis.txt" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/thirteenth_pipeline_raw_node_analysis.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/fifteenth_pipeline_gpt_instruct_raw_node_analysis.txt" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/fifteenth_pipeline_gpt_instruct_raw_node_analysis.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/node_creation.log" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/node_creation.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rag_package/config/embedding_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/config/embedding_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rag_package/config/path_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/config/path_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rag_package/textnode_creator.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/textnode_creator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rag_package/vector_index_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/vector_index_manager.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,26 +41,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.__init__.executor": "Run",
-    "Python.document_processor.executor": "Run",
-    "Python.llm_clients.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.metadata_extraction_config.executor": "Run",
-    "Python.node_analysis.executor": "Run",
-    "Python.query_engine.executor": "Run",
-    "Python.rag_config.executor": "Run",
-    "Python.run.executor": "Run",
-    "Python.test_openai.executor": "Run",
-    "Python.textnode_creator.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/matthew.hunt/Developer/python_projects/retrieval_augmented_generation/raw_input_data",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.document_processor.executor&quot;: &quot;Run&quot;,
+    &quot;Python.llm_clients.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.metadata_extraction_config.executor&quot;: &quot;Run&quot;,
+    &quot;Python.node_analysis.executor&quot;: &quot;Run&quot;,
+    &quot;Python.query_engine.executor&quot;: &quot;Run&quot;,
+    &quot;Python.rag_config.executor&quot;: &quot;Run&quot;,
+    &quot;Python.run.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_openai.executor&quot;: &quot;Run&quot;,
+    &quot;Python.textnode_creator.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/matthew.hunt/Developer/python_projects/retrieval_augmented_generation/raw_input_data&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.intentionPowerPack&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/raw_input_data" />

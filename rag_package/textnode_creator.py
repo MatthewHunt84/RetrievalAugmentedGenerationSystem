@@ -8,6 +8,11 @@ from llama_index.core.schema import Document, BaseNode
 from rag_package.errors import TextNodeCreationError
 from rag_package.config.node_creation_config import NodeCreationConfig
 from rag_package.parsers.markdown_header_splitter import MarkdownHeaderSplitter
+import pickle
+from llama_index.core.schema import BaseNode
+import hashlib
+import llama_index
+from typing import Optional
 
 class TextNodeCreator:
     """
@@ -22,29 +27,26 @@ class TextNodeCreator:
 
         # First, set up logging before we do anything else
         self.logger = logging.getLogger(__name__)
-        self._setup_logging()  # This configures the logger with handlers and levels
+        self._setup_logging()
 
-        # Now we can use logging in subsequent initialization steps
         self.logger.info("Initializing TextNodeCreator")
 
-        # Validate essential configuration
-        if not isinstance(self.config.paths_config.parsed_results_path, Path):
-            self.config.paths_config.parsed_results_path = Path(
-                self.config.paths_config.parsed_results_path
-            )
-            self.logger.debug("Converted parsed_results_path to Path object")
-
-        # Initialize paths
+        # Initialize paths from config
         self.parsed_results_path = self.config.paths_config.parsed_results_path
         self.output_dir = self.config.paths_config.output_dir
         self.analysis_dir = self.config.paths_config.analysis_dir
-        self.logger.debug("Initialized path configurations")
 
-        # Now we can safely ensure directories exist
+        # Now that we have logging and paths, create the cache instance
+        # Pass both the creator (self) and the logger
+        self.cache = self.NodeCache(self, self.logger)
+
+        # Initialize the cache paths now that everything is ready
+        self.cache.initialize_paths()
+
+        # Continue with the rest of your initialization
         self._ensure_output_paths()
-
-        # Initialize parsers
         self.parsers = self._initialize_parsers()
+
         self.logger.info("TextNodeCreator initialization complete")
 
     def _ensure_output_paths(self) -> None:
@@ -888,3 +890,194 @@ class TextNodeCreator:
                 self.logger.info(f"Response timestamp: {response.created}")
 
             self.logger.info("=== End Response Overview ===\n")
+
+    class NodeCache:
+        def __init__(self, creator: 'TextNodeCreator', logger: logging.Logger):
+            """
+            Initialize the cache manager with the parent TextNodeCreator and a logger.
+
+            Args:
+                creator: The parent TextNodeCreator instance
+                logger: A configured logger instance
+            """
+            self.creator = creator
+            self.logger = logger
+
+            # We'll set up the paths later
+            self.cache_dir = None
+            self.metadata_path = None
+            self.nodes_path = None
+
+        def initialize_paths(self):
+            """Initialize cache paths after TextNodeCreator is fully set up."""
+            self.cache_dir = self.creator.output_dir
+            self.metadata_path = self.cache_dir / "node_cache_metadata.pkl"
+            self.nodes_path = self.cache_dir / "cached_nodes.pkl"
+
+        def _get_parsed_results_hash(self) -> str:
+            """
+            Computes a hash of the parsed results file to detect content changes.
+            This hash is used to invalidate the cache when the source data changes.
+
+            Returns:
+                str: A hex string representing the SHA-256 hash of the file contents,
+                     or an empty string if the file doesn't exist.
+            """
+            parsed_results_path = self.creator.parsed_results_path
+            if not parsed_results_path.exists():
+                self.logger.debug(f"Parsed results file not found at: {parsed_results_path}")
+                return ""
+
+            try:
+                with open(parsed_results_path, 'rb') as f:
+                    file_hash = hashlib.sha256(f.read()).hexdigest()
+                    self.logger.debug(f"Computed hash for parsed results: {file_hash[:8]}...")
+                    return file_hash
+            except Exception as e:
+                self.logger.error(f"Failed to compute hash for parsed results: {str(e)}")
+                return ""
+
+        def _compute_config_hash(self) -> str:
+            """
+            Creates a deterministic hash of the configuration to detect changes.
+            Uses all relevant fields from NodeCreationConfig that could affect node creation.
+            """
+            config_dict = {
+                "pipeline_name": self.creator.config.pipeline_name,
+                "chunk_sizes": self.creator.config.chunk_sizes,
+                "chunk_overlap": self.creator.config.chunk_overlap,
+                "test_pages": self.creator.config.test_pages,
+                "hierarchical_config": self.creator.config.hierarchical_config.__dict__,
+                "metadata_extraction": {
+                    "model": self.creator.config.metadata_extraction.model_name,
+                    "batch_size": self.creator.config.metadata_extraction.batch_size,
+                    "max_tokens": self.creator.config.metadata_extraction.max_tokens_per_batch
+                },
+                "base_instruction": self.creator.config.base_instruction
+            }
+
+            config_str = json.dumps(config_dict, sort_keys=True)
+            return hashlib.sha256(config_str.encode()).hexdigest()
+
+        def save_nodes(self, nodes: list[BaseNode]) -> None:
+            """
+            Saves nodes and their metadata to cache.
+            """
+            try:
+                metadata = {
+                    "creation_timestamp": datetime.now().isoformat(),
+                    "pipeline_name": self.creator.config.pipeline_name,
+                    "config_hash": self._compute_config_hash(),
+                    "parsed_results_hash": self._get_parsed_results_hash(),
+                    "llama_index_version": llama_index.core.__version__,
+                    "node_count": len(nodes)
+                }
+
+                self.logger.info(f"Saving {len(nodes)} nodes to cache...")
+
+                with open(self.metadata_path, 'wb') as f:
+                    pickle.dump(metadata, f)
+
+                with open(self.nodes_path, 'wb') as f:
+                    pickle.dump(nodes, f)
+
+                self.logger.info(f"Successfully cached nodes to {self.cache_dir}")
+                self.logger.debug(f"Cache metadata: {metadata}")
+
+            except Exception as e:
+                self.logger.error(f"Failed to save nodes to cache: {str(e)}")
+                raise
+
+        def load_nodes(self) -> Optional[list[BaseNode]]:
+            """
+            Attempts to load cached nodes, performing validation checks.
+            """
+            try:
+                if self.creator.config.invalidate_cache:
+                    self.logger.info("Cache invalidation requested in config")
+                    return None
+
+                if not (self.metadata_path.exists() and self.nodes_path.exists()):
+                    self.logger.info("No cached nodes found")
+                    return None
+
+                with open(self.metadata_path, 'rb') as f:
+                    metadata = pickle.load(f)
+
+                # Validate cache
+                current_config_hash = self._compute_config_hash()
+                if metadata["config_hash"] != current_config_hash:
+                    self.logger.info("Configuration has changed - invalidating cache")
+                    return None
+
+                current_results_hash = self._get_parsed_results_hash()
+                if metadata["parsed_results_hash"] != current_results_hash:
+                    self.logger.info("Parsed results have changed - invalidating cache")
+                    return None
+
+                with open(self.nodes_path, 'rb') as f:
+                    nodes = pickle.load(f)
+
+                self.logger.info(f"Successfully loaded {len(nodes)} nodes from cache")
+                self.logger.debug(f"Cache metadata: {metadata}")
+
+                return nodes
+
+            except Exception as e:
+                self.logger.error(f"Error loading cached nodes: {str(e)}")
+                return None
+
+        def clear(self) -> None:
+            """Removes all cached data."""
+            try:
+                if self.metadata_path.exists():
+                    self.metadata_path.unlink()
+                if self.nodes_path.exists():
+                    self.nodes_path.unlink()
+                self.logger.info("Cache cleared successfully")
+            except Exception as e:
+                self.logger.error(f"Error clearing cache: {str(e)}")
+                raise
+
+    def create_or_load_nodes(
+            self,
+            metadata_extraction_test_pages: list[int] = None,
+            node_analysis_pages: list[int] = None,
+            force_refresh: bool = False
+    ) -> list[BaseNode]:
+        """
+        Main entry point for node creation that implements caching.
+        This method either loads nodes from cache or creates new ones as needed.
+
+        Args:
+            metadata_extraction_test_pages: Optional list of pages to enhance with metadata
+            node_analysis_pages: Optional list of pages to include in analysis output
+            force_refresh: If True, bypasses cache and creates new nodes
+
+        Returns:
+            List of BaseNode objects
+        """
+        if force_refresh or self.config.do_not_cache:
+            self.logger.info("Bypassing cache due to force_refresh or do_not_cache setting")
+            return self.create_nodes(
+                metadata_extraction_test_pages=metadata_extraction_test_pages,
+                node_analysis_pages=node_analysis_pages
+            )
+
+        # Try loading from cache first
+        cached_nodes = self.cache.load_nodes()
+        if cached_nodes is not None:
+            return cached_nodes
+
+        # Create new nodes if cache miss
+        self.logger.info("Creating new nodes...")
+        nodes = self.create_nodes(
+            metadata_extraction_test_pages=metadata_extraction_test_pages,
+            node_analysis_pages=node_analysis_pages
+        )
+
+        # Cache the newly created nodes if caching is enabled
+        if not self.config.do_not_cache:
+            self.cache.save_nodes(nodes)
+
+        return nodes

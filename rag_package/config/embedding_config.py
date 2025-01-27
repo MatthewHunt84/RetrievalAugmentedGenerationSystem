@@ -1,12 +1,17 @@
 from llama_index.embeddings.openai import OpenAIEmbedding
 from llama_index.core import Settings
+from functools import lru_cache
 
+@lru_cache()
 def get_embed_model() -> OpenAIEmbedding:
     """
-    Singleton pattern for embedding model access.
-    Ensures consistent embedding model usage across the application.
+    Cached singleton pattern for embedding model access with explicit configuration.
     """
-    if not hasattr(get_embed_model, '_instance'):
-        get_embed_model._instance = OpenAIEmbedding(model="text-embedding-3-large")
-        Settings.embed_model = get_embed_model._instance
-    return get_embed_model._instance
+    embed_model = OpenAIEmbedding(
+        model="text-embedding-3-large",
+        api_key=None,  # Will use environment variable
+        dimensions=3072,  # Explicitly set for text-embedding-3-large
+        api_base=None,  # Use default OpenAI API base
+    )
+    Settings.embed_model = embed_model
+    return embed_model

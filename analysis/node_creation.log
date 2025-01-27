@@ -11180,3 +11180,766 @@ Evaluating node: fab54aac-20a5-49f9-ab49-1fb77bbc49bb
 2025-01-13 11:39:24,145 - INFO - Filtered 182 nodes to 6 nodes from pages [10]
 2025-01-13 11:39:24,145 - INFO - Starting node hierarchy analysis for 6 nodes
 2025-01-13 11:39:24,145 - INFO - Writing analysis to analysis/fifteenth_pipeline_gpt_instruct_raw_node_analysis.txt
+2025-01-24 15:26:56,217 - INFO - Logger level set to: 20
+2025-01-24 15:26:56,217 - INFO - Initializing TextNodeCreator
+2025-01-24 15:26:56,217 - INFO - TextNodeCreator initialization complete
+2025-01-24 15:26:56,217 - INFO - Beginning hierarchical node creation process...
+2025-01-24 15:26:56,219 - INFO - Processing document: Barreto_Brochure.pdf
+2025-01-24 15:26:56,220 - INFO - Created 5 nodes for page 1
+2025-01-24 15:26:56,220 - INFO - Created 6 nodes for page 2
+2025-01-24 15:26:56,220 - INFO - Created 6 nodes for page 3
+2025-01-24 15:26:56,220 - INFO - Created 4 nodes for page 4
+2025-01-24 15:26:56,220 - INFO - Created 7 nodes for page 5
+2025-01-24 15:26:56,220 - INFO - Created 3 nodes for page 6
+2025-01-24 15:26:56,220 - INFO - Created 5 nodes for page 7
+2025-01-24 15:26:56,220 - INFO - Created 5 nodes for page 8
+2025-01-24 15:26:56,220 - INFO - Created 8 nodes for page 9
+2025-01-24 15:26:56,221 - INFO - Created 6 nodes for page 10
+2025-01-24 15:26:56,221 - INFO - Created 12 nodes for page 11
+2025-01-24 15:26:56,221 - INFO - Created 3 nodes for page 12
+2025-01-24 15:26:56,221 - INFO - Created 7 nodes for page 13
+2025-01-24 15:26:56,221 - INFO - Created 5 nodes for page 14
+2025-01-24 15:26:56,221 - INFO - Created 5 nodes for page 15
+2025-01-24 15:26:56,221 - INFO - Created 6 nodes for page 16
+2025-01-24 15:26:56,221 - INFO - Created 5 nodes for page 17
+2025-01-24 15:26:56,221 - INFO - Created 6 nodes for page 18
+2025-01-24 15:26:56,222 - INFO - Created 8 nodes for page 19
+2025-01-24 15:26:56,222 - INFO - Created 3 nodes for page 20
+2025-01-24 15:26:56,222 - INFO - Created 8 nodes for page 21
+2025-01-24 15:26:56,222 - INFO - Created 5 nodes for page 22
+2025-01-24 15:26:56,222 - INFO - Created 9 nodes for page 23
+2025-01-24 15:26:56,222 - INFO - Created 5 nodes for page 24
+2025-01-24 15:26:56,222 - INFO - Created 8 nodes for page 25
+2025-01-24 15:26:56,222 - INFO - Created 3 nodes for page 26
+2025-01-24 15:26:56,222 - INFO - Created 6 nodes for page 27
+2025-01-24 15:26:56,222 - INFO - Created 5 nodes for page 28
+2025-01-24 15:26:56,223 - INFO - Created 5 nodes for page 29
+2025-01-24 15:26:56,223 - INFO - Created 4 nodes for page 30
+2025-01-24 15:26:56,223 - INFO - Created 5 nodes for page 31
+2025-01-24 15:26:56,223 - INFO - Created 4 nodes for page 32
+2025-01-24 15:26:56,223 - INFO - Extracting metadata for pages: [10]
+2025-01-24 15:26:56,223 - INFO - Filtered 182 nodes to 6 nodes from pages [10]
+2025-01-24 15:26:56,223 - INFO - Enhancing metadata for 6 nodes
+2025-01-24 15:26:56,223 - INFO - Processing pages: [10]
+2025-01-24 15:26:56,223 - INFO - Starting document metadata extraction...
+2025-01-24 15:27:11,881 - INFO - 
+=== LLM Response Overview (Document Metadata Extraction) ===
+2025-01-24 15:27:11,881 - INFO - Response type: dict
+2025-01-24 15:27:11,881 - INFO - API Source: Unknown
+2025-01-24 15:27:11,881 - INFO - No content found in response
+2025-01-24 15:27:11,881 - INFO - === End Response Overview ===
+
+2025-01-24 15:27:11,881 - ERROR - Failed to extract document metadata: Invalid JSON structure: Extra data: line 7 column 2 (char 289)
+2025-01-24 15:27:11,881 - INFO - Created 1 batches from 6 nodes
+2025-01-24 15:27:11,881 - INFO - Processing batch of 6 nodes
+2025-01-24 15:27:11,881 - INFO - Batch content:
+2025-01-24 15:27:11,881 - INFO - Node 80924b05-a8ba-4fc7-b651-b4da41ae2478 (Page 10): BARRETO TRENCHERS
+2025-01-24 15:27:11,882 - INFO - Node b1b8b4b8-a2fe-4a51-9f56-c083416cde66 (Page 10): 1324D Standard Trencher:
+2025-01-24 15:27:11,882 - INFO - Node aafef7d0-699b-4490-8975-d69bbd813a43 (Page 10): 912HM Mini Trencher:
+2025-01-24 15:27:11,882 - INFO - Node bda85fcd-18e6-4e54-bbc3-e79f49cd101f (Page 10): 712MT Micro Trencher:
+2025-01-24 15:27:11,882 - INFO - Node 42f42d65-0967-4a4d-b66a-af22f72cc33e (Page 10): 2024RTK Track Trencher:
+2025-01-24 15:27:11,882 - INFO - Node 68e360f7-c435-4d7c-9834-c0608ac3805b (Page 10): 1324STK Track Trencher:
+2025-01-24 15:27:11,882 - INFO - Processing batch of 6 nodes for metadata extraction
+2025-01-24 15:27:42,869 - INFO - 
+=== LLM Response Overview (Batch Metadata Extraction) ===
+2025-01-24 15:27:42,870 - INFO - Response type: dict
+2025-01-24 15:27:42,870 - INFO - API Source: Unknown
+2025-01-24 15:27:42,870 - INFO - No content found in response
+2025-01-24 15:27:42,870 - INFO - === End Response Overview ===
+
+2025-01-24 15:27:42,870 - INFO - Successfully extracted metadata for batch
+2025-01-24 15:27:42,870 - INFO - Processing metadata for 5 models
+2025-01-24 15:27:42,871 - INFO - 
+Evaluating node: 80924b05-a8ba-4fc7-b651-b4da41ae2478
+2025-01-24 15:27:42,871 - INFO - Header text: barreto trenchers
+2025-01-24 15:27:42,871 - INFO - Header level: 1
+2025-01-24 15:27:42,871 - INFO - Node 80924b05-a8ba-4fc7-b651-b4da41ae2478 is a top-level category header (barreto trenchers) at hierarchy level 0. Metadata extraction not applicable for structural nodes.
+2025-01-24 15:27:42,871 - INFO - 
+Evaluating node: b1b8b4b8-a2fe-4a51-9f56-c083416cde66
+2025-01-24 15:27:42,871 - INFO - Header text: 1324d standard trencher:
+2025-01-24 15:27:42,871 - INFO - Header level: 2
+2025-01-24 15:27:42,871 - INFO - Successfully matched node b1b8b4b8-a2fe-4a51-9f56-c083416cde66 to model 1324D with confidence score 1.00
+2025-01-24 15:27:42,871 - INFO - 
+Evaluating node: aafef7d0-699b-4490-8975-d69bbd813a43
+2025-01-24 15:27:42,871 - INFO - Header text: 912hm mini trencher:
+2025-01-24 15:27:42,871 - INFO - Header level: 2
+2025-01-24 15:27:42,871 - INFO - Successfully matched node aafef7d0-699b-4490-8975-d69bbd813a43 to model 912HM with confidence score 1.00
+2025-01-24 15:27:42,871 - INFO - 
+Evaluating node: bda85fcd-18e6-4e54-bbc3-e79f49cd101f
+2025-01-24 15:27:42,871 - INFO - Header text: 712mt micro trencher:
+2025-01-24 15:27:42,871 - INFO - Header level: 2
+2025-01-24 15:27:42,871 - INFO - Successfully matched node bda85fcd-18e6-4e54-bbc3-e79f49cd101f to model 712MT with confidence score 1.00
+2025-01-24 15:27:42,871 - INFO - 
+Evaluating node: 42f42d65-0967-4a4d-b66a-af22f72cc33e
+2025-01-24 15:27:42,872 - INFO - Header text: 2024rtk track trencher:
+2025-01-24 15:27:42,872 - INFO - Header level: 2
+2025-01-24 15:27:42,872 - INFO - Successfully matched node 42f42d65-0967-4a4d-b66a-af22f72cc33e to model 2024RTK with confidence score 1.00
+2025-01-24 15:27:42,872 - INFO - 
+Evaluating node: 68e360f7-c435-4d7c-9834-c0608ac3805b
+2025-01-24 15:27:42,872 - INFO - Header text: 1324stk track trencher:
+2025-01-24 15:27:42,872 - INFO - Header level: 2
+2025-01-24 15:27:42,872 - INFO - Successfully matched node 68e360f7-c435-4d7c-9834-c0608ac3805b to model 1324STK with confidence score 1.00
+2025-01-24 15:27:42,872 - INFO - Updated model metadata. Current count: 5
+2025-01-24 15:27:42,872 - WARNING - No metadata found for node 80924b05-a8ba-4fc7-b651-b4da41ae2478 (Page 10)
+2025-01-24 15:27:42,872 - INFO - Enhanced node b1b8b4b8-a2fe-4a51-9f56-c083416cde66 (Page 10) with metadata
+2025-01-24 15:27:42,872 - INFO - Enhanced node aafef7d0-699b-4490-8975-d69bbd813a43 (Page 10) with metadata
+2025-01-24 15:27:42,872 - INFO - Enhanced node bda85fcd-18e6-4e54-bbc3-e79f49cd101f (Page 10) with metadata
+2025-01-24 15:27:42,872 - INFO - Enhanced node 42f42d65-0967-4a4d-b66a-af22f72cc33e (Page 10) with metadata
+2025-01-24 15:27:42,872 - INFO - Enhanced node 68e360f7-c435-4d7c-9834-c0608ac3805b (Page 10) with metadata
+2025-01-24 15:27:42,872 - INFO - Enhanced 5 out of 6 nodes with metadata
+2025-01-24 15:27:42,873 - INFO - Analyzing nodes from pages: [10]
+2025-01-24 15:27:42,873 - INFO - Filtered 182 nodes to 6 nodes from pages [10]
+2025-01-24 15:27:42,873 - INFO - Starting node hierarchy analysis for 6 nodes
+2025-01-24 15:27:42,873 - INFO - Writing analysis to analysis/fifteenth_pipeline_gpt_instruct_raw_node_analysis.txt
+2025-01-24 15:38:38,582 - INFO - Logger level set to: 20
+2025-01-24 15:38:38,583 - INFO - Initializing TextNodeCreator
+2025-01-24 15:38:38,583 - INFO - TextNodeCreator initialization complete
+2025-01-24 15:38:38,583 - INFO - Beginning hierarchical node creation process...
+2025-01-24 15:38:38,585 - INFO - Processing document: Barreto_Brochure.pdf
+2025-01-24 15:38:38,585 - INFO - Created 5 nodes for page 1
+2025-01-24 15:38:38,585 - INFO - Created 6 nodes for page 2
+2025-01-24 15:38:38,585 - INFO - Created 6 nodes for page 3
+2025-01-24 15:38:38,585 - INFO - Created 4 nodes for page 4
+2025-01-24 15:38:38,585 - INFO - Created 7 nodes for page 5
+2025-01-24 15:38:38,585 - INFO - Created 3 nodes for page 6
+2025-01-24 15:38:38,585 - INFO - Created 5 nodes for page 7
+2025-01-24 15:38:38,586 - INFO - Created 5 nodes for page 8
+2025-01-24 15:38:38,586 - INFO - Created 8 nodes for page 9
+2025-01-24 15:38:38,586 - INFO - Created 6 nodes for page 10
+2025-01-24 15:38:38,586 - INFO - Created 12 nodes for page 11
+2025-01-24 15:38:38,586 - INFO - Created 3 nodes for page 12
+2025-01-24 15:38:38,586 - INFO - Created 7 nodes for page 13
+2025-01-24 15:38:38,586 - INFO - Created 5 nodes for page 14
+2025-01-24 15:38:38,587 - INFO - Created 5 nodes for page 15
+2025-01-24 15:38:38,587 - INFO - Created 6 nodes for page 16
+2025-01-24 15:38:38,587 - INFO - Created 5 nodes for page 17
+2025-01-24 15:38:38,587 - INFO - Created 6 nodes for page 18
+2025-01-24 15:38:38,587 - INFO - Created 8 nodes for page 19
+2025-01-24 15:38:38,587 - INFO - Created 3 nodes for page 20
+2025-01-24 15:38:38,587 - INFO - Created 8 nodes for page 21
+2025-01-24 15:38:38,587 - INFO - Created 5 nodes for page 22
+2025-01-24 15:38:38,587 - INFO - Created 9 nodes for page 23
+2025-01-24 15:38:38,588 - INFO - Created 5 nodes for page 24
+2025-01-24 15:38:38,588 - INFO - Created 8 nodes for page 25
+2025-01-24 15:38:38,588 - INFO - Created 3 nodes for page 26
+2025-01-24 15:38:38,588 - INFO - Created 6 nodes for page 27
+2025-01-24 15:38:38,588 - INFO - Created 5 nodes for page 28
+2025-01-24 15:38:38,588 - INFO - Created 5 nodes for page 29
+2025-01-24 15:38:38,588 - INFO - Created 4 nodes for page 30
+2025-01-24 15:38:38,588 - INFO - Created 5 nodes for page 31
+2025-01-24 15:38:38,588 - INFO - Created 4 nodes for page 32
+2025-01-24 15:38:38,588 - INFO - Extracting metadata for pages: [10]
+2025-01-24 15:38:38,588 - INFO - Filtered 182 nodes to 6 nodes from pages [10]
+2025-01-24 15:38:38,588 - INFO - Enhancing metadata for 6 nodes
+2025-01-24 15:38:38,588 - INFO - Processing pages: [10]
+2025-01-24 15:38:38,589 - INFO - Starting document metadata extraction...
+2025-01-24 15:38:54,775 - INFO - 
+=== LLM Response Overview (Document Metadata Extraction) ===
+2025-01-24 15:38:54,776 - INFO - Response type: dict
+2025-01-24 15:38:54,776 - INFO - API Source: Unknown
+2025-01-24 15:38:54,776 - INFO - No content found in response
+2025-01-24 15:38:54,776 - INFO - === End Response Overview ===
+
+2025-01-24 15:38:54,776 - ERROR - Failed to extract document metadata: Invalid JSON structure: Extra data: line 7 column 2 (char 289)
+2025-01-24 15:38:54,776 - INFO - Created 1 batches from 6 nodes
+2025-01-24 15:38:54,776 - INFO - Processing batch of 6 nodes
+2025-01-24 15:38:54,776 - INFO - Batch content:
+2025-01-24 15:38:54,776 - INFO - Node aa38d2fb-0169-4de4-a989-30ece2d5b3b5 (Page 10): BARRETO TRENCHERS
+2025-01-24 15:38:54,776 - INFO - Node dc233768-4349-4c9b-9f7e-2bae08af7187 (Page 10): 1324D Standard Trencher:
+2025-01-24 15:38:54,776 - INFO - Node b8335359-9506-44fd-98a5-0a0c79503998 (Page 10): 912HM Mini Trencher:
+2025-01-24 15:38:54,776 - INFO - Node 4a532e11-140f-411f-85a5-1365c2184b5d (Page 10): 712MT Micro Trencher:
+2025-01-24 15:38:54,776 - INFO - Node 0b3e81ac-adbf-4eab-abe8-c4388b704f5f (Page 10): 2024RTK Track Trencher:
+2025-01-24 15:38:54,776 - INFO - Node 556f0175-c50f-44a6-8800-b9b0e1ddb81d (Page 10): 1324STK Track Trencher:
+2025-01-24 15:38:54,776 - INFO - Processing batch of 6 nodes for metadata extraction
+2025-01-24 15:39:43,045 - INFO - 
+=== LLM Response Overview (Batch Metadata Extraction) ===
+2025-01-24 15:39:43,046 - INFO - Response type: dict
+2025-01-24 15:39:43,046 - INFO - API Source: Unknown
+2025-01-24 15:39:43,046 - INFO - No content found in response
+2025-01-24 15:39:43,046 - INFO - === End Response Overview ===
+
+2025-01-24 15:39:43,047 - INFO - Successfully extracted metadata for batch
+2025-01-24 15:39:43,047 - INFO - Processing metadata for 5 models
+2025-01-24 15:39:43,047 - INFO - 
+Evaluating node: aa38d2fb-0169-4de4-a989-30ece2d5b3b5
+2025-01-24 15:39:43,047 - INFO - Header text: barreto trenchers
+2025-01-24 15:39:43,047 - INFO - Header level: 1
+2025-01-24 15:39:43,047 - INFO - Node aa38d2fb-0169-4de4-a989-30ece2d5b3b5 is a top-level category header (barreto trenchers) at hierarchy level 0. Metadata extraction not applicable for structural nodes.
+2025-01-24 15:39:43,047 - INFO - 
+Evaluating node: dc233768-4349-4c9b-9f7e-2bae08af7187
+2025-01-24 15:39:43,047 - INFO - Header text: 1324d standard trencher:
+2025-01-24 15:39:43,047 - INFO - Header level: 2
+2025-01-24 15:39:43,047 - INFO - Successfully matched node dc233768-4349-4c9b-9f7e-2bae08af7187 to model 1324D with confidence score 1.00
+2025-01-24 15:39:43,047 - INFO - 
+Evaluating node: b8335359-9506-44fd-98a5-0a0c79503998
+2025-01-24 15:39:43,047 - INFO - Header text: 912hm mini trencher:
+2025-01-24 15:39:43,047 - INFO - Header level: 2
+2025-01-24 15:39:43,047 - INFO - Successfully matched node b8335359-9506-44fd-98a5-0a0c79503998 to model 912HM with confidence score 1.00
+2025-01-24 15:39:43,047 - INFO - 
+Evaluating node: 4a532e11-140f-411f-85a5-1365c2184b5d
+2025-01-24 15:39:43,047 - INFO - Header text: 712mt micro trencher:
+2025-01-24 15:39:43,047 - INFO - Header level: 2
+2025-01-24 15:39:43,047 - INFO - Successfully matched node 4a532e11-140f-411f-85a5-1365c2184b5d to model 712MT with confidence score 1.00
+2025-01-24 15:39:43,047 - INFO - 
+Evaluating node: 0b3e81ac-adbf-4eab-abe8-c4388b704f5f
+2025-01-24 15:39:43,047 - INFO - Header text: 2024rtk track trencher:
+2025-01-24 15:39:43,047 - INFO - Header level: 2
+2025-01-24 15:39:43,047 - INFO - Successfully matched node 0b3e81ac-adbf-4eab-abe8-c4388b704f5f to model 2024RTK with confidence score 1.00
+2025-01-24 15:39:43,047 - INFO - 
+Evaluating node: 556f0175-c50f-44a6-8800-b9b0e1ddb81d
+2025-01-24 15:39:43,047 - INFO - Header text: 1324stk track trencher:
+2025-01-24 15:39:43,047 - INFO - Header level: 2
+2025-01-24 15:39:43,047 - INFO - Successfully matched node 556f0175-c50f-44a6-8800-b9b0e1ddb81d to model 1324STK with confidence score 1.00
+2025-01-24 15:39:43,047 - INFO - Updated model metadata. Current count: 5
+2025-01-24 15:39:43,047 - WARNING - No metadata found for node aa38d2fb-0169-4de4-a989-30ece2d5b3b5 (Page 10)
+2025-01-24 15:39:43,047 - INFO - Enhanced node dc233768-4349-4c9b-9f7e-2bae08af7187 (Page 10) with metadata
+2025-01-24 15:39:43,047 - INFO - Enhanced node b8335359-9506-44fd-98a5-0a0c79503998 (Page 10) with metadata
+2025-01-24 15:39:43,047 - INFO - Enhanced node 4a532e11-140f-411f-85a5-1365c2184b5d (Page 10) with metadata
+2025-01-24 15:39:43,047 - INFO - Enhanced node 0b3e81ac-adbf-4eab-abe8-c4388b704f5f (Page 10) with metadata
+2025-01-24 15:39:43,047 - INFO - Enhanced node 556f0175-c50f-44a6-8800-b9b0e1ddb81d (Page 10) with metadata
+2025-01-24 15:39:43,048 - INFO - Enhanced 5 out of 6 nodes with metadata
+2025-01-24 15:39:43,048 - INFO - Analyzing nodes from pages: [10]
+2025-01-24 15:39:43,048 - INFO - Filtered 182 nodes to 6 nodes from pages [10]
+2025-01-24 15:39:43,048 - INFO - Starting node hierarchy analysis for 6 nodes
+2025-01-24 15:39:43,048 - INFO - Writing analysis to analysis/fifteenth_pipeline_gpt_instruct_raw_node_analysis.txt
+2025-01-24 15:52:58,981 - INFO - Logger level set to: 20
+2025-01-24 15:52:58,981 - INFO - Initializing TextNodeCreator
+2025-01-24 15:52:58,981 - INFO - TextNodeCreator initialization complete
+2025-01-24 15:52:58,981 - INFO - Beginning hierarchical node creation process...
+2025-01-24 15:52:58,984 - INFO - Processing document: Barreto_Brochure.pdf
+2025-01-24 15:52:58,984 - INFO - Created 5 nodes for page 1
+2025-01-24 15:52:58,985 - INFO - Created 6 nodes for page 2
+2025-01-24 15:52:58,985 - INFO - Created 6 nodes for page 3
+2025-01-24 15:52:58,986 - INFO - Created 4 nodes for page 4
+2025-01-24 15:52:58,986 - INFO - Created 7 nodes for page 5
+2025-01-24 15:52:58,986 - INFO - Created 3 nodes for page 6
+2025-01-24 15:52:58,986 - INFO - Created 5 nodes for page 7
+2025-01-24 15:52:58,987 - INFO - Created 5 nodes for page 8
+2025-01-24 15:52:58,987 - INFO - Created 8 nodes for page 9
+2025-01-24 15:52:58,987 - INFO - Created 6 nodes for page 10
+2025-01-24 15:52:58,987 - INFO - Created 12 nodes for page 11
+2025-01-24 15:52:58,988 - INFO - Created 3 nodes for page 12
+2025-01-24 15:52:58,988 - INFO - Created 7 nodes for page 13
+2025-01-24 15:52:58,988 - INFO - Created 5 nodes for page 14
+2025-01-24 15:52:58,988 - INFO - Created 5 nodes for page 15
+2025-01-24 15:52:58,988 - INFO - Created 6 nodes for page 16
+2025-01-24 15:52:58,988 - INFO - Created 5 nodes for page 17
+2025-01-24 15:52:58,988 - INFO - Created 6 nodes for page 18
+2025-01-24 15:52:58,988 - INFO - Created 8 nodes for page 19
+2025-01-24 15:52:58,988 - INFO - Created 3 nodes for page 20
+2025-01-24 15:52:58,989 - INFO - Created 8 nodes for page 21
+2025-01-24 15:52:58,989 - INFO - Created 5 nodes for page 22
+2025-01-24 15:52:58,989 - INFO - Created 9 nodes for page 23
+2025-01-24 15:52:58,989 - INFO - Created 5 nodes for page 24
+2025-01-24 15:52:58,989 - INFO - Created 8 nodes for page 25
+2025-01-24 15:52:58,989 - INFO - Created 3 nodes for page 26
+2025-01-24 15:52:58,989 - INFO - Created 6 nodes for page 27
+2025-01-24 15:52:58,989 - INFO - Created 5 nodes for page 28
+2025-01-24 15:52:58,989 - INFO - Created 5 nodes for page 29
+2025-01-24 15:52:58,989 - INFO - Created 4 nodes for page 30
+2025-01-24 15:52:58,990 - INFO - Created 5 nodes for page 31
+2025-01-24 15:52:58,990 - INFO - Created 4 nodes for page 32
+2025-01-24 15:52:58,990 - INFO - Extracting metadata for pages: [10]
+2025-01-24 15:52:58,990 - INFO - Filtered 182 nodes to 6 nodes from pages [10]
+2025-01-24 15:52:58,990 - INFO - Enhancing metadata for 6 nodes
+2025-01-24 15:52:58,990 - INFO - Processing pages: [10]
+2025-01-24 15:52:58,990 - INFO - Starting document metadata extraction...
+2025-01-24 15:53:12,755 - INFO - 
+=== LLM Response Overview (Document Metadata Extraction) ===
+2025-01-24 15:53:12,755 - INFO - Response type: dict
+2025-01-24 15:53:12,755 - INFO - API Source: Unknown
+2025-01-24 15:53:12,755 - INFO - No content found in response
+2025-01-24 15:53:12,755 - INFO - === End Response Overview ===
+
+2025-01-24 15:53:12,755 - INFO - Successfully extracted document metadata
+2025-01-24 15:53:12,755 - INFO - Document metadata content: {
+  "manufacturer": "Barreto",
+  "document_type": "catalog",
+  "year_published": "2017",
+  "equipment_categories": [
+    "trenchers"
+  ],
+  "models_included": [
+    "1324D Standard Trencher",
+    "912HM Mini Trencher",
+    "712MT Micro Trencher",
+    "2024RTK Track Trencher",
+    "1324STK Track Trencher"
+  ]
+}
+2025-01-24 15:53:12,755 - INFO - Created 1 batches from 6 nodes
+2025-01-24 15:53:12,756 - INFO - Processing batch of 6 nodes
+2025-01-24 15:53:12,756 - INFO - Batch content:
+2025-01-24 15:53:12,756 - INFO - Node ad18c922-7b02-4289-803c-34bab1e7f3b2 (Page 10): BARRETO TRENCHERS
+2025-01-24 15:53:12,756 - INFO - Node 9e4abbea-df57-4562-b89f-8f5cc8bccb62 (Page 10): 1324D Standard Trencher:
+2025-01-24 15:53:12,756 - INFO - Node 6eb7cd4b-8f70-458b-94d5-26817936ee03 (Page 10): 912HM Mini Trencher:
+2025-01-24 15:53:12,756 - INFO - Node f57ca6fd-9d37-42eb-83e5-58d91b650a49 (Page 10): 712MT Micro Trencher:
+2025-01-24 15:53:12,756 - INFO - Node 9c58989b-12a4-4361-9923-c96d9a799ab6 (Page 10): 2024RTK Track Trencher:
+2025-01-24 15:53:12,756 - INFO - Node 751a54a8-9b64-4754-9318-5a7fd32d14bb (Page 10): 1324STK Track Trencher:
+2025-01-24 15:53:12,756 - INFO - Processing batch of 6 nodes for metadata extraction
+2025-01-24 15:53:38,459 - INFO - 
+=== LLM Response Overview (Batch Metadata Extraction) ===
+2025-01-24 15:53:38,460 - INFO - Response type: dict
+2025-01-24 15:53:38,460 - INFO - API Source: Unknown
+2025-01-24 15:53:38,460 - INFO - No content found in response
+2025-01-24 15:53:38,460 - INFO - === End Response Overview ===
+
+2025-01-24 15:53:38,460 - ERROR - Failed to extract batch metadata: Invalid JSON structure: Extra data: line 57 column 2 (char 2181)
+2025-01-24 15:53:38,460 - WARNING - No metadata extracted from this batch
+2025-01-24 15:53:38,460 - WARNING - No metadata found for node ad18c922-7b02-4289-803c-34bab1e7f3b2 (Page 10)
+2025-01-24 15:53:38,460 - WARNING - No metadata found for node 9e4abbea-df57-4562-b89f-8f5cc8bccb62 (Page 10)
+2025-01-24 15:53:38,460 - WARNING - No metadata found for node 6eb7cd4b-8f70-458b-94d5-26817936ee03 (Page 10)
+2025-01-24 15:53:38,460 - WARNING - No metadata found for node f57ca6fd-9d37-42eb-83e5-58d91b650a49 (Page 10)
+2025-01-24 15:53:38,460 - WARNING - No metadata found for node 9c58989b-12a4-4361-9923-c96d9a799ab6 (Page 10)
+2025-01-24 15:53:38,460 - WARNING - No metadata found for node 751a54a8-9b64-4754-9318-5a7fd32d14bb (Page 10)
+2025-01-24 15:53:38,460 - INFO - Enhanced 0 out of 6 nodes with metadata
+2025-01-24 15:53:38,460 - INFO - Analyzing nodes from pages: [10]
+2025-01-24 15:53:38,461 - INFO - Filtered 182 nodes to 6 nodes from pages [10]
+2025-01-24 15:53:38,461 - INFO - Starting node hierarchy analysis for 6 nodes
+2025-01-24 15:53:38,461 - INFO - Writing analysis to analysis/fifteenth_pipeline_gpt_instruct_raw_node_analysis.txt
+2025-01-24 15:58:54,697 - INFO - Logger level set to: 20
+2025-01-24 15:58:54,697 - INFO - Initializing TextNodeCreator
+2025-01-24 15:58:54,697 - INFO - TextNodeCreator initialization complete
+2025-01-24 15:58:54,697 - INFO - Beginning hierarchical node creation process...
+2025-01-24 15:58:54,698 - INFO - Processing document: Barreto_Brochure.pdf
+2025-01-24 15:58:54,699 - INFO - Created 5 nodes for page 1
+2025-01-24 15:58:54,699 - INFO - Created 6 nodes for page 2
+2025-01-24 15:58:54,699 - INFO - Created 6 nodes for page 3
+2025-01-24 15:58:54,699 - INFO - Created 4 nodes for page 4
+2025-01-24 15:58:54,699 - INFO - Created 7 nodes for page 5
+2025-01-24 15:58:54,699 - INFO - Created 3 nodes for page 6
+2025-01-24 15:58:54,699 - INFO - Created 5 nodes for page 7
+2025-01-24 15:58:54,700 - INFO - Created 5 nodes for page 8
+2025-01-24 15:58:54,700 - INFO - Created 8 nodes for page 9
+2025-01-24 15:58:54,700 - INFO - Created 6 nodes for page 10
+2025-01-24 15:58:54,700 - INFO - Created 12 nodes for page 11
+2025-01-24 15:58:54,700 - INFO - Created 3 nodes for page 12
+2025-01-24 15:58:54,700 - INFO - Created 7 nodes for page 13
+2025-01-24 15:58:54,700 - INFO - Created 5 nodes for page 14
+2025-01-24 15:58:54,700 - INFO - Created 5 nodes for page 15
+2025-01-24 15:58:54,700 - INFO - Created 6 nodes for page 16
+2025-01-24 15:58:54,700 - INFO - Created 5 nodes for page 17
+2025-01-24 15:58:54,701 - INFO - Created 6 nodes for page 18
+2025-01-24 15:58:54,701 - INFO - Created 8 nodes for page 19
+2025-01-24 15:58:54,701 - INFO - Created 3 nodes for page 20
+2025-01-24 15:58:54,701 - INFO - Created 8 nodes for page 21
+2025-01-24 15:58:54,701 - INFO - Created 5 nodes for page 22
+2025-01-24 15:58:54,701 - INFO - Created 9 nodes for page 23
+2025-01-24 15:58:54,701 - INFO - Created 5 nodes for page 24
+2025-01-24 15:58:54,701 - INFO - Created 8 nodes for page 25
+2025-01-24 15:58:54,701 - INFO - Created 3 nodes for page 26
+2025-01-24 15:58:54,702 - INFO - Created 6 nodes for page 27
+2025-01-24 15:58:54,702 - INFO - Created 5 nodes for page 28
+2025-01-24 15:58:54,702 - INFO - Created 5 nodes for page 29
+2025-01-24 15:58:54,702 - INFO - Created 4 nodes for page 30
+2025-01-24 15:58:54,702 - INFO - Created 5 nodes for page 31
+2025-01-24 15:58:54,702 - INFO - Created 4 nodes for page 32
+2025-01-24 15:58:54,702 - INFO - Extracting metadata for pages: [10]
+2025-01-24 15:58:54,702 - INFO - Filtered 182 nodes to 6 nodes from pages [10]
+2025-01-24 15:58:54,702 - INFO - Enhancing metadata for 6 nodes
+2025-01-24 15:58:54,702 - INFO - Processing pages: [10]
+2025-01-24 15:58:54,702 - INFO - Starting document metadata extraction...
+2025-01-24 15:59:10,926 - INFO - 
+=== LLM Response Overview (Document Metadata Extraction) ===
+2025-01-24 15:59:10,926 - INFO - Response type: dict
+2025-01-24 15:59:10,926 - INFO - API Source: Unknown
+2025-01-24 15:59:10,926 - INFO - No content found in response
+2025-01-24 15:59:10,926 - INFO - === End Response Overview ===
+
+2025-01-24 15:59:10,926 - INFO - Successfully extracted document metadata
+2025-01-24 15:59:10,926 - INFO - Document metadata content: {
+  "manufacturer": "Barreto",
+  "document_type": "catalog",
+  "year_published": "2017",
+  "equipment_categories": [
+    "trenchers"
+  ],
+  "models_included": [
+    "1324D Standard Trencher",
+    "912HM Mini Trencher",
+    "712MT Micro Trencher",
+    "2024RTK Track Trencher",
+    "1324STK Track Trencher"
+  ]
+}
+2025-01-24 15:59:10,927 - INFO - Created 1 batches from 6 nodes
+2025-01-24 15:59:10,927 - INFO - Processing batch of 6 nodes
+2025-01-24 15:59:10,927 - INFO - Batch content:
+2025-01-24 15:59:10,927 - INFO - Node 101bdfaf-8cbd-454c-bfbe-362c6ded727e (Page 10): BARRETO TRENCHERS
+2025-01-24 15:59:10,927 - INFO - Node 04ec2077-4fe0-4df9-9864-b396a0e54b6e (Page 10): 1324D Standard Trencher:
+2025-01-24 15:59:10,927 - INFO - Node 465c5803-5ece-4046-aaf0-9cd80c23e2f1 (Page 10): 912HM Mini Trencher:
+2025-01-24 15:59:10,927 - INFO - Node 398a5334-84bf-42a0-b42b-1114ef2a53e2 (Page 10): 712MT Micro Trencher:
+2025-01-24 15:59:10,927 - INFO - Node 1aee79d0-a653-4b84-8064-91efbd45af23 (Page 10): 2024RTK Track Trencher:
+2025-01-24 15:59:10,927 - INFO - Node 01004338-17a1-491d-a855-94780df54f2d (Page 10): 1324STK Track Trencher:
+2025-01-24 15:59:10,927 - INFO - Processing batch of 6 nodes for metadata extraction
+2025-01-24 15:59:36,983 - INFO - 
+=== LLM Response Overview (Batch Metadata Extraction) ===
+2025-01-24 15:59:36,984 - INFO - Response type: dict
+2025-01-24 15:59:36,984 - INFO - API Source: Unknown
+2025-01-24 15:59:36,984 - INFO - No content found in response
+2025-01-24 15:59:36,985 - INFO - === End Response Overview ===
+
+2025-01-24 15:59:36,985 - ERROR - Failed to extract batch metadata: Invalid JSON structure: Extra data: line 57 column 2 (char 2174)
+2025-01-24 15:59:36,985 - WARNING - No metadata extracted from this batch
+2025-01-24 15:59:36,985 - WARNING - No metadata found for node 101bdfaf-8cbd-454c-bfbe-362c6ded727e (Page 10)
+2025-01-24 15:59:36,985 - WARNING - No metadata found for node 04ec2077-4fe0-4df9-9864-b396a0e54b6e (Page 10)
+2025-01-24 15:59:36,985 - WARNING - No metadata found for node 465c5803-5ece-4046-aaf0-9cd80c23e2f1 (Page 10)
+2025-01-24 15:59:36,985 - WARNING - No metadata found for node 398a5334-84bf-42a0-b42b-1114ef2a53e2 (Page 10)
+2025-01-24 15:59:36,985 - WARNING - No metadata found for node 1aee79d0-a653-4b84-8064-91efbd45af23 (Page 10)
+2025-01-24 15:59:36,985 - WARNING - No metadata found for node 01004338-17a1-491d-a855-94780df54f2d (Page 10)
+2025-01-24 15:59:36,985 - INFO - Enhanced 0 out of 6 nodes with metadata
+2025-01-24 15:59:36,985 - INFO - Analyzing nodes from pages: [10]
+2025-01-24 15:59:36,986 - INFO - Filtered 182 nodes to 6 nodes from pages [10]
+2025-01-24 15:59:36,986 - INFO - Starting node hierarchy analysis for 6 nodes
+2025-01-24 15:59:36,986 - INFO - Writing analysis to analysis/fifteenth_pipeline_gpt_instruct_raw_node_analysis.txt
+2025-01-24 16:21:57,699 - INFO - Logger level set to: 20
+2025-01-24 16:21:57,699 - INFO - Initializing TextNodeCreator
+2025-01-24 16:28:38,419 - INFO - Logger level set to: 20
+2025-01-24 16:28:38,419 - INFO - Initializing TextNodeCreator
+2025-01-24 16:28:38,419 - INFO - TextNodeCreator initialization complete
+2025-01-24 16:28:38,419 - INFO - No cached nodes found
+2025-01-24 16:28:38,419 - INFO - Creating new nodes...
+2025-01-24 16:28:38,419 - INFO - Beginning hierarchical node creation process...
+2025-01-24 16:28:38,419 - ERROR - Hierarchical node creation failed: 'TextNodeCreator' object has no attribute 'parsed_results_path'
+2025-01-24 16:37:34,293 - INFO - Logger level set to: 20
+2025-01-24 16:37:34,293 - INFO - Initializing TextNodeCreator
+2025-01-24 16:37:34,293 - INFO - TextNodeCreator initialization complete
+2025-01-24 16:37:34,293 - INFO - No cached nodes found
+2025-01-24 16:37:34,293 - INFO - Creating new nodes...
+2025-01-24 16:37:34,293 - INFO - Beginning hierarchical node creation process...
+2025-01-24 16:37:34,293 - ERROR - Hierarchical node creation failed: 'TextNodeCreator' object has no attribute 'parsed_results_path'
+2025-01-24 16:38:45,341 - INFO - Logger level set to: 20
+2025-01-24 16:38:45,341 - INFO - Initializing TextNodeCreator
+2025-01-24 16:38:45,341 - INFO - TextNodeCreator initialization complete
+2025-01-24 16:38:45,341 - INFO - No cached nodes found
+2025-01-24 16:38:45,341 - INFO - Creating new nodes...
+2025-01-24 16:38:45,341 - INFO - Beginning hierarchical node creation process...
+2025-01-24 16:38:45,341 - ERROR - Hierarchical node creation failed: 'TextNodeCreator' object has no attribute 'parsed_results_path'
+2025-01-24 16:40:24,006 - INFO - Logger level set to: 20
+2025-01-24 16:40:24,006 - INFO - Initializing TextNodeCreator
+2025-01-24 16:40:36,430 - INFO - Logger level set to: 20
+2025-01-24 16:40:36,430 - INFO - Initializing TextNodeCreator
+2025-01-24 16:41:43,486 - INFO - Logger level set to: 20
+2025-01-24 16:41:43,487 - INFO - Initializing TextNodeCreator
+2025-01-24 16:45:00,496 - INFO - Logger level set to: 20
+2025-01-24 16:45:00,496 - INFO - Initializing TextNodeCreator
+2025-01-24 16:45:41,200 - INFO - Logger level set to: 20
+2025-01-24 16:45:41,200 - INFO - Initializing TextNodeCreator
+2025-01-24 16:46:11,158 - INFO - Logger level set to: 20
+2025-01-24 16:46:11,159 - INFO - Initializing TextNodeCreator
+2025-01-24 16:47:14,714 - INFO - Logger level set to: 20
+2025-01-24 16:47:14,714 - INFO - Initializing TextNodeCreator
+2025-01-24 16:48:40,234 - INFO - Logger level set to: 20
+2025-01-24 16:48:40,243 - INFO - Initializing TextNodeCreator
+2025-01-24 16:53:46,155 - INFO - Logger level set to: 20
+2025-01-24 16:53:46,155 - INFO - Initializing TextNodeCreator
+2025-01-24 16:53:46,155 - INFO - TextNodeCreator initialization complete
+2025-01-24 16:53:46,155 - INFO - No cached nodes found
+2025-01-24 16:53:46,155 - INFO - Creating new nodes...
+2025-01-24 16:53:46,155 - INFO - Beginning hierarchical node creation process...
+2025-01-24 16:53:46,157 - INFO - Processing document: Barreto_Brochure.pdf
+2025-01-24 16:53:46,157 - INFO - Created 5 nodes for page 1
+2025-01-24 16:53:46,157 - INFO - Created 6 nodes for page 2
+2025-01-24 16:53:46,157 - INFO - Created 6 nodes for page 3
+2025-01-24 16:53:46,157 - INFO - Created 4 nodes for page 4
+2025-01-24 16:53:46,158 - INFO - Created 7 nodes for page 5
+2025-01-24 16:53:46,158 - INFO - Created 3 nodes for page 6
+2025-01-24 16:53:46,158 - INFO - Created 5 nodes for page 7
+2025-01-24 16:53:46,158 - INFO - Created 5 nodes for page 8
+2025-01-24 16:53:46,158 - INFO - Created 8 nodes for page 9
+2025-01-24 16:53:46,158 - INFO - Created 6 nodes for page 10
+2025-01-24 16:53:46,158 - INFO - Created 12 nodes for page 11
+2025-01-24 16:53:46,158 - INFO - Created 3 nodes for page 12
+2025-01-24 16:53:46,158 - INFO - Created 7 nodes for page 13
+2025-01-24 16:53:46,158 - INFO - Created 5 nodes for page 14
+2025-01-24 16:53:46,159 - INFO - Created 5 nodes for page 15
+2025-01-24 16:53:46,159 - INFO - Created 6 nodes for page 16
+2025-01-24 16:53:46,159 - INFO - Created 5 nodes for page 17
+2025-01-24 16:53:46,159 - INFO - Created 6 nodes for page 18
+2025-01-24 16:53:46,159 - INFO - Created 8 nodes for page 19
+2025-01-24 16:53:46,159 - INFO - Created 3 nodes for page 20
+2025-01-24 16:53:46,159 - INFO - Created 8 nodes for page 21
+2025-01-24 16:53:46,159 - INFO - Created 5 nodes for page 22
+2025-01-24 16:53:46,159 - INFO - Created 9 nodes for page 23
+2025-01-24 16:53:46,160 - INFO - Created 5 nodes for page 24
+2025-01-24 16:53:46,160 - INFO - Created 8 nodes for page 25
+2025-01-24 16:53:46,160 - INFO - Created 3 nodes for page 26
+2025-01-24 16:53:46,160 - INFO - Created 6 nodes for page 27
+2025-01-24 16:53:46,160 - INFO - Created 5 nodes for page 28
+2025-01-24 16:53:46,160 - INFO - Created 5 nodes for page 29
+2025-01-24 16:53:46,160 - INFO - Created 4 nodes for page 30
+2025-01-24 16:53:46,160 - INFO - Created 5 nodes for page 31
+2025-01-24 16:53:46,160 - INFO - Created 4 nodes for page 32
+2025-01-24 16:53:46,160 - INFO - Extracting metadata for pages: [10]
+2025-01-24 16:53:46,160 - INFO - Filtered 182 nodes to 6 nodes from pages [10]
+2025-01-24 16:53:46,160 - INFO - Enhancing metadata for 6 nodes
+2025-01-24 16:53:46,160 - INFO - Processing pages: [10]
+2025-01-24 16:53:46,160 - INFO - Starting document metadata extraction...
+2025-01-24 16:53:58,951 - INFO - 
+=== LLM Response Overview (Document Metadata Extraction) ===
+2025-01-24 16:53:58,952 - INFO - Response type: dict
+2025-01-24 16:53:58,952 - INFO - API Source: Unknown
+2025-01-24 16:53:58,952 - INFO - No content found in response
+2025-01-24 16:53:58,952 - INFO - === End Response Overview ===
+
+2025-01-24 16:53:58,952 - ERROR - Failed to extract document metadata: Invalid JSON structure: Extra data: line 7 column 2 (char 289)
+2025-01-24 16:53:58,952 - INFO - Created 1 batches from 6 nodes
+2025-01-24 16:53:58,952 - INFO - Processing batch of 6 nodes
+2025-01-24 16:53:58,952 - INFO - Batch content:
+2025-01-24 16:53:58,952 - INFO - Node 7f05c1ea-12e2-489f-8385-7c746235f9c2 (Page 10): BARRETO TRENCHERS
+2025-01-24 16:53:58,952 - INFO - Node c2627a16-aadc-4989-9c24-512df7ebe07f (Page 10): 1324D Standard Trencher:
+2025-01-24 16:53:58,952 - INFO - Node 2c06b567-d7a1-492a-a0ab-7de61970e13e (Page 10): 912HM Mini Trencher:
+2025-01-24 16:53:58,952 - INFO - Node bee594ac-df14-4f86-9a0e-307dfe126c4b (Page 10): 712MT Micro Trencher:
+2025-01-24 16:53:58,952 - INFO - Node 369f7453-32ba-4edd-b25e-0ac8906754b5 (Page 10): 2024RTK Track Trencher:
+2025-01-24 16:53:58,952 - INFO - Node f8cbb2fe-1971-4d98-b130-22731b8eb9f5 (Page 10): 1324STK Track Trencher:
+2025-01-24 16:53:58,952 - INFO - Processing batch of 6 nodes for metadata extraction
+2025-01-24 16:54:33,768 - INFO - 
+=== LLM Response Overview (Batch Metadata Extraction) ===
+2025-01-24 16:54:33,769 - INFO - Response type: dict
+2025-01-24 16:54:33,769 - INFO - API Source: Unknown
+2025-01-24 16:54:33,769 - INFO - No content found in response
+2025-01-24 16:54:33,769 - INFO - === End Response Overview ===
+
+2025-01-24 16:54:33,769 - INFO - Successfully extracted metadata for batch
+2025-01-24 16:54:33,769 - INFO - Processing metadata for 5 models
+2025-01-24 16:54:33,769 - INFO - 
+Evaluating node: 7f05c1ea-12e2-489f-8385-7c746235f9c2
+2025-01-24 16:54:33,770 - INFO - Header text: barreto trenchers
+2025-01-24 16:54:33,770 - INFO - Header level: 1
+2025-01-24 16:54:33,770 - INFO - Node 7f05c1ea-12e2-489f-8385-7c746235f9c2 is a top-level category header (barreto trenchers) at hierarchy level 0. Metadata extraction not applicable for structural nodes.
+2025-01-24 16:54:33,770 - INFO - 
+Evaluating node: c2627a16-aadc-4989-9c24-512df7ebe07f
+2025-01-24 16:54:33,770 - INFO - Header text: 1324d standard trencher:
+2025-01-24 16:54:33,770 - INFO - Header level: 2
+2025-01-24 16:54:33,770 - INFO - Successfully matched node c2627a16-aadc-4989-9c24-512df7ebe07f to model 1324D with confidence score 1.00
+2025-01-24 16:54:33,770 - INFO - 
+Evaluating node: 2c06b567-d7a1-492a-a0ab-7de61970e13e
+2025-01-24 16:54:33,770 - INFO - Header text: 912hm mini trencher:
+2025-01-24 16:54:33,770 - INFO - Header level: 2
+2025-01-24 16:54:33,770 - INFO - Successfully matched node 2c06b567-d7a1-492a-a0ab-7de61970e13e to model 912HM with confidence score 1.00
+2025-01-24 16:54:33,770 - INFO - 
+Evaluating node: bee594ac-df14-4f86-9a0e-307dfe126c4b
+2025-01-24 16:54:33,770 - INFO - Header text: 712mt micro trencher:
+2025-01-24 16:54:33,770 - INFO - Header level: 2
+2025-01-24 16:54:33,770 - INFO - Successfully matched node bee594ac-df14-4f86-9a0e-307dfe126c4b to model 712MT with confidence score 1.00
+2025-01-24 16:54:33,770 - INFO - 
+Evaluating node: 369f7453-32ba-4edd-b25e-0ac8906754b5
+2025-01-24 16:54:33,770 - INFO - Header text: 2024rtk track trencher:
+2025-01-24 16:54:33,770 - INFO - Header level: 2
+2025-01-24 16:54:33,770 - INFO - Successfully matched node 369f7453-32ba-4edd-b25e-0ac8906754b5 to model 2024RTK with confidence score 1.00
+2025-01-24 16:54:33,770 - INFO - 
+Evaluating node: f8cbb2fe-1971-4d98-b130-22731b8eb9f5
+2025-01-24 16:54:33,770 - INFO - Header text: 1324stk track trencher:
+2025-01-24 16:54:33,770 - INFO - Header level: 2
+2025-01-24 16:54:33,771 - INFO - Successfully matched node f8cbb2fe-1971-4d98-b130-22731b8eb9f5 to model 1324STK with confidence score 1.00
+2025-01-24 16:54:33,771 - INFO - Updated model metadata. Current count: 5
+2025-01-24 16:54:33,771 - WARNING - No metadata found for node 7f05c1ea-12e2-489f-8385-7c746235f9c2 (Page 10)
+2025-01-24 16:54:33,771 - INFO - Enhanced node c2627a16-aadc-4989-9c24-512df7ebe07f (Page 10) with metadata
+2025-01-24 16:54:33,771 - INFO - Enhanced node 2c06b567-d7a1-492a-a0ab-7de61970e13e (Page 10) with metadata
+2025-01-24 16:54:33,771 - INFO - Enhanced node bee594ac-df14-4f86-9a0e-307dfe126c4b (Page 10) with metadata
+2025-01-24 16:54:33,771 - INFO - Enhanced node 369f7453-32ba-4edd-b25e-0ac8906754b5 (Page 10) with metadata
+2025-01-24 16:54:33,771 - INFO - Enhanced node f8cbb2fe-1971-4d98-b130-22731b8eb9f5 (Page 10) with metadata
+2025-01-24 16:54:33,771 - INFO - Enhanced 5 out of 6 nodes with metadata
+2025-01-24 16:54:33,771 - INFO - Analyzing nodes from pages: [10]
+2025-01-24 16:54:33,771 - INFO - Filtered 182 nodes to 6 nodes from pages [10]
+2025-01-24 16:54:33,772 - INFO - Starting node hierarchy analysis for 6 nodes
+2025-01-24 16:54:33,772 - INFO - Writing analysis to analysis/sixteenth_pipeline_gpt_instruct_raw_node_analysis.txt
+2025-01-24 16:54:33,776 - ERROR - Failed to save nodes to cache: module 'llama_index' has no attribute '__version__'
+2025-01-24 16:55:42,217 - INFO - Logger level set to: 20
+2025-01-24 16:55:42,218 - INFO - Initializing TextNodeCreator
+2025-01-24 16:55:42,218 - INFO - TextNodeCreator initialization complete
+2025-01-24 16:55:42,218 - INFO - No cached nodes found
+2025-01-24 16:55:42,218 - INFO - Creating new nodes...
+2025-01-24 16:55:42,218 - INFO - Beginning hierarchical node creation process...
+2025-01-24 16:55:42,220 - INFO - Processing document: Barreto_Brochure.pdf
+2025-01-24 16:55:42,220 - INFO - Created 5 nodes for page 1
+2025-01-24 16:55:42,221 - INFO - Created 6 nodes for page 2
+2025-01-24 16:55:42,221 - INFO - Created 6 nodes for page 3
+2025-01-24 16:55:42,221 - INFO - Created 4 nodes for page 4
+2025-01-24 16:55:42,221 - INFO - Created 7 nodes for page 5
+2025-01-24 16:55:42,221 - INFO - Created 3 nodes for page 6
+2025-01-24 16:55:42,221 - INFO - Created 5 nodes for page 7
+2025-01-24 16:55:42,221 - INFO - Created 5 nodes for page 8
+2025-01-24 16:55:42,221 - INFO - Created 8 nodes for page 9
+2025-01-24 16:55:42,222 - INFO - Created 6 nodes for page 10
+2025-01-24 16:55:42,222 - INFO - Created 12 nodes for page 11
+2025-01-24 16:55:42,222 - INFO - Created 3 nodes for page 12
+2025-01-24 16:55:42,222 - INFO - Created 7 nodes for page 13
+2025-01-24 16:55:42,222 - INFO - Created 5 nodes for page 14
+2025-01-24 16:55:42,222 - INFO - Created 5 nodes for page 15
+2025-01-24 16:55:42,222 - INFO - Created 6 nodes for page 16
+2025-01-24 16:55:42,222 - INFO - Created 5 nodes for page 17
+2025-01-24 16:55:42,222 - INFO - Created 6 nodes for page 18
+2025-01-24 16:55:42,222 - INFO - Created 8 nodes for page 19
+2025-01-24 16:55:42,223 - INFO - Created 3 nodes for page 20
+2025-01-24 16:55:42,223 - INFO - Created 8 nodes for page 21
+2025-01-24 16:55:42,223 - INFO - Created 5 nodes for page 22
+2025-01-24 16:55:42,223 - INFO - Created 9 nodes for page 23
+2025-01-24 16:55:42,223 - INFO - Created 5 nodes for page 24
+2025-01-24 16:55:42,223 - INFO - Created 8 nodes for page 25
+2025-01-24 16:55:42,223 - INFO - Created 3 nodes for page 26
+2025-01-24 16:55:42,223 - INFO - Created 6 nodes for page 27
+2025-01-24 16:55:42,223 - INFO - Created 5 nodes for page 28
+2025-01-24 16:55:42,223 - INFO - Created 5 nodes for page 29
+2025-01-24 16:55:42,224 - INFO - Created 4 nodes for page 30
+2025-01-24 16:55:42,224 - INFO - Created 5 nodes for page 31
+2025-01-24 16:55:42,224 - INFO - Created 4 nodes for page 32
+2025-01-24 16:55:42,224 - INFO - Extracting metadata for pages: [10]
+2025-01-24 16:55:42,224 - INFO - Filtered 182 nodes to 6 nodes from pages [10]
+2025-01-24 16:55:42,224 - INFO - Enhancing metadata for 6 nodes
+2025-01-24 16:55:42,224 - INFO - Processing pages: [10]
+2025-01-24 16:55:42,224 - INFO - Starting document metadata extraction...
+2025-01-24 16:55:56,365 - INFO - 
+=== LLM Response Overview (Document Metadata Extraction) ===
+2025-01-24 16:55:56,365 - INFO - Response type: dict
+2025-01-24 16:55:56,365 - INFO - API Source: Unknown
+2025-01-24 16:55:56,365 - INFO - No content found in response
+2025-01-24 16:55:56,365 - INFO - === End Response Overview ===
+
+2025-01-24 16:55:56,365 - ERROR - Failed to extract document metadata: Invalid JSON structure: Extra data: line 7 column 2 (char 280)
+2025-01-24 16:55:56,365 - INFO - Created 1 batches from 6 nodes
+2025-01-24 16:55:56,365 - INFO - Processing batch of 6 nodes
+2025-01-24 16:55:56,365 - INFO - Batch content:
+2025-01-24 16:55:56,365 - INFO - Node fdf5cd34-6f07-4690-a7c1-e9802ba519f6 (Page 10): BARRETO TRENCHERS
+2025-01-24 16:55:56,366 - INFO - Node 964f95cc-c6ea-433a-8497-a07162ace05c (Page 10): 1324D Standard Trencher:
+2025-01-24 16:55:56,366 - INFO - Node 776b8a72-a81e-4cb7-9493-e2dc9a0d67b4 (Page 10): 912HM Mini Trencher:
+2025-01-24 16:55:56,366 - INFO - Node 4eb1a3fc-8383-433d-b5d9-a97e7d4e620d (Page 10): 712MT Micro Trencher:
+2025-01-24 16:55:56,366 - INFO - Node e08b6ca9-a102-43c1-a3ce-b964fe29f908 (Page 10): 2024RTK Track Trencher:
+2025-01-24 16:55:56,366 - INFO - Node 5c2eb4f4-87ff-415e-8e59-cab2d686a8dd (Page 10): 1324STK Track Trencher:
+2025-01-24 16:55:56,366 - INFO - Processing batch of 6 nodes for metadata extraction
+2025-01-24 16:56:27,843 - INFO - 
+=== LLM Response Overview (Batch Metadata Extraction) ===
+2025-01-24 16:56:27,843 - INFO - Response type: dict
+2025-01-24 16:56:27,843 - INFO - API Source: Unknown
+2025-01-24 16:56:27,843 - INFO - No content found in response
+2025-01-24 16:56:27,843 - INFO - === End Response Overview ===
+
+2025-01-24 16:56:27,843 - ERROR - Failed to extract batch metadata: Invalid JSON structure: Extra data: line 57 column 2 (char 2193)
+2025-01-24 16:56:27,843 - WARNING - No metadata extracted from this batch
+2025-01-24 16:56:27,843 - WARNING - No metadata found for node fdf5cd34-6f07-4690-a7c1-e9802ba519f6 (Page 10)
+2025-01-24 16:56:27,843 - WARNING - No metadata found for node 964f95cc-c6ea-433a-8497-a07162ace05c (Page 10)
+2025-01-24 16:56:27,843 - WARNING - No metadata found for node 776b8a72-a81e-4cb7-9493-e2dc9a0d67b4 (Page 10)
+2025-01-24 16:56:27,843 - WARNING - No metadata found for node 4eb1a3fc-8383-433d-b5d9-a97e7d4e620d (Page 10)
+2025-01-24 16:56:27,843 - WARNING - No metadata found for node e08b6ca9-a102-43c1-a3ce-b964fe29f908 (Page 10)
+2025-01-24 16:56:27,844 - WARNING - No metadata found for node 5c2eb4f4-87ff-415e-8e59-cab2d686a8dd (Page 10)
+2025-01-24 16:56:27,844 - INFO - Enhanced 0 out of 6 nodes with metadata
+2025-01-24 16:56:27,844 - INFO - Analyzing nodes from pages: [10]
+2025-01-24 16:56:27,844 - INFO - Filtered 182 nodes to 6 nodes from pages [10]
+2025-01-24 16:56:27,844 - INFO - Starting node hierarchy analysis for 6 nodes
+2025-01-24 16:56:27,844 - INFO - Writing analysis to analysis/sixteenth_pipeline_gpt_instruct_raw_node_analysis.txt
+2025-01-24 16:56:27,847 - INFO - Saving 182 nodes to cache...
+2025-01-24 16:56:27,853 - INFO - Successfully cached nodes to node_outputs
+2025-01-24 17:04:04,221 - INFO - Logger level set to: 20
+2025-01-24 17:04:04,221 - INFO - Initializing TextNodeCreator
+2025-01-24 17:04:04,222 - INFO - TextNodeCreator initialization complete
+2025-01-24 17:04:04,227 - INFO - Successfully loaded 182 nodes from cache
+2025-01-24 17:07:29,079 - INFO - Logger level set to: 20
+2025-01-24 17:07:29,079 - INFO - Initializing TextNodeCreator
+2025-01-24 17:07:29,079 - INFO - TextNodeCreator initialization complete
+2025-01-24 17:07:29,084 - INFO - Successfully loaded 182 nodes from cache
+2025-01-24 17:08:16,525 - INFO - Logger level set to: 20
+2025-01-24 17:08:16,525 - INFO - Initializing TextNodeCreator
+2025-01-24 17:08:16,525 - INFO - TextNodeCreator initialization complete
+2025-01-24 17:08:16,529 - INFO - Successfully loaded 182 nodes from cache
+2025-01-24 17:09:47,448 - INFO - Logger level set to: 20
+2025-01-24 17:09:47,449 - INFO - Initializing TextNodeCreator
+2025-01-24 17:09:47,449 - INFO - TextNodeCreator initialization complete
+2025-01-24 17:09:47,456 - INFO - Successfully loaded 182 nodes from cache
+2025-01-24 17:13:20,752 - INFO - Logger level set to: 20
+2025-01-24 17:13:20,752 - INFO - Initializing TextNodeCreator
+2025-01-24 17:13:20,752 - INFO - TextNodeCreator initialization complete
+2025-01-24 17:13:20,757 - INFO - Successfully loaded 182 nodes from cache
+2025-01-24 17:16:07,727 - INFO - Logger level set to: 20
+2025-01-24 17:16:07,727 - INFO - Initializing TextNodeCreator
+2025-01-24 17:16:07,727 - INFO - TextNodeCreator initialization complete
+2025-01-24 17:16:07,731 - INFO - Successfully loaded 182 nodes from cache
+2025-01-24 17:17:32,170 - INFO - Logger level set to: 20
+2025-01-24 17:17:32,171 - INFO - Initializing TextNodeCreator
+2025-01-24 17:17:32,171 - INFO - TextNodeCreator initialization complete
+2025-01-24 17:17:32,175 - INFO - Successfully loaded 182 nodes from cache
+2025-01-24 17:20:38,245 - INFO - Logger level set to: 20
+2025-01-24 17:20:38,245 - INFO - Initializing TextNodeCreator
+2025-01-24 17:20:38,245 - INFO - TextNodeCreator initialization complete
+2025-01-24 17:20:38,246 - INFO - Configuration has changed - invalidating cache
+2025-01-24 17:20:38,246 - INFO - Creating new nodes...
+2025-01-24 17:20:38,246 - INFO - Beginning hierarchical node creation process...
+2025-01-24 17:20:38,248 - INFO - Processing document: Barreto_Brochure.pdf
+2025-01-24 17:20:38,248 - INFO - Created 5 nodes for page 1
+2025-01-24 17:20:38,248 - INFO - Created 6 nodes for page 2
+2025-01-24 17:20:38,248 - INFO - Created 6 nodes for page 3
+2025-01-24 17:20:38,248 - INFO - Created 4 nodes for page 4
+2025-01-24 17:20:38,248 - INFO - Created 7 nodes for page 5
+2025-01-24 17:20:38,248 - INFO - Created 3 nodes for page 6
+2025-01-24 17:20:38,249 - INFO - Created 5 nodes for page 7
+2025-01-24 17:20:38,249 - INFO - Created 5 nodes for page 8
+2025-01-24 17:20:38,249 - INFO - Created 8 nodes for page 9
+2025-01-24 17:20:38,249 - INFO - Created 6 nodes for page 10
+2025-01-24 17:20:38,249 - INFO - Created 12 nodes for page 11
+2025-01-24 17:20:38,249 - INFO - Created 3 nodes for page 12
+2025-01-24 17:20:38,249 - INFO - Created 7 nodes for page 13
+2025-01-24 17:20:38,249 - INFO - Created 5 nodes for page 14
+2025-01-24 17:20:38,249 - INFO - Created 5 nodes for page 15
+2025-01-24 17:20:38,250 - INFO - Created 6 nodes for page 16
+2025-01-24 17:20:38,250 - INFO - Created 5 nodes for page 17
+2025-01-24 17:20:38,250 - INFO - Created 6 nodes for page 18
+2025-01-24 17:20:38,250 - INFO - Created 8 nodes for page 19
+2025-01-24 17:20:38,250 - INFO - Created 3 nodes for page 20
+2025-01-24 17:20:38,250 - INFO - Created 8 nodes for page 21
+2025-01-24 17:20:38,250 - INFO - Created 5 nodes for page 22
+2025-01-24 17:20:38,250 - INFO - Created 9 nodes for page 23
+2025-01-24 17:20:38,250 - INFO - Created 5 nodes for page 24
+2025-01-24 17:20:38,250 - INFO - Created 8 nodes for page 25
+2025-01-24 17:20:38,251 - INFO - Created 3 nodes for page 26
+2025-01-24 17:20:38,251 - INFO - Created 6 nodes for page 27
+2025-01-24 17:20:38,251 - INFO - Created 5 nodes for page 28
+2025-01-24 17:20:38,251 - INFO - Created 5 nodes for page 29
+2025-01-24 17:20:38,251 - INFO - Created 4 nodes for page 30
+2025-01-24 17:20:38,251 - INFO - Created 5 nodes for page 31
+2025-01-24 17:20:38,251 - INFO - Created 4 nodes for page 32
+2025-01-24 17:20:38,252 - INFO - Saving 182 nodes to cache...
+2025-01-24 17:20:38,256 - INFO - Successfully cached nodes to node_outputs
+2025-01-27 08:26:48,751 - INFO - Logger level set to: 20
+2025-01-27 08:26:48,751 - INFO - Initializing TextNodeCreator
+2025-01-27 08:26:48,751 - INFO - TextNodeCreator initialization complete
+2025-01-27 08:26:48,751 - INFO - No cached nodes found
+2025-01-27 08:26:48,751 - INFO - Creating new nodes...
+2025-01-27 08:26:48,751 - INFO - Beginning hierarchical node creation process...
+2025-01-27 08:26:48,753 - INFO - Processing document: Barreto_Brochure.pdf
+2025-01-27 08:26:48,753 - INFO - Created 5 nodes for page 1
+2025-01-27 08:26:48,753 - INFO - Created 6 nodes for page 2
+2025-01-27 08:26:48,754 - INFO - Created 6 nodes for page 3
+2025-01-27 08:26:48,754 - INFO - Created 4 nodes for page 4
+2025-01-27 08:26:48,754 - INFO - Created 7 nodes for page 5
+2025-01-27 08:26:48,754 - INFO - Created 3 nodes for page 6
+2025-01-27 08:26:48,754 - INFO - Created 5 nodes for page 7
+2025-01-27 08:26:48,754 - INFO - Created 5 nodes for page 8
+2025-01-27 08:26:48,754 - INFO - Created 8 nodes for page 9
+2025-01-27 08:26:48,754 - INFO - Created 6 nodes for page 10
+2025-01-27 08:26:48,754 - INFO - Created 12 nodes for page 11
+2025-01-27 08:26:48,755 - INFO - Created 3 nodes for page 12
+2025-01-27 08:26:48,755 - INFO - Created 7 nodes for page 13
+2025-01-27 08:26:48,755 - INFO - Created 5 nodes for page 14
+2025-01-27 08:26:48,755 - INFO - Created 5 nodes for page 15
+2025-01-27 08:26:48,755 - INFO - Created 6 nodes for page 16
+2025-01-27 08:26:48,755 - INFO - Created 5 nodes for page 17
+2025-01-27 08:26:48,755 - INFO - Created 6 nodes for page 18
+2025-01-27 08:26:48,755 - INFO - Created 8 nodes for page 19
+2025-01-27 08:26:48,755 - INFO - Created 3 nodes for page 20
+2025-01-27 08:26:48,755 - INFO - Created 8 nodes for page 21
+2025-01-27 08:26:48,756 - INFO - Created 5 nodes for page 22
+2025-01-27 08:26:48,756 - INFO - Created 9 nodes for page 23
+2025-01-27 08:26:48,756 - INFO - Created 5 nodes for page 24
+2025-01-27 08:26:48,756 - INFO - Created 8 nodes for page 25
+2025-01-27 08:26:48,756 - INFO - Created 3 nodes for page 26
+2025-01-27 08:26:48,756 - INFO - Created 6 nodes for page 27
+2025-01-27 08:26:48,756 - INFO - Created 5 nodes for page 28
+2025-01-27 08:26:48,756 - INFO - Created 5 nodes for page 29
+2025-01-27 08:26:48,756 - INFO - Created 4 nodes for page 30
+2025-01-27 08:26:48,756 - INFO - Created 5 nodes for page 31
+2025-01-27 08:26:48,757 - INFO - Created 4 nodes for page 32
+2025-01-27 08:26:48,757 - INFO - Saving 182 nodes to cache...
+2025-01-27 08:26:48,760 - INFO - Successfully cached nodes to node_outputs
+2025-01-27 08:32:45,675 - INFO - Logger level set to: 20
+2025-01-27 08:32:45,675 - INFO - Initializing TextNodeCreator
+2025-01-27 08:32:45,675 - INFO - TextNodeCreator initialization complete
+2025-01-27 08:32:45,680 - INFO - Successfully loaded 182 nodes from cache
