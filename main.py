@@ -66,29 +66,42 @@ def main():
         mock_data = [
             {
                 "attribute_id": "bg6t6xhlfxbw",
+                "attribute_group_id": "qbxtcrbchk2v",
                 "name": "Weight",
                 "description": "The weight of the equipment's frame",
                 "unit": "pounds",
                 "format": "number",
-                "options": [],
+                "vocabulary_options": [],
                 "attribute_group_id": "askfdjsrlj",
                 "attribute_group_name": "Information"
             },
             {
+                "attribute_id": "bg6t6xhlfxby",
+                "attribute_group_id": "qbxtcrbchk2v",
+                "name": "Engine",
+                "description": "",
+                "unit": "",
+                "format": "string",
+                "vocabulary_options": ["Diesel", "Electric"],
+                "attribute_group_id": "askfdtsrlj",
+                "attribute_group_name": "Information"
+            },
+            {
                 "attribute_id": "bnccqpc9nwtd",
+                "attribute_group_id": "qbxtcrbchk2v",
                 "name": "Has safety clutch",
                 "description": "Does this equipment have a safety clutch, answer true or false.",
                 "unit": "boolean",
                 "format": "string",
-                "options": [],
+                "vocabulary_options": [],
                 "attribute_group_id": "askfdjsalj",
                 "attribute_group_name": "Information"
             }
         ]
 
         query_builder = StructuredQueryEngineBuilder(
-            make="Baretto",
-            model="1324D Standard Trencher",
+            make=make,
+            model=model,
             attributes=mock_data,
             prompt=f"Add attributes to model if found, or None for a {make} {model}",
             llm_model="gpt-4o-mini"

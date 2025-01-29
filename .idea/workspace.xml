@@ -6,13 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="13557991-094d-4fae-8b67-4e865e4684de" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis/fifteenth_pipeline_gpt_instruct_raw_node_analysis.txt" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/fifteenth_pipeline_gpt_instruct_raw_node_analysis.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis/node_creation.log" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/node_creation.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rag_package/config/embedding_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/config/embedding_config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rag_package/config/path_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/config/path_config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rag_package/textnode_creator.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/textnode_creator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rag_package/vector_index_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/vector_index_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rag_package/structured_query_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/structured_query_engine.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +47,7 @@
     &quot;Python.query_engine.executor&quot;: &quot;Run&quot;,
     &quot;Python.rag_config.executor&quot;: &quot;Run&quot;,
     &quot;Python.run.executor&quot;: &quot;Run&quot;,
+    &quot;Python.structured_query_engine.executor&quot;: &quot;Run&quot;,
     &quot;Python.test_openai.executor&quot;: &quot;Run&quot;,
     &quot;Python.textnode_creator.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
