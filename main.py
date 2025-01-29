@@ -4,6 +4,7 @@ from torch.utils.model_dump import hierarchical_pickle
 
 from rag_package.config.hierarchical_config import HierarchicalConfig
 from rag_package.config.metadata_extraction_config import MetadataExtractionConfig
+from rag_package.csv_creator import CSVCreator
 from rag_package.document_processor import DocumentProcessor
 from rag_package.vector_index_manager import VectorIndexManager
 from rag_package.textnode_creator import TextNodeCreator
@@ -14,6 +15,7 @@ from rag_package.config.parser_config import ParserConfig
 from rag_package.config.node_creation_config import NodeCreationConfig
 from rag_package.config.embedding_config import get_embed_model
 from rag_package import structured_query_engine
+from rag_package import csv_creator
 
 from rag_package.structured_query_engine import StructuredQueryEngineBuilder
 import llama_index
@@ -110,7 +112,8 @@ def main():
         response = query_builder.query(index)
         print(json.dumps(response, indent=2))
 
-    #
+        csv_data = CSVCreator.export_dict_to_csv(data=response)
+        print(csv_data.decode('utf-8'))
 
 
     except Exception as e:
