@@ -61,11 +61,10 @@ def main():
         # index = index_manager.get_or_create_index(text_nodes)
         index = index_manager.get_or_create_index()
 
-
         make = "Baretto"
         model = "1324D Standard Trencher"
 
-        mock_data = [
+        mock_attributes = [
             {
                 "attribute_id": "bg6t6xhlfxbw",
                 "attribute_group_id": "qbxtcrbchk2v",
@@ -80,10 +79,10 @@ def main():
             {
                 "attribute_id": "bg6t6xhlfxby",
                 "attribute_group_id": "qbxtcrbchk2v",
-                "name": "Engine",
+                "name": "Max dig depth",
                 "description": "",
-                "unit": "",
-                "format": "string",
+                "unit": "inches",
+                "format": "number",
                 "vocabulary_options": ["Diesel", "Electric"],
                 "attribute_group_id": "askfdtsrlj",
                 "attribute_group_name": "Information"
@@ -91,8 +90,8 @@ def main():
             {
                 "attribute_id": "bnccqpc9nwtd",
                 "attribute_group_id": "qbxtcrbchk2v",
-                "name": "Has safety clutch",
-                "description": "Does this equipment have a safety clutch, answer true or false.",
+                "name": "Introduced in 1995",
+                "description": "",
                 "unit": "boolean",
                 "format": "string",
                 "vocabulary_options": [],
@@ -104,17 +103,22 @@ def main():
         query_builder = StructuredQueryEngineBuilder(
             make=make,
             model=model,
-            attributes=mock_data,
+            attributes=mock_attributes,
             prompt=f"Add attributes to model if found, or None for a {make} {model}",
             llm_model="gpt-4o-mini"
         )
 
-        response = query_builder.query(index)
+        make_model_pairs = [
+            ("Baretto", "1324D Standard Trencher"),
+            ("Baretto", "2024RTK Track Trencher"),
+            ("Baretto", "1324STK Track Trencher")
+        ]
+
+        response = query_builder.query_many(index, make_model_pairs)
         print(json.dumps(response, indent=2))
 
         csv_data = CSVCreator.export_dict_to_csv(data=response)
         print(csv_data.decode('utf-8'))
-
 
     except Exception as e:
         return error_handler.handle_error(e)

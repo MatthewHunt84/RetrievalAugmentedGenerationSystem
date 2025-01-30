@@ -77,7 +77,10 @@ class StructuredQueryEngineBuilder:
 
         return create_model(model_name, **attr_fields)
 
-    def query(self, index: VectorStoreIndex) -> dict:
+    def query_one(self, index: VectorStoreIndex) -> dict[str, list[str]]:
+        ## Although this is for a single equipment item query, we still return the attribute values in a list (like we do for query_all_list)
+        ## This is to keep the pipeline consistent.
+        ## Regardless of the type of query, the resulting dictionary can be fed directly into the CSVCreator's export_dict_to_csv method
         structured_attr_model = self.create_dynamic_attr_model()
 
         llm = OpenAI(model=self.llm_model)
@@ -96,39 +99,76 @@ class StructuredQueryEngineBuilder:
             if isinstance(response, str):
                 raise ValueError("LLM repeatedly returned string response instead of structured data")
 
-        # Convert Pydantic model to dictionary
+        ## Convert returning Pydantic model back to a dictionary
         model_response = response.response
-        result_dict = {
-            'make': self.make,
-            'model': self.model
+        result_dict: dict[str, list[str]] = {
+            'make': [self.make],
+            'model': [self.model]
         }
 
-        ## We will return a dictionary instead of a model, because the model attribute names would be in snake case.
+        ## We will return a dictionary instead of a model, because the model attribute names would be in snake case
         for field in model_response.model_fields:
             value = getattr(model_response, field)
-            ## Clean up the field name for the output
-            original_name = next(
-                (attr['name'] for attr in self.attributes
-                 if self._clean_attr_name(attr['name']) == field),
-                field
-            )
 
-            ## Find the attribute info
+            # Find the original attribute name and info
             attr_info = next((attr for attr in self.attributes
                               if self._clean_attr_name(attr['name']) == field), None)
+            original_name = attr_info['name'] if attr_info else field
 
-            ## Clean up the value so we don't return things like "true boolean" or "NO VALUE FOUND STRING"
+            ## we want to concatenate the value + unit when it makes sense
+            ## For instance "900 pounds" makes sense
+            ## but "true boolean", or "NO VALUE FOUND string" don't
             is_boolean = (
                     value in ('true', 'false', 'yes', 'no') or
                     (attr_info and attr_info.get('vocabulary_options') == ['yes', 'no'])
             )
 
-            if (attr_info and
-                    attr_info.get('unit') and
-                    value not in (None, "NO VALUE FOUND") and
-                    not is_boolean):
-                value = f"{value} {attr_info['unit']}"
+            if value is None:
+                formatted_value = "NO VALUE FOUND"
+            elif is_boolean:
+                formatted_value = str(value).lower()
+            elif attr_info and attr_info.get('unit') and value != "NO VALUE FOUND":
+                formatted_value = f"{value} {attr_info['unit']}"
+            else:
+                formatted_value = str(value)
 
-            result_dict[original_name.lower()] = value if value is not None else "NO VALUE FOUND"
+            result_dict[original_name.lower()] = [formatted_value]
+
+        return result_dict
+
+    def query_many(self, index: VectorStoreIndex, make_model_pairs: list[tuple[str, str]]):
+        ## Here we query the attributes for multiple equipment items (like for a cat class)
+        ## We take the make model pairs as tuples instead of a dict, because in a dict because equipment items of the same make overwrite the others
+        ## This method can probably be optimized by making it async and having the calls run in parallel - but one step at a time
+
+        ## First we need to set up the dictionary that will hold the outputs
+        result_dict = {
+            'make': [],
+            'model': [],
+            **{attr['name'].lower(): [] for attr in self.attributes}
+        }
+
+        ## Then here's the simple query method which makes one call at a time (for now)
+        for make, model in make_model_pairs:
+            try:
+                self.make = make
+                self.model = model
+                single_result = self.query_one(index)
+
+                ## Add the result of each call to our dictionary
+                for key in result_dict:
+                    value = single_result.get(key, ["NO VALUE FOUND"])[0]
+                    result_dict[key].append(value)
+
+            except Exception as e:
+                print(f"Error querying {make} {model}: {str(e)}")
+                ## Add error values to make debugging easier
+                for key in result_dict:
+                    if key == 'make':
+                        result_dict[key].append(make)
+                    elif key == 'model':
+                        result_dict[key].append(model)
+                    else:
+                        result_dict[key].append(f"ERROR: {str(e)}")
 
         return result_dict

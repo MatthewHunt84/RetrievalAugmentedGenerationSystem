@@ -7,6 +7,7 @@
     <list default="true" id="13557991-094d-4fae-8b67-4e865e4684de" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rag_package/csv_creator.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/csv_creator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rag_package/structured_query_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_package/structured_query_engine.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,11 +63,11 @@
       <recent name="$PROJECT_DIR$/raw_input_data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/rag_package" />
       <recent name="$PROJECT_DIR$/saved_parsed_results" />
       <recent name="$PROJECT_DIR$/raw_input_data" />
       <recent name="$PROJECT_DIR$/rag_package/config" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/rag_package" />
     </key>
   </component>
   <component name="SharedIndexes">
