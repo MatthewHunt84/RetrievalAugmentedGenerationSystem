@@ -21,7 +21,9 @@ from rag_package.structured_query_engine import StructuredQueryEngineBuilder
 import llama_index
 import json
 
-def main():
+import asyncio
+
+async def main():
     load_dotenv()
     error_handler = ErrorHandler()
 
@@ -56,13 +58,12 @@ def main():
         # text_nodes = node_creator.create_or_load_nodes()
         # #
         embed_model = get_embed_model()
-        # #
-        index_manager = VectorIndexManager(embed_model=embed_model)
-        # index = index_manager.get_or_create_index(text_nodes)
-        index = index_manager.get_or_create_index()
 
-        make = "Baretto"
-        model = "1324D Standard Trencher"
+        index_manager = VectorIndexManager(embed_model=embed_model)
+            ## To use new text nodes:
+        # index = index_manager.get_or_create_index(text_nodes)
+            ## Otherwise we'll use saved nodes:
+        index = index_manager.get_or_create_index()
 
         mock_attributes = [
             {
@@ -100,23 +101,33 @@ def main():
             }
         ]
 
-        query_builder = StructuredQueryEngineBuilder(
-            make=make,
-            model=model,
-            attributes=mock_attributes,
-            prompt=f"Add attributes to model if found, or None for a {make} {model}",
-            llm_model="gpt-4o-mini"
-        )
+        # Initialize with just the vector store and LLM model as dependencies
+        query_builder = StructuredQueryEngineBuilder(index= index, llm_model="gpt-4o-mini")
 
+        # Set up your query parameters
+        prompt_template = "Add attributes to model if found, or None for a {make} {model}"
+
+
+            # For a single query
+        single_query_pairs = [("Baretto", "1324D Standard Trencher")]
+
+            # For multiple queries
         make_model_pairs = [
             ("Baretto", "1324D Standard Trencher"),
             ("Baretto", "2024RTK Track Trencher"),
             ("Baretto", "1324STK Track Trencher")
         ]
 
-        response = query_builder.query_many(index, make_model_pairs)
+        # Query with arguments listed as explicit dependencies
+        response = await query_builder.aquery(
+            make_model_pairs=make_model_pairs,  # or single_query_pairs for one item
+            attributes=mock_attributes,
+            prompt_template=prompt_template
+        )
+
         print(json.dumps(response, indent=2))
 
+        # Convert to CSV
         csv_data = CSVCreator.export_dict_to_csv(data=response)
         print(csv_data.decode('utf-8'))
 
@@ -128,4 +139,6 @@ def main():
 
 # Main execution block - This is where we orchestrate everything
 if __name__ == "__main__":
-    main()
+    ## This is Python and Asyncio's version of swift's Task { } essentially.
+    ## Make an async call from a syncronous context
+    asyncio.run(main())

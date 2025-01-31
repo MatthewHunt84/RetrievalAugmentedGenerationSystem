@@ -3,14 +3,13 @@ from pydantic import BaseModel, Field, create_model
 from llama_index.llms.openai import OpenAI
 from typing import Optional
 import re
+import asyncio
 
 class StructuredQueryEngineBuilder:
-    def __init__(self, make: str, model: str, attributes: list[dict],
-                 prompt: str, llm_model: str):
-        self.make = make
-        self.model = model
-        self.attributes = attributes
-        self.prompt = prompt
+    def __init__(self, index: VectorStoreIndex, llm_model: str):
+        ## Generic initialization with the vector store and an LLM
+        ## The LLM dependency could be moved to the query argument list, but I think it's reasonable to keep it here until that becomes a necessity.
+        self.index = index
         self.llm_model = llm_model
 
     def _clean_attr_name(self, name: str) -> str:
@@ -25,31 +24,30 @@ class StructuredQueryEngineBuilder:
                           unit: str = None, format: str = None,
                           vocabulary_options: list = None) -> Field:
         ## This is the description the LLM will use to find the appropriate attribute
-        ## If descriptions are provided use those
+        ## Since these fields are optional, we need to compose the description differently depending on what is passed in
+
+        ## If descriptions are provided, just use those
         if description:
             base_desc = description
-        ## Otherwise we'll use the following default prompt
         else:
+            ## Otherwise we'll use the following default prompt
             base_desc = f"The {name.lower()} of the item"
 
         additional_info = []
-
-        ## Add format information if provided
         if format:
+        ## Add format information if provided
             additional_info.append(f"Should be a {format}")
-
-        ## Add unit information if provided also
         if unit:
+        ## Add unit information if provided also
             additional_info.append(f"in {unit}")
-
+        if vocabulary_options:
         ## Add vocabulary options if provided. These are a multichoice selection for the LLM
         ## These are essentially saying "respond only with one of the following answers"
-        ## "NO VALUE FOUND" is due to the LLM often defaulting to "false" if it can't find the information, which might not be accurate.
-        if vocabulary_options:
+        ## Due to the LLM often defaulting to "false" if it can't find the information (which might not be accurate) we ask it to instead respond with: "NO VALUE FOUND"
             options_str = ", ".join(vocabulary_options)
             additional_info.append(f"Must be one of: [{options_str}]")
             additional_info.append("Use 'NO VALUE FOUND' if cannot be determined from the available data")
-
+        ## And finally return the most detailed version of the description we can
         if additional_info:
             final_desc = f"{base_desc}. {' '.join(additional_info)}."
         else:
@@ -57,13 +55,13 @@ class StructuredQueryEngineBuilder:
 
         return Field(description=final_desc, default=None)
 
-    def create_dynamic_attr_model(self, model_name: str = "DynamicModel") -> type[BaseModel]:
+    def create_dynamic_attr_model(self, attributes: list[dict], model_name: str = "DynamicModel") -> type[BaseModel]:
+        ## Creates a pydantic model based on the attributes for each make and model, with descriptions for each field
+        ## Multiple queries can use the same BaseModel, so long as each receives make / model information in the prompt (see line 108)
         attr_fields = {}
 
-        for attr in self.attributes:
+        for attr in attributes:
             clean_name = self._clean_attr_name(attr['name'])
-
-            # All fields are strings to handle various types uniformly
             attr_fields[clean_name] = (
                 Optional[str],
                 self._make_description(
@@ -77,98 +75,197 @@ class StructuredQueryEngineBuilder:
 
         return create_model(model_name, **attr_fields)
 
-    def query_one(self, index: VectorStoreIndex) -> dict[str, list[str]]:
-        ## Although this is for a single equipment item query, we still return the attribute values in a list (like we do for query_all_list)
-        ## This is to keep the pipeline consistent.
-        ## Regardless of the type of query, the resulting dictionary can be fed directly into the CSVCreator's export_dict_to_csv method
-        structured_attr_model = self.create_dynamic_attr_model()
+    def query(self,
+              make_model_pairs: list[tuple[str, str]],
+              attributes: list[dict],
+              prompt_template: str) -> dict[str, list[str]]:
 
-        llm = OpenAI(model=self.llm_model)
-        query_engine = index.as_query_engine(
-            output_cls=structured_attr_model,
-            response_mode="compact",
-            llm=llm
-        )
-
-        response = query_engine.query(self.prompt)
-
-        ## Added a "retry once" policy if the LLM gives us back a string instead of a pydantic model
-        if isinstance(response, str):
-            retry_query = f"{self.prompt} Do not return a string response - only return the requested attribute values."
-            response = query_engine.query(retry_query)
-            if isinstance(response, str):
-                raise ValueError("LLM repeatedly returned string response instead of structured data")
-
-        ## Convert returning Pydantic model back to a dictionary
-        model_response = response.response
-        result_dict: dict[str, list[str]] = {
-            'make': [self.make],
-            'model': [self.model]
-        }
-
-        ## We will return a dictionary instead of a model, because the model attribute names would be in snake case
-        for field in model_response.model_fields:
-            value = getattr(model_response, field)
-
-            # Find the original attribute name and info
-            attr_info = next((attr for attr in self.attributes
-                              if self._clean_attr_name(attr['name']) == field), None)
-            original_name = attr_info['name'] if attr_info else field
-
-            ## we want to concatenate the value + unit when it makes sense
-            ## For instance "900 pounds" makes sense
-            ## but "true boolean", or "NO VALUE FOUND string" don't
-            is_boolean = (
-                    value in ('true', 'false', 'yes', 'no') or
-                    (attr_info and attr_info.get('vocabulary_options') == ['yes', 'no'])
-            )
-
-            if value is None:
-                formatted_value = "NO VALUE FOUND"
-            elif is_boolean:
-                formatted_value = str(value).lower()
-            elif attr_info and attr_info.get('unit') and value != "NO VALUE FOUND":
-                formatted_value = f"{value} {attr_info['unit']}"
-            else:
-                formatted_value = str(value)
-
-            result_dict[original_name.lower()] = [formatted_value]
-
-        return result_dict
-
-    def query_many(self, index: VectorStoreIndex, make_model_pairs: list[tuple[str, str]]):
-        ## Here we query the attributes for multiple equipment items (like for a cat class)
-        ## We take the make model pairs as tuples instead of a dict, because in a dict because equipment items of the same make overwrite the others
-        ## This method can probably be optimized by making it async and having the calls run in parallel - but one step at a time
+        ## This query method is more generic and flexible, and can now be used for CatClasses, so long as each member of the cat class is represented as an Equipment Item
+        ## Note that we take the make model pairs as tuples instead of a dict, because in a dict because equipment items of the same make overwrite the others
+        ## This method can be optimized by making it async and having the calls run in parallel - that's the next step
 
         ## First we need to set up the dictionary that will hold the outputs
         result_dict = {
             'make': [],
             'model': [],
-            **{attr['name'].lower(): [] for attr in self.attributes}
+            **{self._clean_attr_name(attr['name']): [] for attr in attributes}
         }
+
+        ## Then we build our query engine
+        ## Because we're doing a structured LLM call, the query engine needs to be initialized with a single Pydantic model
+        ## Even though each query is for a different object (make and model now - but CAT class in the future), we use the prompt to pass this information into the LLM call
+        structured_attr_model = self.create_dynamic_attr_model(attributes)
+        llm = OpenAI(model=self.llm_model)
+        query_engine = self.index.as_query_engine(
+            output_cls=structured_attr_model,
+            response_mode="compact",
+            llm=llm
+        )
 
         ## Then here's the simple query method which makes one call at a time (for now)
         for make, model in make_model_pairs:
             try:
-                self.make = make
-                self.model = model
-                single_result = self.query_one(index)
+                ## Format prompt for this specific make/model
+                prompt = prompt_template.format(make=make, model=model)
 
-                ## Add the result of each call to our dictionary
-                for key in result_dict:
-                    value = single_result.get(key, ["NO VALUE FOUND"])[0]
-                    result_dict[key].append(value)
+                ## Query the index
+                response = query_engine.query(prompt)
+
+                ## Handle unwanted string responses with a one time retry (easier than trying to parse out what we need)
+                if isinstance(response, str):
+                    retry_prompt = f"{prompt} Do not return a string response - only return the requested attribute values."
+                    response = query_engine.query(retry_prompt)
+                    if isinstance(response, str):
+                        raise ValueError("LLM Error: LLM repeatedly returned string response instead of structured data expected from structured LLM call")
+
+                ## Extract the response
+                model_response = response.response
+
+                # Add make and model
+                result_dict['make'].append(make)
+                result_dict['model'].append(model)
+
+                ## Clean up and format the returned values
+                ## This stops us from exporting weird cells in our CSV like "true boolean" or "NO VALUE FOUND string"
+                for field_name in result_dict:
+                    if field_name not in ['make', 'model']:
+                        value = getattr(model_response, field_name, None)
+
+                        # Find the original attribute info
+                        attr_info = next((attr for attr in attributes
+                                          if self._clean_attr_name(attr['name']) == field_name), None)
+
+                        # Format the value
+                        if value is None:
+                            formatted_value = "NO VALUE FOUND"
+                        elif isinstance(value, bool) or (
+                                attr_info and attr_info.get('vocabulary_options') == ['yes', 'no']):
+                            formatted_value = str(value).lower()
+                        elif attr_info and attr_info.get('unit') and value != "NO VALUE FOUND":
+                            if attr_info['unit'] != ("boolean" or "bool" or "string"):
+                                formatted_value = f"{value} {attr_info['unit']}"
+                            else:
+                                formatted_value = f"{value}"
+                        else:
+                            formatted_value = str(value)
+
+                        result_dict[field_name].append(formatted_value)
 
             except Exception as e:
                 print(f"Error querying {make} {model}: {str(e)}")
-                ## Add error values to make debugging easier
-                for key in result_dict:
-                    if key == 'make':
-                        result_dict[key].append(make)
-                    elif key == 'model':
-                        result_dict[key].append(model)
-                    else:
-                        result_dict[key].append(f"ERROR: {str(e)}")
+                ## Add error values for ALL fields to maintain list lengths - otherwise both this method and the downstream CSVCreator step will fail
+                result_dict['make'].append(make)
+                result_dict['model'].append(model)
+                for field_name in result_dict:
+                    if field_name not in ['make', 'model']:
+                        result_dict[field_name].append(f"ERROR: {str(e)}")
+
+        list_lengths = {len(v) for v in result_dict.values()}
+        if len(list_lengths) != 1:
+            raise ValueError(
+                f"Inconsistent list lengths in result: {dict((k, len(v)) for k, v in result_dict.items())}")
+
+        return result_dict
+
+    async def aquery(self,
+                    make_model_pairs: list[tuple[str, str]],
+                    attributes: list[dict],
+                    prompt_template: str) -> dict[str, list[str]]:
+
+        ## First we need to set up the dictionary that will hold the outputs
+        result_dict = {
+            'make': [],
+            'model': [],
+            **{self._clean_attr_name(attr['name']): [] for attr in attributes}
+        }
+
+        ## Then we build our query engine
+        ## Because we're doing a structured LLM call, the query engine needs to be initialized with a single Pydantic model
+        ## Even though each query is for a different object (make and model now - but CAT class in the future), we use the prompt to pass this information into the LLM call
+        structured_attr_model = self.create_dynamic_attr_model(attributes)
+        llm = OpenAI(model=self.llm_model)
+        query_engine = self.index.as_query_engine(
+            output_cls=structured_attr_model,
+            response_mode="compact",
+            llm=llm
+        )
+
+        async def process_single_query(make: str, model: str) -> dict:
+            try:
+                ## Format prompt for this specific make/model
+                prompt = prompt_template.format(make=make, model=model)
+
+                ## Query the index - Note: using await since we're in an async context
+                response = await query_engine.aquery(prompt)
+
+                ## Handle unwanted string responses with a one time retry
+                if isinstance(response, str):
+                    retry_prompt = f"{prompt} Do not return a string response - only return the requested attribute values."
+                    response = await query_engine.aquery(retry_prompt)
+                    if isinstance(response, str):
+                        raise ValueError(
+                            "LLM Error: LLM repeatedly returned string response instead of structured data expected from structured LLM call")
+
+                ## Extract the response
+                model_response = response.response
+
+                # Create a result dictionary for this specific query
+                single_result = {
+                    'make': make,
+                    'model': model
+                }
+
+                ## Clean up and format the returned values
+                for field_name in result_dict:
+                    if field_name not in ['make', 'model']:
+                        value = getattr(model_response, field_name, None)
+
+                        # Find the original attribute info
+                        attr_info = next((attr for attr in attributes
+                                          if self._clean_attr_name(attr['name']) == field_name), None)
+
+                        # Format the value (same formatting logic as before)
+                        if value is None:
+                            formatted_value = "NO VALUE FOUND"
+                        elif isinstance(value, bool) or (
+                                attr_info and attr_info.get('vocabulary_options') == ['yes', 'no']):
+                            formatted_value = str(value).lower()
+                        elif attr_info and attr_info.get('unit') and value != "NO VALUE FOUND":
+                            if attr_info['unit'] != ("boolean" or "bool" or "string"):
+                                formatted_value = f"{value} {attr_info['unit']}"
+                            else:
+                                formatted_value = f"{value}"
+                        else:
+                            formatted_value = str(value)
+
+                        single_result[field_name] = formatted_value
+
+                return single_result
+
+            except Exception as e:
+                ## Add error values for ALL fields to maintain list lengths - otherwise both this method and the downstream CSVCreator step will fail
+                return {
+                    'make': make,
+                    'model': model,
+                    **{field_name: f"ERROR: {str(e)}"
+                       for field_name in result_dict if field_name not in ['make', 'model']}
+                }
+
+        ## Create tasks for all make/model pairs
+        tasks = [process_single_query(make, model) for make, model in make_model_pairs]
+
+        ## Execute and gather all queries concurrently
+        results = await asyncio.gather(*tasks)
+
+        ## Combine all results into the final dictionary
+        for result in results:
+            for field_name in result_dict:
+                result_dict[field_name].append(result[field_name])
+
+        ## Double check we nothing went wrong with our dictionary
+        list_lengths = {len(v) for v in result_dict.values()}
+        if len(list_lengths) != 1:
+            raise ValueError(
+                f"Inconsistent list lengths in result: {dict((k, len(v)) for k, v in result_dict.items())}")
 
         return result_dict
